@@ -43,8 +43,9 @@ run;
 ******************************************************************************;
 * SAS PROC SQL allows users to execute valid SQL statements;
 * often called queries, from SAS;
-* in a more typical SQL environment the 'proc sql' and 'quit' statements;
+* in a more typical SQL environment the proc sql and quit statements;
 * would be unnecessary and unrecognized in a query;	
+
 proc sql;
  
  	* display basic information about table1 in the SAS log;
@@ -76,7 +77,7 @@ quit;
 proc sql noprint;
 	
 	* a where clause is used to subset rows of a table;
-	* the order statement sorts displayed results or created tables;
+	* the order by statement sorts displayed results or created tables;
 	* desc refers to descending sort order;
 	create table table4 as 
 	select key, x2 as x6 
