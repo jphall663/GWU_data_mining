@@ -1,1 +1,1 @@
-week_3/kdd09cup_samp.sas7bdat filter=lfs diff=lfs merge=lfs -text
+*.sas7bdat filter=lfs diff=lfs merge=lfs -text
