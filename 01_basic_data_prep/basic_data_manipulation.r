@@ -57,7 +57,7 @@ library(ggplot2)  # popular package for plotting with consistent syntax
 # '<-' is the preferred assignment operator in R
 # '/' is the safest directory separator character to use
 
-git_dir <- 'C:/workspace/GWU_data_mining/week_2'
+git_dir <- 'C:/workspace/GWU_data_mining/01_basic_data_prep'
 
 # set the working directory
 # the working directory is where files are written to and read from by default
