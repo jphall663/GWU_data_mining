@@ -179,7 +179,7 @@ Enter the following statements on the git bash command line:
 `$ git remote add origin https://github.com/<your username>/GWU_data_mining.git`
 
 
-`$ git remote add upstream https://github.com/jphall663/enlighten-apply.git`
+`$ git remote add upstream https://github.com/jphall663/GWU_data_mining.git`
 
 
 `$ git pull origin master`
