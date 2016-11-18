@@ -145,23 +145,23 @@ These packages will be used for in class demonstrations and homework solutions.
 
 You are welcome to use git and/or GitHub to save and manage your own copies of this material. 
 
-The easiest way to do so is to download this entire repository as a zip file, however you will need to download a new copy whenever changes are made to this repository.
+The easiest way to do so is to download this entire repository as a zip file, however you will need to download a new copy whenever changes are made to this repository. To do so, navigate to the [course GitHub repository](https://github.com/jphall663/GWU_data_mining) and click the 'Clone or Download' button and then select 'Download Zip'. 
 
-![alt text](README_pics/download.png "Download this repo.") 
+![alt text](readme_pics/download.png "Download this repo.") 
 
 If you would like to take advantage of the version control capabilities of git then you need to follow these steps.
 
 ###### Install required software 
 
-Git client: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+* [Git client](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-Git lfs client https://git-lfs.github.com/
+* [Git lfs client](https://git-lfs.github.com)
 
 ###### Fork and pull materials
 
-Fork the GWU_data_mining repository from: https://github.com/jphall663/GWU_data_mining
+Navigate to the [course GitHub repository](https://github.com/jphall663/GWU_data_mining) and click the 'Fork' button. 
 
-![alt text](README_pics/fork.png "Fork this repo!")
+![alt text](readme_pics/fork.png "Fork this repo!")
 
 Enter the following statements on the git bash command line:
 
