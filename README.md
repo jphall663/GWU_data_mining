@@ -126,12 +126,11 @@ The instructor reserves the right to make revisions to any item on this syllabus
 
 These packages will be used for in class demonstrations and homework solutions. 
 
-* [H2o.ai](http://www.h2o.ai) is a package of high-performance functions and algorithms for preprocessing data and training statistical and machine learning models. It can be accessed without the need for coding through a standalone, browser-based client or by installing additional coding interfaces for R and/or Python.
+* [H2o.ai](http://www.h2o.ai) is a package of high performance functions and algorithms for preprocessing data and training statistical and machine learning models. It can be accessed without the need for coding through a standalone, web browser client or by installing additional coding interfaces for R and/or Python.
 
-* [Anaconda Python 2.7](https://www.continuum.io/downloads) Python is an approachable, general-purpose programming language with excellent add on libraries for math and data analysis. Anaconda Python is a commercial version of Python that bundles these add on packages (and many other packages) together with convenient development utilities like the Spyder IDE. 
+* [Anaconda Python 2.7](https://www.continuum.io/downloads) Python is an approachable, general purpose programming language with excellent add on libraries for math and data analysis. Anaconda Python is a commercial version of Python that bundles these add on packages (and many other packages) together with convenient development utilities like the Spyder IDE. 
 
-* [SAS Enterprise Miner](http://www.sas.com/en_us/software/analytics/enterprise-miner.html) is a commercial package for preprocessing data and training statistical and machine learning models. Enterprise Miner allows for the construction of complex data mining workflows without writing code. Enterprise Miner is a commerical product and not freely available. You may access Enterprise Miner through the [SAS on Demand for Academics portal](https://odamid.oda.sas.com) or by contacting the [GWU Instructional Technology Lab](https://itl.gwu.edu/sas-software-distribution).
-
+* [SAS Enterprise Miner](http://www.sas.com/en_us/software/analytics/enterprise-miner.html) is a commercial package for preprocessing data and training statistical and machine learning models. Enterprise Miner allows for the construction of complex data mining workflows without writing code. Enterprise Miner is a proprietary commerical product and not freely available. You may access Enterprise Miner through the [SAS on Demand for Academics portal](https://odamid.oda.sas.com) or by contacting the [GWU Instructional Technology Lab](https://itl.gwu.edu/sas-software-distribution).
 
 #### Other useful free software:
 
@@ -139,13 +138,13 @@ These packages will be used for in class demonstrations and homework solutions.
 
 * [R Studio](https://www.rstudio.com/products/rstudio/#Desktop) is the standard IDE for the R language.
 
-* [SAS University Edition](http://www.sas.com/en_ph/software/university-edition/download-software.html) is a free edition of the commercial data analysis software. SAS University Edition contains the newest version of several SAS software packages and learning tools and utilities for new users. It also requires a virtual machine player which you may need to install separately.
+* [SAS University Edition](http://www.sas.com/en_ph/software/university-edition/download-software.html) is a free edition of SAS'  proprietary commercial data analysis software. SAS University Edition contains the newest version of several SAS software packages along with learning tools and utilities for new users. It also requires a virtual machine player which you may need to install separately.
 
 #### Using Git
 
-You are welcome to use git and/or GitHub to save and manage your own copies of this material. 
+You are welcome to use git and/or GitHub to save and manage your own copies of class materials. 
 
-The easiest way to do so is to download this entire repository as a zip file, however you will need to download a new copy whenever changes are made to this repository. To do so, navigate to the [course GitHub repository](https://github.com/jphall663/GWU_data_mining) and click the 'Clone or Download' button and then select 'Download Zip'. 
+The easiest way to do so is to download this entire repository as a zip file. However you will need to download a new copy of the repository whenever changes are made to this repository. To download the course repository, navigate to the [course GitHub repository (i.e. this page)](https://github.com/jphall663/GWU_data_mining) and click the 'Clone or Download' button and then select 'Download Zip'. 
 
 ![alt text](readme_pics/download.png "Download this repo.") 
 
@@ -159,11 +158,14 @@ If you would like to take advantage of the version control capabilities of git t
 
 ###### Fork and pull materials
 
-Navigate to the [course GitHub repository](https://github.com/jphall663/GWU_data_mining) and click the 'Fork' button. 
+Navigate to the [course GitHub repository (i.e. this page)](https://github.com/jphall663/GWU_data_mining) and click the 'Fork' button. 
 
 ![alt text](readme_pics/fork.png "Fork this repo!")
 
 Enter the following statements on the git bash command line:
+
+`$ cd <parent directory>`
+
 
 `$ mkdir GWU_data_mining`
  
