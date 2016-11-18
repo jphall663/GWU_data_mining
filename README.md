@@ -21,7 +21,7 @@ Weeks | Date | Topics
 9   | | Project proposal presentations
 -   | | Spring Break
 10  | | [Section 06: Clustering](06_clustering/06_clustering.md)
-11  | | [Section 07: Association Rules](07_association_rules.md)
+11  | | [Section 07: Association Rules](07_association_rules/07_association_rules.md)
 12  | | [Section 08: Text Mining](08_text_mining/08_text_mining.md)
 13  | | Miscellaneous topics as needed
 14  | | Project presentations
