@@ -29,6 +29,6 @@
 * [*Statistical Modeling: the Two Cultures*](http://www.stat.uchicago.edu/~lekheng/courses/191f09/breiman.pdf)
 * [*Fifty Years of Data Science*](http://courses.csail.mit.edu/18.337/2015/docs/50YearsDataScience.pdf)
 
-  --
+  -
 
 * [*The Evolution of Analytics*](http://www.oreilly.com/data/free/the-evolution-of-analytics.csp)

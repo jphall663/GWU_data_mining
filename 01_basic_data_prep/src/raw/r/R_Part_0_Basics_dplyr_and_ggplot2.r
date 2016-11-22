@@ -1,19 +1,3 @@
-###############################################################################
-# Copyright (c) 2015 by Patrick Hall, jpatrickhall@gmail.com                  #
-#                                                                             #
-# Licensed under the Apache License, Version 2.0 (the "License");             #
-# you may not use this file except in compliance with the License.            #
-# You may obtain a copy of the License at                                     #
-#                                                                             #
-#   http://www.apache.org/licenses/LICENSE-2.0                                #
-#                                                                             #
-# Unless required by applicable law or agreed to in writing, software         #
-# distributed under the License is distributed on an "AS IS" BASIS,           #
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.    #
-# See the License for the specific language governing permissions and         #
-# limitations under the License.                                              #
-###############################################################################
-
 ### standard output ###########################################################
 # two primary R core functions are used to print information to the console
 #   print() and cat()
@@ -21,7 +5,7 @@
 #   of R objects
 # note that '.' is just a character, it does not denote object membership
 #   as in Java and Python
-# cat() simply attempts to prints string literals
+# cat() simply attempts to print string literals
 # an object with no functions or operators is also printed to the console
 
 x <- 'Hello World!'
@@ -34,13 +18,13 @@ print(x)
 cat(x) 
 x
 
-### import libraries ##########################################################
+### import packages ###########################################################
 
 # R contains thousands of packages for many different purposes
 # Packages are:
 #   - nearly always free and open source
 #   - installed using the install.packages() function or a GUI command
-#   - of varying quality
+#   - of varying quality and licensing
 #   - loaded using the library() function, after being installed
 
 library(dplyr)    # popular package for data wrangling with consistent syntax
@@ -80,10 +64,18 @@ n_vars <- 5
 #   default
 key <- seq(n_rows)
 
+# show the first five elements
+# most data structures in R can be 'sliced', i.e. using numeric indices
+#   to select a subset of items 
+key[1:5] 
+
 # create lists of strings that will become column names
 # paste() concatentates strings with a separator character in between them
 num_vars <- paste('numeric', seq_len(n_vars), sep = '')
+num_vars
+
 char_vars <- paste('char', seq_len(n_vars), sep = '')
+char_vars
 
 # initialize a data.frame with the key variable
 scratch_df <- data.frame(INDEX = key)
@@ -93,6 +85,11 @@ scratch_df <- data.frame(INDEX = key)
 # replicate() replicates n_row length lists of numeric values n_vars times
 scratch_df[, num_vars] <- replicate(n_vars, runif(n_rows))
 
+# head() displays the top of a data structure
+head(scratch_df) 
+
+# add n_var character columns, each with n_row rows, to the data.frame
+# create a list of strings from which to generate random text variables
 # sapply() applies a function to a sequence of values
 # LETTERS is a character vector containing uppercase letters
 # an anonymous function is defined that replicates a value 8 times with no
@@ -101,10 +98,14 @@ scratch_df[, num_vars] <- replicate(n_vars, runif(n_rows))
 #   randomly from test_draw using the sample() function
 text_draw <- sapply(LETTERS[1:7],
                     FUN = function(x) paste(rep(x, 8), collapse = ""))
+text_draw
+
 scratch_df[, char_vars] <- replicate(n_vars,
                                      sample(text_draw, n_rows, replace = TRUE))
+head(scratch_df)
 
 # convert from standard data.frame to dlpyr table
+# dplyr is a popular, intuitive, and effcient package for manipulating data sets
 # R has many data types: http://www.statmethods.net/input/datatypes.html
 scratch_tbl <- tbl_df(scratch_df)
 
@@ -134,16 +135,49 @@ ggplot(scratch_tbl, aes(char1)) +
 # subset all the variables whose names begin with 'char'
 # subset variables by their names
 num_vars <- select(scratch_tbl, num_range('numeric', 1:n_vars))
+head(num_vars)
+
 char_vars <- select(scratch_tbl, starts_with('char'))
+head(char_vars)
+
 mixed_vars <- select(scratch_tbl, one_of('numeric1', 'char1'))
+head(mixed_vars)
 
 # subset rows using multiple dplyr functions
 # subset rows using their numeric indices
 # subset top rows based on the value of a certain variable
 # subset rows where a certain variable has a certain value
 some_rows <- slice(scratch_tbl, 1:10)
+some_rows
+
 sorted_top_rows <- top_n(scratch_tbl, 10, numeric1)
+sorted_top_rows 
+
 AAAAAAAA_rows <- filter(scratch_tbl, char1 == 'AAAAAAAA')
+head(AAAAAAAA_rows)
+
+### updating the table ########################################################
+# dplyr, as a best practice, does not support in-place overwrites of data 
+
+# dplyr::transform enables the creation of new variables from existing 
+#   variables
+scratch_tbl2 <- transform(scratch_tbl, 
+                          new_numeric = round(numeric1, 1))
+head(scratch_tbl2)
+
+# dplyr::mutate enables the creation of new variables from existing 
+#   variables and computed variables
+scratch_tbl2 <- mutate(scratch_tbl, 
+                       new_numeric = round(numeric1, 1), 
+                       new_numeric2 = new_numeric * 10)
+head(scratch_tbl2)
+
+# dplyr::transmute enables the creation of new variables from existing 
+#   variables and computed variables, but keeps only newly created variables
+scratch_tbl2 <- transmute(scratch_tbl, 
+                          new_numeric = round(numeric1, 1), 
+                          new_numeric2 = new_numeric * 10)
+head(scratch_tbl2)
 
 ### sorting the table #########################################################
 # sort tables using dplyr::arrange
@@ -151,7 +185,10 @@ AAAAAAAA_rows <- filter(scratch_tbl, char1 == 'AAAAAAAA')
 # sort by two variables
 
 sorted <- arrange(char_vars, char1)
+head(sorted)
+
 sorted2 <- arrange(char_vars, char1, char2)
+head(sorted2)
 
 ### adding data to the table ##################################################
 # add data to a table using dplyr:: bind and dplyr::join
@@ -159,11 +196,21 @@ sorted2 <- arrange(char_vars, char1, char2)
 # join combines tables based on matching values of a shared variable
 
 bindr <- bind_rows(sorted, sorted2)
-bindc <- bind_cols(sorted, sorted2)
+nrow(bindr)
 
+bindc <- bind_cols(sorted, sorted2)
+ncol(bindc)
+
+# create two tables to join on a key variable 
 sorted_left <- arrange(select(scratch_tbl, one_of('INDEX', 'char1')), char1)
 right <- select(scratch_tbl, one_of('INDEX', 'numeric1'))
+
+# Perform join 
+# joined table contains `char1` from the left table 
+#   and `numeric1` from the right table 
+#  matched by the value of `INDEX`
 joined <- left_join(sorted_left, right, by = 'INDEX')
+head(joined)
 
 ### comparing tables ##########################################################
 # comparing tables using dplyr::all.equal
@@ -171,7 +218,10 @@ joined <- left_join(sorted_left, right, by = 'INDEX')
 #   and/or columns
 # very useful for keeping track of changes to important tables
 
+# Create a table for comparision 
 test <- select(scratch_tbl, one_of('INDEX', 'numeric1', 'char1'))
+
+# Compare
 print(all.equal(joined, test, ignore_row_order = FALSE))
 print(all.equal(joined, test, ignore_col_order = FALSE))
 print(all.equal(joined, test))
@@ -180,23 +230,32 @@ print(all.equal(joined, test))
 # combine rows of tables into summary values with dplyr::summarise and
 #   dplyr::summarise_each
 # summarize one variable using summarise, avg is the name of the created var
-# summarize many variables using summarise_each, fun() defines the summary
+# summarize many variables using summarise_each, funs() defines the summary
 #   function
 
 ave <- summarise(num_vars, avg = mean(numeric1))
-all_aves <-summarise_each(num_vars, funs(mean))
+ave
 
-### by-group processing #######################################################
+all_aves <-summarise_each(num_vars, funs(mean))
+all_aves
+
+### by group processing #######################################################
+# By groups allow you to divide and process a data set based on the values of 
+#   one or more variables
 # dplyr::group_by groups a data set together based on the values of a certain
 #   variable
 # operations can then be applied to groups
 grouped <- group_by(joined, char1)
 grouped <- summarise(grouped, avg = mean(numeric1))
+grouped
 
 ### exporting and importing the table #########################################
-# the R core function write.table enables reading and writing of text files.
+# the R core function write.table enables writing text files
+# the similar R core function read.table enables reading text files
 
 # export
+# use the sep option to specifiy the columns delimiter character
+# row.names = FALSE indicates not to save the row number to the text file
 filename <- paste(git_dir, 'scratch.csv', sep = '/')
 write.table(scratch_tbl, file = filename, quote = FALSE, sep = ',',
             row.names = FALSE)
