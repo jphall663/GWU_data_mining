@@ -27,6 +27,10 @@ Weeks | Date | Topics
 14  | | Project presentations
 15  | | Final Exam 
 
+#### Additional reference material:
+* [Data visualization](data_viz/data_viz.md)
+
+
 ## Course Syllabus
 
 #### Pre-requisite Courses
