@@ -12,7 +12,7 @@ Part 1 - data.table [notebook](src/notebooks/r/R_Part_1_data.table.ipynb) [raw c
 
 ##### SAS
 Part 0 - Base SAS and PROC SGPLOT [notebook](src/notebooks/sas/SAS_Part_0_Base_SAS_PROC_SGPLOT.ipynb)	[code](src/raw/sas/SAS_Part_0_Base_SAS_PROC_SGPLOT.sas)
-Part 1 - PROC SQL [notebook](src/notebooks/sas/SAS_Part_1_PROC_SQL.ipynb) [code](src/raw/sas/.sas)
+Part 1 - PROC SQL [notebook](src/notebooks/sas/SAS_Part_1_PROC_SQL.ipynb) [code](src/raw/sas/SAS_Part_1_PROC_SQL.sas)
 
 ## [Sample Quiz](sample_quiz/quiz_1.pdf)
 

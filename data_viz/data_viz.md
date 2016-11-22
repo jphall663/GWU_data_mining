@@ -1,15 +1,13 @@
-# Visualization Resources
-
-## Some visualization guidelines 
+## Some visualization resources
 
 #### Preface
 
 A fundamental consideration for any visualization is the target audience, specifically what they already know about the topic to be visualized, and what they want to know. Having a clear understanding of these two notions will assist in creating a visual analysis that is interesting, comprehensible and free of bias. To ensure the visualization is understandable for the audience, consider whether the data and message of the visualization are better suited for a more immediately recognizable form of static chart or graph, or a more complex, interactive or animated visualization. For many types of quantitative visual communications, a line graph, bar chart, scatter plot or pie chart is preferable. When choosing to forgo the familiarity of these standards, there must be a significant reward for the audience. Knowing the purpose of the visualization can be immensely helpful in resolving the accessibility versus complexity tradeoff. Generally, visualizations meant for presentation should be more directly recognizable, with only a small number of highlighted visual narratives. Conversely, visualizations and visual apps meant for exploration and discovery may be highly complex, interactive, animated or any combination thereof. When choosing to construct an interactive visual app, the interactive functionality should support the audience’s analytic goals. Common interactive capabilities the audience may expect include: selecting data, reorganizing data, zooming and data filtering. Animation in visualization is typically used for multi-dimensional analyses involving time, to increase audience engagement, or to emphasize trends, patterns or outliers. Two dimensional problem domains with time as the independent variable can typically be expressed clearly using a static line chart. The method of Small Multiples, or a series of small charts having similar axes within the same larger graphic, is often employed for multi-dimensional analysis where animation may be inappropriate.
 
 Accuracy and engagement are also important aspects of purpose. If the infographic is meant to display the analyzed data as accurately as possible, care should be taken to ensure all graphic attributes are to scale, that aesthetic
-complexity is uniform throughout the image(s), and that all information contained in the data, or an explicitly defined subset, is displayed. If the purpose of the visualization is to increase or motivate the audience’s engagement with the portrayed data or topic, then a less rigorous and more aesthetically focused approach may be warranted, provided any artistic distortions to the character of the data are noted. While many enhancement techniques and effects can be applied to digital images at an analyst’s discretion, simply dropping less critical information from a visualization and increasing the aesthetic detail of more critical information can suffice to increase audience ngagement.
+complexity is uniform throughout the image(s), and that all information contained in the data, or an explicitly defined subset, is displayed. If the purpose of the visualization is to increase or motivate the audience’s engagement with the portrayed data or topic, then a less rigorous and more aesthetically focused approach may be warranted, provided any artistic distortions to the character of the data are noted. While many enhancement techniques and effects can be applied to digital images at an analyst’s discretion, simply dropping less critical information from a visualization and increasing the aesthetic detail of more critical information can suffice to increase audience engagement.
 
-Below are a few good rules for not confusing your audience. 
+Below are a few good rules for increasing audience engagement (and decreasing audience confusion), a few web sites with free software, and a few others you may find instructive or inspirational. 
 
 #### Keep dimensionality as low as possible
 
@@ -47,8 +45,7 @@ Below are a few good rules for not confusing your audience.
 * [ggplot2 (R)](https://cran.r-project.org/web/packages/ggplot2/)
 * [shiny (R)](https://cran.r-project.org/web/packages/shiny/)
 
-#### List of libraries and other resources
-[awesome-dataviz](https://github.com/fasouto/awesome-dataviz)
+#### List of libraries and other resources: [awesome-dataviz](https://github.com/fasouto/awesome-dataviz)
 
 ## Data visualization galleries
 
@@ -64,8 +61,8 @@ Below are a few good rules for not confusing your audience.
 
 * [Google Trends - Search terms over time](http://www.google.com/trends/)
 * [Statsilk - Maps and other data visualization](http://www.statsilk.com/)
-* [Raw - Web visualizations from CSV or Excel files](http://raw.densitydesign.org/)
 * [Color Brewer - Color advice for maps](http://colorbrewer2.org/)
+* [Raw - Web visualizations from CSV or Excel files](http://raw.densitydesign.org/)
 * [Wordle - Word clouds](http://www.wordle.net/)
 * [Gephi - Visualizing complex networks](http://gephi.github.io/)
 * [Circos - Circular format plots](http://circos.ca/software/)
