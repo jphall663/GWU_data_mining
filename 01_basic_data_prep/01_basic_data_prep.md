@@ -30,6 +30,13 @@ A great deal of work in data mining projects is spent on data munging. Below som
 * SAS
   * [Base SAS and PROC SGPLOT](#sas-base)
   * [PROC SQL](#sas-sql)
+
+#### Reading: [Tidy Data](https://www.jstatsoft.org/article/view/v059i10)
+
+#### [Sample Quiz](sample_quiz/quiz_1.pdf)
+
+#### Additional References
+* Simple [benchmark](https://github.com/szilard/benchm-databases) of data processing tools by [@szilard](https://github.com/szilard)
   
 <a name='python-pandas' />
 #### Python Pandas
@@ -1029,7 +1036,7 @@ proc sql noprint;
 
 quit;
 
-proc sql print;
+proc sql noprint;
 
 	* a subquery is a query embedded in another query;
 	select *
