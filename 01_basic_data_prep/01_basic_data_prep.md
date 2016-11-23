@@ -25,8 +25,8 @@ A great deal of work in data mining projects is spent on data munging. Below som
 #### Code examples
 * [Python Pandas](#python-pandas)
 * R
-  * [Basics, dplyr, and ggplot](#r-basics)
-  * [data.table](#r-data.table)
+  * [Basics, dplyr, and ggplot](#r-basics) - [view notebook](src/notebooks/r/R_Part_0_Basics_dplyr_and_ggplot2.ipynb)
+  * [data.table](#r-data.table) - [view notebook](src/notebooks/r/R_Part_1_data.table.ipynb)
 * SAS
   * [Base SAS and PROC SGPLOT](#sas-base)
   * [PROC SQL](#sas-sql)
