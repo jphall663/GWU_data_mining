@@ -2,5 +2,5 @@
 
 #### Basic data operations
 
-![alt text](operations_cheat_sheet.png)
+![alt text](operations_cheat_sheet2.png)
 
