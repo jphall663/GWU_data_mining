@@ -894,7 +894,7 @@ run;
 
 <a name='sas-sql' />
 #### SAS PROC SQL
-
+```sas
 ******************************************************************************;
 * simple SQL operations demonstrated using SAS PROC SQL                      *;
 * a *VERY BASIC* introduction to SQL                                         *;
