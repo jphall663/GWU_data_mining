@@ -28,8 +28,8 @@ A great deal of work in data mining projects is spent on data munging. Below som
   * [Basics, dplyr, and ggplot](#r-basics) - [view notebook](src/notebooks/r/R_Part_0_Basics_dplyr_and_ggplot2.ipynb)
   * [data.table](#r-data.table) - [view notebook](src/notebooks/r/R_Part_1_data.table.ipynb)
 * SAS
-  * [Base SAS and PROC SGPLOT](#sas-base) - [view notebook (as html)](src/notebooks/sas/SAS_Part_0_Base_SAS_PROC_SGPLOT.html)
-  * [PROC SQL](#sas-sql) - [view notebook (as html)](src/notebooks/sas/SAS_Part_1_PROC_SQL.html)
+  * [Base SAS and PROC SGPLOT](#sas-base)
+  * [PROC SQL](#sas-sql)
   
 <a name='python-pandas' />
 #### Python Pandas
@@ -499,7 +499,7 @@ head(scratch_dt)
 ```
 
 <a name='sas-base' />
-#### Base SAS and PROC SGPLOT - [view notebook (as html)](src/notebooks/sas/SAS_Part_0_Base_SAS_PROC_SGPLOT.html)
+#### Base SAS and PROC SGPLOT
 ```sas
 ******************************************************************************;
 * Copyright (c) 2015 by SAS Institute Inc., Cary, NC 27513 USA               *;
@@ -893,8 +893,8 @@ run;
 ```
 
 <a name='sas-sql' />
-#### SAS PROC SQL - [view notebook (as html)](src/notebooks/sas/SAS_Part_1_PROC_SQL.html)
-```sas
+#### SAS PROC SQL
+
 ******************************************************************************;
 * simple SQL operations demonstrated using SAS PROC SQL                      *;
 * a *VERY BASIC* introduction to SQL                                         *;
