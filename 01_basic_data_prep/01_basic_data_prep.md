@@ -20,7 +20,7 @@ A great deal of work in data mining projects is spent on data munging. Below som
 
 **Join/Bind** - Combining data sets side-by-side based on matching values of variables in both data sets.
 
-** Append/Bind** - Stacking data sets bottom-to-top regardless of the values of any variable(s).
+**Append/Bind** - Stacking data sets bottom-to-top regardless of the values of any variable(s).
 
 #### Code examples
 * [Python Pandas](#python-pandas)
@@ -38,7 +38,7 @@ A great deal of work in data mining projects is spent on data munging. Below som
 ```
 
 <a name='r-basics' />
-#### R Basics, dplyr, and ggplot
+#### R Basics, dplyr, and ggplot - [view notebook](src/notebooks/r/R_Part_0_Basics_dplyr_and_ggplot2.ipynb)
 ```r
 ### standard output ###########################################################
 # two primary R core functions are used to print information to the console
@@ -307,7 +307,7 @@ import <- read.table(filename, header = TRUE, sep = ',')
 ```
 
 <a name='r-data.table' />
-#### R data.table
+#### R data.table - [view notebook](src/notebooks/r/R_Part_1_data.table.ipynb)
 ```r
 ### data.table is an efficient package for manipulating data sets #############
 # data.table is implemented in optimized C and often attempts to update
