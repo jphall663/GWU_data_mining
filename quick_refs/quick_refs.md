@@ -23,7 +23,7 @@ Term | Definition|
 **Confusion matrix** | Table that depicts the performance of the algorithm (using the false positive rate, false negative, true positive, and true negative rates). 
 <a name="Continuous"></a>**Continuous** | A variable that can take on all or nearly all values along an interval on the real number line (for example, height or weight). The opposite of a [**discrete**](#Discrete) value, which can only take on certain numerical values (for example, the number of patients treated).
 **CSV file** | CSV is an acronym for comma-separated value. A CSV file stores data in a plain text format. 
-<a name="DL"></a>**Deep Learning** | Uses a composition of multiple non-linear transformations to model high-level abstractions in data. See also [LeCun, Bengio and Hinton 2015](http://www.nature.com/nature/journal/v521/n7553/full/nature14539.html)
+<a name="DL"></a>**Deep Learning** | Uses a composition of multiple non-linear transformations to model high-level abstractions in data. See also [LeCun, Bengio and Hinton 2015](http://www.nature.com/nature/journal/v521/n7553/full/nature14539.html).
 <a name="Dependent"></a>**Dependent variable** | The [**response**](#Response) column in a data set; what you are trying to measure, observe, or predict. The opposite of an [**independent variable**](#Independent).
 **Deviance** | Deviance is the difference between an expected value and an observed value. It plays a critical role in defining GLM models. For a more detailed discussion of deviance.
 <a name="DistKV"></a>**Distributed key/value (DKV)**| Distributed key/value store. Refer also to [**key/value store**](#KVstore). 
