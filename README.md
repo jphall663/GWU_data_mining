@@ -29,6 +29,7 @@ Weeks | Date | Topics
 
 #### Additional reference material
 * [Data visualization](data_viz/data_viz.md)
+* [Quick references](quick_refs/quick_refs.md)
 
 ## Course Syllabus
 
