@@ -1,5 +1,3 @@
-# GWU_data_mining
-
 ## Materials for GWU DNSC 6279 
 
 This course provides exposure to various data preprocessing, statistics, and machine learning techniques that can be used both to discover relationships in large data sets and to build predictive models.
