@@ -42,6 +42,8 @@ Mr. Patrick Hall
 
 E-mail: jphall@gwu.edu
 
+Twitter: [@jpatrickhall](https://twitter.com/jpatrickhall)
+
 Office Hours: 
 
 #### Recommended Textbooks
