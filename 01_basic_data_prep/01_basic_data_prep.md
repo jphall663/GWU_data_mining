@@ -6,13 +6,13 @@ A great deal of work in data mining projects is spent on data munging. Below som
 
 ![alt text](basic_data_operations.png)
 
-**Subset/Select/Filter/Slice Rows** - Reducing the number of rows in a data set by some criterion.
+**Subset/Select/Filter/Slice Rows** - Selecting rows or reducing the number of rows in a data set by some criterion.
 
-**Subset/Select/Slice Columns** - Reducing the number of columns(/variables) in a data set by some criterion.
+**Subset/Select/Slice Columns** - Selecting(/variables) or reducing the number of columns(/variables) in a data set by some criterion.
 
 **Sort/Arrange/Order By** - Arranging the rows of a data set in sequential order based on the values of one or more variables.
 
-**Group By** - Grouping the rows of a data set together based on the values of of one or more variables.
+**Group By** - Grouping the rows of a data set together based on the values of one or more variables.
 
 **Transpose** - Rearranging a data set such that the row and column(/variable) values are switched.
 
@@ -31,12 +31,19 @@ A great deal of work in data mining projects is spent on data munging. Below som
   * [Base SAS and PROC SGPLOT](#sas-base)
   * [PROC SQL](#sas-sql)
 
-#### Reading: [Tidy Data](https://www.jstatsoft.org/article/view/v059i10)
+#### Class Notes: *Introduction to Data Mining* - [chapter 2 notes](notes/Tan_notes.pdf)
+
+#### Required Reading
+
+* [Tidy Data](https://www.jstatsoft.org/article/view/v059i10)
+* *Introduction to Data Mining* - chapter 2, sections 2.1-2.3
 
 #### [Sample Quiz](sample_quiz/quiz_1.pdf)
 
-#### Additional References
+#### Supplementary References
 * Simple [benchmark](https://github.com/szilard/benchm-databases) of data processing tools by [@szilard](https://github.com/szilard)
+
+***
   
 <a name='python-pandas' />
 #### Python Pandas
@@ -589,7 +596,7 @@ run;
 * the sas data set is the primary data structure in the SAS language;
 * now you will make one called scratch;
 * The size of data set is more typically defined by the size of the SAS data 
-*   set(s) from which it is created
+*   set(s) from which it is created;
 
 %let n_rows = 1000; /* define number of rows */
 %let n_vars = 5;    /* define number of character and numeric variables */
@@ -648,6 +655,9 @@ data scratch;
 	put 'Done.';
 run;
 
+* (obs=) option enables setting the number of rows to print;
+proc print data=scratch (obs=5); run;
+
 *** basic data analysis ******************************************************;
 
 * use proc contents to understand basic information about a data set;
@@ -687,17 +697,26 @@ data scratch2;
 	set scratch(keep=numeric:);
 run;
 
+* print first five rows;
+proc print data=scratch2(obs=5); run;
+
 * overwrite scratch2 set;
 data scratch2;
     /* ranges of vars specified using var<N> - var<M> syntax */
 	set scratch(keep=char1-char&n_vars);
 run;
 
+* print first five rows;
+proc print data=scratch2(obs=5); run;
+
 * overwrite scratch2 set;
 data scratch2;
 	/* by name */
 	set scratch(keep=key numeric1 char1);
 run;
+
+* print first five rows;
+proc print data=scratch2(obs=5); run;
 
 * subsetting and modifying columns;
 * select two columns and modify them with data step functions;
@@ -714,6 +733,10 @@ data scratch2;
 	trans_char1 = tranwrd(new_char1, 'GGGGGGGG', 'foo');
 run;
 
+* print first five rows;
+* notice that '.' represents numeric missing in SAS;
+proc print data=scratch2(obs=5); run;
+
 * subsetting rows;
 * select only the first row and impute the missing value;
 * create scratch3 set;
@@ -724,6 +747,9 @@ data scratch3;
 	lag_numeric1 = 0;
 run;
 
+* print;
+proc print data=scratch3; run;
+
 * subsetting rows;
 * remove the problematic first row containing the missing value;
 * from scratch2 set;
@@ -731,6 +757,9 @@ data scratch2;
 	set scratch2;
 	if key > 1;
 run;
+
+* print first five rows;
+proc print data=scratch2(obs=5); run;
 
 * combining data sets top-to-bottom;
 * add scratch3 to the bottom of scratch2;
@@ -746,6 +775,9 @@ proc sort
 	by key; /* you must specificy a variables to sort by */
 run;
 
+* print first five rows;
+proc print data=scratch2(obs=5); run;
+
 * sorting data sets;
 * create the new scratch4 set;
 proc sort
@@ -754,6 +786,9 @@ proc sort
 	by new_char1 new_numeric1; /* you can sort by many variables */
 run;
 
+* print first five rows;
+proc print data=scratch4(obs=5); run;
+
 * combining data sets side-by-side;
 * to create messy scratch5 set;
 data scratch5;
@@ -761,6 +796,9 @@ data scratch5;
 	/* it overwrites common variables - be careful */
 	merge scratch scratch4;
 run;
+
+* print first five rows;
+proc print data=scratch5(obs=5); run;
 
 * combining data sets side-by-side;
 * join columns to scratch from scratch2 when key variable matches;
@@ -774,6 +812,9 @@ data scratch6;
 	by key;
 run;
 
+* print first five rows;
+proc print data=scratch6(obs=5); run;
+
 * don't forget PROC SQL;
 * nearly all common SQL statements and functions are supported by PROC SQL;
 * join columns to scratch from scratch2 when key variable matches;
@@ -785,6 +826,9 @@ proc sql noprint; /* noprint suppresses procedure output */
 	join scratch2
 	on scratch.key = scratch2.key;
 quit;
+
+* print first five rows;
+proc print data=scratch7(obs=5); run;
 
 * comparing data sets;
 * results from data step merge with by variable and PROC SQL join;
@@ -835,6 +879,9 @@ data scratch8;
 	end;
 run;
 
+* using PROC PRINT without the data= option prints the most recent set;
+proc print; run;
+
 * by group processing;
 * by variables can be used efficiently in most procedures;
 * the data set must be sorted;
@@ -844,6 +891,58 @@ proc univariate
 	histogram lag_numeric1;
 	inset min max mean / position=ne;
 	by new_char1;
+run;
+
+******************************************************************************;
+* SECTION 3 - generating analytical graphics                                 *;
+******************************************************************************;
+
+*** histograms using PROC SGPLOT *********************************************;
+
+proc sgplot
+	/* sashelp.iris is a sample data set */
+	/* binwidth - bin width in terms of histogram variable */
+	/* datalabel - display counts or percents for each bin */
+	/* showbins - use bins to determine x-axis tickmarks */
+	data=sashelp.iris;
+	histogram petalwidth /
+		binwidth=2
+		datalabel=count
+		showbins;
+run;
+
+*** bubble plots using PROC SGPLOT *******************************************;
+
+proc sgplot
+	/* group - color by a categorical variable */
+	/* lineattrs - sets the bubble outline color and other outline attributes */
+	data=sashelp.iris;
+	bubble x=petalwidth y=petallength size=sepallength /
+		group=species
+		lineattrs=(color=grey);
+run;
+
+*** scatter plot with regression information using PROC SGPLOT ***************;
+
+proc sgplot
+	/* clm - confidence limits for mean predicted values */
+	/* cli - prediction limits for individual predicted values */
+	/* alpha - set threshold for clm and cli limits */
+	data=sashelp.iris;
+	reg x=petalwidth y=petallength /
+	clm cli alpha=0.1;
+run;
+
+*** stacked bar chart using PROC SGPLOT **************************************;
+
+proc sgplot
+	/* sashelp.cars is a sample data set */
+	/* vbar variable on x-axis */
+	/* group - splits vertical bars */
+	/* add title */
+	data=sashelp.cars;
+	vbar type / group=origin;
+	title 'Car Types by Country of Origin';
 run;
 
 ******************************************************************************;
@@ -923,6 +1022,7 @@ data table1;
 		output;
 	end; 
 run; 
+proc print; run;
 
 * table2 has a primary key called key and two character variables: x3 and x4;
 * table2 is located in the SAS work library, it could be called work.table2;
@@ -933,6 +1033,7 @@ data table2;
 		output;
 	end; 
 run;
+proc print; run;
 
 ******************************************************************************;
 * SAS PROC SQL allows users to execute valid SQL statements;
@@ -955,9 +1056,9 @@ proc sql;
 		
 quit; 	
 
-* the SAS noprint statement suppresses the display of selected results;
+* the NOPRINT option can be used to supress output;
 * very important for large tables;
-proc sql noprint; 
+proc sql /* noprint */; 
 
 	* create table3 in the work library/database;
 	* x1 from table1 will be named x5 in the new table;
@@ -968,7 +1069,7 @@ proc sql noprint;
 	
 quit;
 
-proc sql noprint;
+proc sql;
 	
 	* a where clause is used to subset rows of a table;
 	* the order by statement sorts displayed results or created tables;
@@ -981,7 +1082,7 @@ proc sql noprint;
 	
 quit;	
 	
-proc sql noprint;
+proc sql;
 	
 	* insert can be used to add data to a table;
 	insert into table1
@@ -989,7 +1090,7 @@ proc sql noprint;
 
 quit;
 	
-proc sql noprint;
+proc sql;
 
 	* update can be used to change the value of previously existing data;
 	update table1
@@ -998,7 +1099,7 @@ proc sql noprint;
 
 quit;
 	
-proc sql noprint; 	
+proc sql; 	
 	
 	* an inner join only retains rows from both tables;
 	* where key values match;
@@ -1010,7 +1111,7 @@ proc sql noprint;
 	
 quit;
 	
-proc sql noprint;
+proc sql;
 
 	* left joins retain all the rows from one table;
 	* and only retain rows where key values match from the other table;
@@ -1023,7 +1124,7 @@ proc sql noprint;
 
 quit;
 
-proc sql noprint;
+proc sql;
 
 	* the where statement cannot be used with aggregate functions;
 	* instead use the having statement;
@@ -1036,7 +1137,7 @@ proc sql noprint;
 
 quit;
 
-proc sql noprint;
+proc sql;
 
 	* a subquery is a query embedded in another query;
 	select *

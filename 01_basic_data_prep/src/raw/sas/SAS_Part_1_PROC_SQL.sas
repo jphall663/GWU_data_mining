@@ -19,6 +19,7 @@ data table1;
 		output;
 	end; 
 run; 
+proc print; run;
 
 * table2 has a primary key called key and two character variables: x3 and x4;
 * table2 is located in the SAS work library, it could be called work.table2;
@@ -29,6 +30,7 @@ data table2;
 		output;
 	end; 
 run;
+proc print; run;
 
 ******************************************************************************;
 * SAS PROC SQL allows users to execute valid SQL statements;
@@ -51,9 +53,9 @@ proc sql;
 		
 quit; 	
 
-* the SAS noprint statement suppresses the display of selected results;
+* the NOPRINT option can be used to supress output;
 * very important for large tables;
-proc sql noprint; 
+proc sql /* noprint */; 
 
 	* create table3 in the work library/database;
 	* x1 from table1 will be named x5 in the new table;
@@ -64,7 +66,7 @@ proc sql noprint;
 	
 quit;
 
-proc sql noprint;
+proc sql;
 	
 	* a where clause is used to subset rows of a table;
 	* the order by statement sorts displayed results or created tables;
@@ -77,7 +79,7 @@ proc sql noprint;
 	
 quit;	
 	
-proc sql noprint;
+proc sql;
 	
 	* insert can be used to add data to a table;
 	insert into table1
@@ -85,7 +87,7 @@ proc sql noprint;
 
 quit;
 	
-proc sql noprint;
+proc sql;
 
 	* update can be used to change the value of previously existing data;
 	update table1
@@ -94,7 +96,7 @@ proc sql noprint;
 
 quit;
 	
-proc sql noprint; 	
+proc sql; 	
 	
 	* an inner join only retains rows from both tables;
 	* where key values match;
@@ -106,7 +108,7 @@ proc sql noprint;
 	
 quit;
 	
-proc sql noprint;
+proc sql;
 
 	* left joins retain all the rows from one table;
 	* and only retain rows where key values match from the other table;
@@ -119,7 +121,7 @@ proc sql noprint;
 
 quit;
 
-proc sql noprint;
+proc sql;
 
 	* the where statement cannot be used with aggregate functions;
 	* instead use the having statement;
@@ -132,7 +134,7 @@ proc sql noprint;
 
 quit;
 
-proc sql print;
+proc sql;
 
 	* a subquery is a query embedded in another query;
 	select *

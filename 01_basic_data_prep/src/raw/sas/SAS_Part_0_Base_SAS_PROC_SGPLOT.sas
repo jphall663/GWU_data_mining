@@ -79,7 +79,7 @@ run;
 * the sas data set is the primary data structure in the SAS language;
 * now you will make one called scratch;
 * The size of data set is more typically defined by the size of the SAS data 
-*   set(s) from which it is created
+*   set(s) from which it is created;
 
 %let n_rows = 1000; /* define number of rows */
 %let n_vars = 5;    /* define number of character and numeric variables */
@@ -138,6 +138,9 @@ data scratch;
 	put 'Done.';
 run;
 
+* (obs=) option enables setting the number of rows to print;
+proc print data=scratch (obs=5); run;
+
 *** basic data analysis ******************************************************;
 
 * use proc contents to understand basic information about a data set;
@@ -177,17 +180,26 @@ data scratch2;
 	set scratch(keep=numeric:);
 run;
 
+* print first five rows;
+proc print data=scratch2(obs=5); run;
+
 * overwrite scratch2 set;
 data scratch2;
     /* ranges of vars specified using var<N> - var<M> syntax */
 	set scratch(keep=char1-char&n_vars);
 run;
 
+* print first five rows;
+proc print data=scratch2(obs=5); run;
+
 * overwrite scratch2 set;
 data scratch2;
 	/* by name */
 	set scratch(keep=key numeric1 char1);
 run;
+
+* print first five rows;
+proc print data=scratch2(obs=5); run;
 
 * subsetting and modifying columns;
 * select two columns and modify them with data step functions;
@@ -204,6 +216,10 @@ data scratch2;
 	trans_char1 = tranwrd(new_char1, 'GGGGGGGG', 'foo');
 run;
 
+* print first five rows;
+* notice that '.' represents numeric missing in SAS;
+proc print data=scratch2(obs=5); run;
+
 * subsetting rows;
 * select only the first row and impute the missing value;
 * create scratch3 set;
@@ -214,6 +230,9 @@ data scratch3;
 	lag_numeric1 = 0;
 run;
 
+* print;
+proc print data=scratch3; run;
+
 * subsetting rows;
 * remove the problematic first row containing the missing value;
 * from scratch2 set;
@@ -221,6 +240,9 @@ data scratch2;
 	set scratch2;
 	if key > 1;
 run;
+
+* print first five rows;
+proc print data=scratch2(obs=5); run;
 
 * combining data sets top-to-bottom;
 * add scratch3 to the bottom of scratch2;
@@ -236,6 +258,9 @@ proc sort
 	by key; /* you must specificy a variables to sort by */
 run;
 
+* print first five rows;
+proc print data=scratch2(obs=5); run;
+
 * sorting data sets;
 * create the new scratch4 set;
 proc sort
@@ -244,6 +269,9 @@ proc sort
 	by new_char1 new_numeric1; /* you can sort by many variables */
 run;
 
+* print first five rows;
+proc print data=scratch4(obs=5); run;
+
 * combining data sets side-by-side;
 * to create messy scratch5 set;
 data scratch5;
@@ -251,6 +279,9 @@ data scratch5;
 	/* it overwrites common variables - be careful */
 	merge scratch scratch4;
 run;
+
+* print first five rows;
+proc print data=scratch5(obs=5); run;
 
 * combining data sets side-by-side;
 * join columns to scratch from scratch2 when key variable matches;
@@ -264,6 +295,9 @@ data scratch6;
 	by key;
 run;
 
+* print first five rows;
+proc print data=scratch6(obs=5); run;
+
 * don't forget PROC SQL;
 * nearly all common SQL statements and functions are supported by PROC SQL;
 * join columns to scratch from scratch2 when key variable matches;
@@ -275,6 +309,9 @@ proc sql noprint; /* noprint suppresses procedure output */
 	join scratch2
 	on scratch.key = scratch2.key;
 quit;
+
+* print first five rows;
+proc print data=scratch7(obs=5); run;
 
 * comparing data sets;
 * results from data step merge with by variable and PROC SQL join;
@@ -324,6 +361,9 @@ data scratch8;
 		output; /* output the last row of a sorted by group */
 	end;
 run;
+
+* using PROC PRINT without the data= option prints the most recent set;
+proc print; run;
 
 * by group processing;
 * by variables can be used efficiently in most procedures;
