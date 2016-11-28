@@ -991,7 +991,7 @@ run;
 ```
 
 <a name='sas-sql' />
-#### SAS PROC SQL - - [clone/download notebook](src/notebooks/sas)
+#### SAS PROC SQL - [clone/download notebook](src/notebooks/sas)
 ```sas
 ******************************************************************************;
 * simple SQL operations demonstrated using SAS PROC SQL                      *;
