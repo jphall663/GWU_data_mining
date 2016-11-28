@@ -41,7 +41,7 @@ library(ggplot2)  # popular package for plotting with consistent syntax
 # '<-' is the preferred assignment operator in R
 # '/' is the safest directory separator character to use
 
-git_dir <- 'C:/workspace/GWU_data_mining/01_basic_data_prep'
+git_dir <- '/path/to/GWU_data_mining/01_basic_data_prep/src/raw/r'
 
 # set the working directory
 # the working directory is where files are written to and read from by default
@@ -248,6 +248,19 @@ all_aves
 grouped <- group_by(joined, char1)
 grouped <- summarise(grouped, avg = mean(numeric1))
 grouped
+
+### Transposing a table #######################################################
+# Transposing a matrix simply switches row and columns values
+# Transposing a data.frame or dplyr table is more complex because of metadata
+#   associated with variable names and row indices
+
+transposed = t(scratch_tbl)
+glimpse(transposed)
+
+# Often, instead of simply transposing, a data set will need to be reformatted 
+# in a melt/stack-column split-cast action described in Hadley Wickham's 
+# 'Tidy Data' https://www.jstatsoft.org/article/view/v059i10
+# see also dplyr::gather and dplyr::spread()
 
 ### exporting and importing the table #########################################
 # the R core function write.table enables writing text files

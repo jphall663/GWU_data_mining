@@ -11,7 +11,7 @@
 library(data.table)
 
 # enter the directory location of this file within single quotes
-git_dir <- 'C:/workspace/GWU_data_mining/01_basic_data_prep'
+git_dir <- '/path/to/GWU_data_mining/01_basic_data_prep/src/raw/r'
 
 # set the working directory
 setwd(git_dir)
@@ -173,6 +173,19 @@ scratch_dt2[, .(new_numeric2 = sum(new_numeric)), by = char1][new_numeric2 > 40]
 # no chaining 
 scratch_dt3 <- scratch_dt2[, .(new_numeric2 = sum(new_numeric)), by = char1]
 scratch_dt3[new_numeric2 > 40]
+
+### Transposing a table #######################################################
+# Transposing a matrix simply switches row and columns values
+# Transposing a data.frame or data.table is more complex because of metadata
+#   associated with variable names and row indices
+
+transposed = t(scratch_dt)
+str(transposed)
+
+# Often, instead of simply transposing, a data set will need to be reformatted 
+# in a melt/stack-column split-cast action described in Hadley Wickham's 
+# 'Tidy Data' https://www.jstatsoft.org/article/view/v059i10
+# see also dcast.data.table and melt.data.table
 
 ### exporting and importing the table #########################################
 # fread and fwrite allow for optimized file i/o

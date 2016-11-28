@@ -28,19 +28,19 @@ A great deal of work in data mining projects is spent on data munging. Below som
   * [Basics, dplyr, and ggplot](#r-basics) - [view notebook](src/notebooks/r/R_Part_0_Basics_dplyr_and_ggplot2.ipynb)
   * [data.table](#r-data.table) - [view notebook](src/notebooks/r/R_Part_1_data.table.ipynb)
 * SAS
-  * [Base SAS and PROC SGPLOT](#sas-base)
-  * [PROC SQL](#sas-sql)
+  * [Base SAS and PROC SGPLOT](#sas-base) - [clone/download notebook](src/notebooks/sas)
+  * [PROC SQL](#sas-sql) - [clone/download notebook](src/notebooks/sas)
 
-#### Class Notes: *Introduction to Data Mining* - [chapter 2 notes](notes/Tan_notes.pdf)
+#### Class Notes: *Introduction to Data Mining* - [chapter 2 notes](https://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap2_data.pdf)
 
 #### Required Reading
 
-* [Tidy Data](https://www.jstatsoft.org/article/view/v059i10)
 * *Introduction to Data Mining* - chapter 2, sections 2.1-2.3
 
 #### [Sample Quiz](sample_quiz/quiz_1.pdf)
 
 #### Supplementary References
+* [Tidy Data](https://www.jstatsoft.org/article/view/v059i10)
 * Simple [benchmark](https://github.com/szilard/benchm-databases) of data processing tools by [@szilard](https://github.com/szilard)
 
 ***
@@ -97,7 +97,7 @@ library(ggplot2)  # popular package for plotting with consistent syntax
 # '<-' is the preferred assignment operator in R
 # '/' is the safest directory separator character to use
 
-git_dir <- 'C:/workspace/GWU_data_mining/01_basic_data_prep'
+git_dir <- '/path/to/GWU_data_mining/01_basic_data_prep/src/raw/r'
 
 # set the working directory
 # the working directory is where files are written to and read from by default
@@ -305,6 +305,19 @@ grouped <- group_by(joined, char1)
 grouped <- summarise(grouped, avg = mean(numeric1))
 grouped
 
+### Transposing a table #######################################################
+# Transposing a matrix simply switches row and columns values
+# Transposing a data.frame or dplyr table is more complex because of metadata
+#   associated with variable names and row indices
+
+transposed = t(scratch_tbl)
+glimpse(transposed)
+
+# Often, instead of simply transposing, a data set will need to be reformatted 
+# in a melt/stack-column split-cast action described in Hadley Wickham's 
+# 'Tidy Data' https://www.jstatsoft.org/article/view/v059i10
+# see also dplyr::gather and dplyr::spread()
+
 ### exporting and importing the table #########################################
 # the R core function write.table enables writing text files
 # the similar R core function read.table enables reading text files
@@ -336,7 +349,7 @@ import <- read.table(filename, header = TRUE, sep = ',')
 library(data.table)
 
 # enter the directory location of this file within single quotes
-git_dir <- 'C:/workspace/GWU_data_mining/01_basic_data_prep'
+git_dir <- '/path/to/GWU_data_mining/01_basic_data_prep/src/raw/r'
 
 # set the working directory
 setwd(git_dir)
@@ -499,6 +512,19 @@ scratch_dt2[, .(new_numeric2 = sum(new_numeric)), by = char1][new_numeric2 > 40]
 scratch_dt3 <- scratch_dt2[, .(new_numeric2 = sum(new_numeric)), by = char1]
 scratch_dt3[new_numeric2 > 40]
 
+### Transposing a table #######################################################
+# Transposing a matrix simply switches row and columns values
+# Transposing a data.frame or data.table is more complex because of metadata
+#   associated with variable names and row indices
+
+transposed = t(scratch_dt)
+str(transposed)
+
+# Often, instead of simply transposing, a data set will need to be reformatted 
+# in a melt/stack-column split-cast action described in Hadley Wickham's 
+# 'Tidy Data' https://www.jstatsoft.org/article/view/v059i10
+# see also dcast.data.table and melt.data.table
+
 ### exporting and importing the table #########################################
 # fread and fwrite allow for optimized file i/o
 # fwrite only availabe in data.table version > 1.9.7
@@ -513,7 +539,7 @@ head(scratch_dt)
 ```
 
 <a name='sas-base' />
-#### Base SAS and PROC SGPLOT
+#### Base SAS and PROC SGPLOT - [clone/download notebook](src/notebooks/sas)
 ```sas
 ******************************************************************************;
 * Copyright (c) 2015 by SAS Institute Inc., Cary, NC 27513 USA               *;
@@ -893,57 +919,23 @@ proc univariate
 	by new_char1;
 run;
 
-******************************************************************************;
-* SECTION 3 - generating analytical graphics                                 *;
-******************************************************************************;
-
-*** histograms using PROC SGPLOT *********************************************;
-
-proc sgplot
-	/* sashelp.iris is a sample data set */
-	/* binwidth - bin width in terms of histogram variable */
-	/* datalabel - display counts or percents for each bin */
-	/* showbins - use bins to determine x-axis tickmarks */
-	data=sashelp.iris;
-	histogram petalwidth /
-		binwidth=2
-		datalabel=count
-		showbins;
+* transpose;
+proc transpose 
+	data=scratch
+	out=scratch8;
 run;
 
-*** bubble plots using PROC SGPLOT *******************************************;
+* print;
+proc print; var _NAME_ col1-col5; run; 
 
-proc sgplot
-	/* group - color by a categorical variable */
-	/* lineattrs - sets the bubble outline color and other outline attributes */
-	data=sashelp.iris;
-	bubble x=petalwidth y=petallength size=sepallength /
-		group=species
-		lineattrs=(color=grey);
-run;
+* transposing a sas data set can be a complex process;
+* because of metadata associated with variable names;
 
-*** scatter plot with regression information using PROC SGPLOT ***************;
-
-proc sgplot
-	/* clm - confidence limits for mean predicted values */
-	/* cli - prediction limits for individual predicted values */
-	/* alpha - set threshold for clm and cli limits */
-	data=sashelp.iris;
-	reg x=petalwidth y=petallength /
-	clm cli alpha=0.1;
-run;
-
-*** stacked bar chart using PROC SGPLOT **************************************;
-
-proc sgplot
-	/* sashelp.cars is a sample data set */
-	/* vbar variable on x-axis */
-	/* group - splits vertical bars */
-	/* add title */
-	data=sashelp.cars;
-	vbar type / group=origin;
-	title 'Car Types by Country of Origin';
-run;
+* often, instead of simply transposing, a data set will need to be reformatted;
+* in a melt/stack - column split - cast action described in Tidy Data by
+* Hadley Wickham: https://www.jstatsoft.org/article/view/v059i10
+* see also: 
+*  https://github.com/sassoftware/enlighten-apply/tree/master/SAS_UE_TidyData
 
 ******************************************************************************;
 * SECTION 3 - generating analytical graphics                                 *;
@@ -999,7 +991,7 @@ run;
 ```
 
 <a name='sas-sql' />
-#### SAS PROC SQL
+#### SAS PROC SQL - - [clone/download notebook](src/notebooks/sas)
 ```sas
 ******************************************************************************;
 * simple SQL operations demonstrated using SAS PROC SQL                      *;

@@ -376,6 +376,24 @@ proc univariate
 	by new_char1;
 run;
 
+* transpose;
+proc transpose 
+	data=scratch
+	out=scratch8;
+run;
+
+* print;
+proc print; var _NAME_ col1-col5; run; 
+
+* transposing a sas data set can be a complex process;
+* because of metadata associated with variable names;
+
+* often, instead of simply transposing, a data set will need to be reformatted;
+* in a melt/stack - column split - cast action described in Tidy Data by
+* Hadley Wickham: https://www.jstatsoft.org/article/view/v059i10
+* see also: 
+*  https://github.com/sassoftware/enlighten-apply/tree/master/SAS_UE_TidyData
+
 ******************************************************************************;
 * SECTION 3 - generating analytical graphics                                 *;
 ******************************************************************************;
