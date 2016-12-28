@@ -1,19 +1,17 @@
 ## Interpreting Machine Learning
 
-## Contents
-
-### Part 1: Seeing all your data
+#### Part 1: Seeing all your data
 [Correlation graphs](#corr-graph)</br>
 [2-D projections](#2d-proj)</br>
 [Glyphs](#glyph)
 
-### Part 2: Using machine learning in regulated industry
+#### Part 2: Using machine learning in regulated industry
 [OLS regression alternatives](#ols-alt)</br>
 [Build toward machine learning model benchmarks](#ml-benchmark)</br>
 [Machine learning in traditional analytics processes](#ml-process)</br>
 [Small, interpretable ensembles](#small-ensembles)
 
-### Part 3: Understanding complex machine learning models
+#### Part 3: Understanding complex machine learning models
 [Surrogate models](#surr-mod)</br>
 [Local Interpretable Model-agnostic Explanations](#lime)</br>
 [Maximum activation analysis](#max-act)</br>
@@ -23,9 +21,20 @@
 [TreeInterpreter](#treeint)</br>
 [Residual analysis](#res-analysis)
 
-<a name='corr-graph'/>
-## Correlation Graphs
+You’ve probably heard by now that machine learning algorithms can use big data to predict whether a donor will give to a charity, whether an infant in a NICU will develop sepsis, whether a customer will respond to an ad, and on and on. They can even drive cars and predict elections! ... Err, wait. Can they? Personally, I actually think they can. (And as a 538 Politics podcast devotee, I congratulate that team on being righter than most about the 2016 U.S. presidential election and for making their models and results understandable, if not trustworthy.) However, these recent high profile hiccups[<sup>1</sup>](www.nytimes.com/2016/12/21/technology/san-francisco-california-uber-driverless-car-.html)<sup>,</sup>[<sup>2</sup>](http://www.nytimes.com/2016/11/10/technology/the-data-said-clinton-would-win-why-you-shouldnt-have-believed-it.html), should leave everyone that works with data (big or not) and machine learning algorithms asking ourselves some very hard questions, like: Do I really understand my data? Do I really understand the answers my machine learning algorithm is giving me? And do I actually trust these answers?
 
+Unfortunately, the complexity that makes machine learning algorithms great predictors also makes the answers the algorithms produce hard to understand, and maybe even hard to trust. Machine learning algorithms create complex nonlinear, non-polynomial, and quite often, non-continuous functions that approximate the relationship between independent and dependent variables in a data set. These functions can then be used to predict the values of dependent variables for new data (like whether a donor will give to a charity, an infant in a NICU will develop sepsis, whether a customer will to respond to an ad, and on and on). Conversely, linear models create linear, polynomial, and continuous functions to approximate the very same relationships. Even though they’re not always the most accurate predictors, the elegant simplicity of linear models makes the results they generate easy to interpret. 
+
+Business analysts, doctors, and industry researchers really need to understand and trust their results, and linear models were the goto applied predictive modeling tool for decades even though it usually meant giving up a couple points on the accuracy scale. Today many organizations and individuals are embracing machine learning algorithms for predictive modeling tasks, but difficulties in interpretation still present a serious barrier for the practical use of machine learning algorithms. While understanding and trusting results is a general requirement for good (data) science, model interpretability is a serious legal mandate in the regulated verticals of banking, insurance, and other industries.
+
+With all these concerns in mind, this post presents several approaches for interpreting machine learning results, and wherever possible attempts to deconstruct interpretability into two basic and emotional elements, understanding and trust. None of these approaches are as straightforward as inferring conclusions about a data set from the confidence intervals, parameter estimates, and p-values provided by a traditional linear model, but by combining several of the outlined techniques, you should be able to develop an understanding and trust for your own machine-learned answers.
+
+## Part 1: Seeing all your data
+
+
+
+<a name='corr-graph'/>
+#### Correlation Graphs
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.001.png)
 
 The nodes of this graph are the variables in a data set. The weights between the nodes are defined by the absolute value of their pairwise 
@@ -54,8 +63,7 @@ Trust is increased if known relationships are displayed and/or correct modeling 
 Stability to perturbation of the data, stability over time
 
 <a name='2d-proj'/>
-## 2-D projections
-
+#### 2-D projections
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.002.png)
 
 There are numerous types of useful projections (or “embeddings”):
@@ -79,8 +87,7 @@ Trust is increased if known or expected structures (i.e. clusters, outliers, hie
 Stability to perturbation of the data, stability over time
 
 <a name='glyph'/>
-## Glyphs
-
+#### Glyphs
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.003.png)
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.004.png)
 
@@ -95,8 +102,7 @@ Glyphs are typically much easier to digest than just staring at plain rows of da
 **How does it enhance trust?**
 
 <a name='ols-alt'/>
-## OLS regression alternatives
-
+#### OLS regression alternatives
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.png)
 
 Penalized regression:
@@ -143,8 +149,7 @@ By being more accurate
 not just modeling the mean
 
 <a name='ml-benchmark'/>
-## Build toward machine learning model benchmarks
-
+#### Build toward machine learning model benchmarks
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.006.png)
 
 Machine learning models typically incorporate a large number of implicit variable interactions and easily fit nonlinear, non-polynomial patterns in data. If a traditional regression model is much less accurate than a machine learning model, the traditional regression model may be missing important interactions or a piecewise modeling approach maybe necessary.
@@ -165,8 +170,7 @@ nonlinear, nonpolynomial behavior across the domain of a single input variable -
 It helps us make our understandable, trust worthy models more accurate
 
 <a name='ml-process'/>
-## Machine learning in traditional analytics processes
-
+#### Machine learning in traditional analytics processes
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.007.png)
 
 How does it increase trust and understanding?
@@ -186,8 +190,7 @@ Based on past model performance data:
 It helps us make our understandable, trust worthy models more accurate and helps us use them more efficiently
 
 <a name='small-ensembles'/>
-## Small, interpretable ensembles
-
+#### Small, interpretable ensembles
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.008.png)
 
 **How does it enhance understanding?**
@@ -200,8 +203,7 @@ It increases trust if models compliment each other in expected ways, e.g.
 A logistic regression model that is good at rare events slightly increases a good decision tree model that is not good at rare events in the presence of rare events
 
 <a name='surr-mod'/>
-## Surrogate models
-
+#### Surrogate models
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.009.png)
 
 First fit a complex machine learning model to your training data. 
@@ -226,7 +228,7 @@ It increases trust if we can see the logic in the surrogate model matches our do
 It increases trust if the logic is stable under mild perturbations of the data 
 
 <a name='lime'/>
-## Local Interpretable Model-agnostic Explanations
+#### Local Interpretable Model-agnostic Explanations
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.010.png)
 
 Pick or simulate ‘marker’ records/examples 
@@ -254,8 +256,7 @@ It increases trust because we can see how the model makes decisions for key obse
 It increases trust if we see decisions being made about similar observations being made in similar ways
 
 <a name='max-act'/>
-## Maximum activation analysis
-
+#### Maximum activation analysis
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.011.png)
 
 Examples are found or simulated that maximally activate certain neurons, layers, or filters in a neural network or certain nodes or trees in decision tree models.
@@ -280,8 +281,7 @@ It increases trust if similar data points proceed through the model in the same 
 It increases trust if interactions and structure match  
 
 <a name='constr-nn'/>
-## Constrained neural networks
-
+#### Constrained neural networks
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.012.png)
 
 Scale inputs to be non-negative
@@ -308,8 +308,7 @@ It increases trust if similar data points proceed through the model in the same 
 It increases trust if interactions, important features, and direction of an input are consistent for similar data sets
 
 <a name='var-imp'/>
-## Variable importance measures
-
+#### Variable importance measures
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.013.png)
 
 In Tree:
@@ -335,8 +334,7 @@ It increases trust if these rankings match domain expertise or expectations
 It increases trust if these ranks are repeatable in similar data
 
 <a name='par-dep'/>
-## Partial dependence plots
-
+#### Partial dependence plots
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.014.png)
 
 https://web.stanford.edu/~hastie/local.ftp/Springer/OLD/ESLII_print4.pdf, pg. 374
@@ -358,19 +356,48 @@ It increases trust if the displayed behavior is consistent with domain expertise
 It increases trust if displayed behavior is repeatable
 
 <a name='treeint'/>
-## TreeInterpreter
-
+#### TreeInterpreter
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.015.png)
 
+Tree interpreter decomposes decision tree and 
+random forest predictions into bias (overall 
+average) and component terms.
+
+This slide portrays the decomposition of the 
+decision path into bias and individual 
+contributions for a simple decision tree.
+
+For a random forest model, treeinterpreter simply
+prints a ranked list of the bias and individual 
+contributions for a given prediction.
+
+https://github.com/andosa/treeinterpreter
+Source: http://blog.datadive.net/interpreting-random-forests/
+
 **How does it enhance understanding?**
 
+It allows for easy explanations of the internal mechanics of model 
+
 **How does it enhance trust?**
+
+It increases trust if …
+internal mechanics represent known or expected phenomenon in the training data
+different decision paths lead to different results 
+similar decision paths lead to similar results
+if model remains stable over time or over minor perturbations of training data
 
 <a name='res-analysis'/>
-## Residual analysis
-
+#### Residual analysis
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.016.png)
+
+Residuals can be plotted against the target, the predicted target, or against input variables
+
+http://residuals.h2o.ai:8080/
 
 **How does it enhance understanding?**
 
+Patterns in residuals can help elucidate patterns in the data that would otherwise be obscured by the curse of dimensionality, i.e. outliers, clusters, hierarchies, sparsity, etc.
+
 **How does it enhance trust?**
+
+If overall residuals are randomly distributed, this is a good indication that the ML model is fitting the data well. Obvious patterns in residuals could point to problems in model specification or data preparation that can be iteratively corrected by preprocessing data, building a model, and analyzing residuals
