@@ -28,6 +28,7 @@ Weeks | Date | Topics
 #### Additional reference material
 * [Data visualization](data_viz/data_viz.md)
 * [Quick references](quick_refs/quick_refs.md)
+* [Interpreting Machine Learning](interpreting_ml/interpreting_ml.md)
 
 ## Course Syllabus
 
