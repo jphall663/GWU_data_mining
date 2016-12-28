@@ -3,24 +3,24 @@
 ## Contents
 
 ### Part 1: Seeing all your data
-[Correlation graphs](#corr-graph)
-[2-D projections](#2d-proj)
+[Correlation graphs](#corr-graph)</br>
+[2-D projections](#2d-proj)</br>
 [Glyphs](#glyph)
 
 ### Part 2: Using machine learning in regulated industry
-[OLS regression alternatives](#ols-alt)
-[Build toward machine learning model benchmarks](#ml-benchmark)
-[Machine learning in traditional analytics processes](#ml-process)
+[OLS regression alternatives](#ols-alt)</br>
+[Build toward machine learning model benchmarks](#ml-benchmark)</br>
+[Machine learning in traditional analytics processes](#ml-process)</br>
 [Small, interpretable ensembles](#small-ensembles)
 
 ### Part 3: Understanding complex machine learning models
-[Surrogate models](#surr-mod)
-[Local Interpretable Model-agnostic Explanations](#lime)
-[Maximum activation analysis](#max-act)
-[Constrained neural networks](#constr-nn)
-[Variable importance measures](#var-imp)
-[Partial dependence plots](#par-dep)
-[TreeInterpreter](#treeint)
+[Surrogate models](#surr-mod)</br>
+[Local Interpretable Model-agnostic Explanations](#lime)</br>
+[Maximum activation analysis](#max-act)</br>
+[Constrained neural networks](#constr-nn)</br>
+[Variable importance measures](#var-imp)</br>
+[Partial dependence plots](#par-dep)</br>
+[TreeInterpreter](#treeint)</br>
 [Residual analysis](#res-analysis)
 
 <a name='corr-graph'/>
