@@ -1,9 +1,10 @@
 ## Interpreting Machine Learning
 
 #### Part 1: Seeing all your data
+[Glyphs](#glyph)
 [Correlation graphs](#corr-graph)</br>
 [2-D projections](#2d-proj)</br>
-[Glyphs](#glyph)
+
 
 #### Part 2: Using machine learning in regulated industry
 [OLS regression alternatives](#ols-alt)</br>
@@ -31,7 +32,26 @@ With all these concerns in mind, this post presents several approaches for inter
 
 ## Part 1: Seeing all your data
 
+Sadly, most real data sets are hard to see. As a sighted person, I rely on my visual sense quite heavily for understanding information. For me, seeing data is basically tantamount to understanding data. Moreover, I can really only understand two or three visual dimensions, preferably two, and something called change blindness[<sup>3</sup>](https://en.wikipedia.org/wiki/Change_blindness) frustrates human attempts to reason analytically given information split across different pages or screens. So if a data set has more than two or three variables or more rows than can fit on a single page or screen, it’s realistically going to be hard to understand what’s going on in there without resulting to more advanced techniques than scrolling through rows of data.
 
+Why is seeing a data set important for creating understanding and trust in machine learning results? In machine we are attempting to model relationships in a data set. If we can see and better understand the data set and the relationships in it and we can find those relationships represented in our machine learning results, it’s a basic sanity check that a model is working correctly. 
+
+Of course there are many, many ways to visualize data sets. I like the techniques highlighted below because they help illustrate all of a data set, not just univariate or bivariate slices of a data set (meaning one or two variables at a time). This is important in machine learning because machine learning algorithms automatically model high degree interactions between variables and then build a nonlinear response function between said high degree interaction terms and the dependent variable. Of course traditional univariate and bivariate tables and plots are still important and you should use them, I just think they are slightly less helpful in understanding nonlinear models that can pick up on arbitrarily high degree interactions between independent variables.
+
+<a name='glyph'/>
+#### Glyphs
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.003.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.004.png)
+
+Glyphs are typically much easier to digest than just staring at plain rows of data
+
+Here the four variables are represented by their position in a square and their values are represented by a color.
+
+**How does it enhance understanding?**
+
+Glyphs are typically much easier to digest than just staring at plain rows of data
+
+**How does it enhance trust?**
 
 <a name='corr-graph'/>
 #### Correlation Graphs
@@ -85,21 +105,6 @@ all records are shown in a single 2-D plot
 Trust is increased if known or expected structures (i.e. clusters, outliers, hierarchy, sparsity) are preserved and displayed in 2-D plots - also if patterns are stable or change predictably over time
 
 Stability to perturbation of the data, stability over time
-
-<a name='glyph'/>
-#### Glyphs
-![alt text](readme_pics/Interpretable_Machine_Learning_Pics.003.png)
-![alt text](readme_pics/Interpretable_Machine_Learning_Pics.004.png)
-
-Glyphs are typically much easier to digest than just staring at plain rows of data
-
-Here the four variables are represented by their position in a square and their values are represented by a color.
-
-**How does it enhance understanding?**
-
-Glyphs are typically much easier to digest than just staring at plain rows of data
-
-**How does it enhance trust?**
 
 <a name='ols-alt'/>
 #### OLS regression alternatives
