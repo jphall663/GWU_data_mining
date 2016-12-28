@@ -28,18 +28,18 @@
 
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.001.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='2d-proj'/>
 ## 2-D projections
 
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.002.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='glyph'/>
 ## Glyphs
@@ -47,113 +47,113 @@
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.003.png)
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.004.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='ols-alt'/>
 ## OLS regression alternatives
 
-![alt text](readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.005.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='ml-benchmark'/>
-## [Build toward machine learning model benchmarks]
+## Build toward machine learning model benchmarks
 
-![alt text](readme_pics/readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.006.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.006.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='ml-process'/>
-## Machine learning in traditional analytics processes]
+## Machine learning in traditional analytics processes
 
-![alt text](readme_pics/readme_pics/readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.007.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.007.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='small-ensembles'/>
-## Small, interpretable ensembles]
+## Small, interpretable ensembles
 
-![alt text](readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.008.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.008.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='surr-mod'/>
-## Surrogate models]
+## Surrogate models
 
-![alt text](readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.009.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.009.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='lime'/>
 ## Local Interpretable Model-agnostic Explanations
-![alt text](readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.010.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.010.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='max-act'/>
 ## Maximum activation analysis
 
-![alt text](readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.011.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.011.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='constr-nn'/>
-## Constrained neural networks]
+## Constrained neural networks
 
-![alt text](readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.012.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.012.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='var-imp'/>
-## Variable importance measures]
+## Variable importance measures
 
-![alt text](readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.013.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.013.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='par-dep'/>
-## Partial dependence plots]
+## Partial dependence plots
 
-![alt text](readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.014.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.014.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='treeint'/>
-## TreeInterpreter]
+## TreeInterpreter
 
-![alt text](readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.015.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.015.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
 
 <a name='res-analysis'/>
-## Residual analysis]
+## Residual analysis
 
-![alt text](readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/readme_pics/Interpretable_Machine_Learning_Pics.016.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.016.png)
 
-*How does it enhance understanding?*
+**How does it enhance understanding?**
 
-*How does it enhance trust?*
+**How does it enhance trust?**
