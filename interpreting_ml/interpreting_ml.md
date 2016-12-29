@@ -1,10 +1,9 @@
 ## Interpreting Machine Learning
 
 #### Part 1: Seeing all your data
-[Glyphs](#glyph)
+[Glyphs](#glyph)</br>
 [Correlation graphs](#corr-graph)</br>
-[2-D projections](#2d-proj)</br>
-
+[2-D projections](#2d-proj)
 
 #### Part 2: Using machine learning in regulated industry
 [OLS regression alternatives](#ols-alt)</br>
@@ -38,12 +37,12 @@ Of course there are many, many ways to visualize data sets. I like the technique
 
 <a name='glyph'/>
 #### Glyphs
-![alt text](readme_pics/Interpretable_Machine_Learning_Pics.003.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.003.png)</br>
 **Figure 1: Glyphs representing operating systems and web browser (agent) types. Image courtesy of Ivy Wang and the H2o.ai team.**
 
 Glyphs are visual symbols used to represent a data. The color, texture, or alignment of a glyph can be used to represent different values or attributes of data. In figure 1, colored circles are defined to represent different types of operating systems and web browsers. When arranged in a certain way, these glyphs can be used to represent rows of data set.
 
-![alt text](readme_pics/Interpretable_Machine_Learning_Pics.004.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.004.png)</br>
 **Figure 2: Glyphs arranged to represent many rows of a data set. Image courtesy of Ivy Wang and the H2o.ai team.**
 
 Figure two gives an example of how glyphs can be used to represent rows of a data set. Each grouping of four glyphs can be either a row of data or an aggregated group of rows in a data set.   The highlighted Windows/Internet Explorer combination is very common in the data set and so is the OS X and Safari combination. We can see that in general operating system versions tend to be older than browser versions, and that using Windows and Safari is correlated with using newer operating system and browser versions whereas Linux users and bots are correlated with older operating system and browser versions. The red dots that represent queries from bots standout visually (unless you are red-green colorblind ...). Bright colors or unique alignment of events of interest or outliers makes them readily apparent in a glyph representation.
