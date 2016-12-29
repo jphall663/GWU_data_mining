@@ -105,7 +105,7 @@ Projections can add an extra and specific degree of trust if they are used to co
 
 <a name='ols-alt'/>
 #### OLS regression alternatives
-![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.1.png)
 
 Penalized regression:
 -   Penalized regression techniques are particularly well-suited for wide data. 
@@ -121,6 +121,8 @@ Well suited for N << p
 No multiple comparison issues during variable selection
 Preserves interpretability by selecting a small number of variables (L1 penalty) 
 
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.2.png)
+
 GAMs:
 -  Generalized additive models fit linear terms to certain variables and nonlinear splines to other variables
 Allowing you to hand-tune a trade-off between interpretability and accuracy
@@ -129,6 +131,8 @@ Can be predictive based on the application
 Fit linear terms to certain variables
 Fit nonlinear splines to other variables
 Hand-tune a trade-off between interpretability and accuracy 
+
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.3.png)
 
 Quantile regression: 
 -  Fit a traditional, interpretable linear model to different percentiles of your training data 
