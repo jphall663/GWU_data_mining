@@ -111,8 +111,8 @@ The techniques presented in this section are newer types of linear models or the
 
 <a name='ols-alt'/>
 #### OLS regression alternatives
-*Penalized regression*
-![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.1.png)
+*Penalized regression*</br>
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.1.png)</br>
 Image: http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf</br>
 **Figure 5: Shrunken feasible regions for L1/LASSO penalized regression parameters (left) and L2/ridge penalized regression parameters (right).**
 
@@ -120,15 +120,15 @@ Ordinary least squares (OLS) regression is about 200 years old[</sup>4<sup>](htt
 
 Instead of solving the classic normal equation or using statistical tests for variable selection, penalized regression minimizes constrained objective functions to find the best set of regression parameters for a given data set that also satisfy a set of constraints or penalties. You can learn all about penalized regression in [*Elements of Statistical Learning*](http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf), but for our purposes here, its just important to know when you might want to try penalized regression. Penalized regression is great for wide data, even data sets with more columns than rows, and for data sets with lots of correlated variables. L1/LASSO penalties drive unnecessary regression parameters to zero, avoiding potential multiple comparison problems that arise in forward, backward, and stepwise variable selection, but still picking a good, small subset of regression parameters for a data set. L2/ridge penalties help preserve parameter estimate stability, even when many correlated variables exist in a wide data set or important predictor variables are correlated.  It’s also important to know penalized regression techniques don’t usually create confidence intervals or t-test p-values for regression parameters. These types of measures are typically only available through empirical bootstrapping experiments that require a lot of extra computing time.
 
-*Generalized Additive Models (GAMs)*
+*Generalized Additive Models (GAMs)*</br>
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.2.png)</br>
+Image: http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf</br>
 **Figure 6: Spline functions for several variables created by a generalized additive model.**
 
-Generalized Additive Models (GAMs) enable you to
-hand-tune a tradeoff between accuracy and interpretability by fitting standard regression coefficients to certain variables and nonlinear spline functions to other variables. Also most implementations generate convenient plots of the the fitted splines. In many cases you may be able to eyeball the fitted spline and switch it out for a more interpretable polynomial, log, trigonometric or other simple function of the predictor variable. You can learn more about GAMs in [*Elements of Statistical Learning*](http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf).
+Generalized Additive Models (GAMs) enable you to hand-tune a tradeoff between accuracy and interpretability by fitting standard regression coefficients to certain variables and nonlinear spline functions to other variables. Also most implementations generate convenient plots of the the fitted splines. In many cases you may be able to eyeball the fitted spline and switch it out for a more interpretable polynomial, log, trigonometric or other simple function of the predictor variable. You can learn more about GAMs in [*Elements of Statistical Learning*](http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf).
 
-*Quantile Regression*
-![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.3.png)
+*Quantile Regression* </br>
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.3.png) </br>
 **Figure 7: A diagrammatic representation of quantile regression in two dimensions.**
 
 Quantile regression allows you to fit a traditional, interpretable, linear model to different percentiles of your training data, allowing you to find different sets of variables with different parameters for modeling different behaviors across a customer market or portfolio of accounts. It probably makes sense to model low value customers with different variables and different parameter values from high value customers, and quantile regression provides a statistical framework for doing so.
