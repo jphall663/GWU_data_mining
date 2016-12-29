@@ -40,12 +40,12 @@ Of course there are many, many ways to visualize data sets. I like the technique
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.003.png)</br>
 **Figure 1: Glyphs representing operating systems and web browser (agent) types. Image courtesy of Ivy Wang and the H2o.ai team.**
 
-Glyphs are visual symbols used to represent a data. The color, texture, or alignment of a glyph can be used to represent different values or attributes of data. In figure 1, colored circles are defined to represent different types of operating systems and web browsers. When arranged in a certain way, these glyphs can be used to represent rows of data set.
+Glyphs are visual symbols used to represent a data. The color, texture, or alignment of a glyph can be used to represent different values or attributes of data. In figure 1, colored circles are defined to represent different types of operating systems and web browsers. When arranged in a certain way, these glyphs can be used to represent rows of a data set.
 
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.004.png)</br>
 **Figure 2: Glyphs arranged to represent many rows of a data set. Image courtesy of Ivy Wang and the H2o.ai team.**
 
-Figure two gives an example of how glyphs can be used to represent rows of a data set. Each grouping of four glyphs can be either a row of data or an aggregated group of rows in a data set.   The highlighted Windows/Internet Explorer combination is very common in the data set and so is the OS X and Safari combination. We can see that in general operating system versions tend to be older than browser versions, and that using Windows and Safari is correlated with using newer operating system and browser versions whereas Linux users and bots are correlated with older operating system and browser versions. The red dots that represent queries from bots standout visually (unless you are red-green colorblind ...). Bright colors or unique alignment of events of interest or outliers makes them readily apparent in a glyph representation.
+Figure two gives an example of how glyphs can be used to represent rows of a data set. Each grouping of four glyphs can be either a row of data or an aggregated group of rows in a data set. The highlighted Windows/Internet Explorer combination is very common in the data set and so is the OS X and Safari combination. It’s quite likely these two combinations are two compact and disjoint clusters of data. We can also see that in general operating system versions tend to be older than browser versions, and that using Windows and Safari is correlated with using newer operating system and browser versions whereas Linux users and bots are correlated with older operating system and browser versions. The red dots that represent queries from bots standout visually (unless you are red-green colorblind ...). Using bright colors or unique alignments for events of interest or outliers is a good method for making important or unusual data attributes readily apparent in a glyph representation.
 
 *How do glyphs enhance understanding?* 
 
@@ -57,32 +57,24 @@ Seeing structures and relationships in a data set usually makes those structures
 
 <a name='corr-graph'/>
 #### Correlation Graphs
-![alt text](readme_pics/Interpretable_Machine_Learning_Pics.001.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.001.png)</br>
+**Figure 3: A correlation graph representing an anonymized auto insurance claim data set.**
 
-The nodes of this graph are the variables in a data set. The weights between the nodes are defined by the absolute value of their pairwise 
-Pearson correlation. 
+A correlation graph is a two dimensional representation of the relationships (correlation) in a data set that uses undirected graphs. While many details regarding the display of a correlation graph are optional and could be improved beyond those chosen for figure 3, correlation graphs are a very powerful tool for seeing and understanding relationships (correlation) between variables in a data set. Even data sets with tens of thousands of variables can be displayed in two dimensions using this technique.
 
-To create:
-calculate Pearson correlation between columns/variables
-build undirected graph where each node is a column/variable
-connection weights between nodes are defined by Pearson correlation absolute values; weights below a certain threshold are not displayed
-node size is determined by number of connections (node degree)
-node color is determined by a graph communities calculation 
-node position is defined by a graph force field algorithm
+In figure 3, the nodes of the graph are the variables in an anonymized auto insurance claim data set and the edge weights (thickness) between the nodes are defined by the absolute value of their pairwise Pearson correlation. For visual simplicity, weights below a certain threshold are not displayed. The node size is determined by a node’s number of connections (node degree), node color is determined by a graph communities calculation, and node position is defined by a graph force field algorithm. 
 
-Free graph software: https://gephi.org/
+The dependent variable in the data set represented by figure 3 was Claim_Flag, non-zero auto insurance claims in 2007. While many variables are correlated with one another, Claim Flag is only weakly correlated with most other variables in the data set, except for claims_2005 and claims_2006. Figure 3 tells us that a good model for Claim Flag would likely emphasize claims from the previous years and their interactions very heavily, would likely give some emphasis to the BE__NVCAT family of variables and perhaps their interactions, and would likely ignore most other variables in a the data set.
 
-**How does it enhance understanding?**
+*How do correlation graphs enhance understanding?*
 
-By visually displaying relationships between columns
+For most people, correlation graph representation of relationships (correlation) in a data set are easier to understand than scrolling through plain rows of data and looking at variables values, especially for data sets with many variables.
 
-**How does it enhance trust?**
+*How do correlation graphs enhance trust?*
 
-Model reflects graph/graph reflects model
+Seeing relationships in a data set usually makes those relationships easier to understand. An accurate machine learning model should create answers that are representative of the relationships in a data set, and understanding the relationships in data set is a first step to knowing if a model’s answers are trustworthy.
 
-Trust is increased if known relationships are displayed and/or correct modeling results are reflected in the graph - also if patterns are stable or change predictably over time 
-
-Stability to perturbation of the data, stability over time
+The graph in figure 3 was created with [Gephi](http://www.gephi.org).
 
 <a name='2d-proj'/>
 #### 2-D projections
