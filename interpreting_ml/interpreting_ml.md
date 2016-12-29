@@ -58,13 +58,13 @@ Seeing structures and relationships in a data set usually makes those structures
 <a name='corr-graph'/>
 #### Correlation Graphs
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.001.png)</br>
-**Figure 3: A correlation graph representing an anonymized auto insurance claim data set.**
+**Figure 3: A correlation graph representing an anonymized auto insurance claims data set.**
 
-A correlation graph is a two dimensional representation of the relationships (correlation) in a data set that uses undirected graphs. While many details regarding the display of a correlation graph are optional and could be improved beyond those chosen for figure 3, correlation graphs are a very powerful tool for seeing and understanding relationships (correlation) between variables in a data set. Even data sets with tens of thousands of variables can be displayed in two dimensions using this technique.
+A correlation graph is a two dimensional representation of the relationships (correlation) in a data set. While many details regarding the display of a correlation graph are optional and could be improved beyond those chosen for figure 3, correlation graphs are a very powerful tool for seeing and understanding relationships (correlation) between variables in a data set. Even data sets with tens of thousands of variables can be displayed in two dimensions using this technique.
 
-In figure 3, the nodes of the graph are the variables in an anonymized auto insurance claim data set and the edge weights (thickness) between the nodes are defined by the absolute value of their pairwise Pearson correlation. For visual simplicity, weights below a certain threshold are not displayed. The node size is determined by a node’s number of connections (node degree), node color is determined by a graph communities calculation, and node position is defined by a graph force field algorithm. 
+In figure 3, the nodes of the graph are the variables in an anonymized auto insurance claims data set and the edge weights (thickness) between the nodes are defined by the absolute value of their pairwise Pearson correlation. For visual simplicity, weights below a certain threshold are not displayed. The node size is determined by a node’s number of connections (node degree), node color is determined by a graph communities calculation, and node position is defined by a graph force field algorithm. 
 
-The dependent variable in the data set represented by figure 3 was Claim_Flag, non-zero auto insurance claims in 2007. While many variables are correlated with one another, Claim Flag is only weakly correlated with most other variables in the data set, except for claims_2005 and claims_2006. Figure 3 tells us that a good model for Claim Flag would likely emphasize claims from the previous years and their interactions very heavily, would likely give some emphasis to the BE__NVCAT family of variables and perhaps their interactions, and would likely ignore most other variables in a the data set.
+The dependent variable in the data set represented by figure 3 was Claim_Flag, non-zero auto insurance claims in 2007. While many variables are correlated with one another, Claim Flag is only weakly correlated with most other variables in the data set, except for claims_2005 and claims_2006. Figure 3 tells us that a good model for Claim Flag would likely emphasize claims from the previous years and their interactions very heavily, a good model would likely give some emphasis to the BE__NVCAT family of variables and perhaps their interactions, and would likely ignore most other variables in the data set.
 
 *How do correlation graphs enhance understanding?*
 
@@ -72,33 +72,36 @@ For most people, correlation graph representation of relationships (correlation)
 
 *How do correlation graphs enhance trust?*
 
-Seeing relationships in a data set usually makes those relationships easier to understand. An accurate machine learning model should create answers that are representative of the relationships in a data set, and understanding the relationships in data set is a first step to knowing if a model’s answers are trustworthy.
+Seeing relationships in a data set usually makes those relationships easier to understand. An accurate machine learning model should create answers that are representative of the relationships in a data set, and understanding the relationships in a data set is a first step to knowing if a model’s answers are trustworthy.
 
 The graph in figure 3 was created with [Gephi](http://www.gephi.org).
 
 <a name='2d-proj'/>
 #### 2-D projections
-![alt text](readme_pics/Interpretable_Machine_Learning_Pics.002.png)
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.002.png)</br>
+Image: http://www.cs.toronto.edu/~hinton/absps/science_som.pdf</br>
+**Figure 4: Two dimensional projections of the famous 784-dimensional MNIST data set using (left) Principal Components Analysis (PCA) and (right) a stacked denoising autoencoder.** 
 
-There are numerous types of useful projections (or “embeddings”):
-Principal Component Analysis (PCA)
-Multidimensional Scaling (MDS)
-t-SNE (t-distributed Stochastic Neighbor Embedding)
-Autoencoder networks
+There are many techniques for projecting the rows of a data set from a usually high-dimensional original space into a more visually understandable lower-dimensional space, ideally two or three dimensions. Popular techniques include:
 
-Here PCA and autoencoders are shown - better scalability than many other methods
+* Principal Component Analysis (PCA)
+* Multidimensional Scaling (MDS)
+* t-SNE (t-distributed Stochastic Neighbor Embedding)
+* Autoencoder networks
 
-Autoencoder projections can be augmented by training clusters in the original high dimensional data before projecting into lower dimensional space - look for clusters to be preserved in 2-D projections and confirm cluster relationships are reasonable on 2-D plots. For instance older, richer customers should be relatively far from younger, less affluent customers.
+Each of these techniques have strength and weaknesses, but the key idea they all share is to represent the rows of a data set in a meaningful low dimensional space. When a data set has more than two or three dimensions, visualizing it with a scatter plot becomes essentially impossible, but these techniques enable even high-dimensional data sets to be projected into a representative low-dimensional space and visualized using the trusty, old scatter plot. A high quality projection visualized in a scatter plot should exhibit key structural elements of a data set such as clusters, hierarchy, sparsity, and outliers. 
 
-**How does it enhance understanding?**
+In figure 4, the famous [MNIST data set](https://en.wikipedia.org/wiki/MNIST_database) is projected from its original 784 dimensions onto two dimensions using two different techniques, PCA and autoencoder networks. The quick and dirty PCA projection is able to separate digits labeled as zero from digits labeled as one very well. These two digit classes are projected into compact and disjoint clusters, but the other digit classes are generally overlapping. In the more sophisticated, but also more computer-time-consuming, autencoder projection, all the digit classes appear as separate clusters with visually similar digits appearing close to one another in the reduced two-dimensional space. The autoencoder projection is capturing the clustered structure of the original high-dimensional space and the relative locations of those clusters. Interestingly, both plots are able to pick up on a few outlying digits.
 
-all records are shown in a single 2-D plot
+*How do 2-D projections enhance understanding?*
 
-**How does it enhance trust?** 
+For most people, 2-D projections of structures (clusters, hierarchy, sparsity, outliers) in a data set are easier to understand than scrolling through plain rows of data and looking at variables values.
 
-Trust is increased if known or expected structures (i.e. clusters, outliers, hierarchy, sparsity) are preserved and displayed in 2-D plots - also if patterns are stable or change predictably over time
+*How do 2-D projections enhance trust?*
 
-Stability to perturbation of the data, stability over time
+Seeing structures in a data set usually makes those structures easier to understand. An accurate machine learning model should create answers that are representative of the structures in a data set. Understanding the structures in data set is a first step to knowing if a model’s answers are trustworthy.
+
+Projections can add an extra and specific degree of trust if they are used to confirm machine learning modeling results. For instance if known hierarchies, classes, or clusters exist in training or test data sets and these structures are visible in 2-D projections, it is possible to confirm that a machine learning model is labeling these structures correctly. A secondary check is to confirm that similar attributes of structures are projected relatively near one another and different attributes of structures are projected relative far from one another. For instance in a model used to classify or cluster marketing segments, it is reasonable to expect a machine learning model to label older, richer customers differently than younger, less affluent customers, and moreover to expect that these different groups should be relative disjoint and compact in a projection, and relatively far from one another. Such results should also be stable under minor perturbations of the training or test data, and projections from perturbed vs. non-perturbed samples can be used to check for stability.
 
 <a name='ols-alt'/>
 #### OLS regression alternatives
