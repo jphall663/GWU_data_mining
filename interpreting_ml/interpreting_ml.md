@@ -103,62 +103,41 @@ Seeing structures in a data set usually makes those structures easier to underst
 
 Projections can add an extra and specific degree of trust if they are used to confirm machine learning modeling results. For instance if known hierarchies, classes, or clusters exist in training or test data sets and these structures are visible in 2-D projections, it is possible to confirm that a machine learning model is labeling these structures correctly. A secondary check is to confirm that similar attributes of structures are projected relatively near one another and different attributes of structures are projected relative far from one another. Consider a model used to classify or cluster marketing segments, it is reasonable to expect a machine learning model to label older, richer customers differently than younger, less affluent customers, and moreover to expect that these different groups should be relative disjoint and compact in a projection, and relatively far from one another. Such results should also be stable under minor perturbations of the training or test data, and projections from perturbed vs. non-perturbed samples can be used to check for stability.
 
-## Part 2: Using machine learnign in regulated industry
+## Part 2: Using machine learning in regulated industry
 
-For analysts and data scientists working in regulated industries, the potential boost in predictive accuracy provided by machine learning algorithms may not outweigh the current realities internal documentation needs and external regulatory regimes. For these practitioners, traditional linear modeling techniques may be their only option for predictive modeling. However, the forces of innovation and competition don’t stop because you work under a regulatory regime. Data scientists and analysts in the regulated verticals of banking, insurance, and other similar industries face a particular conundrum. They have to find ways to make more and more accurate predictions, but keep their models and modeling processes transparent and interpretable. 
+For analysts and data scientists working in regulated industries, the potential boost in predictive accuracy provided by machine learning algorithms may not outweigh the current realities internal of documentation needs and external regulatory regimes. For these practitioners, traditional linear modeling techniques may be their only option for predictive modeling. However, the forces of innovation and competition don’t stop because you work under a regulatory regime. Data scientists and analysts in the regulated verticals of banking, insurance, and other similar industries face a particular conundrum. They have to find ways to make more and more accurate predictions, but keep their models and modeling processes transparent and interpretable. 
 
 The techniques presented in this section are newer types of linear models or they use machine learning to augment traditional, linear modeling methods. They’re meant for practitioners who just can’t use machine learning algorithms to build predictive models  because of interpretability concerns. They produce results similar, if not identical, to traditional linear models, but with a boost in predictive accuracy provided by machine learning algorithms.
 
 <a name='ols-alt'/>
 #### OLS regression alternatives
+*Penalized regression*
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.1.png)
+Image: http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf</br>
+**Figure 5: Shrunken feasible regions for L1/LASSO penalized regression parameters (left) and L2/ridge penalized regression parameters (right).**
 
-Penalized regression:
--   Penalized regression techniques are particularly well-suited for wide data. 
-Avoid the multiple comparison problem that can arise with stepwise variable selection. 
-They can be trained on datasets with more columns than rows. 
-They preserve interpretability by selecting a small number of original variables for the final model using L1 regularization
-Nearly always predictive
- 
-(L1 also works to increase interpretability across many different types of models.)
+Ordinary least squares (OLS) regression is about 200 years old[</sup>4<sup>](https://en.wikipedia.org/wiki/Least_squares). Maybe it’s time to move on? If you’re interested, penalized regression techniques are a gentle introduction to machine learning. Modern penalized regression techniques usually combine L1/LASSO penalties and L2/ridge penalties in a technique known as elastic net. They also make fewer assumptions about a data set than does OLS regression.
 
-Fewer assumptions
-Well suited for N << p
-No multiple comparison issues during variable selection
-Preserves interpretability by selecting a small number of variables (L1 penalty) 
+Instead of solving the classic normal equation or using statistical tests for variable selection, penalized regression minimizes constrained objective functions to find the best set of regression parameters for a given data set that also satisfy a set of constraints or penalties. You can learn all about penalized regression in [*Elements of Statistical Learning*](http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf), but for our purposes here, its just important to know when you might want to try penalized regression. Penalized regression is great for wide data, even data sets with more columns than rows, and for data sets with lots of correlated variables. L1/LASSO penalties drive unnecessary regression parameters to zero, avoiding potential multiple comparison problems that arise in forward, backward, and stepwise variable selection, but still picking a good, small subset of regression parameters for a data set. L2/ridge penalties help preserve parameter estimate stability, even when many correlated variables exist in a wide data set or important predictor variables are correlated.  It’s also important to know penalized regression techniques don’t usually create confidence intervals or t-test p-values for regression parameters. These types of measures are typically only available through empirical bootstrapping experiments that require a lot of extra computing time.
 
-![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.2.png)
+*Generalized Additive Models (GAMs)*
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.2.png)</br>
+**Figure 6: Spline functions for several variables created by a generalized additive model.**
 
-GAMs:
--  Generalized additive models fit linear terms to certain variables and nonlinear splines to other variables
-Allowing you to hand-tune a trade-off between interpretability and accuracy
-Can be predictive based on the application
+Generalized Additive Models (GAMs) enable you to
+hand-tune a tradeoff between accuracy and interpretability by fitting standard regression coefficients to certain variables and nonlinear spline functions to other variables. Also most implementations generate convenient plots of the the fitted splines. In many cases you may be able to eyeball the fitted spline and switch it out for a more interpretable polynomial, log, trigonometric or other simple function of the predictor variable. You can learn more about GAMs in [*Elements of Statistical Learning*](http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf).
 
-Fit linear terms to certain variables
-Fit nonlinear splines to other variables
-Hand-tune a trade-off between interpretability and accuracy 
-
+*Quantile Regression*
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.005.3.png)
+**Figure 7: A diagrammatic representation of quantile regression in two dimensions.**
 
-Quantile regression: 
--  Fit a traditional, interpretable linear model to different percentiles of your training data 
- Allowing you to find different sets of variables for modeling different behaviors across a customer market or portfolio of accounts
-more inferential than predictive 
+Quantile regression allows you to fit a traditional, interpretable, linear model to different percentiles of your training data, allowing you to find different sets of variables with different parameters for modeling different behaviors across a customer market or portfolio of accounts. It probably makes sense to model low value customers with different variables and different parameter values from high value customers, and quantile regression provides a statistical framework for doing so.
 
-Fit an interpretable linear model to different percentiles of training data
-Find different sets of drivers across percentiles of an entire customer market or portfolio of accounts
+*How do alternative regression techniques enhance understanding and trust?*
 
-https://web.stanford.edu/~hastie/local.ftp/Springer/OLD/ESLII_print4.pdf
+Basically these techniques are plain old understandable, trusted linear models, but used in new and different ways. It’s also quite possible that the lessened assumption burden, the ability to select variables without problematic multiple statistical significance tests, the ability to incorporate important but correlated predictors, the ability to fit nonlinear phenomena, or the ability to fit different quantiles of the data set’s conditional distribution (and not just the mean of the conditional distribution) could lead to more accurate models and more accurate understanding of modeled phenomena.
 
-**How does it enhance understanding?**
-
-It is the same understandable, trust worthy models used in different ways
-
-**How does it enhance trust?**
-
-having less assumptions
-By being more accurate
-not just modeling the mean
+***
 
 <a name='ml-benchmark'/>
 #### Build toward machine learning model benchmarks
