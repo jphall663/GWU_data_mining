@@ -15,17 +15,20 @@
 [Surrogate models](#surr-mod)</br>
 [Local Interpretable Model-agnostic Explanations](#lime)</br>
 [Maximum activation analysis](#max-act)</br>
-[Constrained neural networks](#constr-nn)</br>
+[Sensitivity Analysis](#sens)</br>
+[Monotonicity](#mono)</br>
 [Variable importance measures](#var-imp)</br>
 [Partial dependence plots](#par-dep)</br>
 [TreeInterpreter](#treeint)</br>
 [Residual analysis](#res-analysis)
 
-You’ve probably heard by now that machine learning algorithms can use “big data” to predict whether a donor will give to a charity, whether an infant in a NICU will develop sepsis, whether a customer will respond to an ad, and on and on. Machine learning can even drive cars and predict elections! ... Err, wait. Can it? I actually think it can, but these recent high profile hiccups[<sup>1</sup>](http://www.nytimes.com/2016/12/21/technology/san-francisco-california-uber-driverless-car-.html)<sup>,</sup>[<sup>2</sup>](http://www.nytimes.com/2016/11/10/technology/the-data-said-clinton-would-win-why-you-shouldnt-have-believed-it.html) should leave everyone that works with data (big or not) and machine learning algorithms asking some very hard questions: Do I really understand my data? Do I really understand the answers my machine learning algorithm is giving me? And do I actually trust these answers? Unfortunately, the complexity that enables the extraordinary predictive abilities upon machine learning algorithms also makes the answers the algorithms produce hard to understand, and maybe even hard to trust. Machine learning algorithms create complex nonlinear, non-polynomial, and quite often, non-continuous functions that approximate the relationship between independent and dependent variables in a data set. These functions can then be used to predict the values of dependent variables for new data (like whether a donor will give to a charity, an infant in a NICU will develop sepsis, whether a customer will to respond to an ad, and on and on).
+You’ve probably heard by now that machine learning algorithms can use “big data” to predict whether a donor will give to a charity, whether an infant in a NICU will develop sepsis, whether a customer will respond to an ad, and on and on. Machine learning can even drive cars and predict elections! … Err, wait. Can it? I actually think it can, but these recent high profile hiccups[<sup>1</sup>](http://www.nytimes.com/2016/12/21/technology/san-francisco-california-uber-driverless-car-.html)<sup>,</sup>[<sup>2</sup>](http://www.nytimes.com/2016/11/10/technology/the-data-said-clinton-would-win-why-you-shouldnt-have-believed-it.html) should leave everyone that works with data (big or not) and machine learning algorithms asking themselves some very hard questions: Do I really understand my data? Do I really understand the model and answers my machine learning algorithm is giving me? And do I actually trust these answers? Unfortunately, the complexity that bestows the extraordinary predictive abilities on machine learning algorithms also makes the answers the algorithms produce hard to understand, and maybe even hard to trust.
 
-Conversely, traditional linear models create linear, polynomial, and continuous functions to approximate the very same relationships. Even though they’re not always the most accurate predictors, the elegant simplicity of linear models makes the results they generate easy to interpret. While understanding and trusting results is a general requirement for good (data) science, model interpretability is a serious legal mandate in the regulated verticals of banking, insurance, and other industries. Business analysts, doctors, and industry researchers really need to understand and trust their results, and linear models were the goto applied predictive modeling tool for decades even though it usually meant giving up a couple points on the accuracy scale. Today many organizations and individuals are embracing machine learning algorithms for predictive modeling tasks, but difficulties in interpretation still present a serious barrier for the widespread, practical use of machine learning algorithms.
+Machine learning algorithms create complex nonlinear, non-polynomial, and quite often, non-continuous functions that approximate the relationship between independent and dependent variables in a data set. These functions can then be used to predict the values of dependent variables for new data (like whether a donor will give to a charity, an infant in a NICU will develop sepsis, whether a customer will to respond to an ad, and on and on). Conversely, traditional linear models create linear, polynomial, and continuous functions to approximate the very same relationships. Even though they’re not always the most accurate predictors, the elegant simplicity of linear models makes the results they generate easy to interpret.
 
-With all these concerns in mind, I presents several approaches for interpreting machine learning results, and wherever possible attempts to deconstruct interpretability into two basic and emotional elements, understanding and trust. None of these approaches are as straightforward as inferring conclusions about a data set from the confidence intervals, parameter estimates, and p-values provided by a traditional linear model, but by combining several of the outlined techniques, you should be able to develop an understanding and trust for your machine-learned answers.
+While understanding and trusting models and results is a general requirement for good (data) science, model interpretability is a serious legal mandate in the regulated verticals of banking, insurance, and other industries. Business analysts, doctors, and industry researchers simply have to understand and trust their models and results.  For this reason, linear models were the goto applied predictive modeling tool for decades even though it usually meant giving up a couple points on the accuracy scale. Today many organizations and individuals are embracing machine learning algorithms for predictive modeling tasks, but difficulties in interpretation still present a barrier for the widespread, practical use of machine learning algorithms.
+
+Several approaches are presented here for visualizing data and interpreting machine learning models and results. Wherever possible interpretability is deconstructed into two more basic and emotional components: understanding and trust. None of the presented approaches are as straightforward as inferring conclusions about a data set from the confidence intervals, parameter estimates, and p-values provided by a traditional linear model, but by combining several of the outlined techniques, you should be able to develop understanding and trust for your machine-learned models and answers.
 
 ## Part 1: Seeing all your data
 
@@ -140,7 +143,7 @@ Basically these techniques are plain old understandable, trusted linear models, 
 <a name='ml-benchmark'/>
 #### Build toward machine learning model benchmarks
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.006.png)</br>
-**Figure 8: Assessment plots that compare linear models with interactions to machine learning algorithms**
+**Figure 8: Assessment plots that compare linear models with interactions to machine learning algorithms.**
 
 Two of the main differences between machine learning algorithms and traditional linear models are:
 
@@ -240,6 +243,8 @@ For traditional analytics data, explanatory data samples could potentially be si
 https://www.oreilly.com/learning/introduction-to-local-interpretable-model-agnostic-explanations-lime
 https://arxiv.org/pdf/1606.05386.pdf
 
+*Proposed k-LIME variant*</br>
+
 **How does it enhance understanding?**
 
 It helps us understand the predictions made for key observations
@@ -275,9 +280,24 @@ It increases trust if we see stability in what units are activated for similar i
 It increases trust if similar data points proceed through the model in the same way
 It increases trust if interactions and structure match  
 
-<a name='constr-nn'/>
-#### Constrained neural networks
+<a name='sens'/>
+#### Sensitivity analysis
+
+<a name='mono'/>
+#### Monotonicity
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.012.png)
+
+*Monotonicity of data*</br>
+*Monotonicity of models*</br>
+
+
+For regulated models it's very important - this appears to be for 2 reasons: 1.) it's just expected by regulators - i.e. no matter what the training data says, regulators want to see probability of default go down as savings account balance goes up 2.) it allows for the automatic and direct calculation of reason codes - i.e. we can't give you this loan b/c your savings account balance is too low (in a non-monotonic model, just because your savings is low, doesn't mean your prob. of default is high.)
+
+Monotonicity can from two main places: data constraints and/or model constraints. Data constraints: you can choose all non-negative, monotonic predictors or predictors than can be transformed to non-negative and monotonic, usually by binning. Models can be constrained: possible for GBMs and Neural nets with all non-negative weights and non-negative monotonic inputs should be monotonic.
+
+https://github.com/dmlc/xgboost/issues/1514
+https://papers.nips.cc/paper/1358-monotonic-networks.pdf
+
 
 Scale inputs to be non-negative
 Transform inputs such that their relationship with the target is monotonically increasing or decreasing
@@ -292,9 +312,7 @@ Binning does reduce the resolution of the information presented to the model dur
 But it can lead to better generalization (intricate patterns in the training data can be noise)
 Allows for elegant handling of outliers
 
-Also network architecture itself can be constrained, see for instance:
-http://yann.lecun.com/exdb/publis/pdf/solla-lecun-91.pdf
-https://papers.nips.cc/paper/1358-monotonic-networks.pdf
+
 
 **How does it enhance understanding?**
 
@@ -372,6 +390,8 @@ contributions for a given prediction.
 
 https://github.com/andosa/treeinterpreter
 Source: http://blog.datadive.net/interpreting-random-forests/
+
+Modal tree?
 
 **How does it enhance understanding?**
 
