@@ -17,6 +17,6 @@
   * Register for [SAS on Demand for Academics](https://odamid.oda.sas.com/SASODAControlCenter/enroll.html?enroll=f0c0602b-d3c3-4676-b44c-c378f14fac91) which will give you access to cloud versions of SAS software suitable for in class use.
   * You may need a local install of SAS to complete some assignments and you may need to contact the [GWU Instructional Technology Lab](https://itl.gwu.edu/sas-software-distribution) for information or assistance regarding installing this software. I would try to start installing SAS and SAS Enterprise Miner soon.
   * For Python and h2o.ai:
-1. First, install [Anaconda Python](https://www.continuum.io/downloads).
-2. Then install the [h2o.ai library for Python](http://h2o-release.s3.amazonaws.com/h2o/rel-tutte/2/index.html). (See the 'INSTALL IN PYTHON' tab **only**).
+  1. First, install [Anaconda Python](https://www.continuum.io/downloads).
+  2. Then install the [h2o.ai library for Python](http://h2o-release.s3.amazonaws.com/h2o/rel-tutte/2/index.html). (See the 'INSTALL IN PYTHON' tab **only**).
   * If you are have difficulties with installing software, we can discuss them in class or office hours.
