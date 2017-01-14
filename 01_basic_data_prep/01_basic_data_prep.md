@@ -2,7 +2,7 @@
 
 #### Basic data operations
 
-A great deal of work in data mining projects is spent on data munging. Below some of the basic operations are illustrated and defined. Code examples are provided in common languages. 
+A great deal of work in data mining projects is spent on data munging. Below some of the basic operations are illustrated and defined. Code examples are provided in common languages.
 
 ![alt text](basic_data_operations.png)
 
@@ -36,15 +36,15 @@ A great deal of work in data mining projects is spent on data munging. Below som
 #### Required Reading
 
 * *Introduction to Data Mining* - chapter 2, sections 2.1-2.3
+* [*Tidy Data*](https://www.jstatsoft.org/article/view/v059i10)
 
 #### [Sample Quiz](sample_quiz/quiz_1.pdf)
 
 #### Supplementary References
-* [Tidy Data](https://www.jstatsoft.org/article/view/v059i10)
 * Simple [benchmark](https://github.com/szilard/benchm-databases) of data processing tools by [@szilard](https://github.com/szilard)
 
 ***
-  
+
 <a name='python-pandas' />
 #### Python Pandas - [view notebook](src/notebooks/py/Py_Part_0_pandas_numpy.ipynb)
 ```python
@@ -238,7 +238,7 @@ scratch_df3.tail()
 
 # default outer join on indices
 # indices are not in identical, matching order
-# this will create 2000 row × 6 column dataset
+# this will create 2000 row ï¿½ 6 column dataset
 scratch_df4 = pd.concat([scratch_df, scratch_df3])
 scratch_df4
 
@@ -313,7 +313,7 @@ scratch_df7 = pd.read_csv('scratch.csv')
 ### standard output ###########################################################
 # two primary R core functions are used to print information to the console
 #   print() and cat()
-# print is a generic function that responds differently to different classes 
+# print is a generic function that responds differently to different classes
 #   of R objects
 # note that '.' is just a character, it does not denote object membership
 #   as in Java and Python
@@ -327,7 +327,7 @@ x
 
 class(x) <- 'some.class'
 print(x)
-cat(x) 
+cat(x)
 x
 
 ### import packages ###########################################################
@@ -378,8 +378,8 @@ key <- seq(n_rows)
 
 # show the first five elements
 # most data structures in R can be 'sliced', i.e. using numeric indices
-#   to select a subset of items 
-key[1:5] 
+#   to select a subset of items
+key[1:5]
 
 # create lists of strings that will become column names
 # paste() concatentates strings with a separator character in between them
@@ -398,7 +398,7 @@ scratch_df <- data.frame(INDEX = key)
 scratch_df[, num_vars] <- replicate(n_vars, runif(n_rows))
 
 # head() displays the top of a data structure
-head(scratch_df) 
+head(scratch_df)
 
 # add n_var character columns, each with n_row rows, to the data.frame
 # create a list of strings from which to generate random text variables
@@ -463,31 +463,31 @@ some_rows <- slice(scratch_tbl, 1:10)
 some_rows
 
 sorted_top_rows <- top_n(scratch_tbl, 10, numeric1)
-sorted_top_rows 
+sorted_top_rows
 
 AAAAAAAA_rows <- filter(scratch_tbl, char1 == 'AAAAAAAA')
 head(AAAAAAAA_rows)
 
 ### updating the table ########################################################
-# dplyr, as a best practice, does not support in-place overwrites of data 
+# dplyr, as a best practice, does not support in-place overwrites of data
 
-# dplyr::transform enables the creation of new variables from existing 
+# dplyr::transform enables the creation of new variables from existing
 #   variables
-scratch_tbl2 <- transform(scratch_tbl, 
+scratch_tbl2 <- transform(scratch_tbl,
                           new_numeric = round(numeric1, 1))
 head(scratch_tbl2)
 
-# dplyr::mutate enables the creation of new variables from existing 
+# dplyr::mutate enables the creation of new variables from existing
 #   variables and computed variables
-scratch_tbl2 <- mutate(scratch_tbl, 
-                       new_numeric = round(numeric1, 1), 
+scratch_tbl2 <- mutate(scratch_tbl,
+                       new_numeric = round(numeric1, 1),
                        new_numeric2 = new_numeric * 10)
 head(scratch_tbl2)
 
-# dplyr::transmute enables the creation of new variables from existing 
+# dplyr::transmute enables the creation of new variables from existing
 #   variables and computed variables, but keeps only newly created variables
-scratch_tbl2 <- transmute(scratch_tbl, 
-                          new_numeric = round(numeric1, 1), 
+scratch_tbl2 <- transmute(scratch_tbl,
+                          new_numeric = round(numeric1, 1),
                           new_numeric2 = new_numeric * 10)
 head(scratch_tbl2)
 
@@ -513,13 +513,13 @@ nrow(bindr)
 bindc <- bind_cols(sorted, sorted2)
 ncol(bindc)
 
-# create two tables to join on a key variable 
+# create two tables to join on a key variable
 sorted_left <- arrange(select(scratch_tbl, one_of('INDEX', 'char1')), char1)
 right <- select(scratch_tbl, one_of('INDEX', 'numeric1'))
 
-# Perform join 
-# joined table contains `char1` from the left table 
-#   and `numeric1` from the right table 
+# Perform join
+# joined table contains `char1` from the left table
+#   and `numeric1` from the right table
 #  matched by the value of `INDEX`
 joined <- left_join(sorted_left, right, by = 'INDEX')
 head(joined)
@@ -530,7 +530,7 @@ head(joined)
 #   and/or columns
 # very useful for keeping track of changes to important tables
 
-# Create a table for comparision 
+# Create a table for comparision
 test <- select(scratch_tbl, one_of('INDEX', 'numeric1', 'char1'))
 
 # Compare
@@ -552,7 +552,7 @@ all_aves <-summarise_each(num_vars, funs(mean))
 all_aves
 
 ### by group processing #######################################################
-# By groups allow you to divide and process a data set based on the values of 
+# By groups allow you to divide and process a data set based on the values of
 #   one or more variables
 # dplyr::group_by groups a data set together based on the values of a certain
 #   variable
@@ -569,8 +569,8 @@ grouped
 transposed = t(scratch_tbl)
 glimpse(transposed)
 
-# Often, instead of simply transposing, a data set will need to be reformatted 
-# in a melt/stack-column split-cast action described in Hadley Wickham's 
+# Often, instead of simply transposing, a data set will need to be reformatted
+# in a melt/stack-column split-cast action described in Hadley Wickham's
 # 'Tidy Data' https://www.jstatsoft.org/article/view/v059i10
 # see also dplyr::gather and dplyr::spread()
 
@@ -595,8 +595,8 @@ import <- read.table(filename, header = TRUE, sep = ',')
 ### data.table is an efficient package for manipulating data sets #############
 # data.table is implemented in optimized C and often attempts to update
 #   items by reference to avoid copying large amounts of data
-# data.table is a subclass of data.frame and generally accepts data.frame 
-#   syntax 
+# data.table is a subclass of data.frame and generally accepts data.frame
+#   syntax
 # general form of a data.table is dt[i, j, by]
 #   i is row index, indexed from 1 ...
 #   j is col index, indexed from 1 ...
@@ -630,11 +630,11 @@ text_draw <- sapply(LETTERS[1:7],
 
 # create a sample data.table
 scratch_dt <- data.table(key,
-                         replicate(n_vars, runif(n_rows)), 
-                         replicate(n_vars, sample(text_draw, n_rows, 
+                         replicate(n_vars, runif(n_rows)),
+                         replicate(n_vars, sample(text_draw, n_rows,
                                                   replace = TRUE)))
 
-# the data.table::set* family of methods in data.table always updates items 
+# the data.table::set* family of methods in data.table always updates items
 #   by reference for efficiency
 setnames(scratch_dt, c('key', num_vars, char_vars))
 scratch_dt
@@ -664,12 +664,12 @@ scratch_dt[,list(numeric1, char1)]
 
 # '.' is an alias for 'list'
 class(scratch_dt[,.(numeric1, char1)] )
-scratch_dt[,.(numeric1, char1)] 
+scratch_dt[,.(numeric1, char1)]
 
 # computed columns
 scratch_dt[1:5, round(numeric1, 1)] # compute standalone vector
 scratch_dt[, .(new_numeric = round(numeric1, 1))] # assign name
-                                                  
+
 ### by row
 
 scratch_dt[3:5] # use numeric indices/slicing
@@ -695,8 +695,8 @@ sorted
 sorted2 <- scratch_dt[order(char1, -numeric1)]
 sorted2
 
-# data.table::setkey reorders columns by reference by the specified key 
-#  variable (here called 'key') and sets the variable to the key of the 
+# data.table::setkey reorders columns by reference by the specified key
+#  variable (here called 'key') and sets the variable to the key of the
 #  data.table for future operations
 # subsetting and selecting by the key variable will be more efficient
 #  in future operations
@@ -720,15 +720,15 @@ scratch_dt2
 bindr <- rbindlist(list(sorted, sorted2))
 nrow(bindr)
 
-# data.table::merge joins tables side-by-side using a common key variable 
-# joining data.tables without prespecified keys (i.e. by using data.table::setkey) 
+# data.table::merge joins tables side-by-side using a common key variable
+# joining data.tables without prespecified keys (i.e. by using data.table::setkey)
 #   requires that a key for the join be specified
 # The prefix 'x.' is added to the left table variable names by default
 # The prefix 'y.' is added to the right table variables names by default
 joined1 <- merge(sorted, sorted2, by = c('key'))
 joined1
 
-# joining data.tables with prespecified keys does not require that a key be 
+# joining data.tables with prespecified keys does not require that a key be
 #   specified when data.table::merge is called
 # Add a key to the scratch_dt2 table
 scratch_dt2 <- setkey(scratch_dt2[,.(key, char1, new_numeric)], key)
@@ -739,7 +739,7 @@ joined2 <- merge(sorted3, scratch_dt2)
 joined2
 
 ### by group processing #######################################################
-# by groups allow you to divide and process a data set based on the values 
+# by groups allow you to divide and process a data set based on the values
 #   of a certain variable
 # general form of a data.table is dt[i, j, by]
 #   by is by group variable name
@@ -748,7 +748,7 @@ scratch_dt2[, sum(new_numeric), by = char1]
 scratch_dt2[1:500, sum(new_numeric), by = char1]
 
 # .N returns the number of rows in each by group
-scratch_dt2[, .N, by = char1] 
+scratch_dt2[, .N, by = char1]
 
 # by groups can also be a list
 scratch_dt[, mean(new_numeric), by = .(char1, char2)]
@@ -764,7 +764,7 @@ scratch_dt2[, .SD[c(1, .N)], by = char1]
 # chaining
 scratch_dt2[, .(new_numeric2 = sum(new_numeric)), by = char1][new_numeric2 > 40]
 
-# no chaining 
+# no chaining
 scratch_dt3 <- scratch_dt2[, .(new_numeric2 = sum(new_numeric)), by = char1]
 scratch_dt3[new_numeric2 > 40]
 
@@ -776,8 +776,8 @@ scratch_dt3[new_numeric2 > 40]
 transposed = t(scratch_dt)
 str(transposed)
 
-# Often, instead of simply transposing, a data set will need to be reformatted 
-# in a melt/stack-column split-cast action described in Hadley Wickham's 
+# Often, instead of simply transposing, a data set will need to be reformatted
+# in a melt/stack-column split-cast action described in Hadley Wickham's
 # 'Tidy Data' https://www.jstatsoft.org/article/view/v059i10
 # see also dcast.data.table and melt.data.table
 
@@ -786,7 +786,7 @@ str(transposed)
 # fwrite only availabe in data.table version > 1.9.7
 # available from http://Rdatatable.github.io/data.table
 
-# use fwrite to write a file 
+# use fwrite to write a file
 fwrite(scratch_dt, 'scratch_dt.csv')
 
 # use fread to read a file
@@ -877,7 +877,7 @@ run;
 
 * the sas data set is the primary data structure in the SAS language;
 * now you will make one called scratch;
-* The size of data set is more typically defined by the size of the SAS data 
+* The size of data set is more typically defined by the size of the SAS data
 *   set(s) from which it is created;
 
 %let n_rows = 1000; /* define number of rows */
@@ -885,7 +885,7 @@ run;
 
 * options mprint; /* to see the macro variables resolve uncomment this line */
 data scratch;
-	
+
   /* data sets can be made permanent by creating them in a library */
   /* syntax: data <library>.<table> */
   /* a library is like a database */
@@ -1123,7 +1123,7 @@ run;
 * to create a csv file;
 proc export
 	data=scratch7
-	/* likely the correct directory for SAS University Edition */	
+	/* likely the correct directory for SAS University Edition */
 	outfile='/folders/myfolders/sasuser.v94/scratch.csv'
 	/* create a csv */
 	dbms=csv
@@ -1176,13 +1176,13 @@ proc univariate
 run;
 
 * transpose;
-proc transpose 
+proc transpose
 	data=scratch
 	out=scratch8;
 run;
 
 * print;
-proc print; var _NAME_ col1-col5; run; 
+proc print; var _NAME_ col1-col5; run;
 
 * transposing a sas data set can be a complex process;
 * because of metadata associated with variable names;
@@ -1190,7 +1190,7 @@ proc print; var _NAME_ col1-col5; run;
 * often, instead of simply transposing, a data set will need to be reformatted;
 * in a melt/stack - column split - cast action described in Tidy Data by
 * Hadley Wickham: https://www.jstatsoft.org/article/view/v059i10
-* see also: 
+* see also:
 *  https://github.com/sassoftware/enlighten-apply/tree/master/SAS_UE_TidyData
 
 ******************************************************************************;
@@ -1260,26 +1260,26 @@ run;
 * Refer to part 0                                                            *;
 ******************************************************************************;
 
-*** simulate some small example tables using SAS data step *******************; 
+*** simulate some small example tables using SAS data step *******************;
 * table1 has a primary key called key and two numeric variables: x1 and x2;
 * table1 is located in the SAS work library, it could be called work.table1;
-data table1; 
+data table1;
 	do key=1 to 20;
-		x1 = key * 10; 
+		x1 = key * 10;
 		x2 = key + 10;
 		output;
-	end; 
-run; 
+	end;
+run;
 proc print; run;
 
 * table2 has a primary key called key and two character variables: x3 and x4;
 * table2 is located in the SAS work library, it could be called work.table2;
-data table2; 
-	do key=2 to 20 by 2; 
+data table2;
+	do key=2 to 20 by 2;
 		x3 = scan('a b c d e f g h i j', key/2);
 		x4 = scan('k l m n o p q r s t', key/2);
 		output;
-	end; 
+	end;
 run;
 proc print; run;
 
@@ -1287,57 +1287,57 @@ proc print; run;
 * SAS PROC SQL allows users to execute valid SQL statements;
 * often called queries, from SAS;
 * in a more typical SQL environment the proc sql and quit statements;
-* would be unnecessary and unrecognized in a query;	
+* would be unnecessary and unrecognized in a query;
 
 proc sql;
- 
+
  	* display basic information about table1 in the SAS log;
  	* in SQL parlance work is the database and table1 is the table;
 	describe table work.table1;
-	
-quit;	
-	
+
+quit;
+
 proc sql;
-	
+
 	* display the variable x1 from table1;
-	select x1 from work.table1; 
-		
+	select x1 from work.table1;
+
 quit; 	
 
 * the NOPRINT option can be used to supress output;
 * very important for large tables;
-proc sql /* noprint */; 
+proc sql /* noprint */;
 
 	* create table3 in the work library/database;
 	* x1 from table1 will be named x5 in the new table;
 	* the SQL statement as creates a temporary name or alias;
-	create table table3 as 
+	create table table3 as
 	select key, x1 as x5
 	from table1;
-	
+
 quit;
 
 proc sql;
-	
+
 	* a where clause is used to subset rows of a table;
 	* the order by statement sorts displayed results or created tables;
 	* desc refers to descending sort order;
-	create table table4 as 
-	select key, x2 as x6 
-	from table1 
+	create table table4 as
+	select key, x2 as x6
+	from table1
 	where key <= 10
 	order by x6 desc;
-	
-quit;	
-	
+
+quit;
+
 proc sql;
-	
+
 	* insert can be used to add data to a table;
 	insert into table1
 	values (21, 210, 31);
 
 quit;
-	
+
 proc sql;
 
 	* update can be used to change the value of previously existing data;
@@ -1346,26 +1346,26 @@ proc sql;
 	where key = 7;
 
 quit;
-	
+
 proc sql; 	
-	
+
 	* an inner join only retains rows from both tables;
 	* where key values match;
 	create table table5 as
-	select * 
+	select *
 	from table1
 	join table2
-	on table1.key = table2.key; 
-	
+	on table1.key = table2.key;
+
 quit;
-	
+
 proc sql;
 
 	* left joins retain all the rows from one table;
 	* and only retain rows where key values match from the other table;
 	* aliases can also be used for tables;
-	create table table6 as 
-	select * 
+	create table table6 as
+	select *
 	from table1 as t1 /* left table */
 	left join table2 as t2 /* right table */
 	on t1.key = t2.key;
@@ -1379,7 +1379,7 @@ proc sql;
 	* where sum_x1 > 100 would cause errors in this query;
 	create table table7 as
 	select key, sum(x1) as sum_x1
-	from table1 
+	from table1
 	group by key
 	having sum_x1 > 100;
 
@@ -1389,7 +1389,7 @@ proc sql;
 
 	* a subquery is a query embedded in another query;
 	select *
-	from 
+	from
 	(select key, x1, x2
 	from table1
 	where key <= 10);
