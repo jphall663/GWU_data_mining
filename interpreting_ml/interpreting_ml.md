@@ -48,9 +48,10 @@ Several approaches beyond the usual error measures and assessment plots are pres
 
 #### Scope of interpretability
 
-**Global interpretability**: Most of the presented techniques facilitate *global* interpretations of machine learning algorithms, their results, or the machine-learned relationship between the inputs and the dependent variable(s), e.g. the resulting conditional distribution. Global interpretations help us understand the entire conditional distribution created by a model, but global interpretations can be approximate or based on average values.
+**Global interpretability**: Most of the presented techniques facilitate *global* interpretations of machine learning algorithms, their results, or the machine-learned relationship between the inputs and the dependent variable(s), e.g. the model of the conditional distribution. Global interpretations help us understand the entire conditional distribution, but global interpretations can be approximate or based on average values.
 
 **Local interpretability**: *Local* interpretations promote understanding of small regions of the conditional distribution, such as clusters of input records and their corresponding predictions, or deciles of predictions and their corresponding input rows. Because small sections of the conditional distribution are more likely to be linear, monotonic, or otherwise well-behaved, local explanations can be more accurate than global explanations.
+
 
 #### Understanding and trust
 
