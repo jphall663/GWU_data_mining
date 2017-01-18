@@ -135,7 +135,7 @@ These packages will be used for in class demonstrations and homework solutions.
 
 * [Anaconda Python](https://www.continuum.io/downloads) Python is an approachable, general purpose programming language with excellent add on libraries for math and data analysis. Anaconda Python is a commercial version of Python that bundles these add on packages (and many other packages) together with convenient development utilities like the Spyder IDE.
 
-* [SAS Enterprise Miner](http://www.sas.com/en_us/software/analytics/enterprise-miner.html) is a commercial package for preprocessing data and training statistical and machine learning models. Enterprise Miner allows for the construction of complex data mining workflows without writing code. Enterprise Miner is a proprietary commercial product and not freely available. You may access Enterprise Miner through the [SAS on Demand for Academics portal](https://odamid.oda.sas.com) or by contacting the [GWU Instructional Technology Lab](https://itl.gwu.edu/sas-software-distribution).
+* [SAS 9.4 and Enterprise Miner](http://www.sas.com/en_us/software/analytics/enterprise-miner.html) is a commercial package for preprocessing data and training statistical and machine learning models. Enterprise Miner allows for the construction of complex data mining workflows without writing code. Enterprise Miner is a proprietary commercial product and not freely available. You may access Enterprise Miner through the [SAS on Demand for Academics portal](https://odamid.oda.sas.com) or by contacting the [GWU Instructional Technology Lab](https://itl.gwu.edu/sas-software-distribution).
 
 #### Other useful free software:
 
@@ -143,7 +143,7 @@ These packages will be used for in class demonstrations and homework solutions.
 
 * [R Studio](https://www.rstudio.com/products/rstudio/#Desktop) is the standard IDE for the R language.
 
-* [SAS University Edition](http://www.sas.com/en_ph/software/university-edition/download-software.html) is a free edition of SAS' proprietary commercial data analysis software. SAS University Edition contains the newest version of several SAS software packages along with learning tools and utilities for new users. It also requires a virtual machine player which you may need to install separately.
+* [SAS 9.4 University Edition](http://www.sas.com/en_ph/software/university-edition/download-software.html) is a free edition of SAS' proprietary commercial data analysis software. SAS University Edition contains the newest version of several SAS software packages along with learning tools and utilities for new users. It also requires a virtual machine player which you may need to install separately.
 
 #### Using Git
 
