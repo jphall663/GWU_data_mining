@@ -102,7 +102,7 @@ A correlation graph is a two dimensional representation of the relationships (co
 
 In figure 3, the nodes of the graph are the variables in a loan data set and the edge weights (thickness) between the nodes are defined by the absolute value of their pairwise Pearson correlation. For visual simplicity, weights below a certain threshold are not displayed. The node size is determined by a node’s number of connections (node degree), node color is determined by a graph communities calculation, and node position is defined by a graph force field algorithm. The correlation graph allows us to see groups of correlated variables, identify irrelevant variables, and discover or verify important relationships that machine learning models should incorporate, all in two dimensions.
 
-In a supervised model built for the data represented in figure 3, assuming one of the represented variables was an appropriate target, we would expect variable selection techniques to pick one or two variables from the light green, blue and purple groups and we would expect a model to learn that variables like `CHANNEL_R` are not very important. Figure 3 also illustrates common sense relationships such as that between `FIRST_TIME_HOMEBUYER_FLAG_N` and `ORIGINAL_INTEREST_RATE` that should be reflected in the structure of dependable model.
+In a supervised model built for the data represented in figure 3, assuming one of the represented variables was an appropriate target, we would expect variable selection techniques to pick one or two variables from the light green, blue and purple groups, we would expect that these variables were visibly correlated with the chosen target, and we would expect a model to learn that variables like `CHANNEL_R` are not very important. Figure 3 also illustrates common sense relationships such as that between `FIRST_TIME_HOMEBUYER_FLAG_N` and `ORIGINAL_INTEREST_RATE` that should be reflected in the structure of dependable model.
 
 The graph in figure 3 was created with [Gephi](http://www.gephi.org).
 
@@ -345,16 +345,24 @@ Sensitivity analysis enhances trust when a model's behavior and outputs remain s
 
 <a name='var-imp'/>
 #### Variable importance measures
-![alt text](readme_pics/Interpretable_Machine_Learning_Pics.013.png)</br>
-**Figure 18: An illustration of variable importance in a decision tree ensemble model.**</br>
 
 For nonlinear, non-monotonic response functions, variable importance measures are often the only commonly available quantitative measure of the machine-learned relationships between independent variables and the dependent variable in a model. Variable importance measures rarely give insight into even the average direction that a variable affects a response function. They simply state the magnitude of a variable's relationship with the response as compared to other variables used in the model.
 
+*Tree-based variable importance measures*</br>
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.013.jpeg)</br>
+**Figure 18: An illustration of variable importance in a decision tree ensemble model.**</br>
+
 Variable importance measures are typically seen in tree-based models, but are sometimes also reported for neural networks. A simple heuristic rule for variable importance in a decision tree is related to the depth and frequency at which a variable is split on in a tree, where variables used higher in the tree and more frequently in the tree are more important. For a single decision tree, a variable's importance is quantitatively determined by the cumulative change in the splitting criterion for every node in which that variable was chosen as the best splitting candidate. For a gradient boosted tree ensembles, variable importance is calculated as it is for a single tree but aggregated for the ensemble. For a random forest, variable importance is also calculated as it is for a single tree and aggregated, but an additional measure of variable importance is provided by the change in out-of-bag accuracy caused by shuffling the independent variable of interest, where larger decreases in accuracy are taken as larger indications of importance. (Shuffling is seen as zeroing-out the effect of the independent variable in the model, because other variables are not shuffled.) For neural networks, variable importance measures are typically associated with the aggregated, absolute magnitude of model parameters associated with a given variable of interest. Practitioners should be aware that unsophisticated measures of variable importance can be biased toward larger scale variables or variables with a high number of categories.
+
+*Leave-One-Covariate-Out (LOCO)*</br>
+![alt text](readme_pics/Interpretable_Machine_Learning_Pics.018.jpeg)</br>
+**Figure 19: An illustration of the general LOCO approach.**</br>
+
+A recent [preprint article](https://arxiv.org/pdf/1604.04173v1.pdf) put forward a model-agnostic generalization of mean accuracy decrease variable importance measures called Leave-One-Covariate-Out or LOCO. LOCO creates local interpretations for each row in a training or unlabeled score set by scoring the row of data one time for each input variable (e.g. covariate) in the row. In each scoring run, one input variable is set to missing, zero, it's mean value, another appropriate value for leaving it out of the prediction. The input variable with the largest absolute impact on the prediction for that row is taken to be the most important variable for that row's prediction. Variables can also be ranked by their impact on the prediction on a per-row basis. LOCO creates global variable importance measures by estimating the mean change in accuracy for each variable over an entire data set and even provides confidence intervals for these global estimates of variable importance.
 
 *What is the scope of interpretability for variable importance?*
 
-Variable importance measures are usually global in scope.
+Variable importance measures are usually global in scope, the LOCO approach offers local variable importance measure for each row in a training set or in new data.
 
 *How does variable importance enhance understanding?*
 
@@ -368,7 +376,7 @@ Variable importance measures increase trust if they are in line with human domai
 #### TreeInterpreter
 ![alt text](readme_pics/Interpretable_Machine_Learning_Pics.015.png)</br>
 Image: http://blog.datadive.net/interpreting-random-forests/</br>
-**Figure 19: A single decision tree with a highlighted decision path.**
+**Figure 20: A single decision tree with a highlighted decision path.**
 
 Several [average tree](http://link.springer.com/article/10.1134/S0032946011030069) interpretation approaches have been proposed over the years, but the simple, open source package known as [treeinterpreter](https://github.com/andosa/treeinterpreter) has become popular in recent months. Treeinterpreter decomposes decision tree and
 random forest predictions into bias (overall training data average) and component terms from each independent variable used in the model. Figure 19 portrays the decomposition of the decision path into bias and individual contributions for a simple decision tree. For a random forest model, treeinterpreter simply prints a ranked list of the bias and individual contributions for a given prediction.
