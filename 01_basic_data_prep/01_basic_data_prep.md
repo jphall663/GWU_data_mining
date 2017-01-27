@@ -31,7 +31,9 @@ A great deal of work in data mining projects is spent on data munging. Below som
   * [Base SAS and PROC SGPLOT](#sas-base) - [clone/download notebook](src/notebooks/sas)
   * [PROC SQL](#sas-sql) - [clone/download notebook](src/notebooks/sas)
 
-#### Class Notes: *Introduction to Data Mining* - [chapter 2 notes](https://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap2_data.pdf)
+#### Class Notes: 
+* (Instructor Notes)[notes/instructor_notes_01.pdf]
+* *Introduction to Data Mining* - [chapter 2 notes](https://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap2_data.pdf)
 
 #### Required Reading
 
