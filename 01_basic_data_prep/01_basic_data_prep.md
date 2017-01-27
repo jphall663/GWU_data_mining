@@ -32,7 +32,7 @@ A great deal of work in data mining projects is spent on data munging. Below som
   * [PROC SQL](#sas-sql) - [clone/download notebook](src/notebooks/sas)
 
 #### Class Notes: 
-* [Instructor Notes](notes/instructor_notes_01.pdf)
+* [Instructor Notes](notes/01_instructor_notes.pdf)
 * *Introduction to Data Mining* - [chapter 2 notes](https://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap2_data.pdf)
 
 #### Required Reading
