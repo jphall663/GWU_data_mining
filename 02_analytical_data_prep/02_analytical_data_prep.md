@@ -26,16 +26,16 @@ Problem | Symptoms | Solution
 #### Biased data
 
 <a name='f-selection'/>
-#### Feature selection - [view notebook](src/py_part_1_feature_selection.ipynb)
+#### Feature selection - [view notebook](src/py_part_2_feature_selection.ipynb)
 
 <a name='f-extraction'/>
-#### Feature extraction - [view notebook](src/py_part_1_feature_extraction.ipynb)
+#### Feature extraction - [view notebook](src/py_part_2_feature_extraction.ipynb)
 
 <a name='oversamp'/>
-#### Oversampling - [view notebook](src/py_part_1_over_sample.ipynb)
+#### Oversampling - [view notebook](src/py_part_2_over_sample.ipynb)
 
 <a name='encode'/>
-#### Encoding
+#### Encoding - [view notebook](src/py_part_2_encoding.ipynb)
 
 <a name='discret'/>
 #### Discretization
