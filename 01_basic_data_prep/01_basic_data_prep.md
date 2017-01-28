@@ -42,6 +42,8 @@ A great deal of work in data mining projects is spent on data munging. Below som
 
 #### [Sample Quiz](sample_quiz/quiz_1.pdf)
 
+#### [Assignment](assignment/assignment_1.pdf)
+
 #### Supplementary References
 * Simple [benchmark](https://github.com/szilard/benchm-databases) of data processing tools by [@szilard](https://github.com/szilard)
 
