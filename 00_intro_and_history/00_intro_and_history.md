@@ -14,7 +14,9 @@
 * *Advanced Business Analytics* - chapter 1, section 1 (available on [Blackboard](https://blackboard.gwu.edu))
 * *Introduction to Data Mining* - chapter 1
 
-#### [Sample Quiz](sample_quiz/quiz_0.pdf)
+#### [Sample Quiz](quiz/sample/quiz_0.pdf)
+
+#### [Quiz key](quiz/key/quiz_0_key.pdf)
 
 #### Example Data Sets
 
