@@ -47,10 +47,10 @@ Problem | Symptoms | Solution
 #### Imputation - [view notebook](src/py_part_2_impute.ipynb)
 
 <a name='r-by-level'/>
-#### Rate-by-level
+#### Rate-by-level - [view notebook](src/py_part_2_rate-by-level.ipynb)
 
 <a name='a-by-level'/>
-#### Average-by-level
+#### Average-by-level - [view notebook](src/py_part_2_average-by-level.ipynb)
 
 <a name='standard'/>
 #### Standardization - [view notebook](src/py_part_2_standardize.ipynb)
