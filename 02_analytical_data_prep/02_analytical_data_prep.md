@@ -2,6 +2,12 @@
 
 A great deal of work in data mining projects is spent on data munging. Below some common data problems that can cause models and predictions to be inaccurate are listed along with their symptoms and potential solutions.
 
+#### Supplementary References
+* *Introduction to Data Mining* - chapter 2
+* *Introduction to Data Mining* - [chapter 2 notes](https://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap2_data.pdf)
+
+#### Class notes
+
 Problem | Symptoms | Solution
 --- | --- | ---
 **[Incomplete data](#incomplete)** | Useless models and meaningless results. | Get more data. Get better data. [Design of Experiment](https://en.wikipedia.org/wiki/Design_of_experiments) approaches.
