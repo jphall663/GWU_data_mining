@@ -25,15 +25,15 @@ When a data set simply does not contain information about the phenomenon of inte
 
 <a name='bias'/>
 #### Biased data
-When a data set contains information about the phenomenon of interest, but that information is consistently and systematically wrong.
+When a data set contains information about the phenomenon of interest, but that information is consistently and systematically wrong. There is no analytical remedy for biased data. You must collect more and better data, and probably dispose of the original biased set.
 
 <a name='f-selection'/>
 #### Feature selection - [view notebook](src/py_part_2_feature_selection.ipynb)
-Finding the best subset of original variables from a data set, typically by measuring the original variable's relationship to the target variable and taking the subset of original variables with the strongest relationships with the target. Feature selection decreases the impact of the curse of dimensionality and usually increases the signal-to-noise ratio in a data set, resulting in faster training times and more accurate models. Because feature selection results uses the original variables from a data set, it usually results in more interpretable models than feature extraction techniques.
+Finding the best subset of original variables from a data set, typically by measuring the original variable's relationship to the target variable and taking the subset of original variables with the strongest relationships with the target. Feature selection decreases the impact of the curse of dimensionality and usually increases the signal-to-noise ratio in a data set, resulting in faster training times and more accurate models. Because feature selection uses original variables from a data set, its results are usually more interpretable than feature extraction techniques.
 
 <a name='f-extraction'/>
 #### Feature extraction - [view notebook](src/py_part_2_feature_extraction.ipynb)
-Combining the original variables in a data set into a new, smaller set of more representative variables, very often using unsupervised learning methods. Feature extraction may also be referred to 'dimension reduction'. Feature extraction is the unsupervised analog of feature selection, i.e. it tends to decreases the impact of the curse of dimensionality and usually increases the signal-to-noise ratio in a data set. Feature extraction techniques combine the original variables in the data set in complex ways, usually creating uninterpretable new variables.
+Combining the original variables in a data set into a new, smaller set of more representative variables, very often using unsupervised learning methods. Feature extraction may also be referred to as 'dimension reduction'. Feature extraction is the unsupervised analog of feature selection, i.e. it tends to decreases the impact of the curse of dimensionality and usually increases the signal-to-noise ratio in a data set. Feature extraction techniques combine the original variables in the data set in complex ways, usually creating uninterpretable new variables.
 
 <a name='oversamp'/>
 #### Oversampling - [view notebook](src/py_part_2_over_sample.ipynb)
