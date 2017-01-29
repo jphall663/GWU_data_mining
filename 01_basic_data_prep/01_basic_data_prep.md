@@ -31,7 +31,7 @@ A great deal of work in data mining projects is spent on data munging. Below som
   * [Base SAS and PROC SGPLOT](#sas-base) - [clone/download notebook](src/notebooks/sas)
   * [PROC SQL](#sas-sql) - [clone/download notebook](src/notebooks/sas)
 
-#### Class Notes: 
+#### Class Notes:
 * [Instructor Notes](notes/01_instructor_notes.pdf)
 * *Introduction to Data Mining* - [chapter 2 notes](https://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap2_data.pdf)
 
@@ -40,7 +40,9 @@ A great deal of work in data mining projects is spent on data munging. Below som
 * *Introduction to Data Mining* - chapter 2, sections 2.1-2.3
 * [*Tidy Data*](https://www.jstatsoft.org/article/view/v059i10)
 
-#### [Sample Quiz](sample_quiz/quiz_1.pdf)
+#### [Sample Quiz](quiz/sample/quiz_1.pdf)
+
+#### [Quiz key](quiz/key/quiz_1_key.pdf)
 
 #### [Assignment](assignment/assignment_1.pdf)
 
