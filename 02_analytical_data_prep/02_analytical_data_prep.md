@@ -38,13 +38,13 @@ Problem | Symptoms | Solution
 #### Encoding - [view notebook](src/py_part_2_encoding.ipynb)
 
 <a name='discret'/>
-#### Discretization
+#### Discretization - [view notebook](py_part_2_discretization.ipynb)
 
 <a name='winsor'/>
-#### Winsorizing
+#### Winsorizing - [view notebook](py_part_2_winsorize.ipynb)
 
 <a name='impute'/>
-#### Imputation
+#### Imputation - [view notebook](py_part_2_impute.ipynb)
 
 <a name='r-by-level'/>
 #### Rate-by-level
@@ -53,4 +53,4 @@ Problem | Symptoms | Solution
 #### Average-by-level
 
 <a name='standard'/>
-#### Standardization
+#### Standardization - [view notebook](py_part_2_standardize.ipynb)
