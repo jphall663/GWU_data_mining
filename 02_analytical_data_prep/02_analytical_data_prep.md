@@ -53,4 +53,4 @@ Problem | Symptoms | Solution
 #### Average-by-level
 
 <a name='standard'/>
-#### Standardization - [view notebook](py_part_2_standardize.ipynb)
+#### Standardization - [view notebook](src/py_part_2_standardize.ipynb)
