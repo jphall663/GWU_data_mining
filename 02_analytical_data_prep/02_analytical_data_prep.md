@@ -38,13 +38,13 @@ Problem | Symptoms | Solution
 #### Encoding - [view notebook](src/py_part_2_encoding.ipynb)
 
 <a name='discret'/>
-#### Discretization - [view notebook](py_part_2_discretization.ipynb)
+#### Discretization - [view notebook](src/py_part_2_discretization.ipynb)
 
 <a name='winsor'/>
-#### Winsorizing - [view notebook](py_part_2_winsorize.ipynb)
+#### Winsorizing - [view notebook](src/py_part_2_winsorize.ipynb)
 
 <a name='impute'/>
-#### Imputation - [view notebook](py_part_2_impute.ipynb)
+#### Imputation - [view notebook](src/py_part_2_impute.ipynb)
 
 <a name='r-by-level'/>
 #### Rate-by-level
