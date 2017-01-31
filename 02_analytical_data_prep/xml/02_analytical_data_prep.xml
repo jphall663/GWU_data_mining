@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?><_ROOT_ EMVERSION="14.1" ORIENTATION="HORIZONTAL">
 <Workspace>
 <NODES>
-<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Binning" ID="BINNING" X="264" Y="198" DESCRIPTION="Bin Categorical Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="BINNING">
-<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMDFY.BINNING.SOURCE" MissingAsLevel="Y" ApplyLevelRule="N" BinMethod="QUANTILE" NumBins="4" Freeze="N" CreateGrouping="N" CreateMethod="OVERWRITE" ImportGrouping="N" VarSelMethod="GINI" GiniCutoff="20" GrpMsmnt="ORDINAL" MaxVar="10" ClassGroupRare="Y" GroupCutoff="0.5" INTTARGETMETHOD="CUTMEAN" USERCUTVALUE="0.20" RejectIntTarget="N" ForceRun="N" RunAction="Train" Component="Binning" Precision="2" ImportData="" GroupMissing="N" DataNeeded="Y">
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Binning" ID="BINNING2" X="373" Y="221" DESCRIPTION="Bin Categorical Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="BINNING">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMDFY.BINNING.SOURCE" MissingAsLevel="Y" ApplyLevelRule="N" BinMethod="QUANTILE" NumBins="4" Freeze="N" CreateGrouping="N" CreateMethod="OVERWRITE" ImportGrouping="N" VarSelMethod="GINI" GiniCutoff="5.0" GrpMsmnt="ORDINAL" MaxVar="10" ClassGroupRare="Y" GroupCutoff="0.5" INTTARGETMETHOD="CUTMEAN" USERCUTVALUE="0.20" RejectIntTarget="N" ForceRun="N" RunAction="Train" Component="Binning" Precision="2" ImportData="" GroupMissing="N" DataNeeded="Y">
 <VariableProperties/>
+<EmTargetAttributes/>
 <EmVariableAttributes>
-<DELTA Variable="CLAGE" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="CLNO" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="DEBTINC" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="DELINQ" AttributeName="USE" AttributeValue="Y"/>
-<DELTA Variable="DEROG" AttributeName="USE" AttributeValue="Y"/>
-<DELTA Variable="JOB" AttributeName="USE" AttributeValue="Y"/>
-<DELTA Variable="LOAN" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="MORTDUE" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="NINQ" AttributeName="USE" AttributeValue="Y"/>
-<DELTA Variable="REASON" AttributeName="USE" AttributeValue="Y"/>
-<DELTA Variable="VALUE" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="YOJ" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="REP_home_ownership" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="addr_state" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="annual_inc" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="delinq_2yrs" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="dti" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="emp_length" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="home_ownership" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="id" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="int_rate" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="loan_amnt" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="longest_credit_length" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="purpose" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="revol_util" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="term_length" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="total_acc" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="verification_status" AttributeName="USE" AttributeValue="Y"/>
 </EmVariableAttributes>
-<EmTargetAttributes/>
 <EmFileProperties>
 <USERTRAINCODE Type="EXTERNAL" Extension="sas">
 <Data/>
@@ -29,11 +33,11 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="DMDB" ID="DMDB" X="660" Y="99" DESCRIPTION="Check for Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="EXPLORE" TOOLPREFIX="DMDB">
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="DMDB" ID="DMDB3" X="546" Y="219" DESCRIPTION="Check for Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="EXPLORE" TOOLPREFIX="DMDB">
 <PROPERTIES Location="CATALOG" Catalog="SASHELP.EMEXPL.DMDB.SOURCE" Interval="Y" Class="Y" MaxValues="25" ForceRun="N" RunAction="Train" Component="DMDB" DataNeeded="Y">
 <VariableProperties/>
-<EmVariableAttributes/>
 <EmTargetAttributes/>
+<EmVariableAttributes/>
 <EmFileProperties>
 <USERTRAINCODE Type="EXTERNAL" Extension="sas">
 <Data/>
@@ -44,11 +48,11 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="DMDB" ID="DMDB2" X="1056" Y="132" DESCRIPTION="Check All Vars" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="EXPLORE" TOOLPREFIX="DMDB">
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="DMDB" ID="DMDB4" X="549" Y="281" DESCRIPTION="Check All Vars" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="EXPLORE" TOOLPREFIX="DMDB">
 <PROPERTIES Location="CATALOG" Catalog="SASHELP.EMEXPL.DMDB.SOURCE" Interval="Y" Class="Y" MaxValues="25" ForceRun="N" RunAction="Train" Component="DMDB" DataNeeded="Y">
 <VariableProperties/>
-<EmVariableAttributes/>
 <EmTargetAttributes/>
+<EmVariableAttributes/>
 <EmFileProperties>
 <USERTRAINCODE Type="EXTERNAL" Extension="sas">
 <Data/>
@@ -59,25 +63,25 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids" X="66" Y="66" DESCRIPTION="Home Equity" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
-<PROPERTIES DataSource="homeequity" Scope="LOCAL" Role="TRAIN" Library="SAMPSIO" Table="HMEQ" NCols="13" NObs="5960" NBytes="656384" Segment="" DataSourceRole="TRAIN" OutputType="VIEW" ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC" ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y" MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y" VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="Y" DsId="homeequity" DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="jphall0" DsCreateDate="1801339727.5" DsModifiedBy="jphall0" DsModifyDate="1801339727.5" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train" Component="DataSource" Description="">
+<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids2" X="175" Y="46" DESCRIPTION="LOANS" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
+<PROPERTIES DataSource="loans" Scope="LOCAL" Role="RAW" Library="LOANS" Table="LOANS" NCols="16" NObs="163987" NBytes="23725056" Segment="" DataSourceRole="RAW" OutputType="VIEW" ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC" ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y" MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y" VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="Y" DsId="loans" DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="jphall0" DsCreateDate="1801441564.6" DsModifiedBy="jphall0" DsModifyDate="1801441564.7" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train" Component="DataSource" Description="">
 <VariableProperties/>
 <EmVariableAttributes>
-<DELTA Variable="BAD" AttributeName="ROLE" AttributeValue="TARGET"/>
-<DELTA Variable="BAD" AttributeName="LEVEL" AttributeValue="BINARY"/>
-<DELTA Variable="DELINQ" AttributeName="LEVEL" AttributeValue="NOMINAL"/>
-<DELTA Variable="DEROG" AttributeName="LEVEL" AttributeValue="NOMINAL"/>
-<DELTA Variable="NINQ" AttributeName="LEVEL" AttributeValue="NOMINAL"/>
+<DELTA Variable="addr_state" AttributeName="COMMENT" AttributeValue="Exceeds maximum number of levels cutoff"/>
+<DELTA Variable="bad_loan" AttributeName="ROLE" AttributeValue="TARGET"/>
+<DELTA Variable="bad_loan" AttributeName="LEVEL" AttributeValue="BINARY"/>
+<DELTA Variable="id" AttributeName="LEVEL" AttributeValue="INTERVAL"/>
+<DELTA Variable="verification_status" AttributeName="LEVEL" AttributeValue="BINARY"/>
 </EmVariableAttributes>
 <EmTargetAttributes>
-<BAD>
-<DecData Table="EMWS1.Ids_BAD_DD">
+<bad_loan>
+<DecData Table="EMWS1.Ids2_bad_loan_DD">
 <Data>
-<Obs BAD="1" COUNT="1189" DATAPRIOR="0.1994966443" TRAINPRIOR="0.1994966443" DECPRIOR="." DECISION1="1" DECISION2="0"/>
-<Obs BAD="0" COUNT="4771" DATAPRIOR="0.8005033557" TRAINPRIOR="0.8005033557" DECPRIOR="." DECISION1="0" DECISION2="1"/>
+<Obs BAD_LOAN="1" COUNT="31583" DATAPRIOR="0.1925945349" TRAINPRIOR="0.1925945349" DECPRIOR="." DECISION1="1" DECISION2="0"/>
+<Obs BAD_LOAN="0" COUNT="132404" DATAPRIOR="0.8074054651" TRAINPRIOR="0.8074054651" DECPRIOR="." DECISION1="0" DECISION2="1"/>
 </Data>
 <Metadata>
-<Variable NAME="BAD" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="bad_loan" LABEL="" LENGTH="32" FORMAT="" TYPE="C"/>
 <Variable NAME="COUNT" LABEL="Level Counts" LENGTH="8" FORMAT="10." TYPE="N"/>
 <Variable NAME="DATAPRIOR" LABEL="Data Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
 <Variable NAME="TRAINPRIOR" LABEL="Training Proportions" LENGTH="8" FORMAT="" TYPE="N"/>
@@ -86,21 +90,21 @@
 <Variable NAME="DECISION2" LABEL="0" LENGTH="8" FORMAT="" TYPE="N"/>
 </Metadata>
 </DecData>
-<DecMeta Table="EMWS1.Ids_BAD_DM">
+<DecMeta Table="EMWS1.Ids2_bad_loan_DM">
 <Data>
 <Obs _TYPE_="MATRIX" VARIABLE="" LABEL="" LEVEL="PROFIT" EVENT="" ORDER="" FORMAT="" TYPE="" COST="" USE="N"/>
-<Obs _TYPE_="TARGET" VARIABLE="BAD" LABEL="" LEVEL="BINARY" EVENT="1" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="TARGET" VARIABLE="bad_loan" LABEL="" LEVEL="BINARY" EVENT="1" ORDER="" FORMAT="BEST12.0" TYPE="N" COST="" USE=""/>
 <Obs _TYPE_="DECISION" VARIABLE="DECISION1" LABEL="1" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
 <Obs _TYPE_="DECISION" VARIABLE="DECISION2" LABEL="0" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="Y"/>
 <Obs _TYPE_="DATAPRIOR" VARIABLE="DATAPRIOR" LABEL="Data Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
 <Obs _TYPE_="TRAINPRIOR" VARIABLE="TRAINPRIOR" LABEL="Training Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
 <Obs _TYPE_="DECPRIOR" VARIABLE="DECPRIOR" LABEL="Decision Prior" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE="N"/>
-<Obs _TYPE_="PREDICTED" VARIABLE="P_BAD1" LABEL="Predicted: BAD=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
-<Obs _TYPE_="RESIDUAL" VARIABLE="R_BAD1" LABEL="Residual: BAD=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
-<Obs _TYPE_="PREDICTED" VARIABLE="P_BAD0" LABEL="Predicted: BAD=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
-<Obs _TYPE_="RESIDUAL" VARIABLE="R_BAD0" LABEL="Residual: BAD=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
-<Obs _TYPE_="FROM" VARIABLE="F_BAD" LABEL="From: BAD" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
-<Obs _TYPE_="INTO" VARIABLE="I_BAD" LABEL="Into: BAD" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_bad_loan1" LABEL="Predicted: bad_loan=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_bad_loan1" LABEL="Residual: bad_loan=1" LEVEL="1" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="PREDICTED" VARIABLE="P_bad_loan0" LABEL="Predicted: bad_loan=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="RESIDUAL" VARIABLE="R_bad_loan0" LABEL="Residual: bad_loan=0" LEVEL="0" EVENT="" ORDER="" FORMAT="" TYPE="N" COST="" USE=""/>
+<Obs _TYPE_="FROM" VARIABLE="F_bad_loan" LABEL="From: bad_loan" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
+<Obs _TYPE_="INTO" VARIABLE="I_bad_loan" LABEL="Into: bad_loan" LEVEL="" EVENT="" ORDER="" FORMAT="" TYPE="C" COST="" USE=""/>
 </Data>
 <Metadata>
 <Variable NAME="_TYPE_" LABEL="Type" LENGTH="32" FORMAT="" TYPE="C"/>
@@ -115,7 +119,7 @@
 <Variable NAME="USE" LABEL="Use" LENGTH="1" FORMAT="" TYPE="C"/>
 </Metadata>
 </DecMeta>
-</BAD>
+</bad_loan>
 </EmTargetAttributes>
 <EmFileProperties>
 <EMNOTES Type="EXTERNAL" Extension="txt">
@@ -124,28 +128,43 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMMDFY.EMIMPUTE.CLASS" COMPONENT="Impute" ID="Impt" X="462" Y="198" DESCRIPTION="Impute Numeric Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Impt">
-<PROPERTIES MethodInterval="TREE" MethodClass="COUNT" MethodTargetInterval="NONE" MethodTargetClass="NONE" ABWTuning="9" AHUBERTuning="1.5" AWAVETuning="6.2831853072" SpacingProportion="90" DefaultChar="" DefaultNum="." RandomSeed="12345" Normalize="Y" ImputeNoMissing="N" MaxPctMissing="50" ValidateTestMissing="N" DistributionMissing="N" LeafSize="5" Maxbranch="2" Maxdepth="6" MinCatSize="5" Nrules="5" Nsurrs="2" Splitsize="." Indicator="NONE" IndicatorRole="REJECTED" ReplaceVariable="N" HideVariable="Y" IndicatorSource="IMPUTED" ForceRun="N" RunAction="Train" Component="Impute">
+<NODE CLASS="SASHELP.EMMDFY.EMIMPUTE.CLASS" COMPONENT="Impute" ID="Impt2" X="372" Y="394" DESCRIPTION="Impute Numeric Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Impt">
+<PROPERTIES MethodInterval="TREESURR" MethodClass="NONE" MethodTargetInterval="NONE" MethodTargetClass="NONE" ABWTuning="9" AHUBERTuning="1.5" AWAVETuning="6.2831853072" SpacingProportion="90" DefaultChar="" DefaultNum="." RandomSeed="12345" Normalize="Y" ImputeNoMissing="N" MaxPctMissing="50" ValidateTestMissing="N" DistributionMissing="N" LeafSize="5" Maxbranch="2" Maxdepth="6" MinCatSize="5" Nrules="5" Nsurrs="2" Splitsize="." Indicator="NONE" IndicatorRole="REJECTED" ReplaceVariable="N" HideVariable="Y" IndicatorSource="IMPUTED" ForceRun="N" RunAction="Train" Component="Impute">
 <VariableProperties/>
+<EmTargetAttributes/>
 <EmVariableAttributes>
-<DELTA Variable="BAD" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="CLAGE" AttributeName="USE" AttributeValue="Y"/>
-<DELTA Variable="CLNO" AttributeName="USE" AttributeValue="Y"/>
-<DELTA Variable="DEBTINC" AttributeName="USE" AttributeValue="Y"/>
-<DELTA Variable="DELINQ" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="DEROG" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="GRP_DELINQ" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="GRP_DEROG" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="GRP_NINQ" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="JOB" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="LOAN" AttributeName="USE" AttributeValue="Y"/>
-<DELTA Variable="MORTDUE" AttributeName="USE" AttributeValue="Y"/>
-<DELTA Variable="NINQ" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="REASON" AttributeName="USE" AttributeValue="N"/>
-<DELTA Variable="VALUE" AttributeName="USE" AttributeValue="Y"/>
-<DELTA Variable="YOJ" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="GRP_REP_home_ownership" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="GRP_addr_state" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="GRP_home_ownership" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="GRP_purpose" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="GRP_verification_status" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="REP_annual_inc" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="REP_delinq_2yrs" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="REP_dti" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="REP_emp_length" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="REP_home_ownership" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="REP_int_rate" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="REP_loan_amnt" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="REP_longest_credit_length" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="REP_revol_util" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="REP_term_length" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="REP_total_acc" AttributeName="USE" AttributeValue="Y"/>
+<DELTA Variable="addr_state" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="annual_inc" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="bad_loan" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="delinq_2yrs" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="dti" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="emp_length" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="home_ownership" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="int_rate" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="loan_amnt" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="longest_credit_length" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="purpose" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="revol_util" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="term_length" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="total_acc" AttributeName="USE" AttributeValue="N"/>
+<DELTA Variable="verification_status" AttributeName="USE" AttributeValue="N"/>
 </EmVariableAttributes>
-<EmTargetAttributes/>
 <EmFileProperties>
 <EMNOTES Type="EXTERNAL" Extension="txt">
 <Data/>
@@ -153,11 +172,11 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMASSMT.ASSESS.CLASS" COMPONENT="ModelCompare" ID="MdlComp" X="1254" Y="231" DESCRIPTION="Model Comparison" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="ASSESS" TOOLPREFIX="MdlComp">
-<PROPERTIES NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20" LiftEpsilon="1E-6" ProfitEpsilon="1E-6" RoiEpsilon="1E-6" ScoreDistBin="20" RocChart="Y" RocEpsilon="0.01" AssessAllTargetLevels="N" SelectionData="DEFAULT" HPCriteria="DEFAULT" SelectionTable="TRAIN" SelectionCriteria="DEFAULT" SelectionDepth="10" NumberofBins="20" RecomputeAssess="N" TargetName="BAD" ModelId="Reg" ModelDescription="Reg w/ data prep" ModelCriteria="Train: Misclassification Rate" ForceRun="N" RunAction="Train" Component="ModelCompare" StatisticUsed="_MISC_" TargetLabel="">
+<NODE CLASS="SASHELP.EMASSMT.ASSESS.CLASS" COMPONENT="ModelCompare" ID="MdlComp2" X="752" Y="115" DESCRIPTION="Model Comparison" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="ASSESS" TOOLPREFIX="MdlComp">
+<PROPERTIES NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20" LiftEpsilon="1E-6" ProfitEpsilon="1E-6" RoiEpsilon="1E-6" ScoreDistBin="20" RocChart="Y" RocEpsilon="0.01" AssessAllTargetLevels="N" SelectionData="DEFAULT" HPCriteria="DEFAULT" SelectionTable="TRAIN" SelectionCriteria="DEFAULT" SelectionDepth="10" NumberofBins="20" RecomputeAssess="N" TargetName="bad_loan" ModelId="Reg4" ModelDescription="Reg w/ data prep" ModelCriteria="Train: Misclassification Rate" ForceRun="N" RunAction="Train" Component="ModelCompare" StatisticUsed="_MISC_" TargetLabel="">
 <VariableProperties/>
-<EmVariableAttributes/>
 <EmTargetAttributes/>
+<EmVariableAttributes/>
 <EmFileProperties>
 <EMNOTES Type="EXTERNAL" Extension="txt">
 <Data/>
@@ -165,11 +184,11 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMMODL.REGRESSION.CLASS" COMPONENT="Regression" ID="Reg" X="1056" Y="231" DESCRIPTION="Reg w/ data prep" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Reg">
+<NODE CLASS="SASHELP.EMMODL.REGRESSION.CLASS" COMPONENT="Regression" ID="Reg2" X="372" Y="46" DESCRIPTION="Reg w/ no data prep" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Reg">
 <PROPERTIES MainEffect="Y" TwoFactor="N" Polynomial="N" PolynomialDegree="2" Terms="N" Error="LOGISTIC" LinkFunction="LOGIT" SuppressIntercept="N" InputCoding="DEVIATION" MinResourceUse="N" ModelSelection="NONE" SelectionCriterion="DEFAULT" SelectionDefault="Y" Sequential="N" SlEntry="0.05" SlStay="0.05" Start="0" Stop="0" Force="0" Hierarchy="CLASS" Rule="NONE" MaxStep="." StepOutput="N" OptimizationTechnique="DEFAULT" ModelDefaults="Y" MaxIterations="." MaxFunctionCalls="." MaxCPUTime="1 HOUR" ConvDefaults="Y" AbsConvValue="-1.34078E154" AbsFValue="0" AbsFTime="1" AbsGValue="0.00001" AbsGTime="1" AbsXValue="1E-8" AbsXTime="1" FConvValue="0" FConvTimes="1" GConvValue="1E-6" GConvTimes="1" ClParm="N" Covout="N" CovB="N" CorB="N" Simple="N" SuppressOutput="N" Details="N" PrintDesignMatrix="N" SASSPDS="N" Performance="N" ExcludedVariable="REJECT" ForceRun="N" RunAction="Train" Component="Regression" Interactions="">
 <VariableProperties/>
-<EmVariableAttributes/>
 <EmTargetAttributes/>
+<EmVariableAttributes/>
 <EmFileProperties>
 <EMNOTES Type="EXTERNAL" Extension="txt">
 <Data/>
@@ -177,11 +196,11 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMMODL.REGRESSION.CLASS" COMPONENT="Regression" ID="Reg3" X="264" Y="66" DESCRIPTION="Reg w/ no data prep" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Reg">
+<NODE CLASS="SASHELP.EMMODL.REGRESSION.CLASS" COMPONENT="Regression" ID="Reg4" X="552" Y="350" DESCRIPTION="Reg w/ data prep" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Reg">
 <PROPERTIES MainEffect="Y" TwoFactor="N" Polynomial="N" PolynomialDegree="2" Terms="N" Error="LOGISTIC" LinkFunction="LOGIT" SuppressIntercept="N" InputCoding="DEVIATION" MinResourceUse="N" ModelSelection="NONE" SelectionCriterion="DEFAULT" SelectionDefault="Y" Sequential="N" SlEntry="0.05" SlStay="0.05" Start="0" Stop="0" Force="0" Hierarchy="CLASS" Rule="NONE" MaxStep="." StepOutput="N" OptimizationTechnique="DEFAULT" ModelDefaults="Y" MaxIterations="." MaxFunctionCalls="." MaxCPUTime="1 HOUR" ConvDefaults="Y" AbsConvValue="-1.34078E154" AbsFValue="0" AbsFTime="1" AbsGValue="0.00001" AbsGTime="1" AbsXValue="1E-8" AbsXTime="1" FConvValue="0" FConvTimes="1" GConvValue="1E-6" GConvTimes="1" ClParm="N" Covout="N" CovB="N" CorB="N" Simple="N" SuppressOutput="N" Details="N" PrintDesignMatrix="N" SASSPDS="N" Performance="N" ExcludedVariable="REJECT" ForceRun="N" RunAction="Train" Component="Regression" Interactions="">
 <VariableProperties/>
-<EmVariableAttributes/>
 <EmTargetAttributes/>
+<EmVariableAttributes/>
 <EmFileProperties>
 <EMNOTES Type="EXTERNAL" Extension="txt">
 <Data/>
@@ -189,8 +208,8 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Replace" ID="Repl" X="660" Y="198" DESCRIPTION="Winsorise Numeric" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Repl">
-<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMDFY.REPLACE.SOURCE" HideVariable="N" UnknownLevel="NONE" ReplaceMethod="COMPUTED" CalcMethod="STDDEV" MADSCutoff="9.0" SpacingsCutoff="9.0" StddevCutoff="3.0" PercentsCutoff="0.5" CountReport="Y" ForceRun="N" RunAction="Train" Component="Replace" IntervalMethod="NONE" DataNeeded="Y">
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Replace" ID="Repl2" X="374" Y="147" DESCRIPTION="Replace home_ownership" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Repl">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMDFY.REPLACE.SOURCE" HideVariable="N" UnknownLevel="NONE" ReplaceMethod="COMPUTED" CalcMethod="NONE" MADSCutoff="9.0" SpacingsCutoff="9.0" StddevCutoff="3.0" PercentsCutoff="0.5" CountReport="Y" ForceRun="N" RunAction="Train" Component="Replace" IntervalMethod="NONE" DataNeeded="Y">
 <VariableProperties/>
 <EmVariableAttributes/>
 <EmTargetAttributes/>
@@ -200,10 +219,43 @@
 </USERTRAINCODE>
 <NEWVALUES Type="DATA">
 <Data>
-<Obs NAME="BAD" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
-<Obs NAME="GRP_DELINQ" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
-<Obs NAME="GRP_DEROG" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
-<Obs NAME="GRP_NINQ" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
+<Obs NAME="addr_state" LEVEL="_UNKNOWN_" TYPE="C" REPLACE_VALUE="_DEFAULT_"/>
+<Obs NAME="bad_loan" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
+<Obs NAME="home_ownership" LEVEL="mortgage" TYPE="C" REPLACE_VALUE="MORTGAGE"/>
+<Obs NAME="home_ownership" LEVEL="_UNKNOWN_" TYPE="C" REPLACE_VALUE="_DEFAULT_"/>
+<Obs NAME="purpose" LEVEL="_UNKNOWN_" TYPE="C" REPLACE_VALUE="_DEFAULT_"/>
+<Obs NAME="verification_status" LEVEL="_UNKNOWN_" TYPE="C" REPLACE_VALUE="_DEFAULT_"/>
+</Data>
+<Metadata>
+<Variable NAME="Name" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="LEVEL" LABEL="Formatted Value" LENGTH="20" FORMAT="" TYPE="C"/>
+<Variable NAME="TYPE" LABEL="Type" LENGTH="1" FORMAT="" TYPE="C"/>
+<Variable NAME="REPLACE_VALUE" LABEL="Replacement Value" LENGTH="200" FORMAT="" TYPE="C"/>
+</Metadata>
+</NEWVALUES>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Replace" ID="Repl3" X="373" Y="304" DESCRIPTION="Winsorise Numeric" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Repl">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMDFY.REPLACE.SOURCE" HideVariable="N" UnknownLevel="NONE" ReplaceMethod="COMPUTED" CalcMethod="STDDEV" MADSCutoff="9.0" SpacingsCutoff="9.0" StddevCutoff="3.0" PercentsCutoff="0.5" CountReport="Y" ForceRun="N" RunAction="Train" Component="Replace" IntervalMethod="NONE" DataNeeded="Y">
+<VariableProperties/>
+<EmTargetAttributes/>
+<EmVariableAttributes/>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<NEWVALUES Type="DATA">
+<Data>
+<Obs NAME="GRP_REP_home_ownership" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
+<Obs NAME="GRP_addr_state" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
+<Obs NAME="GRP_home_ownership" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
+<Obs NAME="GRP_purpose" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
+<Obs NAME="GRP_verification_status" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
+<Obs NAME="bad_loan" LEVEL="_UNKNOWN_" TYPE="N" REPLACE_VALUE="_DEFAULT_"/>
 </Data>
 <Metadata>
 <Variable NAME="Name" LABEL="Variable" LENGTH="32" FORMAT="" TYPE="C"/>
@@ -218,11 +270,11 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMMDFY.EMTRANS.CLASS" COMPONENT="Transform" ID="Trans" X="858" Y="198" DESCRIPTION="Standardize Numeric" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Trans">
-<PROPERTIES DefaultMethod="STANDARDIZE" DefaultTargetMethod="NONE" DefaultClassMethod="NONE" DefaultClassTargetMethod="NONE" Offset="1" MinOffset="Y" HideVariable="Y" RejectVariable="Y" GroupCutoff="0.1" GroupMissing="N" EmRandomSeed="12345" EmSampleSize="DEFAULT" EmSampleMethod="FIRSTN" MissingValue="USEINSEARCH" SummaryVariables="TRANSFORMED" SummaryStatistics="Y" UseMetaTransform="Y" MissingAsLevel="N" NumberofBins="VARIABLES" MaxOptimalBins="4" ForceRun="N" RunAction="Train" Component="Transform">
+<NODE CLASS="SASHELP.EMMDFY.EMTRANS.CLASS" COMPONENT="Transform" ID="Trans2" X="371" Y="483" DESCRIPTION="Standardize Numeric" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Trans">
+<PROPERTIES DefaultMethod="STANDARDIZE" DefaultTargetMethod="NONE" DefaultClassMethod="NONE" DefaultClassTargetMethod="NONE" Offset="1" MinOffset="Y" HideVariable="Y" RejectVariable="Y" GroupCutoff="0.1" GroupMissing="N" EmRandomSeed="12345" EmSampleSize="DEFAULT" EmSampleMethod="RANDOM" MissingValue="USEINSEARCH" SummaryVariables="TRANSFORMED" SummaryStatistics="Y" UseMetaTransform="Y" MissingAsLevel="N" NumberofBins="VARIABLES" MaxOptimalBins="4" ForceRun="N" RunAction="Train" Component="Transform">
 <VariableProperties/>
-<EmVariableAttributes/>
 <EmTargetAttributes/>
+<EmVariableAttributes/>
 <EmFileProperties>
 <INTERACTION Type="DATA">
 <Data/>
@@ -240,16 +292,17 @@
 </NODE>
 </NODES>
 <CONNECTIONS>
-<CONNECTION FROM="Ids" TO="BINNING"/>
-<CONNECTION FROM="Ids" TO="Reg3"/>
-<CONNECTION FROM="Reg3" TO="MdlComp"/>
-<CONNECTION FROM="BINNING" TO="Impt"/>
-<CONNECTION FROM="Impt" TO="DMDB"/>
-<CONNECTION FROM="Impt" TO="Repl"/>
-<CONNECTION FROM="Repl" TO="Trans"/>
-<CONNECTION FROM="Trans" TO="DMDB2"/>
-<CONNECTION FROM="Trans" TO="Reg"/>
-<CONNECTION FROM="Reg" TO="MdlComp"/>
+<CONNECTION FROM="Ids2" TO="Reg2"/>
+<CONNECTION FROM="Ids2" TO="Repl2"/>
+<CONNECTION FROM="Repl2" TO="BINNING2"/>
+<CONNECTION FROM="Reg2" TO="MdlComp2"/>
+<CONNECTION FROM="BINNING2" TO="Repl3"/>
+<CONNECTION FROM="Repl3" TO="Impt2"/>
+<CONNECTION FROM="Impt2" TO="DMDB3"/>
+<CONNECTION FROM="Impt2" TO="Trans2"/>
+<CONNECTION FROM="Trans2" TO="DMDB4"/>
+<CONNECTION FROM="Trans2" TO="Reg4"/>
+<CONNECTION FROM="Reg4" TO="MdlComp2"/>
 </CONNECTIONS>
 <NOTES>
 <DATA><![CDATA[
