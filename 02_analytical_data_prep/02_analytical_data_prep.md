@@ -2,9 +2,16 @@
 
 A great deal of work in data mining projects is spent on data munging. Below some common data problems that can cause models and predictions to be inaccurate are listed along with their symptoms and potential solutions.
 
+#### Enterprise Miner Materials
+* [Example data](data/loans.sas7bdat)
+* [Diagram notes](notes/02_analytical_data_prep.pdf)
+* [Diagram XML](xml/02_analytical_data_prep.xml)
+
 #### Supplementary References
 * *Introduction to Data Mining* - chapter 2
 * *Introduction to Data Mining* - [chapter 2 notes](https://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap2_data.pdf)
+
+#### [Sample Quiz](quiz/sample/quiz_2.pdf)
 
 #### Class notes
 
