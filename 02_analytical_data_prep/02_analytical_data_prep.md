@@ -6,6 +6,7 @@ A great deal of work in data mining projects is spent on data munging. Below som
 * [Example data](data/loans.sas7bdat)
 * [Diagram notes](notes/02_analytical_data_prep.pdf)
 * [Diagram XML](xml/02_analytical_data_prep.xml)
+* [Introductory Video(s)](https://www.youtube.com/watch?v=489wJm2X0TY)
 
 #### Supplementary References
 * *Introduction to Data Mining* - chapter 2
