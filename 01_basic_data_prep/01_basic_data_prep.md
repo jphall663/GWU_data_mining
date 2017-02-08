@@ -42,6 +42,8 @@ A great deal of work in data mining projects is spent on data munging. Below som
 
 #### [Sample Quiz](quiz/sample/quiz_1.pdf)
 
+#### [Quiz key](quiz/key/quiz_1_key.pdf)
+
 #### [Assignment](assignment/assignment_1.pdf)
 
 #### Supplementary References
