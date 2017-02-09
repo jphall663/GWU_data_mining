@@ -4,7 +4,7 @@ Regression is important because it is stable, interpretable and widely understoo
 
 #### Class Notes
 
-* [Interpreting linear regression](notes/)
+* [Overview of interpreting linear regression](notes/interpretting_regression.pdf)
 
 * [Conditions for traditional regression](notes/conditions_for_linear_regression.pdf)
 
