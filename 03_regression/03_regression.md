@@ -12,7 +12,7 @@ Regression is important because it is stable, interpretable and widely understoo
 
 * [EM linear regression example](xml/)
 
-* [H2o linear regression example](src/)
+* [H2o linear regression example](src/py_part_3_penalized_regression.ipynb)
 
 * Overview of logistic regression
 
@@ -30,3 +30,5 @@ Regression is important because it is stable, interpretable and widely understoo
 #### Supplementary References
 [*Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Fourth%20Printing.pdf)</br>
 Sections 2.2, 3.1 - 3.3, and 4.3
+
+[*Generalized Linear Modeling with H2o*](http://h2o-release.s3.amazonaws.com/h2o/rel-tverberg/4/docs-website/h2o-docs/booklets/GLMBooklet.pdf)
