@@ -26,7 +26,7 @@ Regression is important because it is stable, interpretable and widely understoo
 
 * [EM logistic regression example](xml/03_logistic_regression.xml)
 
-* [H2o logistic regression example](src/src/py_part_3_penalized_logisitic_regression.ipynb)
+* [H2o logistic regression example](src/src/py_part_3_penalized_logistic_regression.ipynb)
 
 * Overview of assessing binary classifiers
   * [Interpreting assessment measures](notes/interpreting_assessment_measures.pdf)
