@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><_ROOT_ EMVERSION="14.1" ORIENTATION="HORIZONTAL">
 <Workspace>
 <NODES>
-<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Binning" ID="BINNING" X="327" Y="566" DESCRIPTION="Bin Categorical Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="BINNING">
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Binning" ID="BINNING" X="672" Y="132" DESCRIPTION="Bin Categorical Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="BINNING">
 <PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMDFY.BINNING.SOURCE" MissingAsLevel="Y" ApplyLevelRule="N" BinMethod="QUANTILE" NumBins="4" Freeze="N" CreateGrouping="N" CreateMethod="OVERWRITE" ImportGrouping="N" VarSelMethod="GINI" GiniCutoff="5.0" GrpMsmnt="ORDINAL" MaxVar="10" ClassGroupRare="Y" GroupCutoff="0.5" INTTARGETMETHOD="CUTMEAN" USERCUTVALUE="0.20" RejectIntTarget="N" ForceRun="N" RunAction="Train" Component="Binning" Precision="2" ImportData="" GroupMissing="N" DataNeeded="Y">
 <VariableProperties/>
 <EmTargetAttributes/>
@@ -32,10 +32,11 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="DMDB" ID="DMDB" X="497" Y="564" DESCRIPTION="Check for Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="EXPLORE" TOOLPREFIX="DMDB">
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="DMDB" ID="DMDB" X="1273" Y="258" DESCRIPTION="Check for Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="EXPLORE" TOOLPREFIX="DMDB">
 <PROPERTIES Location="CATALOG" Catalog="SASHELP.EMEXPL.DMDB.SOURCE" Interval="Y" Class="Y" MaxValues="25" ForceRun="N" RunAction="Train" Component="DMDB" DataNeeded="Y">
 <VariableProperties/>
 <EmTargetAttributes/>
+<EmVariableAttributes/>
 <EmFileProperties>
 <USERTRAINCODE Type="EXTERNAL" Extension="sas">
 <Data/>
@@ -46,10 +47,11 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="DMDB" ID="DMDB2" X="500" Y="626" DESCRIPTION="Check All Vars" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="EXPLORE" TOOLPREFIX="DMDB">
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="DMDB" ID="DMDB2" X="1464" Y="165" DESCRIPTION="Check All Vars" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="EXPLORE" TOOLPREFIX="DMDB">
 <PROPERTIES Location="CATALOG" Catalog="SASHELP.EMEXPL.DMDB.SOURCE" Interval="Y" Class="Y" MaxValues="25" ForceRun="N" RunAction="Train" Component="DMDB" DataNeeded="Y">
 <VariableProperties/>
 <EmTargetAttributes/>
+<EmVariableAttributes/>
 <EmFileProperties>
 <USERTRAINCODE Type="EXTERNAL" Extension="sas">
 <Data/>
@@ -60,7 +62,7 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids" X="132" Y="330" DESCRIPTION="LOANS" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
+<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids" X="78" Y="132" DESCRIPTION="LOANS" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
 <PROPERTIES DataSource="loans" Scope="LOCAL" Role="RAW" Library="LOAN" Table="LOANS" NCols="16" NObs="163987" NBytes="23725056" Segment="" DataSourceRole="RAW" OutputType="VIEW" ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC" ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y" MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y" VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="Y" DsId="loans" DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="jphall0" DsCreateDate="1802296877.1" DsModifiedBy="jphall0" DsModifyDate="1802296877.2" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train" Component="DataSource" Description="">
 <VariableProperties/>
 <EmVariableAttributes>
@@ -155,8 +157,23 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMMDFY.EMIMPUTE.CLASS" COMPONENT="Impute" ID="Impt" X="323" Y="739" DESCRIPTION="Impute Numeric Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Impt">
-<PROPERTIES MethodInterval="TREESURR" MethodClass="NONE" MethodTargetInterval="NONE" MethodTargetClass="NONE" ABWTuning="9" AHUBERTuning="1.5" AWAVETuning="6.2831853072" SpacingProportion="90" DefaultChar="" DefaultNum="." RandomSeed="12345" Normalize="Y" ImputeNoMissing="N" MaxPctMissing="50" ValidateTestMissing="N" DistributionMissing="N" LeafSize="5" Maxbranch="2" Maxdepth="6" MinCatSize="5" Nrules="5" Nsurrs="2" Splitsize="." Indicator="NONE" IndicatorRole="REJECTED" ReplaceVariable="N" HideVariable="Y" IndicatorSource="IMPUTED" ForceRun="N" RunAction="Train" Component="Impute">
+<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids2" X="1468" Y="401" DESCRIPTION="LOANS" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
+<PROPERTIES DataSource="loans" Scope="LOCAL" Role="SCORE" Library="LOAN" Table="LOANS" NCols="16" NObs="163987" NBytes="23725056" Segment="" DataSourceRole="RAW" OutputType="VIEW" ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC" ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y" MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y" VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="Y" DsId="loans" DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="jphall0" DsCreateDate="1802296877.1" DsModifiedBy="jphall0" DsModifyDate="1802296877.2" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train" Component="DataSource" Description="">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="bad_loan" AttributeName="LEVEL" AttributeValue="BINARY"/>
+<DELTA Variable="loan_amnt" AttributeName="ROLE" AttributeValue="TARGET"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMMDFY.EMIMPUTE.CLASS" COMPONENT="Impute" ID="Impt" X="1068" Y="132" DESCRIPTION="Impute Numeric Missing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Impt">
+<PROPERTIES MethodInterval="TREE" MethodClass="NONE" MethodTargetInterval="NONE" MethodTargetClass="NONE" ABWTuning="9" AHUBERTuning="1.5" AWAVETuning="6.2831853072" SpacingProportion="90" DefaultChar="" DefaultNum="." RandomSeed="12345" Normalize="Y" ImputeNoMissing="N" MaxPctMissing="50" ValidateTestMissing="N" DistributionMissing="N" LeafSize="5" Maxbranch="2" Maxdepth="6" MinCatSize="5" Nrules="5" Nsurrs="2" Splitsize="." Indicator="NONE" IndicatorRole="REJECTED" ReplaceVariable="N" HideVariable="Y" IndicatorSource="IMPUTED" ForceRun="N" RunAction="Train" Component="Impute">
 <VariableProperties/>
 <EmTargetAttributes/>
 <EmVariableAttributes>
@@ -197,22 +214,7 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="LARS" ID="LARS" X="511" Y="231" DESCRIPTION="P. Reg w/ no data prep" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="LARS">
-<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMODL.LARS.SOURCE" SELMETHOD="LASSO" CHOOSECRIT="CV" STOPCRIT="MAXSTEPS" MAXSTEPS="200" DETAILS="Summary" CV="Random" FOLD="5" SEED="12345" EXCLUDEDVARS="Reject" INTERCEPT="Y" CLASSVAR="Y" ForceRun="N" RunAction="Train" Component="LARS" TOOLTYPE="MODEL">
-<VariableProperties/>
-<EmVariableAttributes/>
-<EmTargetAttributes/>
-<EmFileProperties>
-<USERTRAINCODE Type="EXTERNAL" Extension="sas">
-<Data/>
-</USERTRAINCODE>
-<EMNOTES Type="EXTERNAL" Extension="txt">
-<Data/>
-</EMNOTES>
-</EmFileProperties>
-</PROPERTIES>
-</NODE>
-<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="LARS" ID="LARS2" X="505" Y="761" DESCRIPTION="P. Reg w/ data prep" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="LARS">
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="LARS" ID="LARS2" X="1464" Y="66" DESCRIPTION="P. Reg w/ data prep" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="LARS">
 <PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMODL.LARS.SOURCE" SELMETHOD="LASSO" CHOOSECRIT="CV" STOPCRIT="MAXSTEPS" MAXSTEPS="200" DETAILS="Summary" CV="Random" FOLD="5" SEED="12345" EXCLUDEDVARS="Reject" INTERCEPT="Y" CLASSVAR="Y" ForceRun="N" RunAction="Train" Component="LARS" TOOLTYPE="MODEL">
 <VariableProperties/>
 <EmTargetAttributes/>
@@ -227,8 +229,8 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMASSMT.ASSESS.CLASS" COMPONENT="ModelCompare" ID="MdlComp" X="700" Y="381" DESCRIPTION="Model Comparison" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="ASSESS" TOOLPREFIX="MdlComp">
-<PROPERTIES NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20" LiftEpsilon="1E-6" ProfitEpsilon="1E-6" RoiEpsilon="1E-6" ScoreDistBin="20" RocChart="Y" RocEpsilon="0.01" AssessAllTargetLevels="N" SelectionData="DEFAULT" HPCriteria="DEFAULT" SelectionTable="TRAIN" SelectionCriteria="DEFAULT" SelectionDepth="10" NumberofBins="20" RecomputeAssess="N" TargetName="loan_amnt" ModelId="Reg2" ModelDescription="Reg w/ data prep" ModelCriteria="Valid: Average Squared Error" ForceRun="N" RunAction="Train" Component="ModelCompare" StatisticUsed="_VASE_" TargetLabel="">
+<NODE CLASS="SASHELP.EMASSMT.ASSESS.CLASS" COMPONENT="ModelCompare" ID="MdlComp" X="1662" Y="165" DESCRIPTION="Model Comparison" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="ASSESS" TOOLPREFIX="MdlComp">
+<PROPERTIES NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20" LiftEpsilon="1E-6" ProfitEpsilon="1E-6" RoiEpsilon="1E-6" ScoreDistBin="20" RocChart="Y" RocEpsilon="0.01" AssessAllTargetLevels="N" SelectionData="DEFAULT" HPCriteria="DEFAULT" SelectionTable="TEST" SelectionCriteria="_MSE_" SelectionDepth="10" NumberofBins="20" RecomputeAssess="N" TargetName="loan_amnt" ModelId="Reg2" ModelDescription="Reg w/ data prep" ModelCriteria="Test: Mean Square Error" ForceRun="N" RunAction="Train" Component="ModelCompare" StatisticUsed="_TMSE_" TargetLabel="">
 <VariableProperties/>
 <EmTargetAttributes/>
 <EmVariableAttributes/>
@@ -239,7 +241,7 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMSAMP.EMDPART.CLASS" COMPONENT="Partition" ID="Part" X="325" Y="269" DESCRIPTION="Data Partition" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Part">
+<NODE CLASS="SASHELP.EMSAMP.EMDPART.CLASS" COMPONENT="Partition" ID="Part2" X="474" Y="132" DESCRIPTION="Data Partition (2)" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Part">
 <PROPERTIES Method="DEFAULT" TrainPct="40" ValidatePct="30" TestPct="30" RandomSeed="12345" OutputType="DATA" IntervalDistribution="Y" ClassDistribution="Y" ForceRun="N" RunAction="Train" Component="Partition">
 <VariableProperties/>
 <EmVariableAttributes/>
@@ -251,20 +253,8 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMSAMP.EMDPART.CLASS" COMPONENT="Partition" ID="Part2" X="323" Y="488" DESCRIPTION="Data Partition (2)" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Part">
-<PROPERTIES Method="DEFAULT" TrainPct="40" ValidatePct="30" TestPct="30" RandomSeed="12345" OutputType="DATA" IntervalDistribution="Y" ClassDistribution="Y" ForceRun="N" RunAction="Train" Component="Partition">
-<VariableProperties/>
-<EmVariableAttributes/>
-<EmTargetAttributes/>
-<EmFileProperties>
-<EMNOTES Type="EXTERNAL" Extension="txt">
-<Data/>
-</EMNOTES>
-</EmFileProperties>
-</PROPERTIES>
-</NODE>
-<NODE CLASS="SASHELP.EMMODL.REGRESSION.CLASS" COMPONENT="Regression" ID="Reg" X="515" Y="302" DESCRIPTION="Reg w/ no data prep" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Reg">
-<PROPERTIES MainEffect="Y" TwoFactor="N" Polynomial="N" PolynomialDegree="2" Terms="N" Error="LOGISTIC" LinkFunction="LOGIT" SuppressIntercept="N" InputCoding="DEVIATION" MinResourceUse="N" ModelSelection="NONE" SelectionCriterion="DEFAULT" SelectionDefault="Y" Sequential="N" SlEntry="0.05" SlStay="0.05" Start="0" Stop="0" Force="0" Hierarchy="CLASS" Rule="NONE" MaxStep="." StepOutput="N" OptimizationTechnique="DEFAULT" ModelDefaults="Y" MaxIterations="." MaxFunctionCalls="." MaxCPUTime="1 HOUR" ConvDefaults="Y" AbsConvValue="-1.34078E154" AbsFValue="0" AbsFTime="1" AbsGValue="0.00001" AbsGTime="1" AbsXValue="1E-8" AbsXTime="1" FConvValue="0" FConvTimes="1" GConvValue="1E-6" GConvTimes="1" ClParm="N" Covout="N" CovB="N" CorB="N" Simple="N" SuppressOutput="N" Details="N" PrintDesignMatrix="N" SASSPDS="N" Performance="N" ExcludedVariable="REJECT" ForceRun="N" RunAction="Train" Component="Regression" Interactions="">
+<NODE CLASS="SASHELP.EMMODL.REGRESSION.CLASS" COMPONENT="Regression" ID="Reg2" X="1464" Y="264" DESCRIPTION="Reg w/ data prep" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Reg">
+<PROPERTIES MainEffect="Y" TwoFactor="N" Polynomial="N" PolynomialDegree="3" Terms="N" Error="NORMAL" LinkFunction="LOGIT" SuppressIntercept="N" InputCoding="GLM" MinResourceUse="N" ModelSelection="FORWARD" SelectionCriterion="VERROR" SelectionDefault="Y" Sequential="N" SlEntry="0.05" SlStay="0.05" Start="0" Stop="0" Force="0" Hierarchy="CLASS" Rule="NONE" MaxStep="." StepOutput="N" OptimizationTechnique="DEFAULT" ModelDefaults="Y" MaxIterations="." MaxFunctionCalls="." MaxCPUTime="1 HOUR" ConvDefaults="Y" AbsConvValue="-1.34078E154" AbsFValue="0" AbsFTime="1" AbsGValue="0.00001" AbsGTime="1" AbsXValue="1E-8" AbsXTime="1" FConvValue="0" FConvTimes="1" GConvValue="1E-6" GConvTimes="1" ClParm="N" Covout="N" CovB="N" CorB="N" Simple="N" SuppressOutput="N" Details="N" PrintDesignMatrix="N" SASSPDS="N" Performance="N" ExcludedVariable="REJECT" ForceRun="N" RunAction="Train" Component="Regression" Interactions="">
 <VariableProperties/>
 <EmTargetAttributes/>
 <EmVariableAttributes/>
@@ -275,19 +265,7 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMMODL.REGRESSION.CLASS" COMPONENT="Regression" ID="Reg2" X="503" Y="695" DESCRIPTION="Reg w/ data prep" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODEL" TOOLPREFIX="Reg">
-<PROPERTIES MainEffect="Y" TwoFactor="N" Polynomial="N" PolynomialDegree="2" Terms="N" Error="LOGISTIC" LinkFunction="LOGIT" SuppressIntercept="N" InputCoding="DEVIATION" MinResourceUse="N" ModelSelection="NONE" SelectionCriterion="DEFAULT" SelectionDefault="Y" Sequential="N" SlEntry="0.05" SlStay="0.05" Start="0" Stop="0" Force="0" Hierarchy="CLASS" Rule="NONE" MaxStep="." StepOutput="N" OptimizationTechnique="DEFAULT" ModelDefaults="Y" MaxIterations="." MaxFunctionCalls="." MaxCPUTime="1 HOUR" ConvDefaults="Y" AbsConvValue="-1.34078E154" AbsFValue="0" AbsFTime="1" AbsGValue="0.00001" AbsGTime="1" AbsXValue="1E-8" AbsXTime="1" FConvValue="0" FConvTimes="1" GConvValue="1E-6" GConvTimes="1" ClParm="N" Covout="N" CovB="N" CorB="N" Simple="N" SuppressOutput="N" Details="N" PrintDesignMatrix="N" SASSPDS="N" Performance="N" ExcludedVariable="REJECT" ForceRun="N" RunAction="Train" Component="Regression" Interactions="">
-<VariableProperties/>
-<EmTargetAttributes/>
-<EmVariableAttributes/>
-<EmFileProperties>
-<EMNOTES Type="EXTERNAL" Extension="txt">
-<Data/>
-</EMNOTES>
-</EmFileProperties>
-</PROPERTIES>
-</NODE>
-<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Replace" ID="Repl" X="322" Y="413" DESCRIPTION="Replace home_ownership" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Repl">
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Replace" ID="Repl" X="276" Y="132" DESCRIPTION="Replace home_ownership" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Repl">
 <PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMDFY.REPLACE.SOURCE" HideVariable="N" UnknownLevel="NONE" ReplaceMethod="COMPUTED" CalcMethod="NONE" MADSCutoff="9.0" SpacingsCutoff="9.0" StddevCutoff="3.0" PercentsCutoff="0.5" CountReport="Y" ForceRun="N" RunAction="Train" Component="Replace" IntervalMethod="NONE" DataNeeded="Y">
 <VariableProperties/>
 <EmTargetAttributes/>
@@ -318,7 +296,7 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Replace" ID="Repl2" X="324" Y="649" DESCRIPTION="Winsorise Numeric" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Repl">
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="Replace" ID="Repl2" X="870" Y="132" DESCRIPTION="Winsorise Numeric" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Repl">
 <PROPERTIES Location="CATALOG" Catalog="SASHELP.EMMDFY.REPLACE.SOURCE" HideVariable="N" UnknownLevel="NONE" ReplaceMethod="COMPUTED" CalcMethod="STDDEV" MADSCutoff="9.0" SpacingsCutoff="9.0" StddevCutoff="3.0" PercentsCutoff="0.5" CountReport="Y" ForceRun="N" RunAction="Train" Component="Replace" IntervalMethod="NONE" DataNeeded="Y">
 <VariableProperties/>
 <EmTargetAttributes/>
@@ -347,7 +325,19 @@
 </EmFileProperties>
 </PROPERTIES>
 </NODE>
-<NODE CLASS="SASHELP.EMMDFY.EMTRANS.CLASS" COMPONENT="Transform" ID="Trans" X="321" Y="822" DESCRIPTION="Standardize Numeric" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Trans">
+<NODE CLASS="SASHELP.EMUTIL.EMSCORE.CLASS" COMPONENT="Score" ID="Score" X="1748" Y="321" DESCRIPTION="Score" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="ASSESS" TOOLPREFIX="Score">
+<PROPERTIES OutputType="VIEW" FixedOutputNames="Y" HideVariables="N" HideInput="Y" HideTarget="Y" HideRejected="Y" HideAssess="Y" HidePredict="Y" HideFreq="Y" HideClassification="Y" HideResidual="Y" HideOther="Y" ScoreValidate="N" ScoreTest="N" CScore="Y" JScore="Y" PackageName="DEFAULT" UserPackageName="" PreferenceName="" OptimizedCode="Y" GraphReports="Y" ForceRun="N" RunAction="Train" Component="Score">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMMDFY.EMTRANS.CLASS" COMPONENT="Transform" ID="Trans" X="1266" Y="132" DESCRIPTION="Standardize Numeric" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="MODIFY" TOOLPREFIX="Trans">
 <PROPERTIES DefaultMethod="STANDARDIZE" DefaultTargetMethod="NONE" DefaultClassMethod="NONE" DefaultClassTargetMethod="NONE" Offset="1" MinOffset="Y" HideVariable="Y" RejectVariable="Y" GroupCutoff="0.1" GroupMissing="N" EmRandomSeed="12345" EmSampleSize="DEFAULT" EmSampleMethod="RANDOM" MissingValue="USEINSEARCH" SummaryVariables="TRANSFORMED" SummaryStatistics="Y" UseMetaTransform="Y" MissingAsLevel="N" NumberofBins="VARIABLES" MaxOptimalBins="4" ForceRun="N" RunAction="Train" Component="Transform">
 <VariableProperties/>
 <EmTargetAttributes/>
@@ -370,22 +360,19 @@
 </NODES>
 <CONNECTIONS>
 <CONNECTION FROM="Ids" TO="Repl"/>
-<CONNECTION FROM="Reg" TO="MdlComp"/>
+<CONNECTION FROM="Repl" TO="Part2"/>
+<CONNECTION FROM="Part2" TO="BINNING"/>
 <CONNECTION FROM="BINNING" TO="Repl2"/>
 <CONNECTION FROM="Repl2" TO="Impt"/>
 <CONNECTION FROM="Impt" TO="DMDB"/>
 <CONNECTION FROM="Impt" TO="Trans"/>
 <CONNECTION FROM="Trans" TO="DMDB2"/>
 <CONNECTION FROM="Trans" TO="Reg2"/>
-<CONNECTION FROM="Reg2" TO="MdlComp"/>
-<CONNECTION FROM="Ids" TO="Part"/>
-<CONNECTION FROM="Part" TO="LARS"/>
-<CONNECTION FROM="Part" TO="Reg"/>
-<CONNECTION FROM="LARS" TO="MdlComp"/>
-<CONNECTION FROM="Repl" TO="Part2"/>
-<CONNECTION FROM="Part2" TO="BINNING"/>
 <CONNECTION FROM="Trans" TO="LARS2"/>
 <CONNECTION FROM="LARS2" TO="MdlComp"/>
+<CONNECTION FROM="Reg2" TO="MdlComp"/>
+<CONNECTION FROM="MdlComp" TO="Score"/>
+<CONNECTION FROM="Ids2" TO="Score"/>
 </CONNECTIONS>
 <NOTES>
 <DATA><![CDATA[
