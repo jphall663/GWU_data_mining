@@ -39,6 +39,11 @@ Regression is important because it is stable, interpretable and widely understoo
 * [Sample quiz 3.2 - linear regression](quiz/sample/quiz_3.2.pdf)
 * [Sample quiz 3.3 - logistic regression and assessment](quiz/sample/quiz_3.3.pdf)
 
+### Quiz Keys
+
+* [Linear regression]()
+* [Logistic regression]()
+
 #### Supplementary References
 * [*Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Fourth%20Printing.pdf)</br>
 Sections 2.2, 3.1 - 3.3, and 4.3
@@ -50,3 +55,7 @@ Sections 2.2, 3.1 - 3.3, and 4.3
 * [UCLA IDRE: *How do I interpret odds ratios in logistic regression?*](http://www.ats.ucla.edu/stat/mult_pkg/faq/general/odds_ratio.htm)
 
 * [Wikipedia: *Confusion Matrix*](https://en.wikipedia.org/wiki/Confusion_matrix)
+
+* [Math and code for gradient descent and linear regression](http://tillbergmann.com/blog/python-gradient-descent.html)
+
+* [Math and code for gradient descent and logistic regression](http://aimotion.blogspot.com/2011/11/machine-learning-with-python-logistic.html)
