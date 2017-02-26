@@ -32,7 +32,7 @@ Regression is important because it is stable, interpretable and widely understoo
   * [Interpreting assessment measures](notes/interpreting_assessment_measures.pdf)
   * [Assessment measure workbook](xlsx/assessment_workbook.xlsx)
 
-* Assignment
+* [Assignment](assignment/assignment_2.pdf)
 
 #### Sample Quizzes
 * [Sample quiz 3.1 - bias/variance tradeoff](quiz/sample/quiz_3.1.pdf)
