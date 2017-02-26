@@ -41,8 +41,8 @@ Regression is important because it is stable, interpretable and widely understoo
 
 ### Quiz Keys
 
-* [Linear regression]()
-* [Logistic regression]()
+* [Linear regression](key/quiz_3.1_key.pdf)
+* Logistic regression
 
 #### Supplementary References
 * [*Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Fourth%20Printing.pdf)</br>
