@@ -12,7 +12,7 @@ Decision trees strike a nice balance between interpretability and accuracy. They
 
 * [EM decision tree example](xml/04_decision_trees.xml)
 
-* [H2o decision tree ensemble examples](src/py_part_4_decision_tree_ensembles.ipynb)
+* [H2o decision tree ensemble examples](http://nbviewer.jupyter.org/github/jphall663/GWU_data_mining/blob/master/04_decision_trees/src/py_part_4_decision_tree_ensembles.ipynb)
 
 #### [Sample Quiz](quiz/sample/quiz_4.pdf)
 
