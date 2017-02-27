@@ -4,15 +4,15 @@ Decision trees strike a nice balance between interpretability and accuracy. They
 
 #### Class Notes
 
-* [Overview of decision trees](notes/)
+* [Overview of decision trees](notes/instructor_notes.pdf)
 
 * Overview of training decision trees in Enterprise Miner - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
 * [More decision tree splitting and stopping strategies](notes/tan_notes.pdf)
 
-* [EM decision tree example](xml/)
+* [EM decision tree example](xml/04_decision_trees.xml)
 
-* [H2o decision tree ensemble example](src/)
+* [H2o decision tree ensemble examples](src/py_part_4_decision_tree_ensembles.ipynb)
 
 #### [Sample Quiz](quiz/sample/quiz_4.pdf)
 
