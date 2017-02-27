@@ -18,7 +18,11 @@ Decision trees strike a nice balance between interpretability and accuracy. They
 
 #### Supplementary References
 
-* [*Introduction to Data Mining* - Chapter 4 Reading](http://www-users.cs.umn.edu/~kumar/dmbook/ch4.pdf)
+* [*Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Fourth%20Printing.pdf)</br>
+Chapter 8
+
+* [*Introduction to Data Mining*](http://www-users.cs.umn.edu/~kumar/dmbook/ch4.pdf)</br>
+Chapter 4
 
 * [*Gradient Boosting Machines with H2O*](http://h2o-release.s3.amazonaws.com/h2o/rel-tverberg/5/docs-website/h2o-docs/booklets/GBMBooklet.pdf)
 
