@@ -21,8 +21,8 @@ Neural networks are important because of their ability to approximate **any** re
 * *Introduction to Data Mining*</br>
 Section 5.4
 
-* [Neural network FAQ by Warren Sarle](ftp://ftp.sas.com/pub/neural/FAQ.html)
-
 * [*Deep Learning with H2O*](http://h2o-release.s3.amazonaws.com/h2o/rel-ueno/1/docs-website/h2o-docs/booklets/DeepLearningBooklet.pdf)
 
 * *Predictive Modeling and Neural Networks in Enterprise Miner* - [Blackboard electronic reserves](https://blackboard.gwu.edu)
+
+* Neural network FAQ by Warren Sarle: ftp://ftp.sas.com/pub/neural/FAQ.html#A2
