@@ -25,4 +25,4 @@ Section 5.4
 
 * *Predictive Modeling and Neural Networks in Enterprise Miner* - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
-* [Warren Sarle's neural network FAQ](ftp://ftp.sas.com/pub/neural/FAQ.html#A2)
+* [Neural network FAQ by Warren Sarle](ftp://ftp.sas.com/pub/neural/FAQ.html#A2)
