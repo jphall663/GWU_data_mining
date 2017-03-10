@@ -25,4 +25,10 @@ Section 5.4
 
 * *Predictive Modeling and Neural Networks in Enterprise Miner* - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
-* Neural network FAQ by Warren Sarle: ftp://ftp.sas.com/pub/neural/FAQ.html#A2
+* [*Neural Network Zoo*](http://www.asimovinstitute.org/neural-network-zoo/) article </br>
+Quick summary of the many different types of neural networks
+
+* [*Reducing the Dimensionality of Data Using Neural Networks*](https://www.cs.toronto.edu/~hinton/science.pdf)</br>
+The seminal deep learning paper from 2006 by Geoffrey Hinton
+
+* Neural network FAQ by Warren Sarle: ftp://ftp.sas.com/pub/neural/FAQ.html#A2 </br> More than you ever wanted to know about traditional neural networks (some info may be dated and/or obsolete.)
