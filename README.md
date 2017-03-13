@@ -29,6 +29,7 @@ Weeks | Topics
 * [Data visualization](data_viz/data_viz.md)
 * [Quick references](quick_refs/quick_refs.md)
 * [Interpreting Machine Learning](interpreting_ml/interpreting_ml.md)
+* [Data Science Interview Questions](ds_interview.md)
 
 ## Course Syllabus
 
