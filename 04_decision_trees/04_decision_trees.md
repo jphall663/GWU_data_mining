@@ -16,6 +16,8 @@ Decision trees strike a nice balance between interpretability and accuracy. They
 
 #### [Sample Quiz](quiz/sample/quiz_4.pdf)
 
+#### [Quiz Key](quiz/key/quiz_4_key.pdf)
+
 #### Supplementary References
 
 * [*Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Fourth%20Printing.pdf)</br>
