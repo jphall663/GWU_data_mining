@@ -14,13 +14,13 @@
 * Explain finite precision. Why is finite precision a problem in machine learning?
 * Explain the “bias-variance trade-off” and why it is fundamental to machine learning.
 * Describe a recent use of logistic regression.
-* Describe an analysis you have recently completed, including strategies and findings. How were the findings used by the business? (This can be from a student research project or thesis if the candidate is a recent graduate.)
 * Give examples of data cleaning techniques you have used in the past.
 * What subjects would you include in a one-day data science crash course? And why?
 * Describe a situation where you had to decide between two different types of analyses – and why you chose the one you did.
 * Explain the benefits of test-driven software development; or explain the benefits of unit testing.
 
 #### Communication
+* Describe an analysis you have recently completed, including strategies and findings. How were the findings used by the business? (This can be from a student research project or thesis if the candidate is a recent graduate.)
 * Explain to the leaders of this company what model lift is and why they should care.
 * How do you identify and overcome obstacles (during projects, with customers, with decision makers, etc.)?
 * Tell me about a project you worked on that succeeded in part because of the way results were communicated.
