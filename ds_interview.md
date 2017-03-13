@@ -28,3 +28,5 @@
 * How would you design a chart or graph for a color-blind audience?
 * Tell me a compelling story about data that you have analyzed.
 * Explain to a business analyst the trade-off between the predictive power and the interpretability of a model – and why this matters.
+
+Adapted from: https://www.quora.com/What-are-good-interview-questions-to-ask-for-Machine-Learning-Data-Science-positions
