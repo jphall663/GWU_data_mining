@@ -17,7 +17,7 @@ Weeks | Topics
 7   | [Section 04: Decision Trees](04_decision_trees/04_decision_trees.md)
 8   | [Section 05: Neural Networks](05_neural_networks/05_neural_networks.md)
 9   | Project proposal presentations
--   | Spring Break
+--   | Spring Break
 10  | [Section 06: Clustering](06_clustering/06_clustering.md)
 11  | [Section 07: Association Rules](07_association_rules/07_association_rules.md)
 12  | [Section 08: Text Mining](08_text_mining/08_text_mining.md)
