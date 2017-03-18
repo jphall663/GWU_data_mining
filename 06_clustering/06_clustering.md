@@ -8,6 +8,11 @@ Clustering enables us to group the rows of a data set together based on their si
 
 * [*Introduction to Data Mining* clustering notes](notes/tan_notes.pdf)
 
+* [EM neural network example](xml/06_clustering.xml)
+
+* [H2o clustering example](src/py_part_6_clustering.ipynb)
+
+
 #### [Sample Quiz](quiz/sample/quiz_6.pdf)
 
 #### Supplementary References
