@@ -35,39 +35,30 @@ Problem | Symptoms | Solution
 
 <sup>&#10013;</sup> In some cases this is not a problem at all. Some algorithms and software packages handle this automatically and elegantly ... some don't.
 
-<a name='incomplete'/>
 #### Incomplete data
 When a data set simply does not contain information about the phenomenon of interest. There is no analytical remedy for incomplete data. You must collect more and better data, and probably dispose of the original incomplete set.
 
-<a name='bias'/>
 #### Biased data
 When a data set contains information about the phenomenon of interest, but that information is consistently and systematically wrong. There is no analytical remedy for biased data. You must collect more and better data, and probably dispose of the original biased set.
 
-<a name='f-selection'/>
 #### Feature selection - [view notebook](src/py_part_2_feature_selection.ipynb)
 Finding the best subset of original variables from a data set, typically by measuring the original variable's relationship to the target variable and taking the subset of original variables with the strongest relationships with the target. Feature selection decreases the impact of the curse of dimensionality and usually increases the signal-to-noise ratio in a data set, resulting in faster training times and more accurate models. Because feature selection uses original variables from a data set, its results are usually more interpretable than feature extraction techniques.
 
-<a name='f-extraction'/>
 #### Feature extraction - [view notebook](src/py_part_2_feature_extraction.ipynb)
 Combining the original variables in a data set into a new, smaller set of more representative variables, very often using unsupervised learning methods. Feature extraction may also be referred to as 'dimension reduction'. Feature extraction is the unsupervised analog of feature selection, i.e. it tends to decreases the impact of the curse of dimensionality and usually increases the signal-to-noise ratio in a data set. Feature extraction techniques combine the original variables in the data set in complex ways, usually creating uninterpretable new variables.
 
-<a name='oversamp'/>
 #### Oversampling - [view notebook](src/py_part_2_over_sample.ipynb)
 Taking all the rows containing rare events in a data set and increasing them proportionally to the number of rows not containing rare values. 'Undersampling' is the opposite and equally valid approach where the rows not containing rare events are decreased proportionally to the number of rows containing rare events. With rare events, models will often find that the most accurate possible outcome is to predict the rare event never happens. Both oversampling and undersampling artificially inflate the frequency of rare events, which helps models learn to predict rare events.
 
-<a name='encode'/>
 #### Encoding - [view notebook](src/py_part_2_encoding.ipynb)
 Changing the representation of a variable. Very often in data mining applications categorical, character variables are encoded to numeric variables to be used with algorithms that cannot accept character or categorical variables.
 
-<a name='r-by-level'/>
 #### Rate-by-level - [view notebook](src/py_part_2_rate-by-level.ipynb)
 An encoding method for changing categorical variables into numeric variables when the target is a binary categorical variable. Particularly helpful when a categorical variable has many levels.
 
-<a name='a-by-level'/>
 #### Average-by-level - [view notebook](src/py_part_2_average-by-level.ipynb)
 An encoding method for changing categorical variables into numeric variables when the target is a numeric variable. Particularly helpful when a categorical variable has many levels.
 
-<a name='discret'/>
 #### Discretization - [view notebook](src/py_part_2_discretization.ipynb)
 Changing a numeric variable into an ordinal or nominal categorical variable based on value ranges of the original numeric variable. Discretization can also be referred to as 'binning'. Discretization has many benefits:
 * When restricted to using linear models, binning helps introduce nonlinearity because each bin in a variable gets its own parameter.
@@ -75,14 +66,11 @@ Changing a numeric variable into an ordinal or nominal categorical variable base
 * Binning deals with missing values elegantly by assigning them to their own bin.
 * Binning handles outliers elegantly by assigning all outlying values, in training and new data, to the 'high' or 'low' bin. (Outliers damage predictive models that seek to minimize squared error because they create disproportionately large, i.e. squared, residuals which optimization routines will try to minimize at the expense of minimizing the error for more reliable data points.)
 
-<a name='winsor'/>
 #### Winsorizing - [view notebook](src/py_part_2_winsorize.ipynb)
 Removing outliers in a variable's value and replacing them with more central values of that variable. (Outliers damage predictive models that seek to minimize squared error because they create disproportionately large, i.e. squared, residuals which optimization routines will try to minimize at the expense of minimizing the error for more reliable data points.)
 
-<a name='impute'/>
 #### Imputation - [view notebook](src/py_part_2_impute.ipynb)
 Replacing missing data with an appropriate, non-missing value. In predictive modeling imputing should be used with care. Missingness is often predictive. Also imputation changes the distribution of the input variable learned by the model.
 
-<a name='standard'/>
 #### Standardization - [view notebook](src/py_part_2_standardize.ipynb)
 Enforcing similar scales on a set of variables. For distance-based algorithms (e.g. k-means) and algorithms that use gradient-related methods to create model parameters (e.g. regression, artificial neural networks) variables must be on the same scale, or variables with large values will incorrectly dominate the training process.
