@@ -51,7 +51,6 @@ A great deal of work in data mining projects is spent on data munging. Below som
 
 ***
 
-<a name='python-pandas' />
 #### Python Pandas - [view notebook](src/notebooks/py/Py_Part_0_pandas_numpy.ipynb)
 ```python
 #%% standard output ###########################################################
