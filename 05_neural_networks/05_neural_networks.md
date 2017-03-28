@@ -16,6 +16,8 @@ Neural networks are important because of their ability to approximate **any** re
 
 #### [Sample Quiz](quiz/sample/quiz_5.pdf)
 
+#### [Quiz key](quiz/key/quiz_5.pdf)
+
 #### Supplementary References
 
 * *Introduction to Data Mining*</br>
