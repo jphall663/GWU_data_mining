@@ -25,11 +25,11 @@ A great deal of work in data mining projects is spent on data munging. Below som
 #### Code examples
 * [Python Pandas](01_basic_data_prep.md#python-pandas---view-notebook) - [view notebook](src/notebooks/py/Py_Part_0_pandas_numpy.ipynb)
 * R
-  * [Basics, dplyr, and ggplot](#r-basics) - [view notebook](src/notebooks/r/R_Part_0_Basics_dplyr_and_ggplot2.ipynb)
-  * [data.table](#r-data.table) - [view notebook](src/notebooks/r/R_Part_1_data.table.ipynb)
+  * [Basics, dplyr, and ggplot](01_basic_data_prep.md#r-basics-dplyr-and-ggplot---view-notebook) - [view notebook](src/notebooks/r/R_Part_0_Basics_dplyr_and_ggplot2.ipynb)
+  * [data.table](01_basic_data_prep.md#r-datatable---view-notebook) - [view notebook](src/notebooks/r/R_Part_1_data.table.ipynb)
 * SAS
-  * [Base SAS and PROC SGPLOT](#sas-base) - [clone/download notebook](src/notebooks/sas)
-  * [PROC SQL](#sas-sql) - [clone/download notebook](src/notebooks/sas)
+  * [Base SAS and PROC SGPLOT](01_basic_data_prep.md#base-sas-and-proc-sgplot---clonedownload-notebook) - [clone/download notebook](src/notebooks/sas)
+  * [PROC SQL](01_basic_data_prep.md#sas-proc-sql---clonedownload-notebook) - [clone/download notebook](src/notebooks/sas)
 
 #### Class Notes:
 * [Instructor Notes](notes/01_instructor_notes.pdf)
