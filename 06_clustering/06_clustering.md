@@ -12,7 +12,6 @@ Clustering enables us to group the rows of a data set together based on their si
 
 * [H2o clustering example](src/py_part_6_clustering.ipynb)
 
-
 #### [Sample Quiz](quiz/sample/quiz_6.pdf)
 
 #### Supplementary References
