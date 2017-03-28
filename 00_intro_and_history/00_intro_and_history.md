@@ -36,3 +36,4 @@
 ***
 
 * [*The Evolution of Analytics*](http://www.oreilly.com/data/free/the-evolution-of-analytics.csp)
+* [H2O Algorithm Overview](notes/h2o_algos.pdf)
