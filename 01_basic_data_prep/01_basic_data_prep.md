@@ -312,7 +312,6 @@ scratch_df7 = pd.read_csv('scratch.csv')
 
 ```
 
-<a name='r-basics' />
 #### R Basics, dplyr, and ggplot - [view notebook](src/notebooks/r/R_Part_0_Basics_dplyr_and_ggplot2.ipynb)
 ```r
 ### standard output ###########################################################
@@ -594,7 +593,6 @@ write.table(scratch_tbl, file = filename, quote = FALSE, sep = ',',
 import <- read.table(filename, header = TRUE, sep = ',')
 ```
 
-<a name='r-data.table' />
 #### R data.table - [view notebook](src/notebooks/r/R_Part_1_data.table.ipynb)
 ```r
 ### data.table is an efficient package for manipulating data sets #############
@@ -799,7 +797,6 @@ scratch_dt <- fread('scratch_dt.csv')
 head(scratch_dt)
 ```
 
-<a name='sas-base' />
 #### Base SAS and PROC SGPLOT - [clone/download notebook](src/notebooks/sas)
 ```sas
 ******************************************************************************;
@@ -1251,7 +1248,6 @@ proc sgplot
 run;
 ```
 
-<a name='sas-sql' />
 #### SAS PROC SQL - [clone/download notebook](src/notebooks/sas)
 ```sas
 ******************************************************************************;
