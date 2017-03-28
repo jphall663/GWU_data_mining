@@ -23,7 +23,7 @@ A great deal of work in data mining projects is spent on data munging. Below som
 **Append/Bind** - Stacking data sets bottom-to-top regardless of the values of any variable(s).
 
 #### Code examples
-* [Python Pandas](#python-pandas) - [view notebook](src/notebooks/py/Py_Part_0_pandas_numpy.ipynb)
+* [Python Pandas](python-pandas---view-notebook) - [view notebook](src/notebooks/py/Py_Part_0_pandas_numpy.ipynb)
 * R
   * [Basics, dplyr, and ggplot](#r-basics) - [view notebook](src/notebooks/r/R_Part_0_Basics_dplyr_and_ggplot2.ipynb)
   * [data.table](#r-data.table) - [view notebook](src/notebooks/r/R_Part_1_data.table.ipynb)
