@@ -1,6 +1,6 @@
 ## Section 07: Association Rules
 
-Association rules, sometimes referred to as market basket analysis, tell us which items or entities occur together the most often in a large database of transactions. Transactions are typically financial, as in sales and purchases, or technological, as in calls or web links. Association rules have applications in many fields, but especially in marketing and anomaly detection.
+Association rules, sometimes referred to as market basket analysis, tell us which items or entities occur together the most often in a large database of transactions. Transactions are typically financial, as in sales and purchases, or technological, as in calls or web links. Association rules have applications in many fields, but especially in marketing, anomaly detection and recommendation, giving us the original *those who watched/bought X also watched/bought Y and Z* recommendations.  
 
 #### Class Notes
 
