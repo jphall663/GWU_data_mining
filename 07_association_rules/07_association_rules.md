@@ -4,13 +4,13 @@ Association rules, sometimes referred to as market basket analysis, tell us whic
 
 #### Class Notes
 
-* Overview of association rules(notes/instructor_notes.pdf)
+* [Overview of association rules](notes/instructor_notes.pdf)
 
-* Overview of association rules in SAS Enterprise Miner - [Blackboard electronic reserves](https://blackboard.gwu.edu)
+* Overview of association rules in Enterprise Miner - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
-* [*Introduction to Data Mining* association rules notes](notes/tan_notes.pdf)
+* [More details on association rules](notes/tan_notes.pdf)
 
-* EM association rules example(xml/07_association_rules.xml)
+* [EM association rules example](xml/07_association_rules.xml)
 
 #### [Sample Quiz](quiz/sample/quiz_7.pdf)
 
