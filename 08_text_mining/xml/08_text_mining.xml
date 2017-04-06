@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?><_ROOT_ EMVERSION="13.2" ORIENTATION="HORIZONTAL">
+<Workspace>
+<NODES>
+<NODE CLASS="SASHELP.EMUTIL.CONTROLPOINT.CLASS" COMPONENT="ControlPoint" ID="CNTRL" X="840" Y="113" DESCRIPTION="Control Point" DIAGRAMID="_ROOT_" PARENTID="">
+<PROPERTIES/>
+</NODE>
+<NODE CLASS="SASHELP.EMSAMP.IDS.CLASS" COMPONENT="DataSource" ID="Ids" X="66" Y="66" DESCRIPTION="Enron Discussion Thread E-Mail" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="SAMPLE" TOOLPREFIX="Ids">
+<PROPERTIES DataSource="enrondiscussionthreademail" Scope="LOCAL" Role="RAW" Library="L" Table="ENRONDTSAMPLE" NCols="7" NObs="19738" NBytes="." Segment="" DataSourceRole="RAW" OutputType="VIEW" ForceRun="N" ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC" ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y" MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y" VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="Y" DsId="enrondiscussionthreademail" DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="p" DsCreateDate="1775512466.2" DsModifiedBy="p" DsModifyDate="1775512466.2" DsScope="LOCAL" Sample="D" SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y" RunAction="Train" Component="DataSource" Description="Enron Discussion Thread E-Mail">
+<VariableProperties/>
+<EmVariableAttributes>
+<DELTA Variable="ToText" AttributeName="ROLE" AttributeValue="REJECTED"/>
+</EmVariableAttributes>
+<EmTargetAttributes/>
+<EmFileProperties>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="TextCluster" ID="TextCluster" X="660" Y="165" DESCRIPTION="Text Cluster" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="TM" TOOLPREFIX="TextCluster">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMTXTEXT.CLUSTER.SOURCE" resolution="LOW" maxK="100" exactOrMaximum="maximum" nClusters="40" algorithm="1.0" nDescTerms="15" ForceRun="N" RunAction="Train" Component="TextCluster">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="TextFilter" ID="TextFilter" X="462" Y="66" DESCRIPTION="Text Filter" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="TM" TOOLPREFIX="TextFilter">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMTXTEXT.FILTER.SOURCE" spellCheck="N" spellSensitivity="Med" cellWeight="DEFAULT" termWeight="DEFAULT" minDocs="4" maxTerms="." resultTerms="ALL" maxviewTerms="20000" ForceRun="N" RunAction="Train" Component="TextFilter" spellDict="" searchPhrase="" searchVar="" whereDoc="" lastfilternode="" lastparsenode="" synonymImport="" saveSynDS="" spellDS="" interStopDS="" interSynDS="" filters="">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<SYNONYMIMPORT Type="DATA">
+<Data/>
+<Metadata>
+<Variable NAME="term" LABEL="Child Term" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="termrole" LABEL="Term Role" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="parent" LABEL="Parent Term" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="parentrole" LABEL="Parent Role" LENGTH="256" FORMAT="" TYPE="C"/>
+</Metadata>
+</SYNONYMIMPORT>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="TextParsing" ID="TextParsing" X="264" Y="66" DESCRIPTION="Text Parsing" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="TM" TOOLPREFIX="TextParsing">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMTXTEXT.PARSE.SOURCE" language="ENGLISH" delimit="Std" bCapitalize="Y" bPartOfSpeech="Y" NounGroups="Y" multiDS="SASHELP.ENG_MULTI" bPatterns="NONE" stopList="SASHELP.ENGSTOP" ignorePOS="'AUX' 'CONJ' 'DET' 'INTERJ' 'PART' 'PREP' 'PRON'" ignoreAttrib="'NUM' 'PUNCT'" bStems="Y" synonymDS="SASHELP.ENGSYNMS" maxviewTerms="20000" ForceRun="N" RunAction="Train" Component="TextParsing" TGConcepts="" TGCategories="" ignoreEntities="" startList="" filterLang="" parseVar="EMail">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<STOPLIST Type="DATA">
+<Data>
+<Obs TERM="'d" ROLE=""/>
+<Obs TERM="'ll" ROLE=""/>
+<Obs TERM="'m" ROLE=""/>
+<Obs TERM="'re" ROLE=""/>
+<Obs TERM="'s" ROLE=""/>
+<Obs TERM="'ve" ROLE=""/>
+<Obs TERM="a" ROLE=""/>
+<Obs TERM="aboard" ROLE=""/>
+<Obs TERM="about" ROLE=""/>
+<Obs TERM="above" ROLE=""/>
+<Obs TERM="according" ROLE=""/>
+<Obs TERM="accordingly" ROLE=""/>
+<Obs TERM="across" ROLE=""/>
+<Obs TERM="actually" ROLE=""/>
+<Obs TERM="after" ROLE=""/>
+<Obs TERM="afterwards" ROLE=""/>
+<Obs TERM="again" ROLE=""/>
+<Obs TERM="against" ROLE=""/>
+<Obs TERM="ago" ROLE=""/>
+<Obs TERM="ah" ROLE=""/>
+<Obs TERM="ain" ROLE=""/>
+<Obs TERM="all" ROLE=""/>
+<Obs TERM="almost" ROLE=""/>
+<Obs TERM="along" ROLE=""/>
+<Obs TERM="alongside" ROLE=""/>
+<Obs TERM="already" ROLE=""/>
+<Obs TERM="also" ROLE=""/>
+<Obs TERM="although" ROLE=""/>
+<Obs TERM="altogether" ROLE=""/>
+<Obs TERM="am" ROLE=""/>
+<Obs TERM="amid" ROLE=""/>
+<Obs TERM="amidst" ROLE=""/>
+<Obs TERM="among" ROLE=""/>
+<Obs TERM="amongst" ROLE=""/>
+<Obs TERM="an" ROLE=""/>
+<Obs TERM="and" ROLE=""/>
+<Obs TERM="another" ROLE=""/>
+<Obs TERM="any" ROLE=""/>
+<Obs TERM="anybody" ROLE=""/>
+<Obs TERM="anyhow" ROLE=""/>
+<Obs TERM="anyone" ROLE=""/>
+<Obs TERM="anyplace" ROLE=""/>
+<Obs TERM="anything" ROLE=""/>
+<Obs TERM="anyway" ROLE=""/>
+<Obs TERM="anyways" ROLE=""/>
+<Obs TERM="anywhere" ROLE=""/>
+<Obs TERM="apart" ROLE=""/>
+<Obs TERM="appreciate" ROLE=""/>
+<Obs TERM="appropriate" ROLE=""/>
+<Obs TERM="are" ROLE=""/>
+<Obs TERM="around" ROLE=""/>
+<Obs TERM="as" ROLE=""/>
+<Obs TERM="aside" ROLE=""/>
+<Obs TERM="ask" ROLE=""/>
+<Obs TERM="asking" ROLE=""/>
+<Obs TERM="associated" ROLE=""/>
+<Obs TERM="at" ROLE=""/>
+<Obs TERM="atop" ROLE=""/>
+<Obs TERM="available" ROLE=""/>
+<Obs TERM="away" ROLE=""/>
+<Obs TERM="b" ROLE=""/>
+<Obs TERM="be" ROLE=""/>
+<Obs TERM="became" ROLE=""/>
+<Obs TERM="because" ROLE=""/>
+<Obs TERM="become" ROLE=""/>
+<Obs TERM="becomes" ROLE=""/>
+<Obs TERM="becoming" ROLE=""/>
+<Obs TERM="been" ROLE=""/>
+<Obs TERM="before" ROLE=""/>
+<Obs TERM="behind" ROLE=""/>
+<Obs TERM="being" ROLE=""/>
+<Obs TERM="believe" ROLE=""/>
+<Obs TERM="below" ROLE=""/>
+<Obs TERM="beneath" ROLE=""/>
+<Obs TERM="beside" ROLE=""/>
+<Obs TERM="besides" ROLE=""/>
+<Obs TERM="between" ROLE=""/>
+<Obs TERM="beyond" ROLE=""/>
+<Obs TERM="both" ROLE=""/>
+<Obs TERM="but" ROLE=""/>
+<Obs TERM="by" ROLE=""/>
+<Obs TERM="c" ROLE=""/>
+<Obs TERM="call" ROLE=""/>
+<Obs TERM="called" ROLE=""/>
+<Obs TERM="came" ROLE=""/>
+<Obs TERM="can" ROLE=""/>
+<Obs TERM="can't" ROLE=""/>
+<Obs TERM="certain" ROLE=""/>
+<Obs TERM="certainly" ROLE=""/>
+<Obs TERM="change" ROLE=""/>
+<Obs TERM="changes" ROLE=""/>
+<Obs TERM="co" ROLE=""/>
+<Obs TERM="com" ROLE=""/>
+<Obs TERM="come" ROLE=""/>
+<Obs TERM="concerning" ROLE=""/>
+<Obs TERM="consequently" ROLE=""/>
+<Obs TERM="consider" ROLE=""/>
+<Obs TERM="considering" ROLE=""/>
+<Obs TERM="corresponding" ROLE=""/>
+<Obs TERM="could" ROLE=""/>
+<Obs TERM="course" ROLE=""/>
+<Obs TERM="currently" ROLE=""/>
+<Obs TERM="d" ROLE=""/>
+<Obs TERM="describe" ROLE=""/>
+<Obs TERM="described" ROLE=""/>
+<Obs TERM="despite" ROLE=""/>
+<Obs TERM="did" ROLE=""/>
+<Obs TERM="didn't" ROLE=""/>
+<Obs TERM="do" ROLE=""/>
+<Obs TERM="does" ROLE=""/>
+<Obs TERM="doesn't" ROLE=""/>
+<Obs TERM="doing" ROLE=""/>
+<Obs TERM="don't" ROLE=""/>
+<Obs TERM="done" ROLE=""/>
+<Obs TERM="during" ROLE=""/>
+<Obs TERM="e" ROLE=""/>
+<Obs TERM="each" ROLE=""/>
+<Obs TERM="edu" ROLE=""/>
+<Obs TERM="eg" ROLE=""/>
+<Obs TERM="either" ROLE=""/>
+<Obs TERM="else" ROLE=""/>
+<Obs TERM="enough" ROLE=""/>
+<Obs TERM="et" ROLE=""/>
+<Obs TERM="etc" ROLE=""/>
+<Obs TERM="etc." ROLE=""/>
+<Obs TERM="even" ROLE=""/>
+<Obs TERM="ever" ROLE=""/>
+<Obs TERM="every" ROLE=""/>
+<Obs TERM="everybody" ROLE=""/>
+<Obs TERM="everyone" ROLE=""/>
+<Obs TERM="everything" ROLE=""/>
+<Obs TERM="everywhere" ROLE=""/>
+<Obs TERM="example" ROLE=""/>
+<Obs TERM="except" ROLE=""/>
+<Obs TERM="f" ROLE=""/>
+<Obs TERM="following" ROLE=""/>
+<Obs TERM="for" ROLE=""/>
+<Obs TERM="former" ROLE=""/>
+<Obs TERM="formerly" ROLE=""/>
+<Obs TERM="forth" ROLE=""/>
+<Obs TERM="from" ROLE=""/>
+<Obs TERM="furthermore" ROLE=""/>
+<Obs TERM="g" ROLE=""/>
+<Obs TERM="generally" ROLE=""/>
+<Obs TERM="get" ROLE=""/>
+<Obs TERM="gets" ROLE=""/>
+<Obs TERM="getting" ROLE=""/>
+<Obs TERM="give" ROLE=""/>
+<Obs TERM="given" ROLE=""/>
+<Obs TERM="gives" ROLE=""/>
+<Obs TERM="go" ROLE=""/>
+<Obs TERM="goes" ROLE=""/>
+<Obs TERM="going" ROLE=""/>
+<Obs TERM="gone" ROLE=""/>
+<Obs TERM="got" ROLE=""/>
+<Obs TERM="gotten" ROLE=""/>
+<Obs TERM="greetings" ROLE=""/>
+<Obs TERM="h" ROLE=""/>
+<Obs TERM="had" ROLE=""/>
+<Obs TERM="hadn't" ROLE=""/>
+<Obs TERM="hardly" ROLE=""/>
+<Obs TERM="has" ROLE=""/>
+<Obs TERM="have" ROLE=""/>
+<Obs TERM="he" ROLE=""/>
+<Obs TERM="he'd" ROLE=""/>
+<Obs TERM="he's" ROLE=""/>
+<Obs TERM="hello" ROLE=""/>
+<Obs TERM="hence" ROLE=""/>
+<Obs TERM="her" ROLE=""/>
+<Obs TERM="here" ROLE=""/>
+<Obs TERM="hereafter" ROLE=""/>
+<Obs TERM="hereby" ROLE=""/>
+<Obs TERM="herein" ROLE=""/>
+<Obs TERM="hereupon" ROLE=""/>
+<Obs TERM="hers" ROLE=""/>
+<Obs TERM="herself" ROLE=""/>
+<Obs TERM="hi" ROLE=""/>
+<Obs TERM="him" ROLE=""/>
+<Obs TERM="himself" ROLE=""/>
+<Obs TERM="his" ROLE=""/>
+<Obs TERM="hither" ROLE=""/>
+<Obs TERM="hopefully" ROLE=""/>
+<Obs TERM="how" ROLE=""/>
+<Obs TERM="howbeit" ROLE=""/>
+<Obs TERM="however" ROLE=""/>
+<Obs TERM="i" ROLE=""/>
+<Obs TERM="i'd" ROLE=""/>
+<Obs TERM="i'm" ROLE=""/>
+<Obs TERM="ie" ROLE=""/>
+<Obs TERM="if" ROLE=""/>
+<Obs TERM="in" ROLE=""/>
+<Obs TERM="inasmuch" ROLE=""/>
+<Obs TERM="indeed" ROLE=""/>
+<Obs TERM="inside" ROLE=""/>
+<Obs TERM="insofar" ROLE=""/>
+<Obs TERM="instead" ROLE=""/>
+<Obs TERM="into" ROLE=""/>
+<Obs TERM="is" ROLE=""/>
+<Obs TERM="isn't" ROLE=""/>
+<Obs TERM="it" ROLE=""/>
+<Obs TERM="it's" ROLE=""/>
+<Obs TERM="its" ROLE=""/>
+<Obs TERM="itself" ROLE=""/>
+<Obs TERM="j" ROLE=""/>
+<Obs TERM="just" ROLE=""/>
+<Obs TERM="k" ROLE=""/>
+<Obs TERM="l" ROLE=""/>
+<Obs TERM="least" ROLE=""/>
+<Obs TERM="lest" ROLE=""/>
+<Obs TERM="let" ROLE=""/>
+<Obs TERM="let's" ROLE=""/>
+<Obs TERM="like" ROLE=""/>
+<Obs TERM="ll" ROLE=""/>
+<Obs TERM="m" ROLE=""/>
+<Obs TERM="ma'am" ROLE=""/>
+<Obs TERM="madam" ROLE=""/>
+<Obs TERM="made" ROLE=""/>
+<Obs TERM="make" ROLE=""/>
+<Obs TERM="many" ROLE=""/>
+<Obs TERM="may" ROLE=""/>
+<Obs TERM="maybe" ROLE=""/>
+<Obs TERM="me" ROLE=""/>
+<Obs TERM="meanwhile" ROLE=""/>
+<Obs TERM="merely" ROLE=""/>
+<Obs TERM="might" ROLE=""/>
+<Obs TERM="mine" ROLE=""/>
+<Obs TERM="minus" ROLE=""/>
+<Obs TERM="more" ROLE=""/>
+<Obs TERM="moreover" ROLE=""/>
+<Obs TERM="most" ROLE=""/>
+<Obs TERM="mr" ROLE=""/>
+<Obs TERM="mr." ROLE=""/>
+<Obs TERM="mrs" ROLE=""/>
+<Obs TERM="mrs." ROLE=""/>
+<Obs TERM="ms" ROLE=""/>
+<Obs TERM="ms." ROLE=""/>
+<Obs TERM="much" ROLE=""/>
+<Obs TERM="must" ROLE=""/>
+<Obs TERM="my" ROLE=""/>
+<Obs TERM="myself" ROLE=""/>
+<Obs TERM="n" ROLE=""/>
+<Obs TERM="n't" ROLE=""/>
+<Obs TERM="name" ROLE=""/>
+<Obs TERM="namely" ROLE=""/>
+<Obs TERM="nd" ROLE=""/>
+<Obs TERM="near" ROLE=""/>
+<Obs TERM="need" ROLE=""/>
+<Obs TERM="neither" ROLE=""/>
+<Obs TERM="never" ROLE=""/>
+<Obs TERM="nevertheless" ROLE=""/>
+<Obs TERM="new" ROLE=""/>
+<Obs TERM="next to" ROLE=""/>
+<Obs TERM="no" ROLE=""/>
+<Obs TERM="nobody" ROLE=""/>
+<Obs TERM="non" ROLE=""/>
+<Obs TERM="none" ROLE=""/>
+<Obs TERM="nonesuch" ROLE=""/>
+<Obs TERM="nonetheless" ROLE=""/>
+<Obs TERM="noone" ROLE=""/>
+<Obs TERM="nor" ROLE=""/>
+<Obs TERM="normally" ROLE=""/>
+<Obs TERM="not" ROLE=""/>
+<Obs TERM="nothing" ROLE=""/>
+<Obs TERM="notwithstand" ROLE=""/>
+<Obs TERM="now" ROLE=""/>
+<Obs TERM="o" ROLE=""/>
+<Obs TERM="obviously" ROLE=""/>
+<Obs TERM="of" ROLE=""/>
+<Obs TERM="off" ROLE=""/>
+<Obs TERM="often" ROLE=""/>
+<Obs TERM="oh" ROLE=""/>
+<Obs TERM="ok" ROLE=""/>
+<Obs TERM="okay" ROLE=""/>
+<Obs TERM="on" ROLE=""/>
+<Obs TERM="once" ROLE=""/>
+<Obs TERM="one" ROLE=""/>
+<Obs TERM="one's" ROLE=""/>
+<Obs TERM="only" ROLE=""/>
+<Obs TERM="onto" ROLE=""/>
+<Obs TERM="or" ROLE=""/>
+<Obs TERM="other" ROLE=""/>
+<Obs TERM="others" ROLE=""/>
+<Obs TERM="ought" ROLE=""/>
+<Obs TERM="our" ROLE=""/>
+<Obs TERM="ours" ROLE=""/>
+<Obs TERM="ourselves" ROLE=""/>
+<Obs TERM="out" ROLE=""/>
+<Obs TERM="out of" ROLE=""/>
+<Obs TERM="over" ROLE=""/>
+<Obs TERM="own" ROLE=""/>
+<Obs TERM="p" ROLE=""/>
+<Obs TERM="part" ROLE=""/>
+<Obs TERM="per" ROLE=""/>
+<Obs TERM="perhaps" ROLE=""/>
+<Obs TERM="please" ROLE=""/>
+<Obs TERM="plus" ROLE=""/>
+<Obs TERM="possible" ROLE=""/>
+<Obs TERM="presumably" ROLE=""/>
+<Obs TERM="probably" ROLE=""/>
+<Obs TERM="provide" ROLE=""/>
+<Obs TERM="provides" ROLE=""/>
+<Obs TERM="put" ROLE=""/>
+<Obs TERM="q" ROLE=""/>
+<Obs TERM="que" ROLE=""/>
+<Obs TERM="quite" ROLE=""/>
+<Obs TERM="qv" ROLE=""/>
+<Obs TERM="r" ROLE=""/>
+<Obs TERM="rather" ROLE=""/>
+<Obs TERM="rd" ROLE=""/>
+<Obs TERM="re" ROLE=""/>
+<Obs TERM="really" ROLE=""/>
+<Obs TERM="reasonably" ROLE=""/>
+<Obs TERM="regard" ROLE=""/>
+<Obs TERM="regarding" ROLE=""/>
+<Obs TERM="regardless" ROLE=""/>
+<Obs TERM="regards" ROLE=""/>
+<Obs TERM="regularly" ROLE=""/>
+<Obs TERM="relatively" ROLE=""/>
+<Obs TERM="respect" ROLE=""/>
+<Obs TERM="respectively" ROLE=""/>
+<Obs TERM="s" ROLE=""/>
+<Obs TERM="said" ROLE=""/>
+<Obs TERM="same" ROLE=""/>
+<Obs TERM="say" ROLE=""/>
+<Obs TERM="saying" ROLE=""/>
+<Obs TERM="says" ROLE=""/>
+<Obs TERM="secondly" ROLE=""/>
+<Obs TERM="see" ROLE=""/>
+<Obs TERM="seem" ROLE=""/>
+<Obs TERM="seemed" ROLE=""/>
+<Obs TERM="seeming" ROLE=""/>
+<Obs TERM="seems" ROLE=""/>
+<Obs TERM="self" ROLE=""/>
+<Obs TERM="selves" ROLE=""/>
+<Obs TERM="send" ROLE=""/>
+<Obs TERM="sensible" ROLE=""/>
+<Obs TERM="sent" ROLE=""/>
+<Obs TERM="seriously" ROLE=""/>
+<Obs TERM="shall" ROLE=""/>
+<Obs TERM="she" ROLE=""/>
+<Obs TERM="she'd" ROLE=""/>
+<Obs TERM="should" ROLE=""/>
+<Obs TERM="since" ROLE=""/>
+<Obs TERM="sir" ROLE=""/>
+<Obs TERM="so" ROLE=""/>
+<Obs TERM="some" ROLE=""/>
+<Obs TERM="somebody" ROLE=""/>
+<Obs TERM="somehow" ROLE=""/>
+<Obs TERM="someone" ROLE=""/>
+<Obs TERM="someplace" ROLE=""/>
+<Obs TERM="something" ROLE=""/>
+<Obs TERM="sometime" ROLE=""/>
+<Obs TERM="sometimes" ROLE=""/>
+<Obs TERM="someway" ROLE=""/>
+<Obs TERM="somewhat" ROLE=""/>
+<Obs TERM="somewhere" ROLE=""/>
+<Obs TERM="soon" ROLE=""/>
+<Obs TERM="sorry" ROLE=""/>
+<Obs TERM="specified" ROLE=""/>
+<Obs TERM="specify" ROLE=""/>
+<Obs TERM="specifying" ROLE=""/>
+<Obs TERM="still" ROLE=""/>
+<Obs TERM="sub" ROLE=""/>
+<Obs TERM="such" ROLE=""/>
+<Obs TERM="sup" ROLE=""/>
+<Obs TERM="sure" ROLE=""/>
+<Obs TERM="surely" ROLE=""/>
+<Obs TERM="t" ROLE=""/>
+<Obs TERM="take" ROLE=""/>
+<Obs TERM="taken" ROLE=""/>
+<Obs TERM="tell" ROLE=""/>
+<Obs TERM="tend" ROLE=""/>
+<Obs TERM="tends" ROLE=""/>
+<Obs TERM="th" ROLE=""/>
+<Obs TERM="than" ROLE=""/>
+<Obs TERM="thank" ROLE=""/>
+<Obs TERM="thanks" ROLE=""/>
+<Obs TERM="thanx" ROLE=""/>
+<Obs TERM="that" ROLE=""/>
+<Obs TERM="that's" ROLE=""/>
+<Obs TERM="thats" ROLE=""/>
+<Obs TERM="the" ROLE=""/>
+<Obs TERM="their" ROLE=""/>
+<Obs TERM="theirs" ROLE=""/>
+<Obs TERM="them" ROLE=""/>
+<Obs TERM="themselves" ROLE=""/>
+<Obs TERM="then" ROLE=""/>
+<Obs TERM="thence" ROLE=""/>
+<Obs TERM="there" ROLE=""/>
+<Obs TERM="there's" ROLE=""/>
+<Obs TERM="thereafter" ROLE=""/>
+<Obs TERM="thereby" ROLE=""/>
+<Obs TERM="therefore" ROLE=""/>
+<Obs TERM="therein" ROLE=""/>
+<Obs TERM="theres" ROLE=""/>
+<Obs TERM="thereupon" ROLE=""/>
+<Obs TERM="these" ROLE=""/>
+<Obs TERM="they" ROLE=""/>
+<Obs TERM="they're" ROLE=""/>
+<Obs TERM="think" ROLE=""/>
+<Obs TERM="this" ROLE=""/>
+<Obs TERM="thorough" ROLE=""/>
+<Obs TERM="thoroughly" ROLE=""/>
+<Obs TERM="those" ROLE=""/>
+<Obs TERM="though" ROLE=""/>
+<Obs TERM="through" ROLE=""/>
+<Obs TERM="throughout" ROLE=""/>
+<Obs TERM="thru" ROLE=""/>
+<Obs TERM="thus" ROLE=""/>
+<Obs TERM="thusly" ROLE=""/>
+<Obs TERM="thx" ROLE=""/>
+<Obs TERM="till" ROLE=""/>
+<Obs TERM="to" ROLE=""/>
+<Obs TERM="together" ROLE=""/>
+<Obs TERM="too" ROLE=""/>
+<Obs TERM="took" ROLE=""/>
+<Obs TERM="toward" ROLE=""/>
+<Obs TERM="towards" ROLE=""/>
+<Obs TERM="tried" ROLE=""/>
+<Obs TERM="tries" ROLE=""/>
+<Obs TERM="truly" ROLE=""/>
+<Obs TERM="try" ROLE=""/>
+<Obs TERM="trying" ROLE=""/>
+<Obs TERM="two" ROLE=""/>
+<Obs TERM="u" ROLE=""/>
+<Obs TERM="un" ROLE=""/>
+<Obs TERM="under" ROLE=""/>
+<Obs TERM="underneath" ROLE=""/>
+<Obs TERM="unfortunately" ROLE=""/>
+<Obs TERM="unless" ROLE=""/>
+<Obs TERM="unlike" ROLE=""/>
+<Obs TERM="until" ROLE=""/>
+<Obs TERM="unto" ROLE=""/>
+<Obs TERM="up" ROLE=""/>
+<Obs TERM="upon" ROLE=""/>
+<Obs TERM="us" ROLE=""/>
+<Obs TERM="use" ROLE=""/>
+<Obs TERM="used" ROLE=""/>
+<Obs TERM="useful" ROLE=""/>
+<Obs TERM="uses" ROLE=""/>
+<Obs TERM="using" ROLE=""/>
+<Obs TERM="usually" ROLE=""/>
+<Obs TERM="uucp" ROLE=""/>
+<Obs TERM="v" ROLE=""/>
+<Obs TERM="various" ROLE=""/>
+<Obs TERM="ve" ROLE=""/>
+<Obs TERM="very" ROLE=""/>
+<Obs TERM="via" ROLE=""/>
+<Obs TERM="viz" ROLE=""/>
+<Obs TERM="vs" ROLE=""/>
+<Obs TERM="w" ROLE=""/>
+<Obs TERM="was" ROLE=""/>
+<Obs TERM="wasn't" ROLE=""/>
+<Obs TERM="way" ROLE=""/>
+<Obs TERM="we" ROLE=""/>
+<Obs TERM="we'll" ROLE=""/>
+<Obs TERM="welcome" ROLE=""/>
+<Obs TERM="went" ROLE=""/>
+<Obs TERM="were" ROLE=""/>
+<Obs TERM="what" ROLE=""/>
+<Obs TERM="whatever" ROLE=""/>
+<Obs TERM="when" ROLE=""/>
+<Obs TERM="whence" ROLE=""/>
+<Obs TERM="where" ROLE=""/>
+<Obs TERM="whereafter" ROLE=""/>
+<Obs TERM="whereas" ROLE=""/>
+<Obs TERM="whereby" ROLE=""/>
+<Obs TERM="wherein" ROLE=""/>
+<Obs TERM="whereupon" ROLE=""/>
+<Obs TERM="wherever" ROLE=""/>
+<Obs TERM="wherewithall" ROLE=""/>
+<Obs TERM="whether" ROLE=""/>
+<Obs TERM="which" ROLE=""/>
+<Obs TERM="whichever" ROLE=""/>
+<Obs TERM="while" ROLE=""/>
+<Obs TERM="whilst" ROLE=""/>
+<Obs TERM="whither" ROLE=""/>
+<Obs TERM="who" ROLE=""/>
+<Obs TERM="whoever" ROLE=""/>
+<Obs TERM="whole" ROLE=""/>
+<Obs TERM="whom" ROLE=""/>
+<Obs TERM="whomever" ROLE=""/>
+<Obs TERM="whose" ROLE=""/>
+<Obs TERM="whosoever" ROLE=""/>
+<Obs TERM="why" ROLE=""/>
+<Obs TERM="will" ROLE=""/>
+<Obs TERM="willing" ROLE=""/>
+<Obs TERM="with" ROLE=""/>
+<Obs TERM="withal" ROLE=""/>
+<Obs TERM="within" ROLE=""/>
+<Obs TERM="without" ROLE=""/>
+<Obs TERM="won" ROLE=""/>
+<Obs TERM="won't" ROLE=""/>
+<Obs TERM="wonder" ROLE=""/>
+<Obs TERM="would" ROLE=""/>
+<Obs TERM="wouldn't" ROLE=""/>
+<Obs TERM="x" ROLE=""/>
+<Obs TERM="y" ROLE=""/>
+<Obs TERM="y'all" ROLE=""/>
+<Obs TERM="yet" ROLE=""/>
+<Obs TERM="you" ROLE=""/>
+<Obs TERM="you'll" ROLE=""/>
+<Obs TERM="you're" ROLE=""/>
+<Obs TERM="you've" ROLE=""/>
+<Obs TERM="your" ROLE=""/>
+<Obs TERM="yours" ROLE=""/>
+<Obs TERM="yourself" ROLE=""/>
+<Obs TERM="yourselves" ROLE=""/>
+<Obs TERM="z" ROLE=""/>
+</Data>
+<Metadata>
+<Variable NAME="term" LABEL="Term" LENGTH="256" FORMAT="$256." TYPE="C"/>
+<Variable NAME="role" LABEL="Role" LENGTH="256" FORMAT="" TYPE="C"/>
+</Metadata>
+</STOPLIST>
+<STARTLIST Type="DATA">
+<Data/>
+<Metadata>
+<Variable NAME="term" LABEL="Term" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="role" LABEL="Role" LENGTH="256" FORMAT="" TYPE="C"/>
+</Metadata>
+</STARTLIST>
+<MULTIDS Type="DATA">
+<Data>
+<Obs TERM="a bit" ROLE="Adv"/>
+<Obs TERM="a fortiori" ROLE="Adv"/>
+<Obs TERM="a lot" ROLE="Adv"/>
+<Obs TERM="a lot of" ROLE="Adj"/>
+<Obs TERM="a posteriori" ROLE="Adj"/>
+<Obs TERM="a posteriori" ROLE="Adv"/>
+<Obs TERM="a priori" ROLE="Adj"/>
+<Obs TERM="a priori" ROLE="Adv"/>
+<Obs TERM="according to" ROLE="Prep"/>
+<Obs TERM="ad hoc" ROLE="Adj"/>
+<Obs TERM="ad interim" ROLE="Adv"/>
+<Obs TERM="ahead of" ROLE="Prep"/>
+<Obs TERM="all the time" ROLE="Adv"/>
+<Obs TERM="along with" ROLE="Prep"/>
+<Obs TERM="any moment" ROLE="Adv"/>
+<Obs TERM="any second" ROLE="Adv"/>
+<Obs TERM="apart from" ROLE="Prep"/>
+<Obs TERM="as a result of" ROLE="Prep"/>
+<Obs TERM="as a rule" ROLE="Adv"/>
+<Obs TERM="as far as" ROLE="Conj"/>
+<Obs TERM="as far as" ROLE="Prep"/>
+<Obs TERM="as for" ROLE="Prep"/>
+<Obs TERM="as if" ROLE="Conj"/>
+<Obs TERM="as in" ROLE="Prep"/>
+<Obs TERM="as long as" ROLE="Conj"/>
+<Obs TERM="as many as" ROLE="Adv"/>
+<Obs TERM="as of" ROLE="Prep"/>
+<Obs TERM="as one" ROLE="Adv"/>
+<Obs TERM="as per" ROLE="Prep"/>
+<Obs TERM="as regards" ROLE="Prep"/>
+<Obs TERM="as soon as" ROLE="Conj"/>
+<Obs TERM="as though" ROLE="Conj"/>
+<Obs TERM="as to" ROLE="Prep"/>
+<Obs TERM="as well" ROLE="Adv"/>
+<Obs TERM="as well as" ROLE="Conj"/>
+<Obs TERM="as yet" ROLE="Adv"/>
+<Obs TERM="aside from" ROLE="Prep"/>
+<Obs TERM="assuming that" ROLE="Conj"/>
+<Obs TERM="at all" ROLE="Adv"/>
+<Obs TERM="at any rate" ROLE="Adv"/>
+<Obs TERM="at least one" ROLE="Adj"/>
+<Obs TERM="at once" ROLE="Adv"/>
+<Obs TERM="at the expense of" ROLE="Prep"/>
+<Obs TERM="at variance with" ROLE="Prep"/>
+<Obs TERM="away from" ROLE="Prep"/>
+<Obs TERM="back of" ROLE="Prep"/>
+<Obs TERM="bear up" ROLE="Verb"/>
+<Obs TERM="because of" ROLE="Prep"/>
+<Obs TERM="best known" ROLE="Adj"/>
+<Obs TERM="black and white" ROLE="Adj"/>
+<Obs TERM="bona fide" ROLE="Adj"/>
+<Obs TERM="break up" ROLE="Verb"/>
+<Obs TERM="bring about" ROLE="Verb"/>
+<Obs TERM="bring up" ROLE="Verb"/>
+<Obs TERM="build up" ROLE="Verb"/>
+<Obs TERM="but for" ROLE="Prep"/>
+<Obs TERM="by dint of" ROLE="Prep"/>
+<Obs TERM="by itself" ROLE="Adv"/>
+<Obs TERM="by means of" ROLE="Prep"/>
+<Obs TERM="by proxy" ROLE="Adv"/>
+<Obs TERM="by reason of" ROLE="Prep"/>
+<Obs TERM="by the way" ROLE="Adv"/>
+<Obs TERM="by virtue of" ROLE="Prep"/>
+<Obs TERM="by way of" ROLE="Prep"/>
+<Obs TERM="carry on" ROLE="Verb"/>
+<Obs TERM="carry out" ROLE="Verb"/>
+<Obs TERM="carry through" ROLE="Verb"/>
+<Obs TERM="catch on" ROLE="Verb"/>
+<Obs TERM="central african" ROLE="Adj"/>
+<Obs TERM="clean up" ROLE="Verb"/>
+<Obs TERM="clear up" ROLE="Verb"/>
+<Obs TERM="close by" ROLE="Adv"/>
+<Obs TERM="close to" ROLE="Adv"/>
+<Obs TERM="come about" ROLE="Verb"/>
+<Obs TERM="come in" ROLE="Verb"/>
+<Obs TERM="come on" ROLE="Verb"/>
+<Obs TERM="considering that" ROLE="Conj"/>
+<Obs TERM="costa rican" ROLE="Adj"/>
+<Obs TERM="cover up" ROLE="Verb"/>
+<Obs TERM="cut off" ROLE="Verb"/>
+<Obs TERM="dare to" ROLE="Aux"/>
+<Obs TERM="dark blue" ROLE="Adj"/>
+<Obs TERM="de facto" ROLE="Adj"/>
+<Obs TERM="de facto" ROLE="Adv"/>
+<Obs TERM="de jure" ROLE="Adj"/>
+<Obs TERM="de jure" ROLE="Adv"/>
+<Obs TERM="devoid of" ROLE="Prep"/>
+<Obs TERM="draw down" ROLE="Verb"/>
+<Obs TERM="due to" ROLE="Prep"/>
+<Obs TERM="east german" ROLE="Adj"/>
+<Obs TERM="edge in" ROLE="Verb"/>
+<Obs TERM="egg on" ROLE="Verb"/>
+<Obs TERM="en bloc" ROLE="Adv"/>
+<Obs TERM="en masse" ROLE="Adv"/>
+<Obs TERM="en route" ROLE="Adv"/>
+<Obs TERM="et al." ROLE="Abbr"/>
+<Obs TERM="et cetera" ROLE="Adv"/>
+<Obs TERM="even if" ROLE="Conj"/>
+<Obs TERM="even though" ROLE="Conj"/>
+<Obs TERM="ever expanding" ROLE="Adj"/>
+<Obs TERM="ex officio" ROLE="Adj"/>
+<Obs TERM="ex officio" ROLE="Adv"/>
+<Obs TERM="ex parte" ROLE="Adj"/>
+<Obs TERM="ex parte" ROLE="Adv"/>
+<Obs TERM="except for" ROLE="Prep"/>
+<Obs TERM="exclusive of" ROLE="Prep"/>
+<Obs TERM="fall away" ROLE="Verb"/>
+<Obs TERM="fall back" ROLE="Verb"/>
+<Obs TERM="fill in" ROLE="Verb"/>
+<Obs TERM="filled up" ROLE="Adj"/>
+<Obs TERM="find out" ROLE="Verb"/>
+<Obs TERM="fine tune" ROLE="Verb"/>
+<Obs TERM="fit in" ROLE="Verb"/>
+<Obs TERM="for all that" ROLE="Conj"/>
+<Obs TERM="for sake of" ROLE="Prep"/>
+<Obs TERM="for the sake of" ROLE="Prep"/>
+<Obs TERM="for want of" ROLE="Prep"/>
+<Obs TERM="give away" ROLE="Verb"/>
+<Obs TERM="give in" ROLE="Verb"/>
+<Obs TERM="give up" ROLE="Verb"/>
+<Obs TERM="given that" ROLE="Conj"/>
+<Obs TERM="go ahead" ROLE="Verb"/>
+<Obs TERM="granting that" ROLE="Conj"/>
+<Obs TERM="great deal" ROLE="Adv"/>
+<Obs TERM="grow up" ROLE="Verb"/>
+<Obs TERM="hand out" ROLE="Verb"/>
+<Obs TERM="hand over" ROLE="Verb"/>
+<Obs TERM="high income" ROLE="Adj"/>
+<Obs TERM="high quality" ROLE="Adj"/>
+<Obs TERM="hold back" ROLE="Verb"/>
+<Obs TERM="hold up" ROLE="Verb"/>
+<Obs TERM="hoped for" ROLE="Adj"/>
+<Obs TERM="how many" ROLE="Pron"/>
+<Obs TERM="how much" ROLE="Pron"/>
+<Obs TERM="in absentia" ROLE="Adv"/>
+<Obs TERM="in accordance with" ROLE="Prep"/>
+<Obs TERM="in addition" ROLE="Adv"/>
+<Obs TERM="in addition to" ROLE="Prep"/>
+<Obs TERM="in aid of" ROLE="Prep"/>
+<Obs TERM="in case" ROLE="Conj"/>
+<Obs TERM="in case of" ROLE="Prep"/>
+<Obs TERM="in charge of" ROLE="Prep"/>
+<Obs TERM="in common with" ROLE="Prep"/>
+<Obs TERM="in comparison with" ROLE="Prep"/>
+<Obs TERM="in compliance with" ROLE="Prep"/>
+<Obs TERM="in conformity with" ROLE="Prep"/>
+<Obs TERM="in consequence of" ROLE="Prep"/>
+<Obs TERM="in contact with" ROLE="Prep"/>
+<Obs TERM="in exchange for" ROLE="Prep"/>
+<Obs TERM="in favour of" ROLE="Prep"/>
+<Obs TERM="in front" ROLE="Adv"/>
+<Obs TERM="in front of" ROLE="Prep"/>
+<Obs TERM="in general" ROLE="Adv"/>
+<Obs TERM="in heat" ROLE="Adv"/>
+<Obs TERM="in lieu of" ROLE="Prep"/>
+<Obs TERM="in light of" ROLE="Prep"/>
+<Obs TERM="in line with" ROLE="Prep"/>
+<Obs TERM="in need of" ROLE="Prep"/>
+<Obs TERM="in order for" ROLE="Conj"/>
+<Obs TERM="in order that" ROLE="Conj"/>
+<Obs TERM="in particular" ROLE="Adv"/>
+<Obs TERM="in place of" ROLE="Prep"/>
+<Obs TERM="in position" ROLE="Adv"/>
+<Obs TERM="in process of" ROLE="Prep"/>
+<Obs TERM="in pursuit" ROLE="Adv"/>
+<Obs TERM="in re" ROLE="Prep"/>
+<Obs TERM="in reference to" ROLE="Prep"/>
+<Obs TERM="in regard to" ROLE="Prep"/>
+<Obs TERM="in relation to" ROLE="Prep"/>
+<Obs TERM="in respect of" ROLE="Prep"/>
+<Obs TERM="in respect to" ROLE="Prep"/>
+<Obs TERM="in return of" ROLE="Prep"/>
+<Obs TERM="in search of" ROLE="Prep"/>
+<Obs TERM="in situ" ROLE="Adj"/>
+<Obs TERM="in situ" ROLE="Adv"/>
+<Obs TERM="in spite of" ROLE="Prep"/>
+<Obs TERM="in that" ROLE="Conj"/>
+<Obs TERM="in the event that" ROLE="Conj"/>
+<Obs TERM="in the face of" ROLE="Prep"/>
+<Obs TERM="in the interim" ROLE="Adv"/>
+<Obs TERM="in the interval" ROLE="Adv"/>
+<Obs TERM="in the light of" ROLE="Prep"/>
+<Obs TERM="in the process of" ROLE="Prep"/>
+<Obs TERM="in the raw" ROLE="Adv"/>
+<Obs TERM="in use" ROLE="Adv"/>
+<Obs TERM="in vacuo" ROLE="Adv"/>
+<Obs TERM="in view of" ROLE="Prep"/>
+<Obs TERM="in vitro" ROLE="Adj"/>
+<Obs TERM="in vitro" ROLE="Adv"/>
+<Obs TERM="inasmuch as" ROLE="Conj"/>
+<Obs TERM="inside of" ROLE="Prep"/>
+<Obs TERM="insofar as" ROLE="Conj"/>
+<Obs TERM="insofar that" ROLE="Conj"/>
+<Obs TERM="instead of" ROLE="Prep"/>
+<Obs TERM="inter alia" ROLE="Adv"/>
+<Obs TERM="ipso facto" ROLE="Adv"/>
+<Obs TERM="irrespective of" ROLE="Prep"/>
+<Obs TERM="just about" ROLE="Adv"/>
+<Obs TERM="keep in mind" ROLE="Verb"/>
+<Obs TERM="keep out" ROLE="Verb"/>
+<Obs TERM="keep up" ROLE="Verb"/>
+<Obs TERM="kick off" ROLE="Verb"/>
+<Obs TERM="laid back" ROLE="Adj"/>
+<Obs TERM="large scale" ROLE="Adj"/>
+<Obs TERM="latin american" ROLE="Adj"/>
+<Obs TERM="lay out" ROLE="Verb"/>
+<Obs TERM="lead on" ROLE="Verb"/>
+<Obs TERM="lead to" ROLE="Verb"/>
+<Obs TERM="leave out" ROLE="Verb"/>
+<Obs TERM="light up" ROLE="Verb"/>
+<Obs TERM="line up" ROLE="Verb"/>
+<Obs TERM="lock up" ROLE="Verb"/>
+<Obs TERM="long time" ROLE="Adj"/>
+<Obs TERM="look forward to" ROLE="Verb"/>
+<Obs TERM="look out" ROLE="Verb"/>
+<Obs TERM="low income" ROLE="Adj"/>
+<Obs TERM="low level" ROLE="Adj"/>
+<Obs TERM="lower than" ROLE="Prep"/>
+<Obs TERM="make out" ROLE="Verb"/>
+<Obs TERM="make up" ROLE="Verb"/>
+<Obs TERM="market driven" ROLE="Adj"/>
+<Obs TERM="mentally ill" ROLE="Adj"/>
+<Obs TERM="mix up" ROLE="Verb"/>
+<Obs TERM="mixed up" ROLE="Adj"/>
+<Obs TERM="more or less" ROLE="Adv"/>
+<Obs TERM="most often" ROLE="Adj"/>
+<Obs TERM="most remote" ROLE="Adj"/>
+<Obs TERM="move along" ROLE="Verb"/>
+<Obs TERM="must do" ROLE="Adj"/>
+<Obs TERM="near to" ROLE="Prep"/>
+<Obs TERM="need to" ROLE="Aux"/>
+<Obs TERM="needs to" ROLE="Aux"/>
+<Obs TERM="netherlands antillean" ROLE="Adj"/>
+<Obs TERM="next day" ROLE="Adj"/>
+<Obs TERM="next to" ROLE="Prep"/>
+<Obs TERM="no one" ROLE="Pron"/>
+<Obs TERM="north american" ROLE="Adj"/>
+<Obs TERM="north korean" ROLE="Adj"/>
+<Obs TERM="northern irish" ROLE="Adj"/>
+<Obs TERM="not as good" ROLE="Adj"/>
+<Obs TERM="not for profit" ROLE="Adj"/>
+<Obs TERM="not many" ROLE="Adj"/>
+<Obs TERM="not quite" ROLE="Adv"/>
+<Obs TERM="now and then" ROLE="Adv"/>
+<Obs TERM="now that" ROLE="Conj"/>
+<Obs TERM="null and void" ROLE="Adj"/>
+<Obs TERM="number one" ROLE="Adj"/>
+<Obs TERM="of late" ROLE="Adj"/>
+<Obs TERM="off of" ROLE="Prep"/>
+<Obs TERM="off the shelf" ROLE="Adj"/>
+<Obs TERM="old fashioned" ROLE="Adj"/>
+<Obs TERM="on account of" ROLE="Prep"/>
+<Obs TERM="on all sides" ROLE="Adv"/>
+<Obs TERM="on behalf of" ROLE="Prep"/>
+<Obs TERM="on grounds of" ROLE="Prep"/>
+<Obs TERM="on hold" ROLE="Adv"/>
+<Obs TERM="on pain of" ROLE="Prep"/>
+<Obs TERM="on the grounds of" ROLE="Prep"/>
+<Obs TERM="on the matter of" ROLE="Prep"/>
+<Obs TERM="on the part of" ROLE="Prep"/>
+<Obs TERM="on the strength of" ROLE="Prep"/>
+<Obs TERM="on time" ROLE="Adv"/>
+<Obs TERM="on to" ROLE="Prep"/>
+<Obs TERM="on top of" ROLE="Prep"/>
+<Obs TERM="once more" ROLE="Adv"/>
+<Obs TERM="one more" ROLE="Adv"/>
+<Obs TERM="op cit." ROLE="Abbr"/>
+<Obs TERM="ought to" ROLE="Aux"/>
+<Obs TERM="out of" ROLE="Prep"/>
+<Obs TERM="out of control" ROLE="Adj"/>
+<Obs TERM="out of work" ROLE="Adj"/>
+<Obs TERM="outside of" ROLE="Prep"/>
+<Obs TERM="owing to" ROLE="Prep"/>
+<Obs TERM="paper based" ROLE="Adj"/>
+<Obs TERM="par excellence" ROLE="Adj"/>
+<Obs TERM="par excellence" ROLE="Adv"/>
+<Obs TERM="pari passu" ROLE="Adj"/>
+<Obs TERM="pay up" ROLE="Verb"/>
+<Obs TERM="per annum" ROLE="Adv"/>
+<Obs TERM="per capita" ROLE="Adj"/>
+<Obs TERM="per capita" ROLE="Adv"/>
+<Obs TERM="per diem" ROLE="Adj"/>
+<Obs TERM="per diem" ROLE="Adv"/>
+<Obs TERM="per se" ROLE="Adv"/>
+<Obs TERM="pick up" ROLE="Verb"/>
+<Obs TERM="play down" ROLE="Verb"/>
+<Obs TERM="point out" ROLE="Verb"/>
+<Obs TERM="preliminary to" ROLE="Prep"/>
+<Obs TERM="preparatory to" ROLE="Prep"/>
+<Obs TERM="previous to" ROLE="Prep"/>
+<Obs TERM="prima facie" ROLE="Adj"/>
+<Obs TERM="prima facie" ROLE="Adv"/>
+<Obs TERM="prior to" ROLE="Prep"/>
+<Obs TERM="pro forma" ROLE="Adj"/>
+<Obs TERM="pro forma" ROLE="Adv"/>
+<Obs TERM="pro rata" ROLE="Adv"/>
+<Obs TERM="provided that" ROLE="Conj"/>
+<Obs TERM="providing that" ROLE="Conj"/>
+<Obs TERM="pursuant to" ROLE="Prep"/>
+<Obs TERM="put by" ROLE="Verb"/>
+<Obs TERM="put down" ROLE="Verb"/>
+<Obs TERM="put forth" ROLE="Verb"/>
+<Obs TERM="put off" ROLE="Verb"/>
+<Obs TERM="put on" ROLE="Verb"/>
+<Obs TERM="put out" ROLE="Verb"/>
+<Obs TERM="put up" ROLE="Verb"/>
+<Obs TERM="regardless of" ROLE="Prep"/>
+<Obs TERM="relative to" ROLE="Prep"/>
+<Obs TERM="round up" ROLE="Verb"/>
+<Obs TERM="saudi arabian" ROLE="Adj"/>
+<Obs TERM="save that" ROLE="Conj"/>
+<Obs TERM="second class" ROLE="Adj"/>
+<Obs TERM="second level" ROLE="Adj"/>
+<Obs TERM="seeing that" ROLE="Conj"/>
+<Obs TERM="set at" ROLE="Verb"/>
+<Obs TERM="set back" ROLE="Verb"/>
+<Obs TERM="set off" ROLE="Verb"/>
+<Obs TERM="set on" ROLE="Verb"/>
+<Obs TERM="set out" ROLE="Verb"/>
+<Obs TERM="set up" ROLE="Verb"/>
+<Obs TERM="show up" ROLE="Verb"/>
+<Obs TERM="side by side" ROLE="Adj"/>
+<Obs TERM="side by side" ROLE="Adv"/>
+<Obs TERM="sign up" ROLE="Verb"/>
+<Obs TERM="sine die" ROLE="Adv"/>
+<Obs TERM="single out" ROLE="Verb"/>
+<Obs TERM="so as" ROLE="Conj"/>
+<Obs TERM="so long" ROLE="Interj"/>
+<Obs TERM="so that" ROLE="Conj"/>
+<Obs TERM="soak up" ROLE="Verb"/>
+<Obs TERM="sought after" ROLE="Adj"/>
+<Obs TERM="south african" ROLE="Adj"/>
+<Obs TERM="south american" ROLE="Adj"/>
+<Obs TERM="south korean" ROLE="Adj"/>
+<Obs TERM="southeast asian" ROLE="Adj"/>
+<Obs TERM="spell out" ROLE="Verb"/>
+<Obs TERM="sri lankan" ROLE="Adj"/>
+<Obs TERM="stamp out" ROLE="Verb"/>
+<Obs TERM="stand out" ROLE="Verb"/>
+<Obs TERM="stand up" ROLE="Verb"/>
+<Obs TERM="stemming from" ROLE="Prep"/>
+<Obs TERM="step up" ROLE="Verb"/>
+<Obs TERM="sub judice" ROLE="Adv"/>
+<Obs TERM="subsequent to" ROLE="Prep"/>
+<Obs TERM="such as" ROLE="Prep"/>
+<Obs TERM="such that" ROLE="Conj"/>
+<Obs TERM="sui generis" ROLE="Adj"/>
+<Obs TERM="take advantage" ROLE="Verb"/>
+<Obs TERM="take away" ROLE="Verb"/>
+<Obs TERM="take in" ROLE="Verb"/>
+<Obs TERM="take off" ROLE="Verb"/>
+<Obs TERM="take on" ROLE="Verb"/>
+<Obs TERM="take out" ROLE="Verb"/>
+<Obs TERM="take over" ROLE="Verb"/>
+<Obs TERM="take place" ROLE="Verb"/>
+<Obs TERM="take up" ROLE="Verb"/>
+<Obs TERM="thank you" ROLE="Interj"/>
+<Obs TERM="thanks to" ROLE="Prep"/>
+<Obs TERM="third degree" ROLE="Adj"/>
+<Obs TERM="third party" ROLE="Adj"/>
+<Obs TERM="tie up" ROLE="Verb"/>
+<Obs TERM="tip over" ROLE="Verb"/>
+<Obs TERM="to a degree" ROLE="Adv"/>
+<Obs TERM="to the point" ROLE="Adj"/>
+<Obs TERM="together with" ROLE="Prep"/>
+<Obs TERM="too soon" ROLE="Adv"/>
+<Obs TERM="turn down" ROLE="Verb"/>
+<Obs TERM="turn in" ROLE="Verb"/>
+<Obs TERM="turn on" ROLE="Verb"/>
+<Obs TERM="turn out" ROLE="Verb"/>
+<Obs TERM="turn over" ROLE="Verb"/>
+<Obs TERM="turned on" ROLE="Adj"/>
+<Obs TERM="ultra vires" ROLE="Adv"/>
+<Obs TERM="under way" ROLE="Adv"/>
+<Obs TERM="up against" ROLE="Prep"/>
+<Obs TERM="up to" ROLE="Prep"/>
+<Obs TERM="upside down" ROLE="Adv"/>
+<Obs TERM="upwards of" ROLE="Prep"/>
+<Obs TERM="use up" ROLE="Verb"/>
+<Obs TERM="used to" ROLE="Aux"/>
+<Obs TERM="vice versa" ROLE="Adv"/>
+<Obs TERM="ward off" ROLE="Verb"/>
+<Obs TERM="warm blooded" ROLE="Adj"/>
+<Obs TERM="waste away" ROLE="Verb"/>
+<Obs TERM="wear out" ROLE="Verb"/>
+<Obs TERM="well known" ROLE="Adj"/>
+<Obs TERM="wind up" ROLE="Verb"/>
+<Obs TERM="wipe out" ROLE="Verb"/>
+<Obs TERM="with reference to" ROLE="Prep"/>
+<Obs TERM="with regard to" ROLE="Prep"/>
+<Obs TERM="with respect to" ROLE="Prep"/>
+<Obs TERM="with the exception of" ROLE="Prep"/>
+<Obs TERM="within reach" ROLE="Adj"/>
+<Obs TERM="without doubt" ROLE="Adj"/>
+<Obs TERM="work out" ROLE="Verb"/>
+<Obs TERM="wrapped up" ROLE="Adj"/>
+<Obs TERM="write down" ROLE="Verb"/>
+<Obs TERM="zero in" ROLE="Verb"/>
+</Data>
+<Metadata>
+<Variable NAME="term" LABEL="Term" LENGTH="256" FORMAT="$256." TYPE="C"/>
+<Variable NAME="role" LABEL="Role" LENGTH="256" FORMAT="" TYPE="C"/>
+</Metadata>
+</MULTIDS>
+<SYNONYMDS Type="DATA">
+<Data>
+<Obs TERM="sas" TERMROLE="" PARENT="sas institute" PARENTROLE="COMPANY"/>
+</Data>
+<Metadata>
+<Variable NAME="term" LABEL="Child Term" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="termrole" LABEL="Term Role" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="parent" LABEL="Parent Term" LENGTH="256" FORMAT="" TYPE="C"/>
+<Variable NAME="parentrole" LABEL="Parent Role" LENGTH="256" FORMAT="" TYPE="C"/>
+</Metadata>
+</SYNONYMDS>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+<NODE CLASS="SASHELP.EMCORE.EXTENSION.CLASS" COMPONENT="TextTopic" ID="TextTopic" X="660" Y="66" DESCRIPTION="Text Topic" DIAGRAMID="_ROOT_" PARENTID="" TOOLTYPE="TM" TOOLPREFIX="TextTopic">
+<PROPERTIES Location="CATALOG" Catalog="SASHELP.EMTXTEXT.TOPIC.SOURCE" topTermCnt="0" autoTopicCnt="25" autoTopic="N" ForceRun="N" RunAction="Train" Component="TextTopic" initTopics="" tm_topic_node="" tm_topic_dataset="" topics="" augTopics="">
+<VariableProperties/>
+<EmVariableAttributes/>
+<EmTargetAttributes/>
+<EmFileProperties>
+<USERTRAINCODE Type="EXTERNAL" Extension="sas">
+<Data/>
+</USERTRAINCODE>
+<INITTOPICS Type="DATA">
+<Data/>
+<Metadata>
+<Variable NAME="_topic_" LABEL="Topic" LENGTH="100" FORMAT="" TYPE="C"/>
+<Variable NAME="_term_" LABEL="Term" LENGTH="80" FORMAT="" TYPE="C"/>
+<Variable NAME="_role_" LABEL="Role" LENGTH="32" FORMAT="" TYPE="C"/>
+<Variable NAME="_weight_" LABEL="Weight" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</INITTOPICS>
+<TOPIC_CUTOFFS Type="DATA">
+<Data/>
+<Metadata>
+<Variable NAME="_name" LABEL="Topic" LENGTH="100" FORMAT="" TYPE="C"/>
+<Variable NAME="_TYPE_" LABEL="" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="_FREQ_" LABEL="" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="_doccutoff" LABEL="Document Cutoff" LENGTH="8" FORMAT="" TYPE="N"/>
+<Variable NAME="_termcutoff" LABEL="Term Cutoff" LENGTH="8" FORMAT="" TYPE="N"/>
+</Metadata>
+</TOPIC_CUTOFFS>
+<EMNOTES Type="EXTERNAL" Extension="txt">
+<Data/>
+</EMNOTES>
+</EmFileProperties>
+</PROPERTIES>
+</NODE>
+</NODES>
+<CONNECTIONS>
+<CONNECTION FROM="Ids" TO="TextParsing"/>
+<CONNECTION FROM="TextParsing" TO="TextFilter"/>
+<CONNECTION FROM="TextFilter" TO="TextTopic"/>
+<CONNECTION FROM="TextFilter" TO="TextCluster"/>
+<CONNECTION FROM="TextTopic" TO="CNTRL"/>
+<CONNECTION FROM="TextCluster" TO="CNTRL"/>
+</CONNECTIONS>
+<NOTES>
+<DATA><![CDATA[
+
+]]>
+</DATA>
+</NOTES>
+</Workspace>
+</_ROOT_>

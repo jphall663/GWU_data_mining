@@ -25,3 +25,5 @@ Section 10.3
 Chapter 8
 
 * [Quora answers regarding clustering](https://www.quora.com/profile/Patrick-Hall-4/answers/Cluster-analysis)
+
+* [*Estimating the number of clusters in a data set via the gap statistic*](https://web.stanford.edu/~hastie/Papers/gap.pdf)
