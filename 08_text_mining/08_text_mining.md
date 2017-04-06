@@ -4,7 +4,7 @@ Text mining essentially means converting a group of documents into a meaningful 
 
 #### Class notes
 
-* [Overview of text mining techniques](notes/instructor notes.pdf)
+* [Overview of text mining techniques](https://github.com/jphall663/GWU_data_mining/blob/master/08_text_mining/notes/instructor_notes.pdf)
 
 * Text Mining with SAS Text Miner - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
