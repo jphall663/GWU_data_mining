@@ -4,10 +4,12 @@ Text mining essentially means converting a group of documents into a meaningful 
 
 #### Class notes
 
+* [Overview of Text Mining](notes/instructor notes.pdf)
+
 * Text Mining with SAS Text Miner - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
 * [SAS Code Basic Text Manipulation example](https://github.com/sassoftware/enlighten-apply/blob/master/SAS_GWU_examples/3_xml_json_text.sas)</br>
-(Beginning at Line 140)
+(Beginning at Line 140; also available on SODA environment in 'SAS_Workshop' folder.)
 
 * Python Code Basic Text Manipulation example
   * [Part 1](https://github.com/jphall663/bellarmine_py_intro/blob/master/solutions/solution_2.py)
