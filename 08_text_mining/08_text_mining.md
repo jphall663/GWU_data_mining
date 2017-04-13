@@ -21,8 +21,6 @@ Text mining essentially means converting a group of documents into a meaningful 
 
 #### [Sample Quiz](quiz/sample/quiz_8.pdf)
 
-#### [Quiz Key](quiz/key/quiz_8_key.pdf)
-
 #### Supplementary References
 
 * *Text Analytics Using SAS Enterprise Miner* - [Blackboard electronic reserves](https://blackboard.gwu.edu)
