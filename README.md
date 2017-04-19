@@ -2,7 +2,7 @@
 
 **DNSC 6279 ("Data Mining")** provides exposure to various data preprocessing, statistics, and machine learning techniques that can be used both to discover relationships in large data sets and to build predictive models. Techniques covered will include basic and analytical data preprocessing, regression models, decision trees, neural networks, clustering, association analysis, and basic text mining. Techniques will be presented in the context of data driven organizational decision making using statistical and machine learning approaches.
 
-**DNSC 6290 ("Machine Learning")** provides a follow-up course to DNSC 6279 that will expand on both the theoretical and practical aspects of subjects covered in the pre-requisite course while optionally introducing new materials. Techniques covered may include feature engineering, penalized regression, neural networks and deep learning, ensemble models including stacked generalization and super learner techniques, matrix factorization, model validation, and model interpretation. Classes will be taught as workshops where groups of students will apply lecture materials to the ongoing [Kaggle](https://www.kaggle.com) [Advanced Regression](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) and [Digit Recognizer](https://www.kaggle.com/c/digit-recognizer) contests.
+**DNSC 6290 ("Machine Learning")** provides a follow-up course to DNSC 6279 that will expand on both the theoretical and practical aspects of subjects covered in the pre-requisite course while optionally introducing new materials. Techniques covered may include feature engineering, penalized regression, neural networks and deep learning, ensemble models including stacked generalization and super learner approaches, matrix factorization, model validation, and model interpretation. Classes will be taught as workshops where groups of students will apply lecture materials to the ongoing [Kaggle](https://www.kaggle.com) [Advanced Regression](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) and [Digit Recognizer](https://www.kaggle.com/c/digit-recognizer) contests.
 
 ## Course Topics
 
@@ -31,18 +31,20 @@
 * **DNSC 6279 ("Data Mining")**: Stochastics for Analytics I, Statistics for Analytics, or equivalent (JUD/DAD),
 MSBA Program Candidacy or instructor approval.
 
-* **DNSC 6290 ("Machine Learning")**: Stochastics for Analytics I, Statistics for Analytics, or equivalent (JUD/DAD), Data Mining
+* **DNSC 6290 ("Machine Learning")**: Stochastics for Analytics I, Statistics for Analytics, or equivalent (JUD/DAD), Data Mining,
 MSBA Program Candidacy or instructor approval.
 
 #### Instructor
 
 Mr. Patrick Hall
 
-E-mail: jphall@gwu.edu
+**E-mail**: jphall@gwu.edu
 
-Twitter: [@jpatrickhall](https://twitter.com/jpatrickhall)
+**Twitter**: [@jpatrickhall](https://twitter.com/jpatrickhall)
 
-Office Hours: In departmental office space before lectures when business travel allows.
+**Linkedin**: https://www.linkedin.com/in/jpatrickhall/
+
+**Office Hours**: In departmental office space before lectures when business travel allows.
 
 #### Recommended Textbooks
 
@@ -132,21 +134,15 @@ The instructor reserves the right to revise any item on this syllabus, including
 
 ## Software
 
-#### Official software packages
-
-These packages will be used for in class demonstrations and homework solutions.
-
-* [H2o.ai](http://www.h2o.ai) is a package of high performance functions and algorithms for preprocessing data and training statistical and machine learning models. It can be accessed without the need for coding through a standalone, web browser client or by installing additional coding interfaces for R and/or Python.
-
 * [Anaconda Python](https://www.continuum.io/downloads) Python is an approachable, general purpose programming language with excellent add on libraries for math and data analysis. Anaconda Python is a commercial version of Python that bundles these add on packages (and many other packages) together with convenient development utilities like the Spyder IDE.
 
-* [SAS 9.4 and Enterprise Miner](http://www.sas.com/en_us/software/analytics/enterprise-miner.html) is a commercial package for preprocessing data and training statistical and machine learning models. Enterprise Miner allows for the construction of complex data mining workflows without writing code. Enterprise Miner is a proprietary commercial product and not freely available. You may access Enterprise Miner through the [SAS on Demand for Academics portal](https://odamid.oda.sas.com) or by contacting the [GWU Instructional Technology Lab](https://itl.gwu.edu/sas-software-distribution).
-
-#### Other useful free software:
+* [H2o.ai](http://www.h2o.ai) is a package of high performance functions and algorithms for preprocessing data and training statistical and machine learning models. It can be accessed without the need for coding through a standalone, web browser client or by installing additional coding interfaces for R and/or Python.
 
 * [R](https://cran.r-project.org/) is a tremendously popular language for data analysis, with thousands of user contributed packages for different types of data analysis tasks.
 
 * [R Studio](https://www.rstudio.com/products/rstudio/#Desktop) is the standard IDE for the R language.
+
+* [SAS 9.4 and Enterprise Miner](http://www.sas.com/en_us/software/analytics/enterprise-miner.html) is a commercial package for preprocessing data and training statistical and machine learning models. Enterprise Miner allows for the construction of complex data mining workflows without writing code. Enterprise Miner is a proprietary commercial product and not freely available. You may access Enterprise Miner through the [SAS on Demand for Academics portal](https://odamid.oda.sas.com) or by contacting the [GWU Instructional Technology Lab](https://itl.gwu.edu/sas-software-distribution).
 
 * [SAS 9.4 University Edition](http://www.sas.com/en_ph/software/university-edition/download-software.html) is a free edition of SAS' proprietary commercial data analysis software. SAS University Edition contains the newest version of several SAS software packages along with learning tools and utilities for new users. It also requires a virtual machine player which you may need to install separately.
 
