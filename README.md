@@ -2,7 +2,7 @@
 
 **DNSC 6279 ("Data Mining")** provides exposure to various data preprocessing, statistics, and machine learning techniques that can be used both to discover relationships in large data sets and to build predictive models. Techniques covered will include basic and analytical data preprocessing, regression models, decision trees, neural networks, clustering, association analysis, and basic text mining. Techniques will be presented in the context of data driven organizational decision making using statistical and machine learning approaches.
 
-**DNSC 6290 ("Machine Learning")** provides a follow-up course to DNSC 6279 that will expand on both the theoretical and practical aspects of subjects covered in the pre-requisite course while optionally introducing new materials. Techniques covered may include feature engineering, penalized regression, neural networks and deep learning, ensemble models including stacked generalization and super learner approaches, matrix factorization, model validation, and model interpretation. Classes will be taught as workshops where groups of students will apply lecture materials to the ongoing [Kaggle](https://www.kaggle.com) [Advanced Regression](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) and [Digit Recognizer](https://www.kaggle.com/c/digit-recognizer) contests.
+**DNSC 6290 ("Machine Learning")** provides a follow up course to DNSC 6279 that will expand on both the theoretical and practical aspects of subjects covered in the pre-requisite course while optionally introducing new materials. Techniques covered may include feature engineering, penalized regression, neural networks and deep learning, ensemble models including stacked generalization and super learner approaches, matrix factorization, model validation, and model interpretation. Classes will be taught as workshops where groups of students will apply lecture materials to the ongoing [Kaggle](https://www.kaggle.com) [Advanced Regression](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) and [Digit Recognizer](https://www.kaggle.com/c/digit-recognizer) contests.
 
 ## Course Topics
 
@@ -101,14 +101,14 @@ Some materials for this class have personal or corporate copyrights or licenses 
 
 ###### DNSC 6290 ("Machine Learning")  
 
-* **In-class Participation**: As this will be a 6 week, workshop-based course, student attendance and participation in class is expected.
+* **In class Participation**: As this will be a 6 week, workshop based course, student attendance and participation in class is expected.
 
-* **Kaggle Performance**: Lecture materials and hands-on workshop materials will be geared toward application to the [Kaggle](https://www.kaggle.com) [Advanced Regression](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) and [Digit Recognizer](https://www.kaggle.com/c/digit-recognizer) contests. Students are expected to participate in these contests as individuals or in groups and to do reasonably well.
+* **Kaggle Performance**: Lecture materials and hands on workshop materials will be geared toward application to the [Kaggle](https://www.kaggle.com) [Advanced Regression](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) and [Digit Recognizer](https://www.kaggle.com/c/digit-recognizer) contests. Students are expected to participate in these contests as individuals or in groups and to do reasonably well.
 
 * **Public Github Contributions**: Students are expected to write code and generate other artifacts (i.e. notebooks, visualizations, markdown) and to store them in a publicly accessible GitHub repository (or other public location, i.e. personal website).
 
 * **Grading Weights**
-  * In-class participation: 1/3
+  * In class participation: 1/3
   * Kaggle Performance: 1/3
   * Public Github Contributions: 1/3
 
@@ -148,7 +148,7 @@ The instructor reserves the right to revise any item on this syllabus, including
 
 * [TensorFlow](https://www.tensorflow.org/) + [Keras](https://keras.io/) are two of several popular deep learning toolkits and libraries; this particular combination will work on Windows. TensorFlow is a lower-level library for performing mathematical operations. It is GPU-enabled. (GPU support is optional but helpful for this class.) Keras is a higher level library that makes TensorFlow easier to use for building and training common deep learning architectures. They are both available as Python packages.
 
-* [XGBoost](https://github.com/dmlc/xgboost) is an optimized and highly accurate library for gradient boosted regression and classification. There are Python and R packages available for available XGBoost. (I have found XGBoost is easiest to install as R package, but if you get stuck with Python and Windows, you can try following the directions in [this blog post](https://datanoord.wordpress.com/2016/02/06/setup-xgboost-on-windows-python/).)
+* [XGBoost](https://github.com/dmlc/xgboost) is an optimized and highly accurate library for gradient boosted regression and classification. There are Python and R packages available for available XGBoost. (I have found XGBoost is easiest to install as R an package, but if you get stuck with Python and Windows, you can try following the directions in [this blog post](https://datanoord.wordpress.com/2016/02/06/setup-xgboost-on-windows-python/).)
 
 #### Using Git for this Material
 
