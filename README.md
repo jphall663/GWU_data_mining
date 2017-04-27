@@ -23,6 +23,7 @@
 * [Quick references](quick_refs/quick_refs.md)
 * [Interpreting Machine Learning](https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning)
 * [Data Science Interview Questions](ds_interview.md)
+* [Python Tricks for Data Scientists](python_tricks.md)
 
 ## Course Syllabi
 
