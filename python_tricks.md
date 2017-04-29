@@ -179,7 +179,7 @@ print(num_dfdx(sin, 0, 0.000001))
 # simple function for numerical derivative of f at x
 def num_dfdx(f, x, h):
     
-    return (f(x + h) + f(x))/float(h)
+    return (f(x + h) - f(x))/float(h)
 
 num_dfdx(lambda x: x**2, 1, 1e-6)
 # 2.0000009999243673
