@@ -1,5 +1,16 @@
 # Python Tricks - [Notebook](./python_tricks.ipynb)
 
+### Contents
+* [Explicit integer division]()
+* [Helpful numeric formats]()
+* [Symbolic math with sympy]()
+* [Viewing doc strings with `__doc__`]()
+* [Profiling code snippet performance with timeit ]()
+* [Passing a variable number of function arguments with `**kwargs`]()
+* [Function passing]()
+* [#### Anonymous (lambda) functions]()
+
+
 #### Explicit integer division
 
 ```python
@@ -64,7 +75,8 @@ print(latex(y.series(x, 0, 6)))
 ```
 
 #### Viewing doc strings with `__doc__`
-* Also using zip() for multiple list processing 
+* Also using zip() for multiple list processing
+ 
 ```python
 list1 = ['a', 'b', 'c', 'd', 'e']
 list2 = [1, 2, 3, 4, 5]
@@ -101,6 +113,7 @@ f(list1, list2)
 
 #### Profiling code snippet performance with timeit 
 * Notice performance increase when list is pre-initialized
+
 ```python
 import timeit
 n = 10000000
@@ -111,4 +124,73 @@ print(timeit.timeit('for i in range(0, n): list4.append(i)', number=1, setup='fr
 
 # 0.5378604060970247
 # 0.8394112652167678
+```
+
+#### Passing a variable number of function arguments with `**kwargs`
+
+```python
+def f(**kwargs):
+    
+    # kwargs is a dict
+    if kwargs is not None:
+        for key, val in sorted(kwargs.items()):
+            print('%s = %s' %(key, val))
+            
+    print('----------')
+        
+f(a='hello')
+f(a='hello', b='world')
+f(a='goodbye', b='cruel', c='world')
+
+# a = hello
+# ----------
+# a = hello
+# b = world
+# ----------
+# a = goodbye
+# b = cruel
+# c = world
+# ----------
+```
+
+#### Function passing
+
+```python
+# import numeric sine function
+from math import sin
+print(sin(0))
+
+# simple function for numerical derivative of f at x
+def num_dfdx(f, x, h):
+    
+    return (f(x + h) + f(x))/float(h)
+
+print(num_dfdx(sin, 0, 0.01))
+print(num_dfdx(sin, 0, 0.000001))
+
+# 0.0
+# 0.9999833334166665
+# 0.9999999999998334
+```
+
+#### Anonymous (lambda) functions
+
+* Define simple functions in one line of code
+```python
+# simple function for numerical derivative of f at x
+def num_dfdx(f, x, h):
+    
+    return (f(x + h) + f(x))/float(h)
+
+num_dfdx(lambda x: x**2, 1, 1e-6)
+# 2.0000009999243673
+
+magnitude = lambda x: 'small' if 1 >= x >= -1 else 'big'
+print(magnitude(0.5))
+# small
+
+# map and lamba used often to apply a simple function
+# to all elements in a list
+list(map(lambda x: x**2, range(0,10)))
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
