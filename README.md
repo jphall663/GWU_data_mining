@@ -22,8 +22,8 @@
 * [Data visualization](data_viz/data_viz.md)
 * [Quick references](quick_refs/quick_refs.md)
 * [Interpreting Machine Learning](https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning)
-* [Data Science Interview Questions](ds_interview.md)
-* [Python Tricks for Data Scientists](python_tricks.md)
+* [Data Science Interview Questions](interview/ds_interview.md)
+* [Python Tricks for Data Scientists](py_tricks/python_tricks.md)
 
 ## Course Syllabi
 
@@ -63,7 +63,7 @@ Mr. Patrick Hall
 * [*Pattern Recognition and Machine Learning*](http://www.springer.com/us/book/9780387310732), by Christopher Bishop</br>
 ([Freely available PDF](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf))
 
-* [*A Primer on Scientific Programming with Python*](http://www.springer.com/us/book/9783642549595), by Hans Petter Langtangen</br>
+* [*A Primer on Scientific Programming with Python*](http://www.springer.com/us/book/9783642549595), by Hans Petter Langtangen
   ** [Related Free Materials](https://hplgit.github.io/primer.html/doc/pub/half/book.pdf)
   ** [GWU Libraries EBook](https://link-springer-com.proxygw.wrlc.org/book/10.1007%2F978-3-662-49887-3)
 
