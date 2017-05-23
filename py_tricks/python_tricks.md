@@ -6,7 +6,7 @@
 * [Symbolic math with sympy](https://github.com/jphall663/GWU_data_mining/blob/master/py_tricks/python_tricks.md#symbolic-math-with-sympy)
 * [Viewing doc strings with `__doc__`](https://github.com/jphall663/GWU_data_mining/blob/master/py_tricks/python_tricks.md#viewing-doc-strings-with-__doc__)
 * [Profiling code snippet performance with timeit ](https://github.com/jphall663/GWU_data_mining/blob/master/py_tricks/python_tricks.md#profiling-code-snippet-performance-with-timeit)
-* [Passing a variable number of function arguments with `**kwargs`](https://github.com/jphall663/GWU_data_mining/blob/masterpy_tricks/python_tricks.md#passing-a-variable-number-of-function-arguments-with-kwargs)
+* [Passing a variable number of function arguments with `**kwargs`](https://github.com/jphall663/GWU_data_mining/blob/master/py_tricks/python_tricks.md#passing-a-variable-number-of-function-arguments-with-kwargs)
 * [Function passing](https://github.com/jphall663/GWU_data_mining/blob/master/py_tricks/python_tricks.md#function-passing)
 * [Anonymous (lambda) functions](https://github.com/jphall663/GWU_data_mining/blob/master/py_tricks/python_tricks.md#anonymous-lambda-functions)
 
