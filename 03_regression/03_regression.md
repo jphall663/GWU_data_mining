@@ -16,6 +16,8 @@ Regression is important because it is stable, interpretable and widely understoo
 
 * [H2o linear regression example](src/py_part_3_penalized_linear_regression.ipynb)
 
+* [Gradient descent example](src/py_part_3_linear_regression_gradient_descent.ipynb)
+
 ***
 
 ##### Logistic Regression
