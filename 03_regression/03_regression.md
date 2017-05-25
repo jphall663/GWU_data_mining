@@ -18,6 +18,8 @@ Regression is important because it is stable, interpretable and widely understoo
 
 * [Gradient descent example](src/py_part_3_linear_regression_gradient_descent.ipynb)
 
+* [Kaggle Advanced Regression Contest starter kit](src/py_part_3_kaggle_starter.ipynb)
+
 ***
 
 ##### Logistic Regression
@@ -55,6 +57,8 @@ Sections 2.2, 3.1 - 3.3, and 4.3
 * [*Generalized Linear Modeling with H2o*](http://h2o-release.s3.amazonaws.com/h2o/rel-tverberg/4/docs-website/h2o-docs/booklets/GLMBooklet.pdf)
 
 * *Logistic regression in Enterprise Miner* - [Blackboard electronic reserves](https://blackboard.gwu.edu)
+
+* [Advanced Notes](notes/advanced_notes.pdf)
 
 * [UCLA IDRE: *How do I interpret odds ratios in logistic regression?*](http://www.ats.ucla.edu/stat/mult_pkg/faq/general/odds_ratio.htm)
 
