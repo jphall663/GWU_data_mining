@@ -54,7 +54,10 @@ Regression is important because it is stable, interpretable and widely understoo
 * [*Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Fourth%20Printing.pdf)</br>
 Sections 2.2, 3.1 - 3.3, and 4.3
 
-* [*Generalized Linear Modeling with H2o*](http://h2o-release.s3.amazonaws.com/h2o/rel-tverberg/4/docs-website/h2o-docs/booklets/GLMBooklet.pdf)
+* [Elements of Statistical Learning](http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf)</br>
+Chapters 3, 4 and 7
+
+* [*Generalized Linear Modeling with H2o*](hhttp://docs.h2o.ai/h2o/latest-stable/h2o-docs/booklets/GLMBooklet.pdf)
 
 * *Logistic regression in Enterprise Miner* - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
@@ -67,3 +70,13 @@ Sections 2.2, 3.1 - 3.3, and 4.3
 * [Math and code for gradient descent and linear regression](http://tillbergmann.com/blog/python-gradient-descent.html)
 
 * [Math and code for gradient descent and logistic regression](http://aimotion.blogspot.com/2011/11/machine-learning-with-python-logistic.html)
+
+* [Elastic Net Regression](http://www.recognition.mccme.ru/pub/papers/L1/elasticnet.pdf)</br>
+  By Hastie and Zhou, 2005
+  
+* Ensemble Models:
+  * [Stacked Generalization](http://machine-learning.martinsewell.com/ensembles/stacking/Wolpert1992.pdf)</br>
+    by David Wolpert, 1992 
+  * [Super Learner](http://biostats.bepress.com/ucbbiostat/paper222/)</br>
+    by Van Der Laan et al, 2007
+  * [Ensemble Models in SAS Enterprise Miner](https://support.sas.com/resources/papers/proceedings16/SAS3120-2016.pdf)
