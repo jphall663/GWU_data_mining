@@ -31,6 +31,8 @@ Section 5.4
 
 * [*Deep Learning with H2O*](http://h2o-release.s3.amazonaws.com/h2o/rel-ueno/1/docs-website/h2o-docs/booklets/DeepLearningBooklet.pdf)
 
+* [*The Definitive Performance Tuning Guide for H2O Deep Learning*](https://blog.h2o.ai/2015/02/deep-learning-performance/)
+
 * *Predictive Modeling and Neural Networks in Enterprise Miner* - 
 [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
