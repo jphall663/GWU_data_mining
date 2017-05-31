@@ -14,6 +14,8 @@ Neural networks are important because of their ability to approximate **any** re
 
 * [H2O neural network examples](src/py_part_5_neural_networks.ipynb)
 
+* [Kaggle Digit Recognizer Starter Kit](src/py_part_5_MNIST_DNN.ipynb)
+
 * [H2O autoencoder example](src/py_part_5_MNIST_autoencoder.ipynb)
 
 * [MNIST data augmentation example](src/py_part_5_MNIST_data_augmentation.ipynb)
