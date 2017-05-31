@@ -60,6 +60,8 @@ The seminal deep learning paper from 2006 by Geoffrey Hinton
 * [*Neural Network Zoo*](http://www.asimovinstitute.org/neural-network-zoo/) article </br>
 Quick summary of the many different types of neural networks
 
+* [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/index.html)
+
 * Neural network FAQ by Warren Sarle: ftp://ftp.sas.com/pub/neural/FAQ.html#A2 </br> More than you ever wanted to know about traditional neural networks (some info may be dated and/or obsolete.)
 
 * [Quora answers regarding standard neural networks and deep learning](https://www.quora.com/profile/Patrick-Hall-4/answers/Artificial-Neural-Networks-ANNs)
