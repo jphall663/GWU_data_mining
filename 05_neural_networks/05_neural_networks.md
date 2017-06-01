@@ -59,6 +59,8 @@ The seminal deep learning paper from 2006 by Geoffrey Hinton
 
 ***
 
+* [Advanced Notes](notes/advanced_notes.pdf)
+
 * [*Neural Network Zoo*](http://www.asimovinstitute.org/neural-network-zoo/) article </br>
 Quick summary of the many different types of neural networks
 
