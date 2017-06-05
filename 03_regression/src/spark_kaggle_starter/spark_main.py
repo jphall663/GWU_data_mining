@@ -18,12 +18,16 @@ from feature_combiner import feature_combiner
 sc = SparkContext(appName="App")
 sc.setLogLevel('WARN') #Get rid of all the junk in output
 sqlContext = SQLContext(sc)
-
+spark = SparkSession.builder \
+        #.master("local") \
+        .appName("App") \
+        # .config("spark.some.config.option", "some-value") \
+        .getOrCreate()
 
 Y            = 'y'
 ID_VAR       = 'ID'
 DROPS        = [ID_VAR]
-
+#Load data from s3
 train = sqlContext.read.format('com.databricks.spark.csv').options(header='true', inferschema='true').load('s3n://emr-related-files/train.csv')
 test = sqlContext.read.format('com.databricks.spark.csv').options(header='true', inferschema='true').load('s3n://emr-related-files/test.csv')
 train.show(2)
@@ -72,9 +76,110 @@ print('Done encoding.')
 
 encoded_nums, cats = get_type_lists(frame=train,rejects=[ID_VAR,Y],frame_type='spark')
 
+
 print('Combining features....')
 (train, valid, test) = feature_combiner(train, test, encoded_nums, valid_frame = valid, frame_type='spark')
-# valid, test = feature_combiner(valid, test, encoded_nums, frame_type='spark')
 print('Done combining features.')
 
 encoded_combined_nums, cats = get_type_lists(frame=train,rejects=[ID_VAR,Y],frame_type='spark')
+
+################################################################################
+#                 DONE WITH PREPROCESSING - START TRAINING                     #
+################################################################################
+import h2o
+h2o.init(nthreads = -1)
+h2o.show_progress()                                          # turn on progress bars
+from h2o.estimators.glm import H2OGeneralizedLinearEstimator # import GLM models
+from h2o.grid.grid_search import H2OGridSearch               # grid search
+from pysparkling import *
+
+hc = H2OContext.getOrCreate(spark)
+
+print('Making h2o frames...')
+trainHF = hc.as_h2o_frame(train, "trainTable")
+validHF = hc.as_h2o_frame(valid, "testTable")
+testHF = hc.as_h2o_frame(test, "validTable")
+print('Done making h2o frames.')
+
+base_train, stack_train = trainHF.split_frame([0.5], seed=12345)
+base_valid, stack_valid = validHF.split_frame([0.5], seed=12345)
+
+def glm_grid(X, y, train, valid):
+
+    """ Wrapper function for penalized GLM with alpha and lambda search.
+
+    :param X: List of inputs.
+    :param y: Name of target variable.
+    :param train: Name of training H2OFrame.
+    :param valid: Name of validation H2OFrame.
+    :return: Best H2Omodel from H2OGeneralizedLinearEstimator
+    """
+
+    alpha_opts = [0.01, 0.25, 0.5, 0.99] # always keep some L2
+    hyper_parameters = {"alpha":alpha_opts}
+
+    # initialize grid search
+    grid = H2OGridSearch(
+        H2OGeneralizedLinearEstimator(
+            family="gaussian",
+            lambda_search=True,
+            seed=12345),
+        hyper_params=hyper_parameters)
+
+    # train grid
+    grid.train(y=y,
+               x=X,
+               training_frame=train,
+               validation_frame=valid)
+
+    # show grid search results
+    print(grid.show())
+
+    best = grid.get_grid()[0]
+    print(best)
+
+    # plot top frame values
+    yhat_frame = valid.cbind(best.predict(valid))
+    print(yhat_frame[0:10, [y, 'predict']])
+
+    # plot sorted predictions
+    yhat_frame_df = yhat_frame[[y, 'predict']].as_data_frame()
+    yhat_frame_df.sort_values(by='predict', inplace=True)
+    yhat_frame_df.reset_index(inplace=True, drop=True)
+    # _ = yhat_frame_df.plot(title='Ranked Predictions Plot')
+
+    # select best model
+    return best
+print('Training..')
+glm0 = glm_grid(original_nums, Y, base_train, base_valid)
+glm1 = glm_grid(encoded_nums, Y, base_train, base_valid)
+glm2 = glm_grid(encoded_combined_nums, Y, base_train, base_valid)
+print('DONE training.')
+
+
+# stack_train = stack_train.cbind(glm0.predict(stack_train))
+# stack_valid = stack_valid.cbind(glm0.predict(stack_valid))
+# stack_train = stack_train.cbind(glm1.predict(stack_train))
+# stack_valid = stack_valid.cbind(glm1.predict(stack_valid))
+# stack_train = stack_train.cbind(glm2.predict(stack_train))
+# stack_valid = stack_valid.cbind(glm2.predict(stack_valid))
+#
+# test = test.cbind(glm0.predict(test))
+# test = test.cbind(glm1.predict(test))
+# test = test.cbind(glm2.predict(test))
+#
+# glm3 = glm_grid(encoded_combined_nums + ['predict', 'predict0', 'predict1'], Y, stack_train, stack_valid)
+#
+# sub = testHF[ID_VAR].cbind(glm3.predict(testHF))
+# sub['predict'] = sub['predict'].exp()
+# print(sub.head())
+#
+# # create time stamp
+# import re
+# import time
+# time_stamp = re.sub('[: ]', '_', time.asctime())
+#
+# # save file for submission
+# sub.columns = [ID_VAR, Y]
+# sub_fname = '../data/submission_' + str(time_stamp) + '.csv'
+# h2o.download_csv(sub, sub_fname)

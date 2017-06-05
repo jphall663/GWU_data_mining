@@ -74,12 +74,14 @@ def feature_combiner(training_frame, test_frame, nums, valid_frame = None,frame_
                     col_j_train_df = train_df[col_j]
                     col_i_test_df = test_df[col_i]
                     col_j_test_df = test_df[col_j]
+                    col_i_valid_df = valid_df[col_i]
+                    col_j_valid_df = valid_df[col_j]
 
                     # multiply, convert back to h2o
                     train_df[str(col_i + '|' + col_j)] = col_i_train_df.values*col_j_train_df.values
                     test_df[str(col_i + '|' + col_j)] = col_i_test_df.values*col_j_test_df.values
                     if valid_frame:
-                        valid_df[str(col_i + '|' + col_j)] = col_i_test_df.values*col_j_test_df.values
+                        valid_df[str(col_i + '|' + col_j)] = col_i_valid_df.values*col_j_valid_df.values
         print('DONE combining features.')
 
 
@@ -102,11 +104,12 @@ def feature_combiner(training_frame, test_frame, nums, valid_frame = None,frame_
             test_frame.columns = list(test_df)
             # conserve memory
             del test_df
-            # convert test back to h2o
-            valid_frame = h2o.H2OFrame(valid_df)
-            valid_frame.columns = list(valid_df)
-            # conserve memory
-            del valid_df
+            if valid_frame:
+                # convert test back to h2o
+                valid_frame = h2o.H2OFrame(valid_df)
+                valid_frame.columns = list(valid_df)
+                # conserve memory
+                del valid_df
 
             print('Done.')
 
