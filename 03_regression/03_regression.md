@@ -73,10 +73,3 @@ Chapters 3, 4 and 7
 
 * [Elastic Net Regression](http://www.recognition.mccme.ru/pub/papers/L1/elasticnet.pdf)</br>
   By Hastie and Zhou, 2005
-  
-* Ensemble Models:
-  * [Stacked Generalization](http://machine-learning.martinsewell.com/ensembles/stacking/Wolpert1992.pdf)</br>
-    by David Wolpert, 1992 
-  * [Super Learner](http://biostats.bepress.com/ucbbiostat/paper222/)</br>
-    by Van Der Laan et al, 2007
-  * [Ensemble Models in SAS Enterprise Miner](https://support.sas.com/resources/papers/proceedings16/SAS3120-2016.pdf)
