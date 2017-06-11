@@ -44,11 +44,14 @@ Chapters 10 and 15
 * [*Pattern Recognition in Machine Learning*](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf)</br>
 Chapter 14
 
-* [*Random Forests*](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)
+* [*Random Forests*](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf)</br>
+by Leo Breiman
 
-* [*Greedy Function Approximation: A Gradient Boosting Machine*](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf)
+* [*Greedy Function Approximation: A Gradient Boosting Machine*](https://statweb.stanford.edu/~jhf/ftp/trebst.pdf)</br>
+by Jerome Freidman
 
-* [*Extremely Randomized Trees*](https://pdfs.semanticscholar.org/336a/165c17c9c56160d332b9f4a2b403fccbdbfb.pdf)
+* [*Extremely Randomized Trees*](https://pdfs.semanticscholar.org/336a/165c17c9c56160d332b9f4a2b403fccbdbfb.pdf)</br>
+by Pierre Geurts, Damien Ernst and Louis Wehenkel
 
 * Stacked and blended ensemble models:
   * [Stacked Generalization](http://machine-learning.martinsewell.com/ensembles/stacking/Wolpert1992.pdf)</br>
