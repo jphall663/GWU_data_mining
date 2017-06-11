@@ -2,7 +2,7 @@
 
 Regression is important because it is stable, interpretable and widely understood and accepted.
 
-#### Class Notes
+#### Class Materials
 
 ##### Linear regression
 
@@ -61,7 +61,7 @@ Chapters 3, 4 and 7
 
 * *Logistic regression in Enterprise Miner* - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
-* [Advanced Notes](notes/advanced_notes.pdf)
+* [Advanced Class Notes](notes/advanced_notes.pdf)
 
 * [UCLA IDRE: *How do I interpret odds ratios in logistic regression?*](http://www.ats.ucla.edu/stat/mult_pkg/faq/general/odds_ratio.htm)
 

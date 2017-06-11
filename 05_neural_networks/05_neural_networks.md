@@ -2,13 +2,15 @@
 
 Neural networks are important because of their ability to approximate **any** relationship between input variables and target variables. In practice they tend to be difficult to train and difficult to interpret, but excel at pattern recognition tasks in images and sound. A new field of neural networks, known as *deep learning*, has been responsible for some of the most important recent breakthroughs in machine learning and artificial intelligence.
 
-#### Class Notes
+#### Class Materials
 
 * [Overview of neural networks](notes/instructor_notes.pdf)
 
 * Overview of training neural networks in Enterprise Miner - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
 * [More details on training neural networks](notes/tan_notes.pdf)
+
+* [Wen's deep learning notes](notes/cnn-gwu.pdf)
 
 * [EM neural network example](xml/05_neural_networks.xml)
 
@@ -19,6 +21,8 @@ Neural networks are important because of their ability to approximate **any** re
 * [H2O autoencoder example](src/py_part_5_MNIST_autoencoder.ipynb)
 
 * [MNIST data augmentation example](src/py_part_5_MNIST_data_augmentation.ipynb)
+
+* [Wen's MNIST Keras example](src/py_part_5_MNIST_keras_lenet.ipynb)
 
 #### [Sample Quiz](quiz/sample/quiz_5.pdf)
 
@@ -59,7 +63,7 @@ The seminal deep learning paper from 2006 by Geoffrey Hinton
 
 ***
 
-* [Advanced Notes](notes/advanced_notes.pdf)
+* [Advanced Class Notes](notes/advanced_notes.pdf)
 
 * [*Neural Network Zoo*](http://www.asimovinstitute.org/neural-network-zoo/) article </br>
 Quick summary of the many different types of neural networks
@@ -69,6 +73,10 @@ Quick summary of the many different types of neural networks
 * Neural network FAQ by Warren Sarle: ftp://ftp.sas.com/pub/neural/FAQ.html#A2 </br> More than you ever wanted to know about traditional neural networks (some info may be dated and/or obsolete.)
 
 * [Quora answers regarding standard neural networks and deep learning](https://www.quora.com/profile/Patrick-Hall-4/answers/Artificial-Neural-Networks-ANNs)
+
+* [Decent GPU Theano/Keras install instructions for Windows](https://datanoord.wordpress.com/2016/02/02/setup-a-deep-learning-environment-on-windows-theano-keras-with-gpu-enabled/)
+
+* [Decent CPU Theano/TensorFlow/Keras install instructions for Mac](http://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/)
 
 ***
 
