@@ -104,16 +104,17 @@ def feature_combiner(training_frame, test_frame, nums, valid_frame = None,frame_
             test_frame.columns = list(test_df)
             # conserve memory
             del test_df
+            validation_frame = None
             if valid_frame:
                 # convert test back to h2o
-                valid_frame = h2o.H2OFrame(valid_df)
-                valid_frame.columns = list(valid_df)
+                validation_frame = h2o.H2OFrame(valid_df)
+                validation_frame.columns = list(valid_df)
                 # conserve memory
                 del valid_df
 
             print('Done.')
 
             if valid_frame:
-                return train_df, valid_df, test_df
+                return training_frame, validation_frame, test_frame
             else:
-                return train_df, test_df
+                return training_frame, test_frame
