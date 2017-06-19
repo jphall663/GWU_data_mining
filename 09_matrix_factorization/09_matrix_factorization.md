@@ -14,7 +14,7 @@ features suitable for modeling and visualization.
 
 #### Supplementary References
 
-* [Generalized Low Rank Model with H2O](http://docs.h2o.ai/h2o-tutorials/latest-stable/tutorials/glrm/glrm-tutorial.html)
+* [Generalized Low Rank Models (GLRM) with H2O](http://docs.h2o.ai/h2o-tutorials/latest-stable/tutorials/glrm/glrm-tutorial.html)
 
 * [LibFM for Factorization Machines](http://libfm.org/)
 
@@ -32,6 +32,6 @@ by Daniel D. Lee & H. Sebastian Seung
 * [Generalized Low Rank Models](http://www.web.stanford.edu/~boyd/papers/pdf/glrm.pdf)</br>
 by Madeleine Udell, Corinne Horn, Reza Zadeh, and Stephen Boyd
 
-* [Factroization Machines](http://www.algo.uni-konstanz.de/members/rendle/pdf/Rendle2010FM.pdf)</br>
+* [Factorization Machines](http://www.algo.uni-konstanz.de/members/rendle/pdf/Rendle2010FM.pdf)</br>
 by Steffen Rendle
 
