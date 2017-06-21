@@ -11,6 +11,8 @@ features suitable for modeling and visualization.
   * [One component with back-projection](../02_analytical_data_prep/src/py_part_2_feature_extraction.ipynb)
   
   * [Iris data with visualization](src/py_part_9_iris_pca.ipynb)
+  
+  * [Kaggle House Prices example notebook](src/py_part_9_kaggle_GLRM_example.ipynb)
 
 #### Supplementary References
 
@@ -29,7 +31,10 @@ Chapter 12
 * [Learning the Parts of Objects by Nonnegative Matrix Factorization](https://www.cs.princeton.edu/courses/archive/spring12/cos424/pdf/lee-seung.pdf)</br>
 by Daniel D. Lee & H. Sebastian Seung
 
-* [Generalized Low Rank Models](http://www.web.stanford.edu/~boyd/papers/pdf/glrm.pdf)</br>
+* [Generalized Low Rank Models (Book)](http://www.web.stanford.edu/~boyd/papers/pdf/glrm.pdf)</br>
+by Madeleine Udell, Corinne Horn, Reza Zadeh, and Stephen Boyd
+
+* [Generalized Low Rank Models (Paper)](https://stanford.edu/~rezab/nips2014workshop/submits/glrm.pdf)</br>
 by Madeleine Udell, Corinne Horn, Reza Zadeh, and Stephen Boyd
 
 * [Factorization Machines](http://www.algo.uni-konstanz.de/members/rendle/pdf/Rendle2010FM.pdf)</br>
