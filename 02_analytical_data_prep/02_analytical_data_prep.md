@@ -28,7 +28,12 @@ Problem | Symptoms | Solution
 **Outliers** | Biased models and biased, inaccurate results. Unstable parameter estimates and rule generation. Unreliable out-of-domain predictions. | [Discretization](02_analytical_data_prep.md#discretization---view-notebook). [Winsorizing](02_analytical_data_prep.md#winsorizing---view-notebook). Appropriate algorithm selection, e.g. Huber loss functions.
 **Missing Values** | Information loss. Biased models and biased, inaccurate results. | [Imputation](02_analytical_data_prep.md#imputation---view-notebook). [Discretization](02_analytical_data_prep.md#discretization---view-notebook). Appropriate algorithm selection, e.g. Tree-based models, naive Bayes classification.
 **Character Variables<sup>&#10013;</sup>** | Information loss. Biased models and biased, inaccurate results. Computational errors. | [Encoding](02_analytical_data_prep.md#encoding---view-notebook). Appropriate algorithm selection, e.g. Tree-based models, naive Bayes classification.
-**High Cardinality Categorical Variables** | Over-fit models and inaccurate results. Long, intolerable compute times. Unreliable out-of-domain predictions. | [Rate-by-level](02_analytical_data_prep.md#rate-by-level---view-notebook) or variants e.g. perturbed rate-by-level or [Weight of Evidence](http://support.sas.com/documentation/cdl/en/prochp/66409/HTML/default/viewer.htm#prochp_hpbin_details02.htm). [Average-, Median, BLUP-by-level](02_analytical_data_prep.md#average-by-level---view-notebook). [Discretization](02_analytical_data_prep.md#discretization---view-notebook). Embedding approaches, e.g. entity embedding neural networks, factorization machines.
+**High Cardinality Categorical Variables** | Over-fit models and inaccurate 
+results. Long, intolerable compute times. Unreliable out-of-domain 
+predictions. | [Rate-by-level](02_analytical_data_prep.md#target-encoding-
+(categorical)---view-notebook) or variants e.g. perturbed rate-by-level or 
+[Weight of Evidence](http://support.sas.com/documentation/cdl/en/prochp/66409/HTML/default/viewer.htm#prochp_hpbin_details02.htm). [Average-, Median, BLUP-by-level](02_analytical_data_prep.md#target-encoding-(numeric)---view-notebook). 
+[Discretization](02_analytical_data_prep.md#discretization---view-notebook). Embedding approaches, e.g. entity embedding neural networks, factorization machines.
 **Disparate Variable Scales** | Unreliable parameter estimates, biased models, and biased, inaccurate results. | [Standardization](02_analytical_data_prep.md#standardization---view-notebook), Appropriate algorithm selection, e.g. Tree-based models.
 **Strong Multicollinearity (correlation)** | Unstable parameter estimates, unstable rule generation, and unstable predictions. | [Feature selection](02_analytical_data_prep.md#feature-selection---view-notebook). [Feature extraction](02_analytical_data_prep.md#feature-extraction---view-notebook). L2 Regularization.
 **Dirty Data** | Information loss. Biased models and biased, inaccurate results. Long, intolerable compute times. Unstable parameter estimates and rule generation. Unreliable out-of-domain predictions. | Combination of solution strategies.
@@ -53,10 +58,10 @@ Taking all the rows containing rare events in a data set and increasing them pro
 #### Encoding - [view notebook](src/py_part_2_encoding.ipynb)
 Changing the representation of a variable. Very often in data mining applications categorical, character variables are encoded to numeric variables to be used with algorithms that cannot accept character or categorical variables.
 
-#### Rate-by-level - [view notebook](src/py_part_2_rate-by-level.ipynb)
+#### Target Encoding (Categorical) - [view notebook](src/py_part_2_target_encode_categorical.ipynb)
 An encoding method for changing categorical variables into numeric variables when the target is a binary categorical variable. Particularly helpful when a categorical variable has many levels.
 
-#### Average-by-level - [view notebook](src/py_part_2_average-by-level.ipynb)
+#### Target Encoding (Numeric) - [view notebook](src/py_part_2_target_encode_numeric.ipynb)
 An encoding method for changing categorical variables into numeric variables when the target is a numeric variable. Particularly helpful when a categorical variable has many levels.
 
 #### Discretization - [view notebook](src/py_part_2_discretization.ipynb)
