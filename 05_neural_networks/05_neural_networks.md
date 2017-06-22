@@ -84,3 +84,32 @@ Quick summary of the many different types of neural networks
 
   * [Yann LeCun's MNIST page](http://yann.lecun.com/exdb/mnist/)
   * [MNIST as CSV](https://pjreddie.com/projects/mnist-in-csv/)
+  
+***
+
+#### Hacky definitions for hard deep learning concepts
+
+**Max. Out** - A type of activation that outputs the maximum input to a 
+neuron.
+
+**Momentum** - An gradient descent hyper-parameter that helps carry the 
+optimization over local minima and converge faster. Momentum creates a velocity
+vector *v* from previous the iteration's parameters. In 
+the current iteration this vector is added to the current parameter updates, 
+increasing updates for dimensions whose gradients point in the same direction 
+and reducing updates for dimensions whose gradients change directions, 
+resulting in decreased oscillation. Momentum is usually set to max-out at a 
+certain value: "terminal velocity".
+
+**Nesterov Accelerated Gradient** - A type of SGD that uses the momentum 
+formula to calculate the gradient on approximate new parameters. (Like looking 
+into to the future by using the gradient on the approximate next position on 
+the error surface, so you're gradient might be better behaved).
+
+**Adagrad** - A type of SGD that updates parameters for sparse features with 
+bigger gradients and parameters for dense features with smaller gradients, by 
+scaling the learning rate by 1/sum(past parameter-wise gradients). 
+
+**Adadelta** - An alternative to Adagrad. Adagrad always drives the learning 
+rate to zero. Adadelta uses a decaying average of past gradients instead of 
+the sum of all past gradients to avoid this. 
