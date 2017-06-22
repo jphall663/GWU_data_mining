@@ -61,6 +61,12 @@ The seminal convolutional neural network paper from 1998 by Yann Lecun
 * [*Reducing the Dimensionality of Data Using Neural Networks*](https://www.cs.toronto.edu/~hinton/science.pdf)</br>
 The seminal deep learning paper from 2006 by Geoffrey Hinton
 
+* Papers about problems with neural networks:
+
+  * [Intriguing properties of neural networks]](http://cs.nyu.edu/~zaremba/docs/understanding.pdf)
+  
+  * [Deep Neural Networks are Easily Fooled: High Confidence Predictions for Unrecognizable Images]](http://arxiv.org/pdf/1412.1897v2.pdf) 
+
 ***
 
 * [Advanced Class Notes](notes/advanced_notes.pdf)
@@ -84,8 +90,6 @@ Quick summary of the many different types of neural networks
 
   * [Yann LeCun's MNIST page](http://yann.lecun.com/exdb/mnist/)
   * [MNIST as CSV](https://pjreddie.com/projects/mnist-in-csv/)
-  
-***
 
 #### Hacky definitions for hard deep learning concepts
 
