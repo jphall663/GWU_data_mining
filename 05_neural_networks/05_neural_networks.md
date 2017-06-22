@@ -63,7 +63,7 @@ The seminal deep learning paper from 2006 by Geoffrey Hinton
 
 * Papers about problems with neural networks:
 
-  * [Intriguing Properties of Neural Networks](http://cs.nyu.edu/~zaremba/docs/understanding.pdf)
+  * [Intriguing Properties of Neural Networks](https://arxiv.org/pdf/1312.6199.pdf)
   
   * [Deep Neural Networks are Easily Fooled: High Confidence Predictions for Unrecognizable Images](http://arxiv.org/pdf/1412.1897v2.pdf) 
 
