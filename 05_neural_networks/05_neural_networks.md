@@ -36,7 +36,7 @@ Neural networks are important because of their ability to approximate **any** re
 
 * [*Deep Learning with H2O*](http://h2o-release.s3.amazonaws.com/h2o/rel-ueno/1/docs-website/h2o-docs/booklets/DeepLearningBooklet.pdf)
 
-* [*The Definitive Performance Tuning Guide for H2O Deep Learning*](https://blog.h2o.ai/2015/02/deep-learning-performance/)
+* [The Definitive Performance Tuning Guide for H2O Deep Learning](https://blog.h2o.ai/2015/02/deep-learning-performance/)
 
 * *Predictive Modeling and Neural Networks in Enterprise Miner* - 
 [Blackboard electronic reserves](https://blackboard.gwu.edu)
@@ -55,11 +55,13 @@ Chapter 5
 * [*Deep Learning*](http://www.deeplearningbook.org/)</br>
 Chapters 6 - 9 
 
-* [*Gradient-Based Learning Applied to Document Recognition*](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)</br>
+* [Gradient-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)</br>
 The seminal convolutional neural network paper from 1998 by Yann Lecun
 
-* [*Reducing the Dimensionality of Data Using Neural Networks*](https://www.cs.toronto.edu/~hinton/science.pdf)</br>
+* [Reducing the Dimensionality of Data Using Neural Networks](https://www.cs.toronto.edu/~hinton/science.pdf)</br>
 The seminal deep learning paper from 2006 by Geoffrey Hinton
+
+* [Why Does Deep Cheap Learning Work So Well?](https://arxiv.org/pdf/1608.08225.pdf)
 
 * Papers about problems with neural networks:
 
@@ -90,6 +92,8 @@ Quick summary of the many different types of neural networks
 
   * [Yann LeCun's MNIST page](http://yann.lecun.com/exdb/mnist/)
   * [MNIST as CSV](https://pjreddie.com/projects/mnist-in-csv/)
+
+***
 
 #### Hacky definitions for hard deep learning concepts
 
