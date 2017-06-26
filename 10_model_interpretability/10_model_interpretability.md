@@ -23,7 +23,7 @@ techniques for interpreting complex, machine-learned models.
 #### Supplementary References
 
 * [Towards A Rigorous Science of Interpretable Machine Learning](https://arxiv.org/pdf/1702.08608.pdf)</br>
-by and Been Kim
+by Finale Doshi-Velez and Been Kim
 
 * [Ideas for Machine Learning Interpretability](https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning)
 
@@ -31,9 +31,6 @@ by and Been Kim
 
 * [*Elements of Statistical Learning*](http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf)</br>
 Section 10.13
-
-* [*Pattern Recognition in Machine Learning*](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf)</br>
-Chapter 10
 
 ***
 
@@ -43,6 +40,6 @@ by Marco Tulio Ribeiro, Sameer Singh, and Carlos Guestrin
 * [Distribution-Free Predictive Inference for Regression](http://www.stat.cmu.edu/~ryantibs/papers/conformal.pdf)</br>
 by Jing Lei, Max G’Sell, Alessandro Rinaldo, Ryan J. Tibshirani, and Larry Wasserman
 
-* [Peeking inside the black box: Visualizing statistical learning with plots of individual conditional expectation.](https://arxiv.org/pdf/1309.6392.pdf)
+* [Peeking inside the black box: Visualizing statistical learning with plots of individual conditional expectation](https://arxiv.org/pdf/1309.6392.pdf)
 
-* [Extracting trees structured representations of trained networks](https://papers.nips.cc/paper/1152-extracting-tree-structured-representations-of-trained-networks.pdf)
+* [Extracting tree structured representations of trained networks](https://papers.nips.cc/paper/1152-extracting-tree-structured-representations-of-trained-networks.pdf)
