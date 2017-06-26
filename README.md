@@ -18,7 +18,7 @@
 | [Section 07: Association Rules](07_association_rules/07_association_rules.md) |
 | [Section 08: Text Mining](08_text_mining/08_text_mining.md) |
 | [Section 09: Matrix Factorization](09_matrix_factorization/09_matrix_factorization.md)
-| [Section 10: Model Interpretability](10_model_interpretability.md)
+| [Section 10: Model Interpretability](10_model_interpretability/10_model_interpretability.md)
 
 #### Additional reference material
 * [Data visualization](data_viz/data_viz.md)
