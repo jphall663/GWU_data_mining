@@ -15,10 +15,14 @@ techniques for interpreting complex, machine-learned models.
 * Basic ML interpretability examples
 
   * [Decision tree surrogate models](src/dt_surrogate.ipynb)
-  
-  * [Partial dependence and ICE](src/pdp_ice.ipynb)
+
+  * [LIME explanations](src/lime.ipynb)
 
   * [LOCO local feature importance](src/loco.ipynb)
+  
+  * [Partial dependence and ICE](src/pdp_ice.ipynb)  
+  
+  * [Sensitivity analysis](src/sensitivity_analysis.ipynb)
   
 #### Supplementary References
 
