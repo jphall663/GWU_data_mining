@@ -42,11 +42,11 @@ A great deal of work in data mining projects is spent on data munging. Below som
 
 #### [Sample Quiz](quiz/sample/quiz_1.pdf)
 
-#### [Quiz key](quiz/key/quiz_1_key.pdf)
+#### [Quiz key](quiz/key/quiz_1_key.pdf) (Currently Unavailable)
 
 #### [Assignment](assignment/assignment_1.pdf)
 
-#### [Assignment Key](assignment/key)
+#### [Assignment Key](assignment/key) (Currently Unavailable)
 
 #### Supplementary References
 * Simple [benchmark](https://github.com/szilard/benchm-databases) of data processing tools by [@szilard](https://github.com/szilard)
@@ -55,6 +55,30 @@ A great deal of work in data mining projects is spent on data munging. Below som
 
 #### Python Pandas - [view notebook](src/notebooks/py/Py_Part_0_pandas_numpy.ipynb)
 ```python
+
+"""
+Copyright (C) 2017 J. Patrick Hall, jphall@gwu.edu
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+"""
+
 #%% standard output ###########################################################
 # print is the primary function used to write to the console in Python
 # print is a *function* in Python 3
@@ -316,6 +340,28 @@ scratch_df7 = pd.read_csv('scratch.csv')
 
 #### R Basics, dplyr, and ggplot - [view notebook](src/notebooks/r/R_Part_0_Basics_dplyr_and_ggplot2.ipynb)
 ```r
+
+###############################################################################
+# Copyright (C) 2017 J. Patrick Hall, jphall@gwu.edu
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
+# to deal in the Software without restriction, including without limitation
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included
+# in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+# OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+# DEALINGS IN THE SOFTWARE.
+
 ### standard output ###########################################################
 # two primary R core functions are used to print information to the console
 #   print() and cat()
@@ -597,6 +643,28 @@ import <- read.table(filename, header = TRUE, sep = ',')
 
 #### R data.table - [view notebook](src/notebooks/r/R_Part_1_data.table.ipynb)
 ```r
+
+###############################################################################
+# Copyright (C) 2017 J. Patrick Hall, jphall@gwu.edu
+#
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
+# to deal in the Software without restriction, including without limitation
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included
+# in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+# OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+# THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+# DEALINGS IN THE SOFTWARE.
+
 ### data.table is an efficient package for manipulating data sets #############
 # data.table is implemented in optimized C and often attempts to update
 #   items by reference to avoid copying large amounts of data
@@ -801,8 +869,9 @@ head(scratch_dt)
 
 #### Base SAS and PROC SGPLOT - [clone/download notebook](src/notebooks/sas)
 ```sas
+
 ******************************************************************************;
-* Copyright (c) 2015 by SAS Institute Inc., Cary, NC 27513 USA               *;
+* Copyright (C) 2015 by SAS Institute Inc., Cary, NC 27513 USA               *;
 *                                                                            *;
 * Licensed under the Apache License, Version 2.0 (the "License");            *;
 * you may not use this file except in compliance with the License.           *;
@@ -1252,6 +1321,29 @@ run;
 
 #### SAS PROC SQL - [clone/download notebook](src/notebooks/sas)
 ```sas
+
+******************************************************************************;
+* Copyright (C) 2017 by J. Patrick Hall, jphall@gwu.edu                      *;
+*                                                                            *;
+* Permission is hereby granted, free of charge, to any person obtaining a    *;
+* copy of this software and associated documentation files (the "Software"), *;
+* to deal in the Software without restriction, including without limitation  *;
+* the rights to use, copy, modify, merge, publish, distribute, sublicense,   *;
+* and/or sell copies of the Software, and to permit persons to whom the      *;
+* Software is furnished to do so, subject to the following conditions:       *;
+*                                                                            *;
+* The above copyright notice and this permission notice shall be included    *;
+* in all copies or substantial portions of the Software.                     *;
+*                                                                            *;
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS    *;
+* OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,*;
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL    *;
+* THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER *;
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING    *;
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER        *;
+* DEALINGS IN THE SOFTWARE.                                                  *;
+******************************************************************************;
+
 ******************************************************************************;
 * simple SQL operations demonstrated using SAS PROC SQL                      *;
 * a *VERY BASIC* introduction to SQL                                         *;
