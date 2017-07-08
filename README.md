@@ -20,11 +20,11 @@
 | [Section 09: Matrix Factorization](09_matrix_factorization/09_matrix_factorization.md)
 | [Section 10: Model Interpretability](10_model_interpretability/10_model_interpretability.md)
 
-#### Additional reference material
-* [Data visualization](data_viz/data_viz.md)
-* [Quick references](quick_refs/quick_refs.md)
+#### Some external reference material
+* [Data visualization](https://github.com/jphall663/basic_data_viz_rules_and_links)
+* [Data science quick references](https://github.com/jphall663/ds_quick_refs)
 * [Data Science Interview Questions](interview/ds_interview.md)
-* [Python Tricks for Data Scientists](py_tricks/python_tricks.md)
+* [An Introduction to Python](https://github.com/jphall663/bellarmine_py_intro)
 
 ## Course Syllabi
 
@@ -47,6 +47,12 @@ Mr. Patrick Hall
 **Linkedin**: https://www.linkedin.com/in/jpatrickhall/
 
 **Office Hours**: In departmental office space before lectures when business travel allows.
+
+#### Copyrights and Licenses
+
+Most teaching materials are copyrighted by the instructor. Some copyrights are owned by other individuals and entities.
+
+Most code examples are copyrighted by the instructor and provided with an [MIT license](https://opensource.org/licenses/MIT), meaning they can be used for almost anything as long as the copyright and license notice are preserved. Some code examples are copyrighted by other entities, and usually provided with an [Apache Version 2 license](https://opensource.org/licenses/Apache-2.0). These code examples can be also used for nearly any purpose, even commercially, as long as the copyright and license notice are preserved.
 
 #### Recommended Textbooks
 
