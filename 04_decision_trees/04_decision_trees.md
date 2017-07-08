@@ -2,6 +2,8 @@
 
 Decision trees strike a nice balance between interpretability and accuracy. They pick up on nonlinearity and high degree interactions, but they still produce simple rules or diagrams that explain their decisions. They're also a very robust modeling technique that can generally accept missing values, variables of disparate scales, and correlated variables.
 
+Many techniques have evolved for combining multiple decision trees into ensembles models. These ensembles decrease the error from variance a single tree can produce in new data, while typically not increasing error from bias.
+
 #### Class Notes
 
 * [Overview of decision trees](notes/instructor_notes.pdf)
@@ -18,7 +20,7 @@ Decision trees strike a nice balance between interpretability and accuracy. They
 
 #### [Sample Quiz](quiz/sample/quiz_4.pdf)
 
-#### [Quiz Key](quiz/key/quiz_4_key.pdf)
+#### [Quiz Key](quiz/key/quiz_4_key.pdf) (Currently Unavailable)
 
 #### Supplementary References
 
@@ -31,8 +33,6 @@ Decision trees strike a nice balance between interpretability and accuracy. They
 * *Predictive Modeling and Decision Trees in Enterprise Miner* - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
 ***
-
-* [Advanced Class Notes](notes/advanced_notes.pdf)
 
 * [*Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Fourth%20Printing.pdf)</br>
 Chapter 8
@@ -60,10 +60,6 @@ by Pierre Geurts, Damien Ernst and Louis Wehenkel
     by David Wolpert, 1992 
   * [Super Learner](http://biostats.bepress.com/ucbbiostat/paper222/)</br>
     by Van Der Laan et al, 2007
+  * [Stacknet](https://github.com/kaz-Anova/StackNet)</br>
+    by Marios Michailidis
   * [Ensemble Models in SAS Enterprise Miner](https://support.sas.com/resources/papers/proceedings16/SAS3120-2016.pdf)
-
-***
-
-* [Decent instructions for installing Python XGBoost on Windows](https://datanoord.wordpress.com/2016/02/06/setup-xgboost-on-windows-python/)
-
-* [Decent instructions for installing Python XGBoost on Mac](http://machinelearningmastery.com/develop-first-xgboost-model-python-scikit-learn/)

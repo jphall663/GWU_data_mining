@@ -12,7 +12,7 @@
 | [Section 01: Basic Data Prep](01_basic_data_prep/01_basic_data_prep.md) |
 | [Section 02: Analytical Data Prep](02_analytical_data_prep/02_analytical_data_prep.md) |
 | [Section 03: Regression](03_regression/03_regression.md) |
-| [Section 04: Decision Trees](04_decision_trees/04_decision_trees.md) |
+| [Section 04: Decision Trees and Ensembles](04_decision_trees/04_decision_trees.md) |
 | [Section 05: Neural Networks](05_neural_networks/05_neural_networks.md) |
 | [Section 06: Clustering](06_clustering/06_clustering.md) |
 | [Section 07: Association Rules](07_association_rules/07_association_rules.md) |
