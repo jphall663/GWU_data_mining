@@ -26,7 +26,7 @@ Regression is important because it is stable, interpretable and widely understoo
 
 * Overview of logistic regression - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
-* [Overview of interpreting logistic regression](notes/interpreting_logisitic_regression.pdf)
+* [Overview of interpreting logistic regression](notes/interpretting_assessment_measures.pdf)
 
 * [EM logistic regression example](xml/03_logistic_regression.xml)
 
