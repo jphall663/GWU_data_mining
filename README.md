@@ -23,8 +23,8 @@
 #### Some external reference material
 * [Data visualization](https://github.com/jphall663/basic_data_viz_rules_and_links)
 * [Data science quick references](https://github.com/jphall663/ds_quick_refs)
-* [Data Science Interview Questions](interview/ds_interview.md)
-* [An Introduction to Python](https://github.com/jphall663/bellarmine_py_intro)
+* [Data science interview questions](https://github.com/jphall663/ds_interview_qs)
+* [Python introductory materials](https://github.com/jphall663/bellarmine_py_intro)
 
 ## Course Syllabi
 
