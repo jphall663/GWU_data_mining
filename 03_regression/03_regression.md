@@ -1,6 +1,6 @@
 ## Section 03: Regression
 
-Regression is important because it is stable, interpretable and widely understood and accepted.
+Regression is important because it is stable, interpretable and widely understood and accepted, and easy to deploy.
 
 #### Class Materials
 
@@ -16,7 +16,7 @@ Regression is important because it is stable, interpretable and widely understoo
 
 * [H2o linear regression example](src/py_part_3_penalized_linear_regression.ipynb)
 
-* [Gradient descent example](src/py_part_3_linear_regression_gradient_descent.ipynb)
+* [**Basic** gradient descent example](src/py_part_3_linear_regression_gradient_descent.ipynb)
 
 * [Kaggle Advanced Regression Contest starter kit](src/py_part_3_kaggle_starter.ipynb)
 
@@ -38,7 +38,7 @@ Regression is important because it is stable, interpretable and widely understoo
 
 * [Assignment](assignment/assignment_2.pdf)
 
-* [Assignment Key](assignment/key/assignment_2_key.pdf)
+* [Assignment Key](assignment/key/assignment_2_key.pdf) (Currently Unavailable)
 
 #### Sample Quizzes
 * [Sample quiz 3.1 - bias/variance tradeoff](quiz/sample/quiz_3.1.pdf)
@@ -47,8 +47,8 @@ Regression is important because it is stable, interpretable and widely understoo
 
 #### Quiz Keys
 
-* [Linear regression](quiz/key/quiz_3.1_key.pdf)
-* [Logistic regression](quiz/key/quiz_3.2_key.pdf)
+* [Linear regression](quiz/key/quiz_3.1_key.pdf) (Currently Unavailable)
+* [Logistic regression](quiz/key/quiz_3.2_key.pdf) (Currently Unavailable)
 
 #### Supplementary References
 * [*Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Fourth%20Printing.pdf)</br>
@@ -61,15 +61,9 @@ Chapters 3, 4 and 7
 
 * *Logistic regression in Enterprise Miner* - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
-* [Advanced Class Notes](notes/advanced_notes.pdf)
-
 * [UCLA IDRE: *How do I interpret odds ratios in logistic regression?*](http://www.ats.ucla.edu/stat/mult_pkg/faq/general/odds_ratio.htm)
 
 * [Wikipedia: *Confusion Matrix*](https://en.wikipedia.org/wiki/Confusion_matrix)
-
-* [Math and code for gradient descent and linear regression](http://tillbergmann.com/blog/python-gradient-descent.html)
-
-* [Math and code for gradient descent and logistic regression](http://aimotion.blogspot.com/2011/11/machine-learning-with-python-logistic.html)
 
 * [Elastic Net Regression](http://www.recognition.mccme.ru/pub/papers/L1/elasticnet.pdf)</br>
   By Hastie and Zhou, 2005
