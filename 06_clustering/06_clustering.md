@@ -8,13 +8,13 @@ Clustering enables us to group the rows of a data set together based on their si
 
 * [*Introduction to Data Mining* clustering notes](notes/tan_notes.pdf)
 
-* [EM neural network example](xml/06_clustering.xml)
+* [EM clustering example](xml/06_clustering.xml)
 
 * [H2o clustering example](src/py_part_6_clustering.ipynb)
 
 #### [Sample Quiz](quiz/sample/quiz_6.pdf)
 
-#### [Quiz Key](quiz/key/quiz_6_key.pdf)
+#### [Quiz Key](quiz/key/quiz_6_key.pdf) (Currently Unavailable)
 
 #### Supplementary References
 
@@ -24,6 +24,6 @@ Section 10.3
 * [*Introduction to Data Mining*](http://www-users.cs.umn.edu/~kumar/dmbook/ch8.pdf)</br>
 Chapter 8
 
-* [Quora answers regarding clustering](https://www.quora.com/profile/Patrick-Hall-4/answers/Cluster-analysis)
+* [My Quora answers regarding clustering](https://www.quora.com/profile/Patrick-Hall-4/answers/Cluster-analysis)
 
 * [*Estimating the number of clusters in a data set via the gap statistic*](https://web.stanford.edu/~hastie/Papers/gap.pdf)
