@@ -55,8 +55,11 @@ Chapter 5
 * [*Deep Learning*](http://www.deeplearningbook.org/)</br>
 Chapters 6 - 9 
 
+* [Learning representations by back-propogating error](http://www.cs.toronto.edu/~fritz/absps/naturebp.pdf)</br>
+The seminal back-propagation paper by Geoffrey Hinton from 1986
+
 * [Gradient-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)</br>
-The seminal convolutional neural network paper from 1998 by Yann Lecun
+The seminal deep learning and convolutional neural network paper from 1998 by Yann Lecun
 
 * [Reducing the Dimensionality of Data Using Neural Networks](https://www.cs.toronto.edu/~hinton/science.pdf)</br>
 The seminal deep learning paper from 2006 by Geoffrey Hinton
