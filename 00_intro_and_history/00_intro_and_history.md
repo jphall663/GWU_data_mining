@@ -36,6 +36,6 @@
 
 ***
 
-
 * [*The Evolution of Analytics*](http://www.oreilly.com/data/free/the-evolution-of-analytics.csp)
 * [H2O Algorithm Overview](notes/h2o_algos.pdf)
+* [Quora answer for good machine learning references](https://www.quora.com/What-are-some-of-the-best-research-papers-books-for-Machine-learning)

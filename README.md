@@ -50,7 +50,7 @@ Mr. Patrick Hall
 
 #### Copyrights and Licenses
 
-Most teaching materials are copyrighted by the instructor. Some copyrights are owned by other individuals and entities.
+Some teaching materials are copyrighted by the instructor. Some copyrights are owned by other individuals and entities.
 
 Most code examples are copyrighted by the instructor and provided with an [MIT license](https://opensource.org/licenses/MIT), meaning they can be used for almost anything as long as the copyright and license notice are preserved. Some code examples are copyrighted by other entities, and usually provided with an [Apache Version 2 license](https://opensource.org/licenses/Apache-2.0). These code examples can be also used for nearly any purpose, even commercially, as long as the copyright and license notice are preserved.
 
@@ -65,7 +65,6 @@ Most code examples are copyrighted by the instructor and provided with an [MIT l
 ###### DNSC 6290 ("Machine Learning")
 
 * [*Elements of Statistical Learning*](http://www.springer.com/us/book/9780387848570), by Trevor Hastie, Robert Tibshirani, and Jerome Friedman</br>
-([Freely available PDF](http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf))
 
 * [*Pattern Recognition and Machine Learning*](http://www.springer.com/us/book/9780387310732), by Christopher Bishop</br>
 ([Freely available PDF](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf))

@@ -10,27 +10,27 @@ Neural networks are important because of their ability to approximate **any** re
 
 * [More details on training neural networks](notes/tan_notes.pdf)
 
-* [Wen's deep learning notes](notes/cnn-gwu.pdf)
+* [Wen Phan's deep learning with CNN notes](notes/cnn-gwu.pdf)
 
 * [EM neural network example](xml/05_neural_networks.xml)
 
 * [H2O neural network examples](src/py_part_5_neural_networks.ipynb)
 
-* [Kaggle Digit Recognizer Starter Kit](src/py_part_5_MNIST_DNN.ipynb)
+* [Kaggle digit recognizer starter kit](src/py_part_5_MNIST_DNN.ipynb)
 
 * [H2O autoencoder example](src/py_part_5_MNIST_autoencoder.ipynb)
 
 * [MNIST data augmentation example](src/py_part_5_MNIST_data_augmentation.ipynb)
 
-* [Wen's MNIST Keras example](src/py_part_5_MNIST_keras_lenet.ipynb)
+* [Wen Phans's MNIST Keras example](src/py_part_5_MNIST_keras_lenet.ipynb)
 
 #### [Sample Quiz](quiz/sample/quiz_5.pdf)
 
-#### [Quiz key](quiz/key/quiz_5_key.pdf)
+#### [Quiz key](quiz/key/quiz_5_key.pdf) (Currently Unavailable)
 
 #### [Assignment](assignment/assignment_5.pdf)
 
-#### [Assignment key](assignment/key/assignment_5_key.pdf)
+#### [Assignment key](assignment/key/assignment_5_key.pdf) (Currently Unavailable)
 
 #### Supplementary References
 
@@ -46,10 +46,10 @@ Neural networks are important because of their ability to approximate **any** re
 * *Introduction to Data Mining*</br>
 Section 5.4
 
-* [*Elements of Statistical Learning*](http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf)</br>
+* *Elements of Statistical Learning*</br>
 Chapter 11
 
-* [*Pattern Recognition in Machine Learning*](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf)</br>
+* *Pattern Recognition in Machine Learning*](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf)</br>
 Chapter 5
 
 * [*Deep Learning*](http://www.deeplearningbook.org/)</br>
@@ -71,53 +71,18 @@ The seminal deep learning paper from 2006 by Geoffrey Hinton
 
 ***
 
-* [Advanced Class Notes](notes/advanced_notes.pdf)
-
 * [*Neural Network Zoo*](http://www.asimovinstitute.org/neural-network-zoo/) article </br>
 Quick summary of the many different types of neural networks
 
 * [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/index.html)
 
-* Neural network FAQ by Warren Sarle: ftp://ftp.sas.com/pub/neural/FAQ.html#A2 </br> More than you ever wanted to know about traditional neural networks (some info may be dated and/or obsolete.)
-
-* [Quora answers regarding standard neural networks and deep learning](https://www.quora.com/profile/Patrick-Hall-4/answers/Artificial-Neural-Networks-ANNs)
-
-* [Decent GPU Theano/Keras install instructions for Windows](https://datanoord.wordpress.com/2016/02/02/setup-a-deep-learning-environment-on-windows-theano-keras-with-gpu-enabled/)
-
-* [Decent CPU Theano/TensorFlow/Keras install instructions for Mac](http://machinelearningmastery.com/setup-python-environment-machine-learning-deep-learning-anaconda/)
-
 ***
+
+* [My Quora answers regarding standard neural networks and deep learning](https://www.quora.com/profile/Patrick-Hall-4/answers/Artificial-Neural-Networks-ANNs)
+
+* Neural network FAQ by Warren Sarle: ftp://ftp.sas.com/pub/neural/FAQ.html#A2 </br> More than you ever wanted to know about traditional neural networks (some info may be dated and/or obsolete.)
 
 * MNIST Data
 
   * [Yann LeCun's MNIST page](http://yann.lecun.com/exdb/mnist/)
   * [MNIST as CSV](https://pjreddie.com/projects/mnist-in-csv/)
-
-***
-
-#### Hacky definitions for hard deep learning concepts
-
-**Max. Out** - A type of activation that outputs the maximum input to a 
-neuron.
-
-**Momentum** - An gradient descent hyper-parameter that helps carry the 
-optimization over local minima and converge faster. Momentum creates a velocity
-vector *v* from previous the iteration's parameters. In 
-the current iteration this vector is added to the current parameter updates, 
-increasing updates for dimensions whose gradients point in the same direction 
-and reducing updates for dimensions whose gradients change directions, 
-resulting in decreased oscillation. Momentum is usually set to max-out at a 
-certain value: "terminal velocity".
-
-**Nesterov Accelerated Gradient** - A type of SGD that uses the momentum 
-formula to calculate the gradient on approximate new parameters. (Like looking 
-into to the future by using the gradient on the approximate next position on 
-the error surface, so you're gradient might be better behaved).
-
-**Adagrad** - A type of SGD that updates parameters for sparse features with 
-bigger gradients and parameters for dense features with smaller gradients, by 
-scaling the learning rate by 1/sum(past parameter-wise gradients). 
-
-**Adadelta** - An alternative to Adagrad. Adagrad always drives the learning 
-rate to zero. Adadelta uses a decaying average of past gradients instead of 
-the sum of all past gradients to avoid this. 

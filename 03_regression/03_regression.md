@@ -54,7 +54,7 @@ Regression is important because it is stable, interpretable and widely understoo
 * [*Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Fourth%20Printing.pdf)</br>
 Sections 2.2, 3.1 - 3.3, and 4.3
 
-* [*Elements of Statistical Learning*](http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf)</br>
+* *Elements of Statistical Learning*</br>
 Chapters 3, 4 and 7
 
 * [*Generalized Linear Modeling with H2o*](hhttp://docs.h2o.ai/h2o/latest-stable/h2o-docs/booklets/GLMBooklet.pdf)
