@@ -55,7 +55,7 @@ Chapter 5
 * [*Deep Learning*](http://www.deeplearningbook.org/)</br>
 Chapters 6 - 9 
 
-* [Learning representations by back-propogating error](http://www.cs.toronto.edu/~fritz/absps/naturebp.pdf)</br>
+* [Learning Representations by Back-Propogating Error](http://www.cs.toronto.edu/~fritz/absps/naturebp.pdf)</br>
 The seminal back-propagation paper by Geoffrey Hinton from 1986
 
 * [Gradient-Based Learning Applied to Document Recognition](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)</br>
