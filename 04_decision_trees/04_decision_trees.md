@@ -2,7 +2,7 @@
 
 Decision trees strike a nice balance between interpretability and accuracy. They pick up on nonlinearity and high degree interactions, but they still produce simple rules or diagrams that explain their decisions. They're also a very robust modeling technique that can generally accept missing values, variables of disparate scales, and correlated variables.
 
-Many techniques have evolved for combining multiple decision trees into ensembles models. These ensembles decrease the error from variance a single tree can produce in new data, while typically not increasing error from bias.
+Many techniques have evolved for combining multiple decision trees into ensembles models. These ensembles decrease the error from variance a single tree can produce in new data, while typically not increasing error from bias. Tree-based ensembles are often the most accurate types of models for tabular data.
 
 #### Class Notes
 
