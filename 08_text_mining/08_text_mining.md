@@ -4,7 +4,7 @@ Text mining essentially means converting a group of documents into a meaningful 
 
 #### Class notes
 
-* [Overview of text mining techniques](https://github.com/jphall663/GWU_data_mining/blob/master/08_text_mining/notes/instructor_notes.pdf)
+* [Overview of text mining techniques](notes/instructor_notes.pdf)
 
 * Text Mining with SAS Text Miner - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
@@ -21,8 +21,26 @@ Text mining essentially means converting a group of documents into a meaningful 
 
 #### [Sample Quiz](quiz/sample/quiz_8.pdf)
 
-#### [Quiz Key](quiz/key/quiz_8_key.pdf)
+#### [Quiz Key](quiz/key/quiz_8_key.pdf) (Currently Unavailable)
 
 #### Supplementary References
 
 * *Text Analytics Using SAS Enterprise Miner* - [Blackboard electronic reserves](https://blackboard.gwu.edu)
+
+* Term Embedding References
+
+  * [GloVe](https://nlp.stanford.edu/projects/glove/)</br>
+    by Jeffrey Pennington, Richard Socher, and Christopher D. Manning
+
+  * Word2Vec
+
+    * [Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/pdf/1301.3781.pdf)</br>
+      by Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean
+
+    * [Linguistic Regularities in Continuous Space Word Representations](http://www.aclweb.org/anthology/N13-1090)</br>
+      by Tomas Mikolov, Wen-tau Yih, and Geoffrey Zweig
+
+    * [Word2Vec software](https://code.google.com/archive/p/word2vec/)
+
+
+

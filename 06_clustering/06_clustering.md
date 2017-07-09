@@ -27,4 +27,6 @@ Chapter 8
 * [My Quora answers regarding clustering](https://www.quora.com/profile/Patrick-Hall-4/answers/Cluster-analysis)
 
 * [Estimating the number of clusters in a data set via the gap statistic](https://web.stanford.edu/~hastie/Papers/gap.pdf)</br>
-by Robert Tibshirani, Guenther Walther, and Trevor Hastie
+  by Robert Tibshirani, Guenther Walther, and Trevor Hastie
+
+* [A Tutorial on Spectral Clustering](https://pdfs.semanticscholar.org/1437/415df29d3927c7851c7a0db0edd4a472d6e1.pdf)
