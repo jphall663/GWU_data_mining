@@ -207,3 +207,4 @@ Enter the following statements on the git bash command line:
 
 
 `$ git lfs track '*.jpg' '*.png' '*.csv' '*.sas7bdat'`
+
