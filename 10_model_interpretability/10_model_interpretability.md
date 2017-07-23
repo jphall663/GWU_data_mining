@@ -20,13 +20,13 @@ practicing data scientists.
 
   * [Practical LIME](src/lime.ipynb)
 
-  * [Leave-One-Covariate-Out (LOCO) local feature importance and reason codes](src/loco.ipynb)
+  * [Leave-one-covariate-out (LOCO) local feature importance and reason codes](src/loco.ipynb)
 
-  * [Partial dependence and Individual Conditional Expectation (ICE)](src/pdp_ice.ipynb)  
+  * [Partial dependence and individual conditional expectation (ICE)](src/pdp_ice.ipynb)  
 
   * [Sensitivity analysis](src/sensitivity_analysis.ipynb)
 
-  * [Monotonic Models with XGBoost](src/mono_xgboost.ipynb)
+  * [Monotonic models with XGBoost](src/mono_xgboost.ipynb)
 
 #### References
 
@@ -40,13 +40,12 @@ by Finale Doshi-Velez and Been Kim
 
 **Techniques**
 
-* **Partial Dependence**: [*Elements of Statistical Learning*](http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf)</br>
-Section 10.13
+* **Partial Dependence**: *Elements of Statistical Learning*, Section 10.13
 * **LIME**: [“Why Should I Trust You?” Explaining the Predictions of Any Classifier](http://www.kdd.org/kdd2016/papers/files/rfp0573-ribeiroA.pdf)</br>
 by Marco Tulio Ribeiro, Sameer Singh, and Carlos Guestrin
 * **LOCO**: [Distribution-Free Predictive Inference for Regression](http://www.stat.cmu.edu/~ryantibs/papers/conformal.pdf)</br>
 by Jing Lei, Max G’Sell, Alessandro Rinaldo, Ryan J. Tibshirani, and Larry Wasserman
 * **ICE**: [Peeking inside the black box: Visualizing statistical learning with plots of individual conditional expectation](https://arxiv.org/pdf/1309.6392.pdf)
-* Surrogate Models
+* **Surrogate Models**
   * [Extracting tree structured representations of trained networks](https://papers.nips.cc/paper/1152-extracting-tree-structured-representations-of-trained-networks.pdf)
   * [Interpreting Blackbox Models via Model Extraction](https://arxiv.org/pdf/1705.08504.pdf)
