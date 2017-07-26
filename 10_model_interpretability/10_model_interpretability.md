@@ -12,7 +12,9 @@ practicing data scientists.
 
 #### Class Notes
 
-* [O'Reilly AI conference slides](notes/instructor_notes.pdf)
+* [O'Reilly AI conference slides](notes/h2o_oreilly_ai_slides.pdf)
+
+* [Instructor Notes](notes/instructor_notes.pdf)
 
 * Practical ML interpretability examples
 
