@@ -33,7 +33,8 @@
 
 * [*Statistical Modeling: the Two Cultures*](http://www.stat.uchicago.edu/~lekheng/courses/191f09/breiman.pdf)
 * [*Fifty Years of Data Science*](http://courses.csail.mit.edu/18.337/2015/docs/50YearsDataScience.pdf)
-
+* [*The Future of Data Analysis*](https://projecteuclid.org/euclid.aoms/1177704711)
+* [*Data Science: An Action Plan for Expanding the Technical Areas of the Field of Statistics*](https://utexas.instructure.com/files/35465950/download)
 
 ***
 
