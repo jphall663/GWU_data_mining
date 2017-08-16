@@ -20,9 +20,9 @@ practicing data scientists.
 
   * [Decision tree surrogate models](src/dt_surrogate.ipynb)
 
-  * [Practical LIME](src/lime.ipynb)
+  * [LIME (practical samples variant)](src/lime.ipynb)
 
-  * [Leave-one-covariate-out (LOCO) local feature importance and reason codes](src/loco.ipynb)
+  * [LOCO (NA variant)](src/loco.ipynb)
 
   * [Partial dependence and individual conditional expectation (ICE)](src/pdp_ice.ipynb)  
 
