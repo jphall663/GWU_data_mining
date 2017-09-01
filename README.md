@@ -211,3 +211,7 @@ Enter the following statements on the git bash command line:
 #### Docker
 
 [Dockerfile](./anaconda_py35_h2o_xgboost_graphviz) to create Anaconda Python 3.5 environment with H2O, XGBoost, and GraphViz.
+
+Start the container with:
+
+`docker run -i -t -p 8888:8888 <container_id> /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/GWU_data_mining --ip='*' --port=8888 --no-browser"`
