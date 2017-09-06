@@ -1,4 +1,4 @@
-# Base debian system 
+# Base debian system
 FROM debian:8.5
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
@@ -26,7 +26,7 @@ ENTRYPOINT [ "/usr/bin/tini", "--" ]
 CMD [ "/bin/bash" ]
 
 # Java
-RUN apt-get -y install default-jdk
+RUN apt-get -y -f install default-jdk
 
 # H2o deps
 RUN pip install requests && \
@@ -55,12 +55,12 @@ RUN mkdir GWU_data_mining && \
 
 # XGBoost
 RUN apt-get -y install gcc g++ make && \
-    conda -y install libgcc && \
+    conda install -y libgcc && \
     git clone --recursive https://github.com/dmlc/xgboost.git && \
     cd xgboost && \
     make && \
     cd python-package && \
     python setup.py install --user
-        
+
 # GraphViz
-apt-get -y install graphviz
+RUN apt-get -y install graphviz
