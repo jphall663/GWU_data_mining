@@ -10,6 +10,8 @@ Neural networks are important because of their ability to approximate **any** re
 
 * [More details on training neural networks](notes/tan_notes.pdf)
 
+* [Advanced notes](notes/msba_2017_ml_week_2_FINAL.pdf)
+
 * [Wen Phan's deep learning with CNN notes](notes/cnn-gwu.pdf)
 
 * [EM neural network example](xml/05_neural_networks.xml)

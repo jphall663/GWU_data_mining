@@ -12,6 +12,8 @@ Regression is important because it is stable, interpretable and widely understoo
 
 * [The Bias/Variance Tradeoff](notes/bias_variance.pdf)
 
+* [Advanced notes](notes/msba_2017_ml_week_1_FINAL.pdf)
+
 * [EM linear regression example](xml/03_linear_regression.xml)
 
 * [H2o linear regression example](src/py_part_3_penalized_linear_regression.ipynb)
@@ -19,6 +21,7 @@ Regression is important because it is stable, interpretable and widely understoo
 * [**Basic** gradient descent example](src/py_part_3_linear_regression_gradient_descent.ipynb)
 
 * [Kaggle Advanced Regression Contest starter kit](src/py_part_3_kaggle_starter.ipynb)
+
 
 ***
 

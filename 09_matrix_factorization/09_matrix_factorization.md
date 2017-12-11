@@ -14,6 +14,8 @@ features suitable for modeling and visualization.
   
   * [Kaggle House Prices example notebook](src/py_part_9_kaggle_GLRM_example.ipynb)
 
+  * [Advanced notes](notes/msba_2017_ml_week_5_FINAL.pdf)
+  
 #### Supplementary References
 
 * [Generalized Low Rank Models (GLRM) with H2O](http://docs.h2o.ai/h2o-tutorials/latest-stable/tutorials/glrm/glrm-tutorial.html)

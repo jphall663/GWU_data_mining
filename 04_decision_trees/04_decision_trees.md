@@ -12,6 +12,8 @@ Many techniques have evolved for combining multiple decision trees into ensemble
 
 * [More decision tree splitting and stopping strategies](notes/tan_notes.pdf)
 
+* [Advanced notes](notes/msba_2017_ml_week_3_FINAL.pdf)
+
 * [EM decision tree example](xml/04_decision_trees.xml)
 
 * [H2o decision tree ensemble examples](src/py_part_4_decision_tree_ensembles.ipynb)
