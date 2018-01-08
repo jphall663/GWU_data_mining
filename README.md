@@ -21,7 +21,7 @@
 | [Section 10: Model Interpretability](10_model_interpretability/10_model_interpretability.md)
 
 #### Some external reference material
-* [AutoML Resources](https://github.com/jphall663/automl_resources)
+* [AutoML](https://github.com/jphall663/automl_resources)
 * [Data visualization](https://github.com/jphall663/basic_data_viz_rules_and_links)
 * [Data science quick references](https://github.com/jphall663/ds_quick_refs)
 * [Data science interview questions](https://github.com/jphall663/ds_interview_qs)
