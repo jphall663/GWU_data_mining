@@ -1,7 +1,5 @@
 ## Section 00: Intro and History
 
-#### [Spring 2017 Announcements](spring_2017_announcements/spring_2017_announcements.md)
-
 #### Class Notes
 
 * *Introduction to Data Mining* - [chapter 1 notes](http://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap1_intro.pdf)
