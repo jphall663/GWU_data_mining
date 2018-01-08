@@ -1,21 +1,21 @@
 ## Section 09: Matrix factorization
 
-Matrix factorization enables us to represent sparse or high-dimensional data 
-sets and high cardinality features with a small number of dense of numeric 
+Matrix factorization enables us to represent sparse or high-dimensional data
+sets and high cardinality features with a small number of dense of numeric
 features suitable for modeling and visualization.
 
-#### Class Notes 
+#### Class Notes
 
 * Basic PCA examples
 
   * [One component with back-projection](../02_analytical_data_prep/src/py_part_2_feature_extraction.ipynb)
-  
+
   * [Iris data with visualization](src/py_part_9_iris_pca.ipynb)
-  
+
   * [Kaggle House Prices example notebook](src/py_part_9_kaggle_GLRM_example.ipynb)
 
 * [Advanced notes](notes/msba_2017_ml_week_5_FINAL.pdf)
-  
+
 #### Supplementary References
 
 * [Generalized Low Rank Models (GLRM) with H2O](http://docs.h2o.ai/h2o-tutorials/latest-stable/tutorials/glrm/glrm-tutorial.html)
@@ -24,7 +24,7 @@ features suitable for modeling and visualization.
 
 ***
 
-* *Elements of Statistical Learning*</br>
+* [*Elements of Statistical Learning*](https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf)</br>
 Sections 14.5 - 14.6, 14.8
 
 * [*Pattern Recognition in Machine Learning*](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf)</br>
@@ -56,6 +56,3 @@ by Steffen Rendle
 
 * [Near Optimal Signal Recovery From Random Projections: Universal Encoding Strategies?](http://statweb.stanford.edu/~candes/papers/OptimalRecovery.pdf)</br>
 by Emmanuel Candes and Terence Tao
-
-
-

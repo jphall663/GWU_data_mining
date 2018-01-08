@@ -65,7 +65,7 @@ Most code examples are copyrighted by the instructor and provided with an [MIT l
 
 ###### DNSC 6290 ("Machine Learning")
 
-* [*Elements of Statistical Learning*](http://www.springer.com/us/book/9780387848570), by Trevor Hastie, Robert Tibshirani, and Jerome Friedman</br>
+* [*Elements of Statistical Learning*](https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf), by Trevor Hastie, Robert Tibshirani, and Jerome Friedman</br>
 
 * [*Pattern Recognition and Machine Learning*](http://www.springer.com/us/book/9780387310732), by Christopher Bishop</br>
 ([Freely available PDF](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf))
