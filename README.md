@@ -47,7 +47,7 @@ Mr. Patrick Hall
 
 **Linkedin**: https://www.linkedin.com/in/jpatrickhall/
 
-**Office Hours**: In departmental office space before lectures when business travel allows.
+**Office Hours**: Before lectures when business travel allows.
 
 #### Copyrights and Licenses
 
