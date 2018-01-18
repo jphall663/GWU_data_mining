@@ -40,7 +40,7 @@ Neural networks are important because of their ability to approximate **any** re
 
 * [The Definitive Performance Tuning Guide for H2O Deep Learning](https://blog.h2o.ai/2015/02/deep-learning-performance/)
 
-* *Predictive Modeling and Neural Networks in Enterprise Miner* - 
+* *Predictive Modeling and Neural Networks in Enterprise Miner* -
 [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
 ***
@@ -48,14 +48,14 @@ Neural networks are important because of their ability to approximate **any** re
 * *Introduction to Data Mining*</br>
 Section 5.4
 
-* *Elements of Statistical Learning*</br>
+* [*Elements of Statistical Learning*](https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf)</br>
 Chapter 11
 
 * [*Pattern Recognition in Machine Learning*](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf)</br>
 Chapter 5
 
 * [*Deep Learning*](http://www.deeplearningbook.org/)</br>
-Chapters 6 - 9 
+Chapters 6 - 9
 
 * [Learning Representations by Back-Propogating Error](http://www.cs.toronto.edu/~fritz/absps/naturebp.pdf)</br>
 The seminal back-propagation paper by Geoffrey Hinton from 1986
@@ -71,8 +71,8 @@ The seminal deep learning paper from 2006 by Geoffrey Hinton
 * Papers about problems with neural networks:
 
   * [Intriguing Properties of Neural Networks](https://arxiv.org/pdf/1312.6199.pdf)
-  
-  * [Deep Neural Networks are Easily Fooled: High Confidence Predictions for Unrecognizable Images](http://arxiv.org/pdf/1412.1897v2.pdf) 
+
+  * [Deep Neural Networks are Easily Fooled: High Confidence Predictions for Unrecognizable Images](http://arxiv.org/pdf/1412.1897v2.pdf)
 
 ***
 

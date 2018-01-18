@@ -9,6 +9,7 @@ A great deal of work in data mining projects is spent on data munging. Below som
 * [Introductory Video(s)](https://www.youtube.com/playlist?list=PLVBcK_IpFVi-xzvJiOlf33UvVbRoLRu0z)
 
 #### Supplementary References
+* [Label, Segment, Featurize: a cross domain framework for prediction engineering](http://www.jmaxkanter.com/static/papers/DSAA_LSF_2016.pdf)
 * *Introduction to Data Mining* - chapter 2
 * *Introduction to Data Mining* - [chapter 2 notes](https://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap2_data.pdf)
 

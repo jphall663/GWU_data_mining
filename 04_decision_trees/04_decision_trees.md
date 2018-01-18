@@ -42,7 +42,7 @@ Chapter 8
 * [*Introduction to Data Mining*](http://www-users.cs.umn.edu/~kumar/dmbook/ch4.pdf)</br>
 Chapter 4
 
-* *Elements of Statistical Learning*</br>
+* [*Elements of Statistical Learning*](https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf)</br>
 Chapters 10 and 15
 
 * [*Pattern Recognition in Machine Learning*](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf)</br>
@@ -59,7 +59,7 @@ by Pierre Geurts, Damien Ernst and Louis Wehenkel
 
 * Stacked and blended ensemble models:
   * [Stacked Generalization](http://machine-learning.martinsewell.com/ensembles/stacking/Wolpert1992.pdf)</br>
-    by David Wolpert, 1992 
+    by David Wolpert, 1992
   * [Super Learner](http://biostats.bepress.com/ucbbiostat/paper222/)</br>
     by Van Der Laan et al, 2007
   * [Stacknet](https://github.com/kaz-Anova/StackNet)</br>
