@@ -9,8 +9,8 @@
 #### Required Reading
 
 * [*A Very Short History of Data Science*](http://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/)
-* *Advanced Business Analytics* - chapter 1, section 1 (available on [Blackboard](https://blackboard.gwu.edu))
 * *Introduction to Data Mining* - chapter 1
+* [*The Evolution of Analytics*](http://www.oreilly.com/data/free/the-evolution-of-analytics.csp)
 
 #### [Sample Quiz](quiz/sample/quiz_0.pdf)
 
@@ -36,7 +36,6 @@
 
 ***
 
-* [*The Evolution of Analytics*](http://www.oreilly.com/data/free/the-evolution-of-analytics.csp)
 * [H2O Algorithm Overview](notes/h2o_algos.pdf)
 * [Quora answer for good machine learning references](https://www.quora.com/What-are-some-of-the-best-research-papers-books-for-Machine-learning)
 * [An Empirical Comparison of Supervised Learning Algorithms](http://www.eecs.wsu.edu/~holder/courses/CptS570/fall07/present/CaruanaICML06.pdf)
