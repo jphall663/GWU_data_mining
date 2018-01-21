@@ -20,7 +20,7 @@
 
 * Structured data
   * Analytical base table/'Tidy' data - [UCI Adult data](https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data)
-  * Times series data - [Electric power consumption](https://www.kaggle.com/adriferher/electric-power-consumption-data-set)
+  * Times series data - [Historical stock data for DIJA 30 companies](https://www.kaggle.com/szrlee/stock-time-series-20050101-to-20171231/data)
   * Transactional data - [State of Oklahoma credit card purchases](https://catalog.data.gov/dataset/purchase-card-pcard-fiscal-year-2014/resource/4105c297-84dc-4f25-9061-c4e2ad38f7d2)
 * Semi-structured data - [Web visitor interest logs](https://www.kaggle.com/yburger/web-visitor-interests)
 * Unstructured data
@@ -39,4 +39,4 @@
 * [*The Evolution of Analytics*](http://www.oreilly.com/data/free/the-evolution-of-analytics.csp)
 * [H2O Algorithm Overview](notes/h2o_algos.pdf)
 * [Quora answer for good machine learning references](https://www.quora.com/What-are-some-of-the-best-research-papers-books-for-Machine-learning)
-* [An Empirical Comparison of Supervised Learning Algorithms](http://www.cs.cornell.edu/~caruana/ctp/ct.papers/caruana.icml06.pdf)
+* [An Empirical Comparison of Supervised Learning Algorithms](http://www.eecs.wsu.edu/~holder/courses/CptS570/fall07/present/CaruanaICML06.pdf)
