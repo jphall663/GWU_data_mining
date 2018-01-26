@@ -74,3 +74,36 @@ Replacing missing data with an appropriate, non-missing value. In predictive mod
 
 #### Standardization - [view notebook](src/py_part_2_standardize.ipynb)
 Enforcing similar scales on a set of variables. For distance-based algorithms (e.g. k-means) and algorithms that use gradient-related methods to create model parameters (e.g. regression, artificial neural networks) variables must be on the same scale, or variables with large values will incorrectly dominate the training process.
+
+#### A Data Prep Lib Kes Wrote (works with spark, pandas, and h2o frames)
+* [data_prep_lib](src/data_prep_lib.py)
+*<i>Note all the functions have been strenuously tested for all use cases, may have bugs (email kmcrandall@gwmail.gwu.edu if you find one).</i>
+Example Usage For Rate-By-Level function
+```
+import pandas as pd
+import numpy as np
+import h2o
+from data_prep_lib import DataPreperation
+
+dataframe = h2o.import_file('mydata.csv')
+
+#imput target with 0
+#print summary of data
+dataframe.describe()
+
+train, valid, test = dataframe.split_frame([.6,.2], seed=654251)
+
+original_numerics, categoricals = DataPreperation.get_type_lists(frame=train,rejects=[TARGET],frame_type='h2o')
+
+print("Encoding numberic variables...")
+for i, var in enumerate(categoricals):
+    total = len(categoricals)
+
+    print('Encoding: ' + var + ' (' + str(i+1) + '/' + str(total) + ') ...')
+
+    tr_enc, valid_enc, ts_enc = DataPreperation.shrunken_averages_encoder(train, valid_frame = valid,test_frame=test, x=var, y=TARGET,frame_type='h2o', test_does_have_y=True)
+
+    train = train.cbind(tr_enc)
+    valid = valid.cbind(valid_enc)
+    test = test.cbind(ts_enc)
+```
