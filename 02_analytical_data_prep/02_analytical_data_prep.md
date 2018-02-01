@@ -75,3 +75,9 @@ Replacing missing data with an appropriate, non-missing value. In predictive mod
 
 #### Standardization - [view notebook](src/py_part_2_standardize.ipynb)
 Enforcing similar scales on a set of variables. For distance-based algorithms (e.g. k-means) and algorithms that use gradient-related methods to create model parameters (e.g. regression, artificial neural networks) variables must be on the same scale, or variables with large values will incorrectly dominate the training process.
+
+#### A Data Preperation Lib Kes Wrote (works with spark, pandas, and h2o frames)
+* [DataPreperation Library src](src/DataPreperation.py)
+* [view notebook example](src/housing.ipynb)
+* [view notebook html](http://htmlpreview.github.com/?https://github.com/kcrandall/GWU_data_mining/blob/master/02_analytical_data_prep/src/housing.html)
+*<i>Not all the functions have been strenuously tested for all use cases, may have bugs (email kmcrandall@gwmail.gwu.edu if you find one).</i>
