@@ -78,4 +78,5 @@ Enforcing similar scales on a set of variables. For distance-based algorithms (e
 #### A Data Preperation Lib Kes Wrote (works with spark, pandas, and h2o frames)
 * [DataPreperation Library src](src/DataPreperation.py)
 * [view notebook example](src/housing.ipynb)
+* [view notebook html](src/housing.html)
 *<i>Not all the functions have been strenuously tested for all use cases, may have bugs (email kmcrandall@gwmail.gwu.edu if you find one).</i>
