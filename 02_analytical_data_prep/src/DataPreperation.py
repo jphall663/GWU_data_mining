@@ -1,4 +1,3 @@
-
 class DataPreperation(object):
     def __init__(self):
         pass
@@ -143,72 +142,108 @@ class DataPreperation(object):
             else:
                 return df
     @staticmethod
-    def polynomial_combiner(dataframe,columns=[], degree=3,frame_type='spark',only_return_decompositions=False,id_col='ID',sparkSession=None):
+    def polynomial_expansion(dataframe,columns=[], degree=3,frame_type='spark',only_return_polys=False,id_col='ID'):
         """
         Creates a polynomial expansion space based on the features. Both polynomials and interactions.
+
+        Example Usage:
+            df = DataPreperation.polynomial_expansion(df,['Col1', 'Col2'])
 
         :param dataframe: The dataframe to compute polynomials with
         :param columns: The columns to create polynomidals from
         :param degree: The degree to which you want to expand. degree 2 gets (x, x * x, y, x * y, y * y).
         :param frame_type: The type of frame that is input and output. Accepted: 'h2o', 'pandas', 'spark'
-        :parm string only_return_decompositions: will only return the decompositions if set to true and not any of the orginal columns
+        :parm string only_return_polys: will only return the new columns if set to true and not any of the orginal columns
         :parm string id_col: (required for spark) an ID column to join the frames back together
-        :parm string sparkSession: (required for spark) the spark session for the application
         return: A dataframe.
         """
+        if(degree <2):
+            raise Exception('Degree must be >= 2. Got: '+str(degree))
         if frame_type == 'spark':
-            from pyspark.ml.feature import PolynomialExpansion
-            from pyspark.ml.feature import VectorAssembler
+            from pyspark.sql.functions import pow, col
 
             df = dataframe
+            if only_return_polys:
+                df = df.select(id_col, columns)
 
-            assembler = VectorAssembler(
-                inputCols=[x for x in columns],
-                outputCol='features')
-            df = assembler.transform(df)
-
-            polyExpansion = PolynomialExpansion(degree=degree, inputCol="features", outputCol="polyFeatures")
-
-            df = polyExpansion.transform(df)
-
-            #define a function for extracting pca vector column into their own columns
-            def extract_vectors_with_id_col(row):
-                """
-                Takes a vector and extracts it into many columns from the vector.
-                pcaFeatures is the vector being extracted in this function.
-                Vector values will be named  _2, _3, ...
-                """
-                # tuple(x for x in row if x not in ['pcaFeatures'])+
-                return (row[id_col],)+tuple(float(x) for x in row.polyFeatures.values)
-
-
-            def rename_columns(dataframe,new_prefix='poly_',old_colomn_starting_index=2,new_column_starting_index=1):
-                """
-                Takes a spark df and renames all columns to something like pca_1
-                from the previously named columns.
-                """
-                old_column_index = old_colomn_starting_index
-                new_column_index = new_column_starting_index
-                for i in range(0,number_of_poly_features):
-                    dataframe = dataframe.withColumnRenamed('_'+str(old_colomn_starting_index),new_prefix+str(new_column_starting_index))
-                    old_colomn_starting_index+=1
-                    new_column_starting_index+=1
-                return dataframe
-
-            #calculate the number of terms that the expansion made
-            number_of_poly_features = len(sparkSession.sparkContext.parallelize(df.select(id_col,'polyFeatures').rdd.top(1)).flatMap(list).collect()[1])
-
-            if only_return_decompositions: #only keep decompostion columns and id
-                df = df.select(id_col,polyFeatures).rdd.map(extract_vectors_with_id_col).toDF([id_col])
-                df = rename_columns(df)
-            else: #join on ID column and keep all columns
-                df = df.rdd.map(extract_vectors_with_id_col).toDF([id_col]).join(df,id_col,'inner')
-                df = rename_columns(df)
-
-
-            return df.drop('polyFeatures','features')
+            for column in columns:
+                for i in range(2,degree+1):
+                    df = df.withColumn(column+'_'+'^'+str(i), pow(col(column), i) )
+            return df
         else:
             pass
+
+    #This is broken
+    # @staticmethod
+    # def polynomial_combiner(dataframe,columns=[], degree=3,frame_type='spark',only_return_polys=False,id_col='ID',sparkSession=None):
+    #     """
+    #     Creates a polynomial expansion space based on the features. Both polynomials and interactions.
+    #
+    #     :param dataframe: The dataframe to compute polynomials with
+    #     :param columns: The columns to create polynomidals from
+    #     :param degree: The degree to which you want to expand. degree 2 gets (x, x * x, y, x * y, y * y).
+    #     :param frame_type: The type of frame that is input and output. Accepted: 'h2o', 'pandas', 'spark'
+    #     :parm string only_return_polys: will only return the new columns if set to true and not any of the orginal columns
+    #     :parm string id_col: (required for spark) an ID column to join the frames back together
+    #     :parm string sparkSession: (required for spark) the spark session for the application
+    #     return: A dataframe.
+    #     """
+    #     if frame_type == 'spark':
+    #         from pyspark.ml.feature import PolynomialExpansion
+    #         from pyspark.ml.feature import VectorAssembler
+    #
+    #         df = dataframe
+    #
+    #         assembler = VectorAssembler(
+    #             inputCols=[x for x in columns],
+    #             outputCol='features')
+    #         df = assembler.transform(df)
+    #         df.show(2)
+    #         polyExpansion = PolynomialExpansion(degree=degree, inputCol="features", outputCol="polyFeatures")
+    #
+    #         df = polyExpansion.transform(df)
+    #         df.show(2)
+    #
+    #         #define a function for extracting pca vector column into their own columns
+    #         def extract_vectors_with_id_col(row):
+    #             """
+    #             Takes a vector and extracts it into many columns from the vector.
+    #             polyFeatures is the vector being extracted in this function.
+    #             Vector values will be named  _2, _3, ...
+    #             """
+    #             # tuple(x for x in row if x not in ['pcaFeatures'])+
+    #             return (row[id_col],)+tuple(float(x) for x in row.polyFeatures.values)
+    #
+    #
+    #         def rename_columns(dataframe,new_prefix='poly_',old_colomn_starting_index=2,new_column_starting_index=1):
+    #             """
+    #             Takes a spark df and renames all columns to something like pca_1
+    #             from the previously named columns.
+    #             """
+    #             old_column_index = old_colomn_starting_index
+    #             new_column_index = new_column_starting_index
+    #             for i in range(0,number_of_poly_features):
+    #                 dataframe = dataframe.withColumnRenamed('_'+str(old_colomn_starting_index),new_prefix+str(new_column_starting_index))
+    #                 old_colomn_starting_index+=1
+    #                 new_column_starting_index+=1
+    #             return dataframe
+    #
+    #         #calculate the number of terms that the expansion made
+    #         number_of_poly_features = len(sparkSession.sparkContext.parallelize(df.select(id_col,'polyFeatures').rdd.top(1)).flatMap(list).collect()[1])
+    #         df.show(38)
+    #
+    #         if only_return_polys: #only keep decompostion columns and id
+    #             df = df.select(id_col,'polyFeatures').rdd.map(extract_vectors_with_id_col).toDF([id_col])
+    #             df = rename_columns(df)
+    #         else: #join on ID column and keep all columns
+    #             df = df.rdd.map(extract_vectors_with_id_col).toDF([id_col]).join(df,id_col,'inner')
+    #             df = rename_columns(df)
+    #         df.show(37)
+    #
+    #
+    #         return df.drop('polyFeatures','features')
+    #     else:
+    #         pass
 
     @staticmethod
     def get_top_correlations(dataframe,columns,frame_type='spark'):
@@ -237,47 +272,54 @@ class DataPreperation(object):
                                 'correlation': correlation,
                                 'correlation_abs':math.fabs(correlation),
                             })
-                        print({
-                            'columns': columns,
-                            'correlation': correlation,
-                            'correlation_abs':math.fabs(correlation),
-                        })
+                        # print({
+                        #     'columns': columns,
+                        #     'correlation': correlation,
+                        #     'correlation_abs':math.fabs(correlation),
+                        # })
                         correlations_finished.append(col_i+col_j)
             #sort the list so highest correlations are first
-            correlation_list = sorted(correlation_list, key=lambda x: x['correlation'], reverse=True)
+            correlation_list = sorted(correlation_list, key=lambda x: x['correlation_abs'], reverse=True)
             return correlation_list
         else:
             pass
     @staticmethod
-    def feature_combiner(training_frame, valid_frame = None, test_frame=None, nums=['X1','X2','...'],frame_type='spark'):
-        """ Combines numeric features using simple arithmatic operations.
+    def feature_combiner(training_frame, valid_frame = None, test_frame=None, columns=['X1','X2','...'],frame_type='spark'):
+        """ Combines numeric features using simple arithmatic operations to create interactions terms.
 
         :param training_frame: Training frame from which to generate features and onto which generated feeatures will be cbound.
         :param valid_frame: (optional) To also combine features on a validation frame include this
         :param test_frame: (optional) Test frame from which to generate features and onto which generated feeatures will be cbound.
-        :param nums: List of original numeric features from which to generate combined features.
+        :param columns: List of original numeric features from which to generate combined features.
         :param frame_type: The type of frame that is input and output. Accepted: 'h2o', 'pandas', 'spark'
         return: Tuple of either (train_df, test_df) or (train_df, valid_df, test_df)
         """
 
-        total = len(nums)
+        import math
+
+        def nCr(n,r):
+            f = math.factorial
+            return f(n) // f(r) // f(n-r)
+        total = nCr(len(columns),2)
 
         if frame_type == 'spark':
 
             train_df = training_frame
-            test_df = test_frame
+
+            test_df = None
+            if test_frame:
+                test_df = test_frame
 
             valid_df = None
             if valid_frame:
                 valid_df = valid_frame
 
-            for i, col_i in enumerate(nums):
-                print('Combining: ' + col_i + ' (' + str(i+1) + '/' + str(total) + ') ...')
-
-                for j, col_j in enumerate(nums):
-
+            completed = 1
+            for i, col_i in enumerate(columns):
+                for j, col_j in enumerate(columns):
                     # don't repeat (i*j = j*i)
                     if i < j:
+                        print('Combining: ' + col_i + ' & ' + col_j + ' (' + str(completed) + '/' + str(total) + ')'+ '...')
                         combined_col_name = str(col_i + '|' + col_j)
                         # multiply, add a new column
                         train_df = train_df.withColumn(combined_col_name, train_df[col_i]*train_df[col_j])
@@ -285,6 +327,7 @@ class DataPreperation(object):
                             valid_df = valid_df.withColumn(combined_col_name, valid_df[col_i]*valid_df[col_j])
                         if test_frame:
                             test_df = test_df.withColumn(combined_col_name, test_df[col_i]*test_df[col_j])
+                        completed += 1
             print('DONE combining features.')
             if valid_frame:
                 if test_frame:
@@ -310,15 +353,12 @@ class DataPreperation(object):
                 valid_df = valid_frame
                 test_df = test_frame
 
-            for i, col_i in enumerate(nums):
-
-                print('Combining: ' + col_i + ' (' + str(i+1) + '/' + str(total) + ') ...')
-
-                for j, col_j in enumerate(nums):
-
+            completed = 1
+            for i, col_i in enumerate(columns):
+                for j, col_j in enumerate(columns):
                     # don't repeat (i*j = j*i)
                     if i < j:
-
+                        print('Combining: ' + col_i + ' & ' + col_j+' (' + str(completed) + '/' + str(total) + ')'+ '...')
                         # convert to pandas
                         col_i_train_df = train_df[col_i]
                         col_j_train_df = train_df[col_j]
@@ -337,9 +377,9 @@ class DataPreperation(object):
                             valid_df[str(col_i + '|' + col_j)] = col_i_valid_df.values*col_j_valid_df.values
                         if test_frame:
                             test_df[str(col_i + '|' + col_j)] = col_i_test_df.values*col_j_test_df.values
+                        completed += 1
 
             print('DONE combining features.')
-
 
             if frame_type == 'pandas':
                 if valid_frame:
@@ -389,7 +429,7 @@ class DataPreperation(object):
                         return training_frame
 
     @staticmethod
-    def shrunken_averages_encoder(training_frame, valid_frame = None,test_frame=None, x='x', y='y', lambda_=0.15, perturb_range=0.05,threshold=150, test=False, frame_type='h2o',test_does_have_y=False,id_col=None):
+    def shrunken_averages_encoder(training_frame, valid_frame = None,test_frame=None, x='x', y='y', lambda_=0.15, perturb_range=0.05,threshold=150, test=False, frame_type='h2o',test_does_have_y=False,id_col=None,only_return_encoded=False):
         """ Applies simple target encoding to categorical variables.
 
         :param training_frame: Training frame which to create target means and to be encoded.
@@ -403,7 +443,8 @@ class DataPreperation(object):
         :param test: Whether or not to print the row_val_dict for testing purposes.
         :param frame_type: The type of frame being used. Accepted: ['h2o','pandas','spark']
         :param bool test_does_have_y: if the test has y values. If it does then it will caculate independent averages from test frame to prevent feature leakage
-        :param id_col: (spark only) The name of the id column for spark dataframes only. Will conserve memory and only return 2 columns in dfs(id,x_Tencode)
+        :param id_col: (spark required only) The name of the id column for spark dataframes
+        :param only_return_encoded: (spark optional only) If set to true will only return the encoded columns and id_col
         :return: Tuple of 1-3 frames in order of train,valid,test
         """
 
@@ -469,7 +510,7 @@ class DataPreperation(object):
                 #filter out other columns to save memory if id_col specified
                 new_training_frame = training_frame.select(id_col,x).withColumn(encode_name, lit(overall_mean_train))
                 if valid_frame:
-                    new_valid_frame = valid_frame.withColumn(encode_name, lit(overall_mean_valid))
+                    new_valid_frame = valid_frame.select(id_col,x).withColumn(encode_name, lit(overall_mean_valid))
                 if test_does_have_y:
                     new_test_frame = test_frame.select(id_col,x).withColumn(encode_name, lit(overall_mean_test))
                 else:
@@ -534,7 +575,7 @@ class DataPreperation(object):
                     """
                     id = tuple_input[0]
                     value = tuple_input[1]
-                    from numpy import uniform
+                    from numpy.random import uniform
                     perturb_percent = uniform(low=1-perturb_range, high=1+perturb_range, size=(1))[0]
                     return (id, float(value*perturb_percent))
                 # new_training_frame.select(encode_name).show(10)
@@ -555,18 +596,29 @@ class DataPreperation(object):
                     new_test_frame = new_test_frame.drop(encode_name).join(temp_df,id_col,'inner')
                 # new_training_frame.select(encode_name).show(10)
 
-            if id_col != None:
+            if only_return_encoded:
                 #remove origional x as its already in the original dfs
                 if valid_frame:
-                    return new_training_frame.drop(x), new_valid_frame.drop(x),new_test_frame.drop(x)
+                    if test_frame:
+                        return new_training_frame.drop(x), new_valid_frame.drop(x),new_test_frame.drop(x)
+                    else:
+                        return new_training_frame.drop(x), new_valid_frame.drop(x)
                 else:
-                    return new_training_frame.drop(x), new_test_frame.drop(x)
+                    if test_frame:
+                        return new_training_frame.drop(x), new_test_frame.drop(x)
+                    else:
+                        return new_training_frame.drop(x)
             else:
                 if valid_frame:
-                    return new_training_frame, new_valid_frame, new_test_frame
+                    if test_frame:
+                        return new_training_frame.drop(x).join(training_frame,id_col,'inner'), new_valid_frame.drop(x).join(valid_frame,id_col,'inner'), new_test_frame.drop(x).join(test_frame,id_col,'inner')
+                    else:
+                        return new_training_frame.drop(x).join(training_frame,id_col,'inner'), new_valid_frame.drop(x).join(valid_frame,id_col,'inner')
                 else:
-                    return new_training_frame, new_test_frame
-
+                    if test_frame:
+                        return new_training_frame.drop(x).join(training_frame,id_col,'inner'), new_test_frame.drop(x).join(test_frame,id_col,'inner')
+                    else:
+                        return new_training_frame.drop(x).join(training_frame,id_col,'inner')
         else:
             import h2o
             import pandas as pd
@@ -1026,11 +1078,11 @@ class DataPreperation(object):
         return assembler.transform(df)
 
     @staticmethod
-    def dimensionality_reduction(train_frame,valid_frame=None,test_frame=None,columns=[],n_comp=320,random_seed=420,decompositions_to_run=['PCA','TSVD','ICA','GRP','SRP'],frame_type='spark',test_does_have_y=False,only_return_decompositions=False,id_col='ID'):
+    def dimensionality_reduction(train_frame,valid_frame=None,test_frame=None,columns=[],n_comp=320,random_seed=420,decompositions_to_run=['PCA','TSVD','ICA','GRP','SRP'],frame_type='spark',test_does_have_y=False,only_return_decompositions=False,id_col='ID', column_name=None):
         """
         Shrink input features in n_comp features using one or more decomposition functions.
         h2o/pandas frames supports: ['PCA','TSVD','ICA','GRP','SRP']
-        spark frame supports: ['PCA']
+        spark frame supports: ['PCA','SVD']
         :param object train_frame: an input frame of the training data
         :param object valid_frame: (optional) an input frame with validation data
         :param object test_frame: (optional) an input frame of the test data
@@ -1042,6 +1094,7 @@ class DataPreperation(object):
         :parm bool only_return_decompositions: will only return the decompositions if set to true and not any of the orginal columns
         :parm string only_return_decompositions: will only return the decompositions if set to true and not any of the orginal columns
         :parm string id_col: (required for spark) an ID column to join the frames back together
+        :parm string column_name: (optional) if you want something to come before the pca_#
         :return: Up to three frames in order train, valid, test (depends on how many frames you input)
         """
         if frame_type == 'spark':
@@ -1049,21 +1102,25 @@ class DataPreperation(object):
             from pyspark.ml.linalg import Vectors
             from pyspark.ml.feature import VectorAssembler
             # from pyspark.ml.feature import VectorDisassembler
+            from pyspark.ml.feature import StandardScaler
+            from pyspark.ml import Pipeline
+
+            train_df, valid_df, test_df = None,None,None
+            train_df = train_frame
+            if valid_frame:
+                valid_df = valid_frame
+            if test_frame:
+                test_df = test_frame
 
             assembler = VectorAssembler(
                 inputCols=columns,
                 outputCol="features")
-
-            #create a vector column with the desired columns to use for PCA
-            train_df = assembler.transform(train_frame)
-            valid_df, test_df = None,None
-            if valid_frame:
-                valid_df = assembler.transform(valid_frame)
-            if test_frame:
-                test_df = assembler.transform(test_frame)
-
-            #Define PCA transformer
-            pca = PCA(k=n_comp, inputCol="features", outputCol="pcaFeatures")
+            scaler = StandardScaler(inputCol=assembler.getOutputCol(),
+                                    outputCol="scaledFeatures",
+                                    withStd=False,
+                                    withMean=True)
+            pca = PCA(k=n_comp, inputCol=scaler.getOutputCol(), outputCol="pcaFeatures")
+            pipeline = Pipeline(stages=[assembler,scaler, pca])
 
             #define a function for extracting pca vector column into their own columns
             def extract_vectors(row):
@@ -1093,64 +1150,117 @@ class DataPreperation(object):
                 old_column_index = old_colomn_starting_index
                 new_column_index = new_column_starting_index
                 for i in range(0,n_comp):
-                    dataframe = dataframe.withColumnRenamed('_'+str(old_colomn_starting_index),new_prefix+str(new_column_starting_index))
+                    if column_name:
+                        dataframe = dataframe.withColumnRenamed('_'+str(old_colomn_starting_index),column_name+'_'+new_prefix+str(new_column_starting_index))
+                    else:
+                        dataframe = dataframe.withColumnRenamed('_'+str(old_colomn_starting_index),new_prefix+str(new_column_starting_index))
                     old_colomn_starting_index+=1
                     new_column_starting_index+=1
                 return dataframe
 
             #Do PCA tranformation for training data
-            model_train = pca.fit(train_df)
-            result_train = model_train.transform(train_df)
-            if only_return_decompositions: #only keep decompostion columns
-                extracted_pca_train = result_train.rdd.map(extract_vectors_with_id_col).toDF([id_col])
-                extracted_pca_train = rename_columns(extracted_pca_train)
-            else: #join on ID column and keep all columns
-                extracted_pca_train = result_train.rdd.map(extract_vectors_with_id_col).toDF([id_col]).join(result_train,id_col,'inner')
-                extracted_pca_train = rename_columns(extracted_pca_train)
+            model_train = pipeline.fit(train_frame)
+            result_train = model_train.transform(train_frame)
+            extracted_pca_train = result_train.rdd.map(extract_vectors_with_id_col).toDF([id_col])
+            extracted_pca_train = rename_columns(extracted_pca_train)
 
             #Do PCA tranformation for validation data if it was given
             extracted_pca_valid = None
             model_valid = None #Will need this to fit test if it doesn't have y values
             if valid_frame:
-                model_valid = pca.fit(valid_df)
-                result_valid = model_train.transform(valid_df)
-                if only_return_decompositions: #only keep decompostion columns
-                    extracted_pca_valid = result_valid.rdd.map(extract_vectors_with_id_col).toDF([id_col])
-                    extracted_pca_valid = rename_columns(extracted_pca_valid)
-                else: #join on ID column to keep all columns
-                    extracted_pca_valid = result_valid.rdd.map(extract_vectors_with_id_col).toDF([id_col]).join(result_valid,id_col,'inner')
-                    extracted_pca_valid = rename_columns(extracted_pca_valid)
+                model_valid = pipeline.fit(valid_frame)
+                result_valid = model_train.transform(valid_frame)
+                extracted_pca_valid = result_valid.rdd.map(extract_vectors_with_id_col).toDF([id_col])
+                extracted_pca_valid = rename_columns(extracted_pca_valid)
 
             #Do PCA tranformation for test data if it was given
             extracted_pca_test = None
             if test_frame:
-                if test_does_have_y:
-                    #if test has labes fit its own pca
-                    model_test = pca.fit(test_df)
-                    result_test = model_test.transform(test_df)
-                else: #test frame doesn't have labels so we need to use either train or valid
-                    if valid_frame: #valid is prefered to prevent overfiting
-                        result_test = model_valid.transform(test_df)
-                    else: #no valid frame so we need to fit with the train PCs
-                        result_test = model_valid.transform(test_df)
-                if only_return_decompositions: #only keep decompostion columns
-                    extracted_pca_test = result_test.rdd.map(extract_vectors_with_id_col).toDF([id_col])
-                    extracted_pca_test = rename_columns(extracted_pca_test)
-                else: #join on ID column and keep all columns
-                    extracted_pca_test = result_test.rdd.map(extract_vectors_with_id_col).toDF([id_col]).join(result_test,id_col,'inner')
-                    extracted_pca_test = rename_columns(extracted_pca_test)
+                model_test = pipeline.fit(test_frame)
+                result_test = model_test.transform(test_frame)
+                extracted_pca_test = result_test.rdd.map(extract_vectors_with_id_col).toDF([id_col])
+                extracted_pca_test = rename_columns(extracted_pca_test)
+            ###
+            ### SVD ###
+            ###
+            # https://stackoverflow.com/questions/33428589/pyspark-and-pca-how-can-i-extract-the-eigenvectors-of-this-pca-how-can-i-calcu/33500704#33500704
+            # https://github.com/apache/spark/blob/master/examples/src/main/python/mllib/svd_example.py
+            # https://blog.dominodatalab.com/pca-on-very-large-neuroimaging-datasets-using-pyspark/
+            from pyspark.mllib.linalg.distributed import RowMatrix
+            from pyspark.mllib.linalg.distributed import IndexedRow, IndexedRowMatrix
+            from pyspark.mllib.linalg import DenseVector
 
-            #return the right number of frames
+            def extract_svd_vectors_with_id_col(row):
+                """
+                Takes a vector and extracts it into many columns from the vector.
+                pcaFeatures is the vector being extracted in this function.
+                Vector values will be named  _2, _3, ...
+                """
+                # tuple(x for x in row if x not in ['pcaFeatures'])+
+                return (row[id_col],)+tuple(float(x) for x in row.svdFeatures.values)
+
+            if 'SVD' in decompositions_to_run:
+                #Train first
+                mat = IndexedRowMatrix(result_train.rdd.map(lambda row: IndexedRow(row[id_col],DenseVector(row['pcaFeatures']))))
+                svd = mat.computeSVD(n_comp, computeU=True)
+                U = svd.U       # The U factor is a RowMatrix.
+                s = svd.s       # The singular values are stored in a local dense vector.
+                V = svd.V
+                # Print vectors for testing
+#                 collected = U.rows.collect()
+#                 print("U factor is:")
+#                 for vector in collected:
+#                     print(vector)
+#                 print("Singular values are: %s" % s)
+#                 print("V factor is:\n%s" % V)
+                extracted_svd_train = U.rows.map(lambda x: (x, )).toDF().rdd.map(lambda x: (x['_1'][0],x['_1'][1] )).toDF([id_col,'svdFeatures']).rdd.map(extract_svd_vectors_with_id_col).toDF([id_col])
+                extracted_svd_train = rename_columns(extracted_svd_train,new_prefix='svd_')
+                if valid_frame:
+                    mat = IndexedRowMatrix(result_valid.rdd.map(lambda row: IndexedRow(row[id_col],DenseVector(row['pcaFeatures']))))
+                    svd = mat.computeSVD(n_comp, computeU=True)
+                    U = svd.U       # The U factor is a RowMatrix.
+                    s = svd.s       # The singular values are stored in a local dense vector.
+                    V = svd.V       # The V factor is a local dense matrix.
+                    extracted_svd_valid = U.rows.map(lambda x: (x, )).toDF().rdd.map(lambda x: (x['_1'][0],x['_1'][1] )).toDF([id_col,'svdFeatures']).rdd.map(extract_svd_vectors_with_id_col).toDF([id_col])
+                    extracted_svd_valid = rename_columns(extracted_svd_valid,new_prefix='svd_')
+                if test_frame:
+                    mat = IndexedRowMatrix(result_valid.rdd.map(lambda row: IndexedRow(row[id_col],DenseVector(row['pcaFeatures']))))
+                    svd = mat.computeSVD(n_comp, computeU=True)
+                    U = svd.U       # The U factor is a RowMatrix.
+                    s = svd.s       # The singular values are stored in a local dense vector.
+                    V = svd.V       # The V factor is a local dense matrix.
+                    extracted_svd_test = U.rows.map(lambda x: (x, )).toDF().rdd.map(lambda x: (x['_1'][0],x['_1'][1] )).toDF([id_col,'svdFeatures']).rdd.map(extract_svd_vectors_with_id_col).toDF([id_col])
+                    extracted_svd_test = rename_columns(extracted_svd_test,new_prefix='svd_')
+
+            if only_return_decompositions:
+                train_df = train_df.select(id_col)
+                if valid_df:
+                    train_df = valid_df.select(id_col)
+                if test_df:
+                    test_df = test_df.select(id_col)
+            if 'PCA' in decompositions_to_run:
+                train_df = extracted_pca_train.join(train_df,id_col,'inner')
+                if valid_df:
+                    valid_df = extracted_pca_valid.join(valid_df,id_col,'inner')
+                if test_df:
+                    test_df = extracted_pca_test.join(test_df,id_col,'inner')
+            if 'SVD' in decompositions_to_run:
+                train_df = extracted_svd_train.join(train_df,id_col,'inner')
+                if valid_df:
+                    valid_df = extracted_svd_valid.join(valid_df,id_col,'inner')
+                if test_df:
+                    test_df = extracted_svd_test.join(test_df,id_col,'inner')
+            # return the right number of frames
             if valid_frame:
                 if test_frame:
-                    return extracted_pca_train.drop('features','pcaFeatures'),extracted_pca_valid.drop('features','pcaFeatures'),extracted_pca_test.drop('features','pcaFeatures')
+                    return train_df.drop('features','scaledFeatures','pcaFeatures','svdFeatures'),valid_df.drop('features','scaledFeatures','pcaFeatures','svdFeatures'),test_df.drop('features','scaledFeatures','pcaFeatures','svdFeatures')
                 else:
-                    return extracted_pca_train.drop('features','pcaFeatures'),extracted_pca_valid.drop('features','pcaFeatures')
+                    return train_df.drop('features','scaledFeatures','pcaFeatures','svdFeatures'),valid_df.drop('features','scaledFeatures','pcaFeatures','svdFeatures')
             else:
                 if test_frame:
-                    return extracted_pca_train.drop('features','pcaFeatures'),extracted_pca_test.drop('features','pcaFeatures')
+                    return train_df.drop('features','scaledFeatures','pcaFeatures','svdFeatures'),test_df.drop('features','scaledFeatures','pcaFeatures','svdFeatures')
                 else:
-                    return extracted_pca_train.drop('features','pcaFeatures')
+                    return train_df.drop('features','scaledFeatures','pcaFeatures','svdFeatures')
 
         elif frame_type in ['h2o','pandas']:
             from sklearn.random_projection import GaussianRandomProjection
@@ -1378,4 +1488,77 @@ class DataPreperation(object):
                         return training_frame, testing_frame
                     else:
                         return training_frame
+    @staticmethod
+    def pca(frame,columns=[],k=320,frame_type='spark'):
+        """Computes the top `k` principal components, corresponding scores, and all eigenvalues.
 
+        Note:
+            All eigenvalues should be returned in sorted order (largest to smallest). `eigh` returns
+            each eigenvectors as a column.  This function should also return eigenvectors as columns.
+
+        Args:
+            df: A Spark dataframe with a 'features' column, which (column) consists of DenseVectors.
+            k (int): The number of principal components to return.
+
+        Returns:
+            tuple of (np.ndarray, RDD of np.ndarray, np.ndarray): A tuple of (eigenvectors, `RDD` of
+            scores, eigenvalues).  Eigenvectors is a multi-dimensional array where the number of
+            rows equals the length of the arrays in the input `RDD` and the number of columns equals
+            `k`.  The `RDD` of scores has the same number of rows as `data` and consists of arrays
+            of length `k`.  Eigenvalues is an array of length d (the number of features).
+         """
+        if frame_type == 'spark':
+            # https://stackoverflow.com/questions/33428589/pyspark-and-pca-how-can-i-extract-the-eigenvectors-of-this-pca-how-can-i-calcu/33481471
+            from numpy.linalg import eigh
+            from pyspark.ml.linalg import Vectors
+            from pyspark.ml.feature import VectorAssembler
+            from pyspark.ml.feature import StandardScaler
+            from pyspark.ml import Pipeline
+
+            assembler = VectorAssembler(
+                inputCols=columns,
+                outputCol="features")
+            scaler = StandardScaler(inputCol=assembler.getOutputCol(),
+                                    outputCol="scaledFeatures",
+                                    withStd=False,
+                                    withMean=True)
+            pipeline = Pipeline(stages=[assembler,scaler])
+            model = pipeline.fit(frame)
+            df = model.transform(frame)
+
+            def estimateCovariance(df):
+                """Compute the covariance matrix for a given dataframe.
+
+                Note:
+                    The multi-dimensional covariance array should be calculated using outer products.  Don't
+                    forget to normalize the data by first subtracting the mean.
+
+                Args:
+                    df:  A Spark dataframe with a column named 'features', which (column) consists of DenseVectors.
+
+                Returns:
+                    np.ndarray: A multi-dimensional array where the number of rows and columns both equal the
+                        length of the arrays in the input dataframe.
+                """
+                import numpy as np
+                m = df.select(df['scaledFeatures']).map(lambda x: x[0]).mean()
+                dfZeroMean = df.select(df['scaledFeatures']).map(lambda x:   x[0]).map(lambda x: x-m)  # subtract the mean
+
+                return dfZeroMean.map(lambda x: np.outer(x,x)).sum()/df.count()
+
+            cov = estimateCovariance(df)
+            col = cov.shape[1]
+            eigVals, eigVecs = eigh(cov)
+            inds = np.argsort(eigVals)
+            eigVecs = eigVecs.T[inds[-1:-(col+1):-1]]
+            components = eigVecs[0:k]
+            eigVals = eigVals[inds[-1:-(col+1):-1]]  # sort eigenvals
+            score = df.select(df['scaledFeatures']).map(lambda x: x[0]).map(lambda x: np.dot(x, components.T) )
+
+            #Show the Variance explained
+            print('Vairance Explained:', sum(eigVals[0:k])/sum(eigVals) )
+
+            # Return the `k` principal components, `k` scores, and all eigenvalues
+            return components.T, score, eigVals
+        elif frame_type in ['h2o','pandas']:
+            raise Exception('Not Implemented yet.')
