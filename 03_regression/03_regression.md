@@ -4,11 +4,9 @@ Regression is important because it is stable, interpretable and widely understoo
 
 #### Class Materials
 
-##### Linear regression
+##### Linear Regression
 
 * [Overview of interpreting linear regression](notes/interpreting_regression.pdf)
-
-* [Overview of Penalized GLM](notes/penalized_GLM.pdf)
 
 * [The Bias/Variance Tradeoff](notes/bias_variance.pdf)
 
@@ -22,9 +20,15 @@ Regression is important because it is stable, interpretable and widely understoo
 
 * [Kaggle Advanced Regression Contest starter kit](src/py_part_3_kaggle_starter.ipynb)
 
+***
+
+##### Logistic Regression and GLM
+
 * Overview of logistic regression - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
 * [Overview of interpreting logistic regression](notes/interpreting_logisitic_regression.pdf)
+
+* [Overview of Penalized GLM](notes/penalized_GLM.pdf)
 
 * [EM logistic regression example](xml/03_logistic_regression.xml)
 
