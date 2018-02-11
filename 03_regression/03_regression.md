@@ -59,7 +59,7 @@ Sections 2.2, 3.1 - 3.3, and 4.3
 * [*Elements of Statistical Learning*](https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf)</br>
 Chapters 3, 4 and 7
 
-* [*Generalized Linear Modeling with H2o*](hhttp://docs.h2o.ai/h2o/latest-stable/h2o-docs/booklets/GLMBooklet.pdf)
+* [*Generalized Linear Modeling with H2o*](http://docs.h2o.ai/h2o/latest-stable/h2o-docs/booklets/GLMBooklet.pdf)
 
 * *Logistic regression in Enterprise Miner* - [Blackboard electronic reserves](https://blackboard.gwu.edu)
 
