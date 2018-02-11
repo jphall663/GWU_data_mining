@@ -28,6 +28,8 @@ Regression is important because it is stable, interpretable and widely understoo
 
 * [Overview of interpreting logistic regression](notes/interpreting_logisitic_regression.pdf)
 
+* [Confusion Matrix](https://en.wikipedia.org/wiki/Confusion_matrix)
+
 * [Overview of Penalized GLM](notes/penalized_GLM.pdf)
 
 * [EM logistic regression example](xml/03_logistic_regression.xml)
@@ -65,7 +67,5 @@ Chapters 3, 4 and 7
 
 * [UCLA IDRE: *How do I interpret odds ratios in logistic regression?*](https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faq-how-do-i-interpret-odds-ratios-in-logistic-regression/)
 
-* [Wikipedia: *Confusion Matrix*](https://en.wikipedia.org/wiki/Confusion_matrix)
-
-* [Elastic Net Regression](http://www.recognition.mccme.ru/pub/papers/L1/elasticnet.pdf)</br>
+* [Elastic Net Regression](https://web.stanford.edu/~hastie/Papers/B67.2%20(2005)%20301-320%20Zou%20&%20Hastie.pdf)</br>
   By Hastie and Zhou, 2005
