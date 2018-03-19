@@ -30,3 +30,5 @@ Chapter 8
   by Robert Tibshirani, Guenther Walther, and Trevor Hastie
 
 * [A Tutorial on Spectral Clustering](https://pdfs.semanticscholar.org/1437/415df29d3927c7851c7a0db0edd4a472d6e1.pdf)
+
+* [*K*-means tutorial with numpy](http://flothesof.github.io/k-means-numpy.html)
