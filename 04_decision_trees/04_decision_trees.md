@@ -22,7 +22,7 @@ Many techniques have evolved for combining multiple decision trees into ensemble
 
 #### [Sample Quiz](quiz/sample/quiz_4.pdf)
 
-#### [Quiz Key](quiz/key/quiz_4_key.pdf) (Currently Unavailable)
+#### [Quiz Key](quiz/key/quiz_4.pdf)
 
 #### Supplementary References
 
