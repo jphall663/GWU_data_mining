@@ -14,7 +14,7 @@ Association rules, sometimes referred to as market basket analysis, tell us whic
 
 #### [Sample Quiz](quiz/sample/quiz_7.pdf)
 
-#### [Quiz Key](quiz/key/quiz_7_key.pdf) (Currently Unavailable)
+#### [Quiz Key](quiz/key/quiz_7.pdf) 
 
 #### Supplementary References
 
