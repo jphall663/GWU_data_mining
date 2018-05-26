@@ -1,4 +1,5 @@
 *.DS_Store
 .idea*
+*.ipynb_checkpoints
 interpreting_ml
 FAQ
