@@ -24,6 +24,8 @@ Neural networks are important because of their ability to approximate **any** re
 
 * [MNIST data augmentation example](src/py_part_5_MNIST_data_augmentation.ipynb)
 
+* [Basic MLP Example](src/py_part_5_basic_mlp_example.ipynb)
+
 * [Wen Phans's MNIST Keras example](src/py_part_5_MNIST_keras_lenet.ipynb)
 
 #### [Sample Quiz](quiz/sample/quiz_5.pdf)
