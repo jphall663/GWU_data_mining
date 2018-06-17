@@ -12,23 +12,21 @@ practicing data scientists.
 
 #### Class Notes
 
-* [O'Reilly AI conference slides](notes/h2o_oreilly_ai_slides.pdf)
+* [Interpretability: Good, Bad, and Ugly slides](notes/MLI_good_bad_ugly.pdf)
 
 * [Instructor notes](notes/instructor_notes.pdf)
 
 * Practical ML interpretability examples
 
-  * [Decision tree surrogate models](src/dt_surrogate.ipynb)
+  * [Monotonic XGBoost models, partial dependence, and individual conditional expectation plots](https://github.com/jphall663/interpretable_machine_learning_with_python/blob/master/xgboost_pdp_ice.ipynb)
 
-  * [LIME (practical samples variant)](src/lime.ipynb)
+  * [Decision tree surrogates, reason codes, and ensembles of explanations](https://github.com/jphall663/interpretable_machine_learning_with_python/blob/master/dt_surrogate_loco.ipynb)
 
-  * [LOCO (NA variant)](src/loco.ipynb)
+  * [LIME](https://github.com/jphall663/interpretable_machine_learning_with_python/blob/master/lime.ipynb)
 
-  * [Partial dependence and individual conditional expectation (ICE)](src/pdp_ice.ipynb)  
+  * [Sensitivity and residual analysis](https://github.com/jphall663/interpretable_machine_learning_with_python/blob/master/resid_sens_analysis.ipynb)  
 
-  * [Sensitivity analysis](src/sensitivity_analysis.ipynb)
-
-  * [Monotonic models with XGBoost](src/mono_xgboost.ipynb)
+* [Comparison of LIME, Shapley, and treeinterpreter explanations](https://github.com/h2oai/mli-resources/tree/master/lime_shap_treeint_compare)
 
 #### References
 
@@ -37,6 +35,7 @@ practicing data scientists.
 * [Towards A Rigorous Science of Interpretable Machine Learning](https://arxiv.org/pdf/1702.08608.pdf)</br>
 by Finale Doshi-Velez and Been Kim
 * [Ideas for Machine Learning Interpretability](https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning)
+* [An Introduction to Machine Learning Interpretability](https://www.safaribooksonline.com/library/view/an-introduction-to/9781492033158/) (or [Blackboard](https://blackboard.gwu.edu) electronic reserves)
 
 ***
 
@@ -51,3 +50,6 @@ by Jing Lei, Max G’Sell, Alessandro Rinaldo, Ryan J. Tibshirani, and Larry Was
 * **Surrogate Models**
   * [Extracting tree structured representations of trained networks](https://papers.nips.cc/paper/1152-extracting-tree-structured-representations-of-trained-networks.pdf)
   * [Interpreting Blackbox Models via Model Extraction](https://arxiv.org/pdf/1705.08504.pdf)
+* **TreeInterpreter**: [Random forest interpretation with scikit-learn](http://blog.datadive.net/random-forest-interpretation-with-scikit-learn/)
+* **Shapley Explanations**: [A Unified Approach to Interpreting Model Predictions](http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf)
+* **Explainable neural networks (xNN)**: [Explainable Neural Networks based on Additive Index Models](https://arxiv.org/pdf/1806.01933.pdf)
