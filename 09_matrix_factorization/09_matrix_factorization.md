@@ -56,3 +56,9 @@ by Steffen Rendle
 
 * [Near Optimal Signal Recovery From Random Projections: Universal Encoding Strategies?](http://statweb.stanford.edu/~candes/papers/OptimalRecovery.pdf)</br>
 by Emmanuel Candes and Terence Tao
+
+***
+
+* [SAS random projections example](https://github.com/jphall663/enlighten-apply/tree/master/SAS_UE_Random_Projections)
+
+* [Quora answer regarding feature extraction](https://www.quora.com/How-do-you-attack-a-machine-learning-problem-with-a-large-number-of-features/answer/Patrick-Hall-4) 
