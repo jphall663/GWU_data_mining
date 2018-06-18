@@ -33,7 +33,7 @@ practicing data scientists.
 **General**
 
 * [Towards A Rigorous Science of Interpretable Machine Learning](https://arxiv.org/pdf/1702.08608.pdf)
-* [Explaining Explanations: An Approach to Evaluating Interpretability of Machine Learning](https://arxiv.org/abs/1806.00069)
+* [Explaining Explanations: An Approach to Evaluating Interpretability of Machine Learning](https://arxiv.org/pdf/1806.00069.pdf)
 * [A Survey Of Methods For Explaining Black Box Models](https://arxiv.org/pdf/1802.01933.pdf)
 * [Trends and Trajectories for Explainable, Accountable and Intelligible Systems: An HCI Research Agenda](https://dl.acm.org/citation.cfm?id=3174156)
 
