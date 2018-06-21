@@ -22,6 +22,10 @@
 
 #### Some external reference material
 * [AutoML](https://github.com/jphall663/automl_resources)
+* A Few Kaggle Grandmasters Pointers:
+  * [How to become a Kaggle #1: An introduction to model stacking](https://www.youtube.com/watch?v=9Vk1rXLhG48) by [Marios Michailidis](https://www.kaggle.com/kazanova)
+  * [Kaggle Tips](https://github.com/h2oai/h2o-meetups/blob/master/2016_12_15_SV_BigDataScience/2016_12_15_H2O_Meetup_Kaggle_Tips.pdf) by [Dmitry Larko](https://www.kaggle.com/dmitrylarko)
+  * [Learn Kaggle techniques from Kaggle #1](https://www.youtube.com/watch?v=LgLcfZjNF44) by [Owen Zhang](https://www.kaggle.com/owenzhang1)
 * [Data visualization](https://github.com/jphall663/basic_data_viz_rules_and_links)
 * [Data science quick references](https://github.com/jphall663/ds_quick_refs)
 * [Data science interview questions](https://github.com/jphall663/ds_interview_qs)
