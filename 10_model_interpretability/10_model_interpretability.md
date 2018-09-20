@@ -12,9 +12,9 @@ practicing data scientists.
 
 #### Class Notes
 
-* [Interpretability: Good, Bad, and Ugly slides](notes/MLI_good_bad_ugly.pdf)
+* [2018 JSM Presentation](https://github.com/jphall663/jsm_2018_slides/blob/master/main.pdf)
 
-* [Instructor notes](notes/instructor_notes.pdf)
+* [Interpretability: Good, Bad, and Ugly slides](notes/MLI_good_bad_ugly.pdf)
 
 * Practical ML interpretability examples
 
@@ -41,6 +41,7 @@ practicing data scientists.
 
 * [Ideas for Machine Learning Interpretability](https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning)
 * [An Introduction to Machine Learning Interpretability](https://www.safaribooksonline.com/library/view/an-introduction-to/9781492033158/) (or [Blackboard](https://blackboard.gwu.edu) electronic reserves)
+* [On the Art and Science of Machine Learning Explanations](https://github.com/jphall663/jsm_2018_paper/blob/master/jsm_2018_paper.pdf)
 
 ***
 
