@@ -28,6 +28,10 @@ practicing data scientists.
 
 * [Comparison of LIME, Shapley, and treeinterpreter explanations](https://github.com/h2oai/mli-resources/tree/master/lime_shap_treeint_compare)
 
+#### [Sample Quiz](quiz/sample/quiz_10.pdf)
+
+#### [Quiz Key](quiz/key/quiz_10.pdf)
+
 #### References
 
 **General**
