@@ -51,7 +51,12 @@ Mr. Patrick Hall
 
 **Linkedin**: https://www.linkedin.com/in/jpatrickhall/
 
-**Office Hours**: Before lectures when business travel allows.
+#### Course Location
+
+**Location**: Media and Public Affairs Building (805 21st St. NW), Room BO7
+Thursdays 3:30-6:00 PM
+
+**Office Hours**: Physical location TBD; webex by request
 
 #### Copyrights and Licenses
 
@@ -90,27 +95,39 @@ Some materials for this class have personal or corporate copyrights or licenses 
 
 ###### DNSC 6279 ("Data Mining")
 
-* The course grade will be based on homework assignments, quizzes, a final exam, and a team project. Each grading component is described in detail below.
+*  The course grade will be based on team homework assignments, a midterm and final exam, and a team project. Each grading component is described in detail below.
 
-* **Quizzes**: There will be several in class quizzes, typically every week. They will be based on current and prior assigned readings and material covered in the class sessions. No make up quizzes will be given. The lowest quiz grade will be dropped. Quizzes are individual assignments.
-
-* **Homework Assignments**: You will be given several homework assignments during the semester. Homework assignments will typically require the use of software. A typical homework assignment will consist of a few problems with several parts. Homework assignments may be completed in groups. You may be given up to several weeks to complete the assignment. Late homework assignments may be rejected. In preparing your homework assignments, please follow these guidelines:
+* **Homework Assignments**: You will be given several homework assignments during the semester. Homework assignments will typically require the use of software. A typical homework assignment will consist of a few problems with several parts. Homework assignments may be completed in groups of 2-4 students. You may be given up to several weeks to complete the assignment. Late homework assignments may be rejected. In preparing your homework assignments, please follow these guidelines:
   * Ensure any submitted computer program solutions are commented and runnable in a standard Python, R, or SAS environment.
   * Ensure any written solutions are typed or easily readable by anyone.
   * Ensure a clear logical flow and mark your answers.
   * Print/type your name(s) on the top right hand corner of every page or in a header of any papers submitted.
 
-* **Final Exam**: The final exam will be scheduled during finals' week. Graduate final exams are scheduled by the university late in the semester. The exam date will be made known at that time. No make up final exams will be given. The final exam is an individual assignment.
+* **Midterm and Final Exam**: A midterm exam will address content from the first half of the class and a final exam will address content from the second half of the class. The final exam will be scheduled during finals' week. Graduate final exams are scheduled by the university late in the semester. The final exam date will be made known at that time. No make-up midterm or final exams will be given. The exams are individual assignments. *If you are taking the class remotely and cannot attend the exams in-person, make arrangements with the instructor immediately.*
 
-* **Project**: The project is designed to serve as an exercise in applying one or more of the data mining techniques covered in the course to analyze real life data sets. A primary objective is to understand the complexities that arise in mining large, real life datasets that are often inconsistent, incomplete, and unclean. Students can use a variety of software tools to perform the analysis, including standard Python, R, or SAS packages. This is a semester long project, and students have the option to work in 2 or 3 person teams. The deliverables include a formal project proposal (due mid-semester), and a final report (due at the end of the semester at the time of your final project presentation). Projects can be a group or individual assignment. As the project for this class, students may select:
+* **Project**: The project is designed to serve as an exercise in applying one or more of the data mining techniques covered in the course to analyze real life data sets. A primary objective is to understand the complexities that arise in mining large, real life datasets that are often inconsistent, incomplete, and unclean. Students can use a variety of software tools to perform the analysis, including standard Python, R, or SAS packages. This is a semester long project, and students have the option to work in 2-4 person teams. The deliverables include a formal project proposal (due mid-semester), and a final report or presentation (due at the end of the semester). Projects can be a group or individual assignment. As the project for this class, students may select:
   * A current [Kaggle contest](https://www.kaggle.com/)
   * Their MSBA practicum project
 
 * **Grading Weights**
-  * Quizzes: 25%
-  * Homework assignments: 25%
-  * Final exam: 25%
-  * Project: 25%
+  * Group homework assignments: 25%
+  * Midterm exam: 30%
+  * Final exam: 30%
+  * Group semester Project: 15%
+
+* **Grading Scale**
+
+Numeric Grade | Letter grade
+--------------|-------------
+94-100:   |	A
+90-93.99: |	A
+87-89.99: |	B+
+84-86.99: |	B
+80-83.99: |	B
+77-79.99: |	C+
+74-76.99: |	C
+70-73.99:	| C-
+<= 69.99: |	F
 
 ###### DNSC 6290 ("Machine Learning")  
 
@@ -139,7 +156,7 @@ Please contact the [Disability Support Services](http://disabilitysupport.gwu.ed
 
 #### Attendance
 
-Regular attendance is expected. Students are held responsible for all of the work of the courses in which they are registered, and all absences must be excused by the instructor before provision is made to make up the work missed.
+Regular attendance is expected, except for remote students. All students are held responsible for all of the work of the courses in which they are registered, and all absences must be excused by the instructor before provision is made to make up the work missed.
 
 #### Class Policy Changes
 
@@ -150,6 +167,8 @@ The instructor reserves the right to revise any item on this syllabus, including
 * [Anaconda Python](https://www.continuum.io/downloads) Python is an approachable, general purpose programming language with excellent add on libraries for math and data analysis. Anaconda Python is a commercial version of Python that bundles these add on packages (and many other packages) together with convenient development utilities like the Spyder IDE.
 
 * [H2o.ai](http://www.h2o.ai) is a package of high performance functions and algorithms for preprocessing data and training statistical and machine learning models. It can be accessed without the need for coding through a standalone, web browser client or by installing additional coding interfaces for R and/or Python.
+
+* [PySpark](http://spark.apache.org/docs/2.2.0/api/python/pyspark.html) is a convenient, Python-based way to use the extremely powerful and scalable Spark platform. (Spark is becoming the new standard commercial data engineering tool.)
 
 * [R](https://cran.r-project.org/) is a tremendously popular language for data analysis, with thousands of user contributed packages for different types of data analysis tasks.
 
