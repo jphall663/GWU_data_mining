@@ -5,12 +5,13 @@
 * *Introduction to Data Mining* - [chapter 1 notes](http://www-users.cs.umn.edu/~kumar/dmbook/dmslides/chap1_intro.pdf)
 * *Advanced Business Analytics* - chapter 1 notes (available on [Blackboard](https://blackboard.gwu.edu))
 * [Instructor notes](notes/00_instructor_notes.pdf)
+* [More Thoughts on Data Mining](https://github.com/jphall663/nafsa_2018_slides/blob/master/main.pdf)
 
 #### Required Reading
 
 * [*A Very Short History of Data Science*](http://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/)
 * *Introduction to Data Mining* - chapter 1
-* [*The Evolution of Analytics*](http://www.oreilly.com/data/free/the-evolution-of-analytics.csp)
+* [*The Evolution of Analytics*](http://www.oreilly.com/data/free/the-evolution-of-analytics.csp) (see Blackboard electronic reserves too)
 
 #### [Sample Quiz](quiz/sample/quiz_0.pdf)
 
