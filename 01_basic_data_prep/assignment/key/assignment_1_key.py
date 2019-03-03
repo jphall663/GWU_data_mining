@@ -103,7 +103,7 @@ trans_df.count()
 
 # 3 - drop repeattrips
 
-train_df = train_df.drop('repeattrips', 'repeater')
+train_df = train_df.drop('repeattrips')
 train_df.printSchema()
 
 root
