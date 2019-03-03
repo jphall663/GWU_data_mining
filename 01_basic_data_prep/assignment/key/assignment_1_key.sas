@@ -39,7 +39,7 @@ run;
 *** #3 drop repeattrips ******************************************************;
 
 data train; 
-	set train(drop=repeattrips repeater);
+	set train(drop=repeattrips);
 run;
 
 *** #4 left join offers onto the training and test data **********************;
