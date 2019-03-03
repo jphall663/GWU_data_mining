@@ -1,7 +1,7 @@
-csv file submitted:                     2 pts.
-csv file contains 350 rows of data:     1 pt.
-csv file contains 13 columns of data:   1 pt.
-.sas OR .py file submitted:             2 pts.
+csv file submitted:                                2 pts.
+csv file contains 350 rows of data:                1 pt.
+csv file contains 13 columns of data (+ repeater): 1 pt.
+.sas OR .py file submitted:                        2 pts.
 
 1 pt. each for containing the following rows:
 id,chain,offer,market,offerdate,category,quantity,company,offervalue,brand,avg_purchaseamount,avg_purchasequantity,exact_item_bought
