@@ -15,7 +15,7 @@
 
 #### [Sample Quiz](quiz/sample/quiz_0.pdf)
 
-#### [Quiz key](quiz/key/quiz_0.pdf)
+#### [Quiz key](quiz/key/quiz_0_key.pdf)
 
 #### Example Data Sets
 
