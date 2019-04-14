@@ -16,6 +16,8 @@ Clustering enables us to group the rows of a data set together based on their si
 
 #### [Quiz Key](quiz/key/quiz_06.pdf)
 
+#### [Assignment](assignment/assignment_4.pdf)
+
 #### Supplementary References
 
 * [*Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Fourth%20Printing.pdf)</br>
