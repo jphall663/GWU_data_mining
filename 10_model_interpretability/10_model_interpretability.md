@@ -22,6 +22,8 @@ practicing data scientists.
 
   * [Decision tree surrogates, reason codes, and ensembles of explanations](https://github.com/jphall663/interpretable_machine_learning_with_python/blob/master/dt_surrogate_loco.ipynb)
 
+  * [Disparate impact analysis](https://github.com/jphall663/interpretable_machine_learning_with_python/blob/master/dia.ipynb)
+
   * [LIME](https://github.com/jphall663/interpretable_machine_learning_with_python/blob/master/lime.ipynb)
 
   * [Sensitivity and residual analysis](https://github.com/jphall663/interpretable_machine_learning_with_python/blob/master/resid_sens_analysis.ipynb)  
@@ -36,6 +38,7 @@ practicing data scientists.
 
 **General**
 
+* [Interpretable Machine Learning](https://christophm.github.io/interpretable-ml-book/)
 * [Towards A Rigorous Science of Interpretable Machine Learning](https://arxiv.org/pdf/1702.08608.pdf)
 * [Explaining Explanations: An Approach to Evaluating Interpretability of Machine Learning](https://arxiv.org/pdf/1806.00069.pdf)
 * [A Survey Of Methods For Explaining Black Box Models](https://arxiv.org/pdf/1802.01933.pdf)
