@@ -120,10 +120,10 @@ Some materials for this class have personal or corporate copyrights or licenses 
 Numeric Grade | Letter grade
 --------------|-------------
 94-100:   |	A
-90-93.99: |	A
+90-93.99: |	A-
 87-89.99: |	B+
 84-86.99: |	B
-80-83.99: |	B
+80-83.99: |	B-
 77-79.99: |	C+
 74-76.99: |	C
 70-73.99:	| C-
