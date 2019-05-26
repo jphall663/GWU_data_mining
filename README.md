@@ -53,10 +53,11 @@ Mr. Patrick Hall
 
 #### Course Location
 
-**Location**: Media and Public Affairs Building (805 21st St. NW), Room BO7
-Thursdays 3:30-6:00 PM
+**Location**: Duques Hall, Room 255
+Thursdays 6:10-8:40 PM
 
-**Office Hours**: Physical location TBD; webex by request
+**Office Hours**: Funger Hall, Room 415
+Thursdays 5:00 - 6:00 PM
 
 #### Copyrights and Licenses
 
