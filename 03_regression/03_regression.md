@@ -44,7 +44,7 @@ Regression is important because it is stable, interpretable and widely understoo
 
 * [Assignment](assignment/assignment_2.pdf)
 
-* [Assignment Key](assignment/key/assignment_2.ipynb)
+* [Assignment Key](assignment/key)
 
 #### Sample Quizzes
 * [Sample quiz 3.1 - bias/variance tradeoff](quiz/sample/quiz_3.1.pdf)
@@ -53,8 +53,8 @@ Regression is important because it is stable, interpretable and widely understoo
 
 #### Quiz Keys
 
-* [Linear regression](quiz/key/quiz_3.1.pdf)
-* [Logistic regression](quiz/key/)
+* [Linear regression](quiz/key/quiz_3.1_key.pdf)
+* [Logistic regression](quiz/key/quiz_3.2_key.pdf)
 
 #### Supplementary References
 * [*Introduction to Statistical Learning*](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Fourth%20Printing.pdf)</br>
