@@ -31,7 +31,7 @@
 * [Data science interview questions](https://github.com/jphall663/ds_interview_qs)
 * [Python introductory materials](https://github.com/jphall663/bellarmine_py_intro)
 
-## Course Syllabi
+## Course Syllabi (Outdated/Unofficial)
 
 #### Pre-requisite Courses
 
