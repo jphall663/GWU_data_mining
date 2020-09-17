@@ -21,8 +21,8 @@ A great deal of work in data mining projects is spent on data munging. Below som
 
 Problem | Symptoms | Solution
 --- | --- | ---
-**[Incomplete data](#incomplete)** | Useless models and meaningless results. | Get more data. Get better data. [Design of Experiment](https://en.wikipedia.org/wiki/Design_of_experiments) approaches.
-**[Biased Data](#bias)** | Biased models and biased, inaccurate results. | Get more data. Get better data. [Design of Experiment](https://en.wikipedia.org/wiki/Design_of_experiments) approaches.
+**[Incomplete data](https://github.com/jphall663/GWU_data_mining/blob/master/02_analytical_data_prep/02_analytical_data_prep.md#incomplete-data)** | Useless models and meaningless results. | Get more data. Get better data. [Design of Experiment](https://en.wikipedia.org/wiki/Design_of_experiments) approaches.
+**[Biased Data](https://github.com/jphall663/GWU_data_mining/blob/master/02_analytical_data_prep/02_analytical_data_prep.md#biased-data)** | Biased models and biased, inaccurate results. | Get more data. Get better data. [Design of Experiment](https://en.wikipedia.org/wiki/Design_of_experiments) approaches.
 **Wide Data** | Long, intolerable compute times. Meaningless results due to curse of dimensionality. | [Feature selection](02_analytical_data_prep.md#feature-selection---view-notebook). [Feature extraction](02_analytical_data_prep.md#feature-extraction---view-notebook). L1 Regularization.
 **Sparse data<sup>&#10013;</sup>** | Long, intolerable compute times. Meaningless results due to curse of dimensionality. | [Feature extraction](02_analytical_data_prep.md#feature-extraction---view-notebook). Appropriate data representation, i.e. COO, CSR. Appropriate algorithm selection, e.g. factorization  machines.
 **Imbalanced Target Variable** | Single class model predictions. Biased model predictions. | [Proportional Oversampling](02_analytical_data_prep.md#oversampling---view-notebook). Inverse prior probability weighting. Mixture models, e.g. zero-inflated regression methods.
