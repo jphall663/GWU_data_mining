@@ -57,7 +57,7 @@ A great deal of work in data mining projects is spent on data munging. Below som
 ```python
 
 """
-Copyright (C) 2017 J. Patrick Hall, jphall@gwu.edu
+Copyright (C) 2017 - 2023 J. Patrick Hall, jphall@gwu.edu
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
@@ -342,7 +342,7 @@ scratch_df7 = pd.read_csv('scratch.csv')
 ```r
 
 ###############################################################################
-# Copyright (C) 2017 J. Patrick Hall, jphall@gwu.edu
+# Copyright (C) 2017 - 2023 J. Patrick Hall, jphall@gwu.edu
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -645,7 +645,7 @@ import <- read.table(filename, header = TRUE, sep = ',')
 ```r
 
 ###############################################################################
-# Copyright (C) 2017 J. Patrick Hall, jphall@gwu.edu
+# Copyright (C) 2017 - 2023 J. Patrick Hall, jphall@gwu.edu
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
 # copy of this software and associated documentation files (the "Software"),
@@ -1323,7 +1323,7 @@ run;
 ```sas
 
 ******************************************************************************;
-* Copyright (C) 2017 by J. Patrick Hall, jphall@gwu.edu                      *;
+* Copyright (C) 2017 - 2023 by J. Patrick Hall, jphall@gwu.edu                      *;
 *                                                                            *;
 * Permission is hereby granted, free of charge, to any person obtaining a    *;
 * copy of this software and associated documentation files (the "Software"), *;
